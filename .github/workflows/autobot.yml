@@ -5,7 +5,7 @@ name: autobot
 # y GUARDA el diario/lecciones de vuelta en el repo (memoria persistente + aprendizaje).
 on:
   schedule:
-    - cron: '0 * * * *' # cada hora (repo privado: ~free. Para más frecuencia usa '*/30' o '*/15' o repo público)
+    - cron: '*/30 * * * *' # cada 30 min (repo público = minutos ilimitados gratis)
   workflow_dispatch: {} # botón "Run workflow" para probar a mano
 
 permissions:
