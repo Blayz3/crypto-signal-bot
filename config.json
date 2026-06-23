@@ -17,7 +17,8 @@
     "min_local_score": 1,
     "max_ai_candidates": 12,
     "min_adx": 18,
-    "max_signals_per_direction": 2
+    "max_signals_per_direction": 2,
+    "daily_target_signals": 4
   },
   "ai": {
     "provider": "openrouter",

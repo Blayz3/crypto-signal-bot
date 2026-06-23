@@ -173,6 +173,7 @@ async function runScan(config, { onProgress = () => {} } = {}) {
   // --- Etapa 3: la IA decide (cerebro + datos de mercado inyectados) ---
   // Varias candidatas en paralelo (tope moderado para no saturar modelos gratis).
   let aiDone = 0;
+  const evaluated = []; // TODA candidata evaluada (incl. 'none') para el digest diario.
   const decided = await pMap(
     candidates,
     async (c) => {
@@ -186,7 +187,25 @@ async function runScan(config, { onProgress = () => {} } = {}) {
         const confluenceContext = formatConfluence(conf);
         const decision = await ai.decide(c, { brainContext, historyContext, marketContext, confluenceContext });
         onProgress('ai', { symbol: c.symbol, i: ++aiDone, total: candidates.length });
-        if (decision.action && decision.action !== 'none') {
+        const hasPlan = !!(decision.action && decision.action !== 'none');
+        const dir = hasPlan ? decision.action : conf.dominant || c.bias;
+        const confluence = dir === conf.dominant ? conf.count : 0;
+        // Registro para el digest diario (mejores ideas graduadas, aunque la IA diga NONE).
+        evaluated.push({
+          symbol: c.symbol,
+          dir,
+          hasPlan,
+          confluence,
+          localScore: round(c.score),
+          confidence: hasPlan ? decision.confidence : 0,
+          entry: decision.entry ?? null,
+          stop: decision.stop ?? null,
+          target: decision.target ?? null,
+          rr: hasPlan ? computeRR(decision) : null,
+          setup: decision.setup || '',
+          vp: symCtx.volumeProfile || null,
+        });
+        if (hasPlan) {
           // NO se registra automáticamente: solo se guarda cuando el usuario
           // pulsa "Tomado" en la app (scripts/journal-add.js).
           return {
@@ -194,8 +213,8 @@ async function runScan(config, { onProgress = () => {} } = {}) {
             ...decision,
             regime,
             localScore: round(c.score),
-            confluence: decision.action === conf.dominant ? conf.count : 0,
-            confluenceFactors: decision.action === conf.dominant ? conf.factors.map((f) => f.name) : [],
+            confluence,
+            confluenceFactors: dir === conf.dominant ? conf.factors.map((f) => f.name) : [],
             rr: computeRR(decision),
             ts: nowISO(),
           };
@@ -234,7 +253,25 @@ async function runScan(config, { onProgress = () => {} } = {}) {
   });
   onProgress('done', { signals: signals.length });
 
-  return { signals, scanned: ranked.length, candidates: candidates.length, errors };
+  // --- Ideas del día: las mejores oportunidades graduadas (objetivo ~N/día) ---
+  // Honesto: NO fuerza trades A+ que no existen. Surfacea las mejores que HAY,
+  // con nota de calidad. A+/A/B tienen plan; C es "vigilar" (la IA dijo NONE).
+  const gradeOf = (e) => {
+    if (e.hasPlan) return e.confluence >= 4 ? 'A+' : e.confluence >= 2 ? 'A' : 'B';
+    return 'C';
+  };
+  const targetN = config.funnel?.daily_target_signals || 4;
+  const ideas = evaluated
+    .map((e) => ({ ...e, grade: gradeOf(e) }))
+    .sort(
+      (a, b) =>
+        (b.hasPlan === a.hasPlan ? 0 : b.hasPlan ? 1 : -1) ||
+        b.confluence - a.confluence ||
+        Math.abs(b.localScore) - Math.abs(a.localScore)
+    )
+    .slice(0, targetN);
+
+  return { signals, ideas, scanned: ranked.length, candidates: candidates.length, errors };
 }
 
 function lastTf(config) {
