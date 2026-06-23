@@ -1,0 +1,220 @@
+{
+  "main": {
+    "id": "cc8b274e92ee0942",
+    "type": "split",
+    "children": [
+      {
+        "id": "056148cff1ef0604",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e0b4fc099714ca36",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "Graph view"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "21ca373d4e1f2a96",
+    "type": "split",
+    "children": [
+      {
+        "id": "ae81ab7f6d3ae382",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "f7b0e91478a0d268",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
+            }
+          },
+          {
+            "id": "27394bc1e6a57b0e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "ny",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "Search"
+            }
+          },
+          {
+            "id": "8b30e6e701618582",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8abc63268409a312",
+    "type": "split",
+    "children": [
+      {
+        "id": "b38f58ae9ce33837",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "53a14cc88cf220aa",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks"
+            }
+          },
+          {
+            "id": "bcf13fc55c7444ba",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links"
+            }
+          },
+          {
+            "id": "5e7abbc5b1554d1b",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
+            }
+          },
+          {
+            "id": "15e90b53f3d039a9",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "All properties"
+            }
+          },
+          {
+            "id": "6ba429a81db4d70d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "Outline"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "bases:Create new base": false
+    }
+  },
+  "active": "e0b4fc099714ca36",
+  "lastOpenFiles": [
+    "diario/2026-06-15T1221-BTCUSDT-long.md",
+    "diario/2026-06-14T1231-BTCUSDT-long.md",
+    "backend-updates/DEPLOY.sh",
+    "backend-updates/scanner.py",
+    "backend-updates/llm.py",
+    "backend-updates",
+    "00-principios/estrategias-cripto.md",
+    "00-principios/backtest-aprendizajes.md",
+    "frontend-design.skill",
+    "emil-design-eng.skill",
+    "diario/2026-06-13T0237-BTCUSDT-long.md",
+    "registro-entrenamiento-2026-06-12.md",
+    "gestion-riesgo/stop-loss.md",
+    "diario/_TEST-loss.md",
+    "00-principios/meta-mensual.md",
+    "00-principios/config-max-profit.md",
+    "conceptos/canales.md",
+    "Untitled.canvas",
+    "datos-mercado/ballenas-wallets.md",
+    "datos-mercado/fear-greed.md",
+    "datos-mercado/00-como-leer-datos.md",
+    "gestion-riesgo/tipos-de-orden.md",
+    "setups/fade-rechazo-nivel.md",
+    "conceptos/naked-poc.md",
+    "conceptos/volume-profile.md",
+    "00-principios/setups-rendimiento.md",
+    "datos-mercado/noticias-momentum.md",
+    "00-principios/ny-open-analisis.md",
+    "diario/2026-06-11T0807-DOGEUSDT-long.md",
+    "00-principios/checklist-pre-entrada.md",
+    "estructura-mercado/volatilidad-atr.md",
+    "setups/mean-reversion-rango.md",
+    "conceptos/order-flow.md",
+    "conceptos",
+    "ejecucion",
+    "datos-mercado",
+    "setups/rektproof"
+  ]
+}
