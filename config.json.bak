@@ -1,0 +1,91 @@
+{
+  "exchange": "binance",
+  "quote": "USDT",
+  "market_type": "spot",
+  "timeframes": [
+    "15m",
+    "1h",
+    "4h"
+  ],
+  "candles_limit": 200,
+  "scan_interval_minutes": 15,
+  "scan_concurrency": 6,
+  "ai_concurrency": 3,
+  "watchlist": [
+    "BTC",
+    "ETH",
+    "SOL",
+    "BNB",
+    "XRP",
+    "DOGE",
+    "ADA",
+    "AVAX",
+    "LINK",
+    "SUI",
+    "TON",
+    "LTC",
+    "DOT",
+    "NEAR",
+    "APT"
+  ],
+  "auto_top_volume": 50,
+  "funnel": {
+    "min_local_score": 1,
+    "max_ai_candidates": 8,
+    "min_adx": 25
+  },
+  "ai": {
+    "provider": "openrouter",
+    "base_url": "https://openrouter.ai/api/v1",
+    "decision_model": "qwen/qwen3-next-80b-a3b-instruct:free",
+    "decision_model_fallbacks": [
+      "meta-llama/llama-3.3-70b-instruct:free",
+      "nousresearch/hermes-3-llama-3.1-405b:free",
+      "nvidia/nemotron-3-super-120b-a12b:free"
+    ],
+    "decision_model_paid": "deepseek/deepseek-r1",
+    "vision_model": "google/gemma-4-31b-it:free",
+    "vision_model_fallbacks": [
+      "nvidia/nemotron-nano-12b-v2-vl:free",
+      "google/gemma-4-26b-a4b-it:free"
+    ],
+    "use_vision": false
+  },
+  "tradingview": {
+    "app_name": "TradingView",
+    "delay_activate_ms": 800,
+    "delay_symbol_ms": 2500,
+    "delay_timeframe_ms": 2000,
+    "delay_capture_ms": 600,
+    "max_symbols_visual": 8,
+    "timeframe_keys": {
+      "15m": "15",
+      "1h": "60",
+      "4h": "240",
+      "1d": "1D"
+    }
+  },
+  "brain": {
+    "enabled": true,
+    "vault_path": "~/Desktop/cerebro-trading",
+    "top_context_notes": 7,
+    "journal": true,
+    "monthly_r_goal": 100,
+    "daily_loss_limit_r": -3,
+    "max_consecutive_losses": 3
+  },
+  "marketdata": {
+    "enabled": true,
+    "whale_trade_usd": 50000,
+    "news_source": "rss"
+  },
+  "risk": {
+    "default_rr": 2,
+    "atr_period": 14,
+    "atr_stop_mult": 2
+  },
+  "notify": {
+    "macos_notification": true,
+    "min_confidence": 60
+  }
+}

@@ -1,0 +1,8 @@
+node_modules/
+.env
+*.log
+.DS_Store
+dist/
+swift-app/.build/
+*.tar.gz
+# El cerebro (cerebro-trading/) SÍ se sube al repo para que el bot lo use 24/7.

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Signal Bot</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="brand">
+        <span class="dot"></span>
+        <h1>Crypto Signal Bot</h1>
+      </div>
+      <div class="controls">
+        <label class="switch">
+          <input type="checkbox" id="autoscan" />
+          <span>Auto-escaneo</span>
+        </label>
+        <button id="scanBtn">Escanear ahora</button>
+        <button id="visualBtn" class="secondary" title="El bot controla TradingView y lee los gráficos con visión">Escanear con TradingView 👁</button>
+      </div>
+    </header>
+
+    <section class="statusbar">
+      <span id="status">Listo.</span>
+      <span id="meta"></span>
+    </section>
+
+    <main>
+      <div id="empty" class="empty">
+        Pulsa <b>Escanear ahora</b> para buscar entradas. El bot filtra todas las
+        monedas con indicadores locales y solo manda las mejores a la IA.
+      </div>
+      <div id="signals" class="signals"></div>
+    </main>
+
+    <script src="renderer.js"></script>
+  </body>
+</html>

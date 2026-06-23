@@ -1,0 +1,28 @@
+{
+  "name": "crypto-signal-bot",
+  "version": "0.1.0",
+  "description": "Bot de señales crypto que escanea TradingView/exchanges y propone entradas long/short usando DeepSeek + Qwen",
+  "main": "src/main/main.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "electron .",
+    "scan": "node src/core/scanner.js",
+    "visual-scan": "node src/core/visual_scanner.js",
+    "tv-test": "node scripts/tv-test.js",
+    "journal": "node scripts/journal-result.js",
+    "backtest": "node src/core/backtest.js",
+    "brief": "node scripts/brief.js",
+    "monitor": "node scripts/monitor.js",
+    "autobot": "node scripts/autobot.js"
+  },
+  "author": "Ed",
+  "license": "MIT",
+  "dependencies": {
+    "ccxt": "^4.4.0",
+    "dotenv": "^16.4.5",
+    "technicalindicators": "^3.1.0"
+  },
+  "devDependencies": {
+    "electron": "^31.0.0"
+  }
+}

@@ -1,0 +1,51 @@
+name: autobot
+
+# Corre el bot 24/7 en la nube de GitHub (gratis, sin tarjeta).
+# Cada corrida: monitorea trades, aprende de pérdidas, escanea, manda a Telegram,
+# y GUARDA el diario/lecciones de vuelta en el repo (memoria persistente + aprendizaje).
+on:
+  schedule:
+    - cron: '0 * * * *' # cada hora (repo privado: ~free. Para más frecuencia usa '*/30' o '*/15' o repo público)
+  workflow_dispatch: {} # botón "Run workflow" para probar a mano
+
+permissions:
+  contents: write
+
+concurrency:
+  group: autobot
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Instalar dependencias
+        run: npm install --omit=dev
+
+      - name: Correr el bot
+        env:
+          OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          CRYPTOPANIC_API_KEY: ${{ secrets.CRYPTOPANIC_API_KEY }}
+          WHALE_ALERT_API_KEY: ${{ secrets.WHALE_ALERT_API_KEY }}
+        run: node scripts/autobot.js
+
+      - name: Guardar diario y lecciones (memoria + aprendizaje)
+        run: |
+          git config user.name "autobot"
+          git config user.email "autobot@users.noreply.github.com"
+          git add cerebro-trading/diario cerebro-trading/00-principios 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "Sin cambios que guardar."
+          else
+            git commit -m "autobot: actualiza diario/lecciones [skip ci]"
+            git pull --rebase --autostash || true
+            git push || true
+          fi
