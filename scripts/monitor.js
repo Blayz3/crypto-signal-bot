@@ -52,7 +52,7 @@ function outcome(candles, startIdx, action, entry, stop, target) {
   const config = loadConfig();
   const journal = new Journal(config);
   const tg = new Telegram();
-  const ex = new ccxt.binance({ enableRateLimit: true });
+  const ex = require("../src/core/data-exchange").spotClient();
   const dir = path.join(expandHome(config.brain.vault_path), 'diario');
 
   const open = journal.readEntries().filter((e) => e.status === 'open');

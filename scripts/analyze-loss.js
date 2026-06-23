@@ -42,7 +42,7 @@ const r2 = (x) => (x == null || Number.isNaN(x) ? null : Math.round(x * 100) / 1
   // --- Lo que hizo el precio tras la entrada ---
   let facts = 'No se pudo obtener la acción del precio.';
   try {
-    const ex = new ccxt.binance({ enableRateLimit: true });
+    const ex = require("../src/core/data-exchange").spotClient();
     const since = (Date.parse(date) || Date.now()) - 6 * 3600000;
     const o = await ex.fetchOHLCV(symbol, '1h', since, 200);
     const start = o.findIndex((c) => c[0] >= (Date.parse(date) || 0));

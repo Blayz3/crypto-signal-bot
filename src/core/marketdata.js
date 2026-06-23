@@ -20,8 +20,11 @@ class MarketData {
     this.whaleUsd = this.cfg.whale_trade_usd || 50000;
     this.cryptopanicKey = process.env.CRYPTOPANIC_API_KEY || '';
     this.whaleAlertKey = process.env.WHALE_ALERT_API_KEY || '';
-    this._fut = new ccxt.binance({ enableRateLimit: true, options: { defaultType: 'swap' } });
-    this._spot = new ccxt.binance({ enableRateLimit: true });
+    // Exchange de datos configurable (Binance bloquea las IPs de la nube → 451).
+    const exId = (config && config.exchange) || 'bybit';
+    const Ex = ccxt[exId] || ccxt.bybit;
+    this._fut = new Ex({ enableRateLimit: true, options: { defaultType: 'swap' } });
+    this._spot = new Ex({ enableRateLimit: true });
   }
 
   async _json(url, opts) {

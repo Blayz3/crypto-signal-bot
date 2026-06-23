@@ -204,7 +204,7 @@ if (require.main === module)
 (async () => {
   const config = loadConfig();
   const days = parseInt(process.argv[2], 10) || 90;
-  const ex = new ccxt.binance({ enableRateLimit: true });
+  const ex = require("../src/core/data-exchange").spotClient();
 
   // Universo: top por volumen (varias monedas).
   const cfgTop = { ...config, watchlist: [], auto_top_volume: 20 };

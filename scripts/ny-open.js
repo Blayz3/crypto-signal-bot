@@ -175,7 +175,7 @@ Relacionado: [[sesiones-killzones]], [[correlacion-btc]], [[liquidez]], [[criter
   const config = loadConfig();
   const symbol = (process.argv[2] || 'BTC/USDT').toUpperCase();
   const days = parseInt(process.argv[3], 10) || 270;
-  const ex = new ccxt.binance({ enableRateLimit: true });
+  const ex = require("../src/core/data-exchange").spotClient();
 
   process.stderr.write(`Descargando ${days} días de ${symbol} (1h)...\n`);
   const candles = await fetchHistory(ex, symbol, days * 24);

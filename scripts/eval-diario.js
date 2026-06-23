@@ -20,7 +20,7 @@ function parseFM(raw) {
 }
 
 (async () => {
-  const ex = new ccxt.binance({ enableRateLimit: true });
+  const ex = require("../src/core/data-exchange").spotClient();
   const files = fs.readdirSync(DIR).filter((f) => f.endsWith('.md'));
   for (const f of files) {
     const fp = path.join(DIR, f);

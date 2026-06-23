@@ -147,7 +147,7 @@ Trade automático NY Open. BTC abrió ${entry.openDir === 'up' ? 'alcista' : 'ba
   const symbol = 'BTC/USDT';
 
   // Descarga ~50 velas de 1h para tener ATR estable
-  const ex = new ccxt.binance({ enableRateLimit: true });
+  const ex = require("../src/core/data-exchange").spotClient();
   log(`Descargando velas 1h de ${symbol}...`);
   const candles = await ex.fetchOHLCV(symbol, '1h', undefined, 60);
   // candles: [[ts, open, high, low, close, vol], ...]
