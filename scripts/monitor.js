@@ -108,6 +108,26 @@ function outcome(candles, startIdx, action, entry, stop, target) {
     }
   }
   console.log(`Cerrados ${closed} trades.`);
+
+  // --- RETROALIMENTACIÓN DE IDEAS: marca tp/sl/timeout de las ideas del digest ---
+  const openIdeas = journal.readIdeas().filter((i) => i.status === 'open');
+  let ideasClosed = 0;
+  for (const it of openIdeas) {
+    if (!it.symbol || !Number.isFinite(it.entry) || !Number.isFinite(it.stop) || !Number.isFinite(it.target) || !it.date) continue;
+    let candles;
+    try {
+      const entryMs = Date.parse(it.date);
+      candles = await ex.fetchOHLCV(it.symbol, '1h', entryMs - 2 * 3600000, 200);
+    } catch {
+      continue;
+    }
+    const start = Math.max(0, candles.findIndex((c) => c[0] >= Date.parse(it.date)));
+    const res = outcome(candles, start, (it.dir || '').toLowerCase(), it.entry, it.stop, it.target);
+    if (!res) continue; // sigue abierta
+    journal.closeIdea(it.id, res.status, res.r);
+    ideasClosed++;
+  }
+  if (openIdeas.length) console.log(`Ideas: ${ideasClosed}/${openIdeas.length} cerradas (retroalimentación).`);
 })().catch((e) => {
   console.error('Error:', e.message);
   process.exit(1);

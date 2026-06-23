@@ -173,39 +173,56 @@ async function runScan(config, { onProgress = () => {} } = {}) {
   // --- Etapa 3: la IA decide (cerebro + datos de mercado inyectados) ---
   // Varias candidatas en paralelo (tope moderado para no saturar modelos gratis).
   let aiDone = 0;
-  const evaluated = []; // TODA candidata evaluada (incl. 'none') para el digest diario.
+  const evaluated = []; // TODA candidata evaluada para el digest diario (resiliente a caídas de IA).
   const decided = await pMap(
     candidates,
     async (c) => {
+      const regime = regimeFromCandidate(c);
+      const symCtx = symCtxBySymbol[c.symbol] || {};
+      const conf = computeConfluence(c, symCtx, market ? market._globalCtx : {});
+      // Idea BASE mecánica (entrada/SL/TP por ATR) SIEMPRE, antes de llamar a la IA.
+      // Así, aunque los modelos gratis fallen o digan NONE, la idea con niveles existe.
+      const baseDir = conf.dominant || c.bias;
+      const baseConfluence = baseDir === conf.dominant ? conf.count : 0;
+      const mech = mechanicalPlan(c, baseDir, config);
+      const ev = {
+        symbol: c.symbol,
+        dir: baseDir,
+        hasPlan: false,
+        confluence: baseConfluence,
+        localScore: round(c.score),
+        confidence: 0,
+        entry: mech?.entry ?? null,
+        stop: mech?.stop ?? null,
+        target: mech?.target ?? null,
+        rr: mech?.rr ?? null,
+        orderType: 'market',
+        setup: 'mecánico-nivel',
+        vp: symCtx.volumeProfile || null,
+      };
+      evaluated.push(ev);
       try {
-        const regime = regimeFromCandidate(c);
-        const symCtx = symCtxBySymbol[c.symbol] || {};
         const brainContext = brain.contextFor({ bias: c.bias, regime, timeframe: lastTf(config) });
         const marketContext = market ? market.formatContext(market._globalCtx, symCtx) : '';
-        // Confluencia automática: cuántos factores se apilan por dirección.
-        const conf = computeConfluence(c, symCtx, market ? market._globalCtx : {});
         const confluenceContext = formatConfluence(conf);
         const decision = await ai.decide(c, { brainContext, historyContext, marketContext, confluenceContext });
         onProgress('ai', { symbol: c.symbol, i: ++aiDone, total: candidates.length });
-        const hasPlan = !!(decision.action && decision.action !== 'none');
-        const dir = hasPlan ? decision.action : conf.dominant || c.bias;
-        const confluence = dir === conf.dominant ? conf.count : 0;
-        // Registro para el digest diario (mejores ideas graduadas, aunque la IA diga NONE).
-        evaluated.push({
-          symbol: c.symbol,
-          dir,
-          hasPlan,
-          confluence,
-          localScore: round(c.score),
-          confidence: hasPlan ? decision.confidence : 0,
-          entry: decision.entry ?? null,
-          stop: decision.stop ?? null,
-          target: decision.target ?? null,
-          rr: hasPlan ? computeRR(decision) : null,
-          setup: decision.setup || '',
-          vp: symCtx.volumeProfile || null,
-        });
-        if (hasPlan) {
+        if (decision.action && decision.action !== 'none') {
+          // La IA aprobó un plan: SUBE la idea base a "con plan" (grado A+/A/B).
+          const dir = decision.action;
+          const confluence = dir === conf.dominant ? conf.count : 0;
+          Object.assign(ev, {
+            dir,
+            hasPlan: true,
+            confluence,
+            confidence: decision.confidence,
+            entry: decision.entry ?? ev.entry,
+            stop: decision.stop ?? ev.stop,
+            target: decision.target ?? ev.target,
+            rr: computeRR(decision) ?? ev.rr,
+            orderType: decision.orderType || 'market',
+            setup: decision.setup || '',
+          });
           // NO se registra automáticamente: solo se guarda cuando el usuario
           // pulsa "Tomado" en la app (scripts/journal-add.js).
           return {
@@ -219,7 +236,7 @@ async function runScan(config, { onProgress = () => {} } = {}) {
             ts: nowISO(),
           };
         }
-        return null;
+        return null; // IA dijo NONE → la idea base mecánica queda como "vigilar" (C)
       } catch (e) {
         errors.push({ symbol: c.symbol, error: e.message });
         onProgress('ai', { symbol: c.symbol, i: ++aiDone, total: candidates.length });
@@ -261,15 +278,16 @@ async function runScan(config, { onProgress = () => {} } = {}) {
     return 'C';
   };
   const targetN = config.funnel?.daily_target_signals || 4;
-  const ideas = evaluated
-    .map((e) => ({ ...e, grade: gradeOf(e) }))
-    .sort(
-      (a, b) =>
-        (b.hasPlan === a.hasPlan ? 0 : b.hasPlan ? 1 : -1) ||
-        b.confluence - a.confluence ||
-        Math.abs(b.localScore) - Math.abs(a.localScore)
-    )
-    .slice(0, targetN);
+  const byRank = (a, b) => b.confluence - a.confluence || Math.abs(b.localScore) - Math.abs(a.localScore);
+  // Con plan de la IA (A+/A/B) — se mandan TODAS (mínimo N, pero puede ser MÁS).
+  const withPlan = evaluated.filter((e) => e.hasPlan).map((e) => ({ ...e, grade: gradeOf(e) })).sort(byRank);
+  // Sin plan (IA dijo NONE) pero con plan mecánico válido → "vigilar" (grado C).
+  const noPlan = evaluated.filter((e) => !e.hasPlan && e.entry != null).map((e) => ({ ...e, grade: 'C' })).sort(byRank);
+  const ideas = withPlan.slice();
+  for (const e of noPlan) {
+    if (ideas.length >= targetN) break; // completa hasta el mínimo con las mejores "vigilar"
+    ideas.push(e);
+  }
 
   return { signals, ideas, scanned: ranked.length, candidates: candidates.length, errors };
 }
@@ -285,6 +303,30 @@ function computeRR(d) {
   const reward = Math.abs(d.target - d.entry);
   if (risk === 0) return null;
   return round(reward / risk, 2);
+}
+
+/**
+ * Plan mecánico para ideas "vigilar" (cuando la IA no da plan): entrada al precio,
+ * stop a N×ATR y target a R:R. Sirve para mostrar niveles y guardarlos para feedback.
+ */
+function mechanicalPlan(c, dir, config) {
+  if (!dir || dir === 'neutral') return null;
+  const tf = lastTf(config);
+  const atr = c.byTimeframe?.[tf]?.atr;
+  const price = c.price;
+  if (!price || !atr) return null;
+  const rr = config.risk?.default_rr || 2;
+  const mult = config.risk?.atr_stop_mult || 2;
+  // Tope de stop al 8% del precio: en low-caps muy volátiles 2×ATR(4h) da niveles
+  // absurdos (target casi a cero). El cap mantiene entrada/SL/TP realistas.
+  const risk = Math.min(mult * atr, price * 0.08);
+  const long = dir === 'long';
+  return {
+    entry: round(price, 6),
+    stop: round(long ? price - risk : price + risk, 6),
+    target: round(long ? price + rr * risk : price - rr * risk, 6),
+    rr,
+  };
 }
 
 function round(v, dp = 2) {

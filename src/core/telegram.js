@@ -45,15 +45,15 @@ class Telegram {
   /** Formatea una IDEA graduada para el digest diario (A+/A/B con plan, C para vigilar). */
   formatIdea(e) {
     const dir = e.dir === 'long' ? '🟢 LONG' : e.dir === 'short' ? '🔴 SHORT' : '⚪';
-    if (e.hasPlan) {
-      return (
-        `[${e.grade}] ${dir} ${e.symbol}\n` +
-        `   entrada ${e.entry} · stop ${e.stop} · target ${e.target} (R:R ${e.rr})\n` +
-        `   conf ${e.confidence}% · confluencia ${e.confluence} · ${e.setup || ''}`
-      );
-    }
-    const vp = e.vp ? `\n   niveles: POC ${e.vp.poc} · VAL ${e.vp.val} · VAH ${e.vp.vah}` : '';
-    return `[${e.grade}] ${dir} ${e.symbol} · vigilar (sin plan A+, confluencia ${e.confluence})${vp}`;
+    const tag = e.hasPlan ? '' : ' · vigilar (plan mecánico, IA neutral)';
+    const conf = e.confidence ? `${e.confidence}%` : '—';
+    return (
+      `[${e.grade}] ${dir} ${e.symbol}${tag}\n` +
+      `   📥 Entrada: ${e.entry}\n` +
+      `   🛑 SL: ${e.stop}\n` +
+      `   🎯 TP: ${e.target}${e.rr ? `  (R:R ${e.rr})` : ''}\n` +
+      `   conf ${conf} · confluencia ${e.confluence}${e.setup ? ` · ${e.setup}` : ''}`
+    );
   }
 }
 

@@ -104,13 +104,16 @@ const ROOT = path.join(__dirname, '..');
     if (st.lastDigestDate !== today && ideas.length) {
       const lines = ideas.map((e, i) => `${i + 1}. ${tg.formatIdea(e)}`).join('\n');
       await tg.send(
-        `🎯 TOP ${ideas.length} IDEAS DEL DÍA (${today})\n` +
-        `Objetivo: ${target} trades/día. Graduadas por calidad: A+/A/B con plan, C para vigilar.\n` +
+        `🎯 ${ideas.length} IDEAS DEL DÍA (${today})\n` +
+        `Mínimo ${target}/día (pueden ser más). Graduadas: A+/A/B con plan IA, C para vigilar.\n` +
         `Ojo: forzar trades por cuota pierde plata — toma SOLO las que te convenzan.\n\n${lines}`
       );
+      // Guarda cada idea (entrada/SL/TP) para retroalimentación: el monitor marcará
+      // su resultado y el bot aprenderá qué grados funcionan.
+      for (const e of ideas) journal.logIdea(e);
       st.lastDigestDate = today;
       fs.writeFileSync(statePath, JSON.stringify(st, null, 2));
-      console.log(`Digest diario enviado (${ideas.length} ideas).`);
+      console.log(`Digest diario enviado y guardado (${ideas.length} ideas).`);
     }
   } catch (e) {
     console.log('digest:', e.message);

@@ -17,6 +17,7 @@ class Journal {
     const bcfg = (config && config.brain) || {};
     const vault = resolveVault(bcfg.vault_path);
     this.dir = path.join(vault, 'diario');
+    this.ideasFile = path.join(vault, 'ideas-log.jsonl');
     this.enabled = bcfg.enabled !== false && bcfg.journal !== false;
     this._monthlyGoal = bcfg.monthly_r_goal ?? 100;
   }
@@ -65,6 +66,92 @@ class Journal {
 
     fs.writeFileSync(file, fm);
     return file;
+  }
+
+  /**
+   * Registra una IDEA del digest diario (con entrada/SL/TP) en un log aparte
+   * (ideas-log.jsonl) para RETROALIMENTACIÓN: luego el monitor marca su resultado
+   * y el bot aprende qué grados (A+/A/B/C) realmente funcionan. No ensucia el
+   * diario de trades tomados (sus estadísticas siguen limpias).
+   */
+  logIdea(e) {
+    if (!this.enabled) return null;
+    this._ensureDir();
+    const d = new Date(Date.now());
+    const id = `${d.toISOString().slice(0, 16)}-${String(e.symbol || 'NA').replace(/[^\w]/g, '')}-${e.dir}`;
+    const existing = this.readIdeas();
+    if (existing.some((x) => x.id === id && x.status === 'open')) return null; // evita duplicar
+    const rec = {
+      id,
+      date: d.toISOString(),
+      symbol: e.symbol,
+      dir: e.dir,
+      grade: e.grade,
+      hasPlan: !!e.hasPlan,
+      entry: e.entry ?? null,
+      stop: e.stop ?? null,
+      target: e.target ?? null,
+      rr: e.rr ?? null,
+      confluence: e.confluence ?? 0,
+      confidence: e.confidence ?? null,
+      setup: e.setup || '',
+      status: 'open',
+      result_r: null,
+    };
+    fs.appendFileSync(this.ideasFile, JSON.stringify(rec) + '\n');
+    return id;
+  }
+
+  /** Lee las ideas registradas (jsonl). */
+  readIdeas() {
+    if (!fs.existsSync(this.ideasFile)) return [];
+    return fs
+      .readFileSync(this.ideasFile, 'utf8')
+      .split('\n')
+      .filter(Boolean)
+      .map((l) => {
+        try {
+          return JSON.parse(l);
+        } catch {
+          return null;
+        }
+      })
+      .filter(Boolean);
+  }
+
+  /** Cierra una idea (el monitor marca tp/sl/timeout con la acción del precio). */
+  closeIdea(id, status, r) {
+    const all = this.readIdeas();
+    let changed = false;
+    for (const x of all) {
+      if (x.id === id && x.status === 'open') {
+        x.status = status;
+        x.result_r = r;
+        changed = true;
+      }
+    }
+    if (changed) fs.writeFileSync(this.ideasFile, all.map((x) => JSON.stringify(x)).join('\n') + '\n');
+    return changed;
+  }
+
+  /** Rendimiento de las ideas por grado (retroalimentación de calibración). */
+  ideasStats() {
+    const all = this.readIdeas();
+    const closed = all.filter(
+      (x) => ['win', 'loss', 'breakeven'].includes(x.status) && x.result_r != null && !Number.isNaN(x.result_r)
+    );
+    const byGrade = {};
+    for (const x of closed) {
+      const g = x.grade || '?';
+      (byGrade[g] = byGrade[g] || []).push(x.result_r);
+    }
+    const grades = Object.entries(byGrade).map(([grade, rs]) => ({
+      grade,
+      n: rs.length,
+      wr: rs.filter((r) => r > 0).length / rs.length,
+      avgR: rs.reduce((a, r) => a + r, 0) / rs.length,
+    }));
+    return { total: all.length, open: all.filter((x) => x.status === 'open').length, closed: closed.length, grades };
   }
 
   /** Lee todas las entradas del diario parseadas. */
@@ -159,14 +246,26 @@ class Journal {
       : `META MENSUAL: ${s.monthR || 0}/${goal}R este mes. Faltan ${Math.round(remaining * 10) / 10}R en ${daysLeft} días (~${pace}R/día). Persíguela SOLO con setups A+ de alta confluencia; NO sobre-operes ni fuerces.`;
   }
 
+  /** Línea de retroalimentación de ideas por grado (vacío si aún no hay cerradas). */
+  _ideasLine() {
+    const is = this.ideasStats();
+    if (!is.closed) return '';
+    const g = is.grades
+      .sort((a, b) => b.avgR - a.avgR)
+      .map((x) => `${x.grade} (${x.n}t, WR ${(x.wr * 100).toFixed(0)}%, ${fmtR(x.avgR)})`)
+      .join(' · ');
+    return `RETROALIMENTACIÓN DE IDEAS (calibra tus grados): ${g}. Si un grado pierde, sé más exigente al asignarlo o ponlo en vigilar.`;
+  }
+
   /** Bloque de texto con el historial para inyectar en la decisión. */
   statsContext() {
     const s = this.stats();
+    const ideasLine = this._ideasLine();
     if (!s.closed) {
       const base = s.total
         ? `HISTORIAL: ${s.total} señales registradas, ninguna cerrada aún (sin datos de WR todavía).`
         : 'HISTORIAL: aún sin trades cerrados.';
-      return `${base}\n${this._metaLine(s)}`;
+      return [base, ideasLine, this._metaLine(s)].filter(Boolean).join('\n');
     }
     const lines = [];
     lines.push(
@@ -185,6 +284,7 @@ class Journal {
       lines.push(`⚠️ SETUPS QUE PIERDEN (evítalos o exige más confluencia): ${worst}.`);
     }
     lines.push('Prioriza los setups que ganan; evita repetir los que pierden.');
+    if (ideasLine) lines.push(ideasLine);
     lines.push(this._metaLine(s));
     return lines.join('\n');
   }
