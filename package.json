@@ -15,7 +15,8 @@
     "monitor": "node scripts/monitor.js",
     "autobot": "node scripts/autobot.js",
     "monthly-report": "node scripts/monthly-report.js",
-    "ny-trade": "node scripts/ny-open-trade.js"
+    "ny-trade": "node scripts/ny-open-trade.js",
+    "self-train": "node scripts/self-train.js"
   },
   "author": "Ed",
   "license": "MIT",
