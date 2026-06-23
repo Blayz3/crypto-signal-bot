@@ -13,7 +13,9 @@
     "backtest": "node src/core/backtest.js",
     "brief": "node scripts/brief.js",
     "monitor": "node scripts/monitor.js",
-    "autobot": "node scripts/autobot.js"
+    "autobot": "node scripts/autobot.js",
+    "monthly-report": "node scripts/monthly-report.js",
+    "ny-trade": "node scripts/ny-open-trade.js"
   },
   "author": "Ed",
   "license": "MIT",

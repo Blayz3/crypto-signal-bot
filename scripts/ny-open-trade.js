@@ -23,6 +23,8 @@ const path = require('path');
 const fs   = require('fs');
 const os   = require('os');
 const { execSync } = require('child_process');
+require('dotenv').config({ path: path.join(__dirname, '../.env') });
+const { Telegram } = require('../src/core/telegram');
 
 let ccxt;
 try { ccxt = require('ccxt'); }
@@ -189,10 +191,19 @@ Trade automático NY Open. BTC abrió ${entry.openDir === 'up' ? 'alcista' : 'ba
   const file = writeJournal(vault, entryData);
   log(`Diario escrito: ${file}`);
 
-  // Notificación en pantalla
+  // Notificación en pantalla (Mac)
   const notifBody = `${direction.toUpperCase()} ${entryPrice} → SL ${stopLoss} · TP ${takeProfit} (2R) | Reversión ${openDir === 'up' ? '📉' : '📈'}`;
-  notify('🕐 NY Open BTC 8:10 AM', notifBody);
+  notify('🕐 NY Open BTC 8:15 AM', notifBody);
   log(`Notificación enviada: ${notifBody}`);
+
+  // Telegram (para la nube 24/7)
+  const sent = await new Telegram().send(
+    `🕐 NY OPEN — BTC (8:15 NY) · fade contrarian\n` +
+    `${direction.toUpperCase()} @ ${entryPrice}\n` +
+    `SL ${stopLoss} · TP1 ${takeProfit} (2R) · TP2 ${takeProfit2} (3.5R)\n` +
+    `Apertura ${openDir === 'up' ? 'subiendo → SHORT' : 'bajando → LONG'} (84% revierten)`
+  );
+  log(`Telegram: ${sent ? 'enviado' : 'no configurado'}`);
 
   log('=== NY Open Trade — completado ===\n');
 })().catch((e) => {

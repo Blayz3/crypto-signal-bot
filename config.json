@@ -92,7 +92,7 @@
     "vault_path": "~/Desktop/cerebro-trading",
     "top_context_notes": 10,
     "journal": true,
-    "monthly_r_goal": 120,
+    "monthly_r_goal": 130,
     "daily_loss_limit_r": -3,
     "max_consecutive_losses": 3
   },
@@ -109,5 +109,10 @@
   "notify": {
     "macos_notification": true,
     "min_confidence": 65
-  }
+  },
+  "work_timezone": "America/Tegucigalpa",
+  "work_hours": [
+    5,
+    21
+  ]
 }

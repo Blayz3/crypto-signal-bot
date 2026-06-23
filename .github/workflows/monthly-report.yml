@@ -1,0 +1,22 @@
+name: monthly-report
+
+# Resumen de ganancias del mes → Telegram. Corre el día 1 de cada mes (reporta el mes que cerró).
+on:
+  schedule:
+    - cron: '0 13 1 * *' # día 1, 13:00 UTC (~7 AM Tegucigalpa)
+  workflow_dispatch: {}
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - run: npm install --omit=dev
+      - name: Reporte mensual
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node scripts/monthly-report.js

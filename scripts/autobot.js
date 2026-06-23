@@ -36,6 +36,17 @@ const ROOT = path.join(__dirname, '..');
     console.log('monitor:', e.message);
   }
 
+  // Horario de trabajo: el monitor corre siempre (cierra trades), pero solo se
+  // ESCANEA dentro del horario activo (evita el mercado muerto de madrugada).
+  const tz = config.work_timezone || 'America/Tegucigalpa';
+  const [hStart, hEnd] = config.work_hours || [5, 21];
+  const nowHour =
+    parseInt(new Intl.DateTimeFormat('en-US', { timeZone: tz, hour: 'numeric', hour12: false }).format(new Date(Date.now())), 10) % 24;
+  if (nowHour < hStart || nowHour >= hEnd) {
+    console.log(`Fuera de horario (${nowHour}h en ${tz}; activo ${hStart}-${hEnd}h). Solo monitoreo, sin escaneo.`);
+    return;
+  }
+
   // 2) Escanear señales nuevas.
   let res;
   try {
