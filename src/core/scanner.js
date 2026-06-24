@@ -188,6 +188,7 @@ async function runScan(config, { onProgress = () => {} } = {}) {
       const ev = {
         symbol: c.symbol,
         dir: baseDir,
+        action: baseDir,
         hasPlan: false,
         confluence: baseConfluence,
         localScore: round(c.score),
@@ -198,6 +199,7 @@ async function runScan(config, { onProgress = () => {} } = {}) {
         rr: mech?.rr ?? null,
         orderType: 'market',
         setup: 'mecánico-nivel',
+        rationale: 'Plan por niveles (ATR), sin confirmación de IA. Menor convicción: confírmalo antes de entrar.',
         vp: symCtx.volumeProfile || null,
       };
       evaluated.push(ev);
@@ -213,6 +215,7 @@ async function runScan(config, { onProgress = () => {} } = {}) {
           const confluence = dir === conf.dominant ? conf.count : 0;
           Object.assign(ev, {
             dir,
+            action: dir,
             hasPlan: true,
             confluence,
             confidence: decision.confidence,
@@ -222,6 +225,9 @@ async function runScan(config, { onProgress = () => {} } = {}) {
             rr: computeRR(decision) ?? ev.rr,
             orderType: decision.orderType || 'market',
             setup: decision.setup || '',
+            rationale: decision.rationale || '',
+            style: decision.style || '',
+            timeframe: decision.timeframe || '',
           });
           // NO se registra automáticamente: solo se guarda cuando el usuario
           // pulsa "Tomado" en la app (scripts/journal-add.js).
@@ -277,17 +283,12 @@ async function runScan(config, { onProgress = () => {} } = {}) {
     if (e.hasPlan) return e.confluence >= 4 ? 'A+' : e.confluence >= 2 ? 'A' : 'B';
     return 'C';
   };
-  const targetN = config.funnel?.daily_target_signals || 4;
   const byRank = (a, b) => b.confluence - a.confluence || Math.abs(b.localScore) - Math.abs(a.localScore);
-  // Con plan de la IA (A+/A/B) — se mandan TODAS (mínimo N, pero puede ser MÁS).
+  // Lista RANKEADA completa: primero los que la IA aprobó (A+/A/B), luego los
+  // mecánicos válidos (C). El autobot decide cuántos manda y cuándo (mínimo 4/día).
   const withPlan = evaluated.filter((e) => e.hasPlan).map((e) => ({ ...e, grade: gradeOf(e) })).sort(byRank);
-  // Sin plan (IA dijo NONE) pero con plan mecánico válido → "vigilar" (grado C).
   const noPlan = evaluated.filter((e) => !e.hasPlan && e.entry != null).map((e) => ({ ...e, grade: 'C' })).sort(byRank);
-  const ideas = withPlan.slice();
-  for (const e of noPlan) {
-    if (ideas.length >= targetN) break; // completa hasta el mínimo con las mejores "vigilar"
-    ideas.push(e);
-  }
+  const ideas = [...withPlan, ...noPlan];
 
   return { signals, ideas, scanned: ranked.length, candidates: candidates.length, errors };
 }

@@ -30,6 +30,19 @@ class Telegram {
     }
   }
 
+  /** Formatea un TRADE (con grado de calidad) para Telegram. */
+  formatTrade(e) {
+    const arrow = e.dir === 'long' ? '🟢 LONG' : '🔴 SHORT';
+    const ot = e.orderType === 'limit' ? 'LIMIT' : 'MARKET';
+    const conf = e.confidence ? `${e.confidence}%` : '—';
+    return (
+      `📊 TRADE [${e.grade}] ${arrow} ${e.symbol} (${ot})\n` +
+      `📥 Entrada: ${e.entry}\n🛑 SL: ${e.stop}\n🎯 TP: ${e.target}${e.rr ? `  (R:R ${e.rr})` : ''}\n` +
+      `Confianza ${conf} · Confluencia ${e.confluence ?? '—'}${e.setup ? ` · ${e.setup}` : ''}` +
+      (e.rationale ? `\n${e.rationale}` : '')
+    );
+  }
+
   /** Formatea una señal de trade para Telegram. */
   formatSignal(s) {
     const arrow = s.action === 'long' ? '🟢 LONG' : '🔴 SHORT';
@@ -39,20 +52,6 @@ class Telegram {
       `Entrada: ${s.entry}\nStop: ${s.stop}\nTarget: ${s.target}  (R:R ${s.rr})\n` +
       `Confianza: ${s.confidence}%  ·  Confluencia: ${s.confluence ?? '—'}  ·  ${s.setup || ''}\n` +
       `${s.rationale || ''}`
-    );
-  }
-
-  /** Formatea una IDEA graduada para el digest diario (A+/A/B con plan, C para vigilar). */
-  formatIdea(e) {
-    const dir = e.dir === 'long' ? '🟢 LONG' : e.dir === 'short' ? '🔴 SHORT' : '⚪';
-    const tag = e.hasPlan ? '' : ' · vigilar (plan mecánico, IA neutral)';
-    const conf = e.confidence ? `${e.confidence}%` : '—';
-    return (
-      `[${e.grade}] ${dir} ${e.symbol}${tag}\n` +
-      `   📥 Entrada: ${e.entry}\n` +
-      `   🛑 SL: ${e.stop}\n` +
-      `   🎯 TP: ${e.target}${e.rr ? `  (R:R ${e.rr})` : ''}\n` +
-      `   conf ${conf} · confluencia ${e.confluence}${e.setup ? ` · ${e.setup}` : ''}`
     );
   }
 }

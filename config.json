@@ -18,7 +18,8 @@
     "max_ai_candidates": 12,
     "min_adx": 18,
     "max_signals_per_direction": 2,
-    "daily_target_signals": 4
+    "daily_target_signals": 4,
+    "max_signals_per_scan": 4
   },
   "ai": {
     "provider": "openrouter",

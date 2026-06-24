@@ -64,60 +64,59 @@ const ROOT = path.join(__dirname, '..');
     return;
   }
 
-  // Ordena por convicción y aplica el límite por dirección (anti-cluster).
-  const maxDir = config.funnel.max_signals_per_direction || 99;
-  const signals = (res.signals || []).sort(
-    (a, b) => (b.confluence || 0) - (a.confluence || 0) || (b.confidence || 0) - (a.confidence || 0)
-  );
-  const count = { long: 0, short: 0 };
-  const accepted = [];
-  for (const s of signals) {
-    if ((count[s.action] || 0) < maxDir) {
-      accepted.push(s);
-      count[s.action] = (count[s.action] || 0) + 1;
-    }
-  }
-
-  console.log(`Señales: ${signals.length} encontradas, ${accepted.length} aceptadas (límite ${maxDir}/dirección).`);
-
-  // 3) Registrar y notificar.
+  // 3) ENVÍO DE TRADES (mínimo 4/día, repartidos por horas, sin tope superior).
+  //    No es un "digest": cada trade se manda en cuanto aparece. Los A+/A (la IA los
+  //    aprobó) se mandan siempre; si vamos por debajo del ritmo del día, se completa
+  //    con los mejores disponibles hasta el piso de 4. Cada símbolo, una vez al día.
   const journal = new Journal(config);
-  for (const s of accepted) {
-    journal.logSignal(s);
-    await tg.send('📊 NUEVA SEÑAL\n' + tg.formatSignal(s));
-    console.log(`  registrada y enviada: ${s.action} ${s.symbol}`);
-  }
-  if (!accepted.length) console.log('Sin señales A+ este ciclo (esperar es correcto).');
+  const target = config.funnel?.daily_target_signals || 4;
+  const maxDir = config.funnel?.max_signals_per_direction || 2;
+  const perScanCap = config.funnel?.max_signals_per_scan || 4;
 
-  // 4) DIGEST DIARIO — una vez al día: las mejores ideas graduadas (objetivo ~N/día).
-  //    No fuerza trades A+; muestra las mejores oportunidades que HAY, con nota de
-  //    calidad. Las A+ siguen llegando en tiempo real arriba; esto garantiza que Ed
-  //    siempre vea sus 4 mejores ideas del día y decida él.
-  try {
-    const vault = resolveVault(config.brain?.vault_path);
-    const statePath = path.join(vault, '.daily-state.json');
-    let st = {};
-    try { st = JSON.parse(fs.readFileSync(statePath, 'utf8')); } catch { /* primer día */ }
-    const today = new Date(Date.now()).toISOString().slice(0, 10);
-    const target = config.funnel?.daily_target_signals || 4;
-    const ideas = res.ideas || [];
-    if (st.lastDigestDate !== today && ideas.length) {
-      const lines = ideas.map((e, i) => `${i + 1}. ${tg.formatIdea(e)}`).join('\n');
-      await tg.send(
-        `🎯 ${ideas.length} IDEAS DEL DÍA (${today})\n` +
-        `Mínimo ${target}/día (pueden ser más). Graduadas: A+/A/B con plan IA, C para vigilar.\n` +
-        `Ojo: forzar trades por cuota pierde plata — toma SOLO las que te convenzan.\n\n${lines}`
-      );
-      // Guarda cada idea (entrada/SL/TP) para retroalimentación: el monitor marcará
-      // su resultado y el bot aprenderá qué grados funcionan.
-      for (const e of ideas) journal.logIdea(e);
-      st.lastDigestDate = today;
-      fs.writeFileSync(statePath, JSON.stringify(st, null, 2));
-      console.log(`Digest diario enviado y guardado (${ideas.length} ideas).`);
-    }
-  } catch (e) {
-    console.log('digest:', e.message);
+  const vault = resolveVault(config.brain?.vault_path);
+  const statePath = path.join(vault, '.daily-state.json');
+  const today = new Date(Date.now()).toISOString().slice(0, 10);
+  let st = {};
+  try { st = JSON.parse(fs.readFileSync(statePath, 'utf8')); } catch { /* primer día */ }
+  if (st.date !== today) st = { date: today, sent: [] };
+  const sentSymbols = new Set((st.sent || []).map((x) => x.symbol));
+
+  // Ritmo del día: el piso sube de ~1 a `target` conforme avanza la jornada
+  // (así los trades caen repartidos, no 4 de golpe al inicio).
+  const frac = Math.max(0, Math.min(1, (nowHour - hStart) / Math.max(1, hEnd - hStart)));
+  const floorByNow = Math.max(1, Math.ceil(target * frac));
+
+  const pool = (res.ideas || []).filter(
+    (e) => !sentSymbols.has(e.symbol) && [e.entry, e.stop, e.target].every((v) => Number.isFinite(v))
+  );
+
+  const pick = [];
+  const dirCount = { long: 0, short: 0 };
+  const tryAdd = (e) => {
+    if (pick.includes(e)) return false;
+    if ((dirCount[e.dir] || 0) >= maxDir) return false; // anti-cluster por dirección/escaneo
+    pick.push(e);
+    dirCount[e.dir] = (dirCount[e.dir] || 0) + 1;
+    return true;
+  };
+  for (const e of pool) if (e.grade === 'A+' || e.grade === 'A') tryAdd(e); // buenos: siempre
+  for (const e of pool) { // completa hasta el piso del día con lo mejor restante (B/C)
+    if (sentSymbols.size + pick.length >= floorByNow) break;
+    tryAdd(e);
   }
+  const toSend = pick.slice(0, perScanCap);
+
+  console.log(`Trades: ${pool.length} disponibles · piso del día ${floorByNow} · ya enviados hoy ${sentSymbols.size} · este ciclo ${toSend.length}.`);
+
+  for (const e of toSend) {
+    await tg.send(tg.formatTrade(e));
+    journal.logIdea(e); // guarda entrada/SL/TP para retroalimentación (el monitor lo cierra y aprende)
+    if (e.grade === 'A+' || e.grade === 'A') journal.logSignal({ ...e, action: e.dir }); // trade real → diario/auto-aprendizaje
+    st.sent.push({ symbol: e.symbol, dir: e.dir, grade: e.grade });
+    console.log(`  enviado: [${e.grade}] ${e.dir} ${e.symbol}`);
+  }
+  fs.writeFileSync(statePath, JSON.stringify(st, null, 2));
+  if (!toSend.length) console.log('Nada nuevo que enviar este ciclo.');
 })().catch((e) => {
   console.error('Autobot error fatal:', e.message);
   process.exit(1);
