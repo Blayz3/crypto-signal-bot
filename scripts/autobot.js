@@ -38,6 +38,33 @@ const ROOT = path.join(__dirname, '..');
     console.log('monitor:', e.message);
   }
 
+  // Estado diario (compartido por el trade de NY y el envío de trades).
+  const vault = resolveVault(config.brain?.vault_path);
+  const statePath = path.join(vault, '.daily-state.json');
+  const today = new Date(Date.now()).toISOString().slice(0, 10);
+  let st = {};
+  try { st = JSON.parse(fs.readFileSync(statePath, 'utf8')); } catch { /* primer día */ }
+  if (st.date !== today) st = { date: today, sent: [] };
+
+  // TRADE DE LA APERTURA DE NUEVA YORK (8 AM NY). Va dentro del autobot porque
+  // este corre fiable cada 30 min (el cron de GitHub para ny-open se retrasa horas
+  // y, cuando por fin corre, ya no son las 8 en NY → se lo saltaba). Aquí se evalúa
+  // en cuanto el reloj de NY marca las 8, una sola vez al día.
+  const nyHour =
+    parseInt(new Intl.DateTimeFormat('en-US', { timeZone: 'America/New_York', hour: 'numeric', hour12: false }).format(new Date(Date.now())), 10) % 24;
+  if (nyHour === 8 && st.nyTradeDate !== today) {
+    console.log('Apertura de NY (8h): ejecutando trade de BTC...');
+    try {
+      const { stdout } = await execFileP('node', [path.join(__dirname, 'ny-open-trade.js')], { cwd: ROOT, timeout: 180000 });
+      process.stdout.write(stdout);
+      st.nyTradeDate = today;
+      fs.writeFileSync(statePath, JSON.stringify(st, null, 2));
+      console.log('  trade de NY enviado.');
+    } catch (e) {
+      console.log('ny-open-trade:', e.message);
+    }
+  }
+
   // Horario de trabajo: el monitor corre siempre (cierra trades), pero solo se
   // ESCANEA dentro del horario activo (evita el mercado muerto de madrugada).
   const tz = config.work_timezone || 'America/Tegucigalpa';
@@ -72,13 +99,6 @@ const ROOT = path.join(__dirname, '..');
   const target = config.funnel?.daily_target_signals || 4;
   const maxDir = config.funnel?.max_signals_per_direction || 2;
   const perScanCap = config.funnel?.max_signals_per_scan || 4;
-
-  const vault = resolveVault(config.brain?.vault_path);
-  const statePath = path.join(vault, '.daily-state.json');
-  const today = new Date(Date.now()).toISOString().slice(0, 10);
-  let st = {};
-  try { st = JSON.parse(fs.readFileSync(statePath, 'utf8')); } catch { /* primer día */ }
-  if (st.date !== today) st = { date: today, sent: [] };
   const sentSymbols = new Set((st.sent || []).map((x) => x.symbol));
 
   // Ritmo del día: el piso sube de ~1 a `target` conforme avanza la jornada

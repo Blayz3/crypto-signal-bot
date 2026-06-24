@@ -1,12 +1,13 @@
 name: ny-open
 
-# Trade de la apertura de Nueva York a las 8:15 AM (hora de NY), todos los días.
-# Dispara a las 12:15 y 13:15 UTC; un "gate" deja correr SOLO cuando en NY son las 8
-# (así acierta las 8:15 NY tanto en verano EDT como en invierno EST).
+# Análisis de la apertura de NY (refresca la nota del cerebro).
+#
+# NOTA: el TRADE de las 8 AM NY ya NO se dispara aquí — lo ejecuta el autobot
+# (scripts/autobot.js), que corre fiable cada 30 min vía el pinger externo. El
+# cron de GitHub se retrasaba horas y, cuando corría, ya no eran las 8 en NY,
+# así que la compuerta lo saltaba. Este workflow queda solo para refrescar el
+# análisis a mano (botón "Run workflow") cuando quieras.
 on:
-  schedule:
-    - cron: '15 12 * * *' # 12:15 UTC = 8:15 NY (verano / EDT)
-    - cron: '15 13 * * *' # 13:15 UTC = 8:15 NY (invierno / EST)
   workflow_dispatch: {}
 
 permissions:
@@ -25,26 +26,17 @@ jobs:
         with:
           node-version: '20'
 
-      - name: ¿Son las 8 AM en Nueva York?
-        id: gate
-        run: echo "h=$(TZ=America/New_York date +%H)" >> "$GITHUB_OUTPUT"
-
       - name: Instalar dependencias
-        if: steps.gate.outputs.h == '08'
         run: npm install --omit=dev
 
-      - name: NY Open — análisis + trade
-        if: steps.gate.outputs.h == '08'
+      - name: NY Open — refrescar análisis (el TRADE lo hace el autobot)
         env:
           OPENROUTER_API_KEY: ${{ secrets.OPENROUTER_API_KEY }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: |
-          node scripts/ny-open.js BTC/USDT 270 || true
-          node scripts/ny-open-trade.js
+        run: node scripts/ny-open.js BTC/USDT 270 || true
 
       - name: Guardar diario y análisis
-        if: steps.gate.outputs.h == '08'
         run: |
           git config user.name "autobot"
           git config user.email "autobot@users.noreply.github.com"
