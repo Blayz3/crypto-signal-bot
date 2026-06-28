@@ -38,10 +38,20 @@ const ROOT = path.join(__dirname, '..');
     console.log('monitor:', e.message);
   }
 
+  // Horario de trabajo (se calcula ANTES del estado para fijar el "día" en TU zona).
+  const tz = config.work_timezone || 'America/Tegucigalpa';
+  const [hStart, hEnd] = config.work_hours || [5, 21];
+  const nowHour =
+    parseInt(new Intl.DateTimeFormat('en-US', { timeZone: tz, hour: 'numeric', hour12: false }).format(new Date(Date.now())), 10) % 24;
+
   // Estado diario (compartido por el trade de NY y el envío de trades).
+  // CLAVE: el "día" se mide en TU zona horaria, NO en UTC. Antes usaba UTC, cuya
+  // medianoche cae a las 18:00 en Tegucigalpa → el contador se reiniciaba a las 6pm
+  // y, como a esa hora el ritmo ya valía 4, soltaba los 4 de golpe. Con la zona local
+  // el día arranca a tu medianoche y el ritmo reparte los 4 entre las 5am y 9pm.
   const vault = resolveVault(config.brain?.vault_path);
   const statePath = path.join(vault, '.daily-state.json');
-  const today = new Date(Date.now()).toISOString().slice(0, 10);
+  const today = new Intl.DateTimeFormat('en-CA', { timeZone: tz, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(Date.now()));
   let st = {};
   try { st = JSON.parse(fs.readFileSync(statePath, 'utf8')); } catch { /* primer día */ }
   if (st.date !== today) st = { date: today, sent: [] };
@@ -65,12 +75,7 @@ const ROOT = path.join(__dirname, '..');
     }
   }
 
-  // Horario de trabajo: el monitor corre siempre (cierra trades), pero solo se
-  // ESCANEA dentro del horario activo (evita el mercado muerto de madrugada).
-  const tz = config.work_timezone || 'America/Tegucigalpa';
-  const [hStart, hEnd] = config.work_hours || [5, 21];
-  const nowHour =
-    parseInt(new Intl.DateTimeFormat('en-US', { timeZone: tz, hour: 'numeric', hour12: false }).format(new Date(Date.now())), 10) % 24;
+  // El monitor corre siempre (cierra trades); solo se ESCANEA dentro del horario activo.
   if (nowHour < hStart || nowHour >= hEnd) {
     console.log(`Fuera de horario (${nowHour}h en ${tz}; activo ${hStart}-${hEnd}h). Solo monitoreo, sin escaneo.`);
     return;
