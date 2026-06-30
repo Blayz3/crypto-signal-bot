@@ -33,4 +33,18 @@ const config = require('../config.json');
       console.log(`FALLO  ${p.name}:${m}  → ${e.message}`);
     }
   }
+
+  // --- Escaneo real: ¿la IA produce trades o dice "none"? ---
+  console.log('\n=== ESCANEO REAL ===');
+  const { runScan, loadConfig } = require('../src/core/scanner');
+  const res = await runScan(loadConfig(), {});
+  const ideas = res.ideas || [];
+  const grades = {};
+  for (const e of ideas) grades[e.grade] = (grades[e.grade] || 0) + 1;
+  console.log('Candidatas a IA:', res.candidates, '| grados:', JSON.stringify(grades));
+  const withPlan = ideas.filter((e) => e.hasPlan);
+  console.log('Con plan IA (A+/A/B):', withPlan.length, '| C (mecánico):', ideas.length - withPlan.length);
+  withPlan.slice(0, 3).forEach((e) => console.log(`  [${e.grade}] ${e.dir} ${e.symbol} conf ${e.confidence} — ${(e.rationale || '').slice(0, 110)}`));
+  const aiErr = (res.errors || []).filter((e) => e.error && !/marketdata/.test(e.error));
+  console.log('Errores de IA:', aiErr.length, aiErr[0] ? '→ ej: ' + aiErr[0].error.slice(0, 120) : '');
 })().catch((e) => { console.error('fatal:', e.message); process.exit(1); });
