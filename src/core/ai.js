@@ -58,7 +58,20 @@ class AIEngine {
     return chain;
   }
 
-  async _chat(provider, model, messages, { temperature = 0.2, maxTokens = 900, jsonMode = false } = {}) {
+  async _chat(provider, model, messages, opts = {}) {
+    try {
+      return await this._chatOnce(provider, model, messages, opts);
+    } catch (e) {
+      // Algunos modelos no soportan json_object estricto y devuelven 400 "Failed to
+      // generate/validate JSON". Reintenta sin ese modo: el parser extrae el JSON igual.
+      if (opts.jsonMode && e.status === 400 && /JSON/i.test(e.message)) {
+        return this._chatOnce(provider, model, messages, { ...opts, jsonMode: false });
+      }
+      throw e;
+    }
+  }
+
+  async _chatOnce(provider, model, messages, { temperature = 0.2, maxTokens = 900, jsonMode = false } = {}) {
     const body = { model, messages, temperature, max_tokens: maxTokens };
     // Salida JSON estricta donde se soporta (evita que los modelos "piensen en voz alta").
     if (jsonMode) body.response_format = { type: 'json_object' };
