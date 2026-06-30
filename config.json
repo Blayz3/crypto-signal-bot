@@ -86,6 +86,13 @@
     "macos_notification": true,
     "min_confidence": 65
   },
+  "paper": {
+    "margin_per_trade": 200,
+    "starting_balance": 1000,
+    "leverage_low": 20,
+    "leverage_high": 40,
+    "leverage_price_threshold": 20
+  },
   "work_timezone": "America/Tegucigalpa",
   "work_hours": [
     5,

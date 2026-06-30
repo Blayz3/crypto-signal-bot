@@ -120,13 +120,15 @@ class Journal {
   }
 
   /** Cierra una idea (el monitor marca tp/sl/timeout con la acción del precio). */
-  closeIdea(id, status, r) {
+  closeIdea(id, status, r, exit = null) {
     const all = this.readIdeas();
     let changed = false;
     for (const x of all) {
       if (x.id === id && x.status === 'open') {
         x.status = status;
         x.result_r = r;
+        if (exit != null) x.exit = exit;
+        x.closedAt = new Date(Date.now()).toISOString();
         changed = true;
       }
     }

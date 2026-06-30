@@ -36,13 +36,14 @@ function outcome(candles, startIdx, action, entry, stop, target) {
     const lo = candles[i][3];
     const hitStop = long ? lo <= stop : hi >= stop;
     const hitTarget = long ? hi >= target : lo <= target;
-    if (hitStop && hitTarget) return { status: 'loss', r: -1 }; // conservador
-    if (hitStop) return { status: 'loss', r: -1 };
-    if (hitTarget) return { status: 'win', r: r2(Math.abs(target - entry) / risk) };
+    if (hitStop && hitTarget) return { status: 'loss', r: -1, exit: stop }; // conservador
+    if (hitStop) return { status: 'loss', r: -1, exit: stop };
+    if (hitTarget) return { status: 'win', r: r2(Math.abs(target - entry) / risk), exit: target };
     if ((i - startIdx) >= MAX_HOLD_H) {
-      const move = long ? candles[i][4] - entry : entry - candles[i][4];
+      const close = candles[i][4];
+      const move = long ? close - entry : entry - close;
       const r = r2(move / risk);
-      return { status: r >= 0 ? 'breakeven' : 'loss', r };
+      return { status: r >= 0 ? 'breakeven' : 'loss', r, exit: close };
     }
   }
   return null; // sigue abierto
@@ -124,7 +125,7 @@ function outcome(candles, startIdx, action, entry, stop, target) {
     const start = Math.max(0, candles.findIndex((c) => c[0] >= Date.parse(it.date)));
     const res = outcome(candles, start, (it.dir || '').toLowerCase(), it.entry, it.stop, it.target);
     if (!res) continue; // sigue abierta
-    journal.closeIdea(it.id, res.status, res.r);
+    journal.closeIdea(it.id, res.status, res.r, res.exit);
     ideasClosed++;
   }
   if (openIdeas.length) console.log(`Ideas: ${ideasClosed}/${openIdeas.length} cerradas (retroalimentación).`);

@@ -142,6 +142,14 @@ const ROOT = path.join(__dirname, '..');
   }
   fs.writeFileSync(statePath, JSON.stringify(st, null, 2));
   if (!toSend.length) console.log('Nada nuevo que enviar este ciclo.');
+
+  // 4) Actualiza la cuenta de PAPER TRADING (para la app: posiciones, P&L, equity).
+  try {
+    const { stdout } = await execFileP('node', [path.join(__dirname, 'paper-account.js')], { cwd: ROOT, timeout: 120000 });
+    process.stdout.write(stdout);
+  } catch (e) {
+    console.log('paper-account:', e.message);
+  }
 })().catch((e) => {
   console.error('Autobot error fatal:', e.message);
   process.exit(1);
