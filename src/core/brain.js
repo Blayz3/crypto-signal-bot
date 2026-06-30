@@ -81,7 +81,15 @@ class Brain {
     if (!this.loaded) this.load();
     if (!this.notes.length) return '';
 
-    const core = this.notes.filter((n) => n.type === 'riesgo' || n.type === 'principio');
+    // Presupuesto de caracteres: los tiers gratis (Groq/Gemini) rechazan prompts
+    // muy grandes (413). Se prioriza por peso y se corta al llegar al tope.
+    const budget = this.cfg?.max_context_chars ?? 3500;
+    const wr = { high: 3, alta: 3, medium: 2, media: 2, low: 1, baja: 1 };
+    const byWeight = (a, b) => (wr[b.weight] || 1) - (wr[a.weight] || 1);
+
+    const core = this.notes
+      .filter((n) => n.type === 'riesgo' || n.type === 'principio')
+      .sort(byWeight);
     const rest = this.notes.filter((n) => n.type !== 'riesgo' && n.type !== 'principio');
 
     const scored = rest
@@ -92,22 +100,27 @@ class Brain {
 
     const fmt = (n) => `- [${n.title}] ${n.rule}`;
     const lines = [];
-    lines.push('PRINCIPIOS Y RIESGO (aplican siempre):');
-    for (const n of core) lines.push(fmt(n));
-    if (scored.length) {
-      lines.push('');
-      lines.push('CONOCIMIENTO RELEVANTE A ESTE SETUP:');
-      for (const n of scored) lines.push(fmt(n));
+    let used = 0;
+    const add = (line) => {
+      if (used + line.length > budget) return false;
+      lines.push(line);
+      used += line.length + 1;
+      return true;
+    };
+    add('PRINCIPIOS Y RIESGO (aplican siempre):');
+    for (const n of core) if (!add(fmt(n))) break; // los más importantes primero
+    if (scored.length && used < budget) {
+      add('');
+      add('CONOCIMIENTO RELEVANTE A ESTE SETUP:');
+      for (const n of scored) if (!add(fmt(n))) break;
     }
-    const withPb = scored.filter((n) => n.playbook).slice(0, 3);
-    if (withPb.length) {
-      lines.push('');
-      lines.push('PLAYBOOKS DE EJECUCION (siguelos paso a paso; si el candidato no cumple un paso, none):');
-      for (const n of withPb) {
-        lines.push('');
-        lines.push('### ' + n.title);
-        lines.push(n.playbook);
-      }
+    // Un solo playbook (el más relevante) si todavía cabe — son largos.
+    const pb = scored.find((n) => n.playbook);
+    if (pb && used < budget * 0.85) {
+      add('');
+      add('PLAYBOOK (síguelo; si el candidato no cumple un paso, none):');
+      add('### ' + pb.title);
+      add(String(pb.playbook).slice(0, Math.max(0, budget - used)));
     }
     return lines.join('\n');
   }
