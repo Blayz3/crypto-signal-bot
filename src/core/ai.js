@@ -78,8 +78,10 @@ class AIEngine {
       err.status = res.status;
       // Saturación (429), modelo retirado/inexistente (404), key del proveedor mala
       // (401/403) o caída (5xx) → se salta al siguiente modelo/proveedor de la cadena.
-      // Solo 400 (payload malo) NO es reintentable (fallaría en todos por igual).
-      err.retriable = [429, 404, 401, 403].includes(res.status) || res.status >= 500;
+      // 400 normalmente es payload malo (no reintentable), PERO si es "modelo
+      // retirado/decommissioned/no existe" sí se salta al siguiente.
+      const modelGone = res.status === 400 && /decommission|not found|does not exist|been removed|no longer/i.test(txt);
+      err.retriable = [429, 404, 401, 403].includes(res.status) || res.status >= 500 || modelGone;
       throw err;
     }
     const json = await res.json();
