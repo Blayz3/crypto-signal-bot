@@ -1,28 +1,71 @@
 'use strict';
 
 /**
- * Capa de IA sobre OpenRouter (compatible con la API de OpenAI).
- * - decisionModel: DeepSeek razona sobre indicadores -> decisión de trade.
- * - visionModel: Qwen-VL "mira" un screenshot del gráfico (fase 2, opcional).
+ * Capa de IA multi-proveedor (todos con API compatible con OpenAI).
+ *
+ * Cadena de proveedores GRATIS (config.ai.providers), en orden, saltando al
+ * siguiente cuando uno se satura/cae (429/404/5xx) o le falta la key:
+ *   1. Google Gemini  — ~1500 req/día gratis, sin tarjeta (recomendado).
+ *   2. Groq           — Llama-3.3-70B / DeepSeek-R1, rapidísimo, límite generoso.
+ *   3. OpenRouter     — modelos :free (solo 50 req/día → último recurso).
+ *
+ * Cada proveedor lee su key de process.env (api_key_env). Los que no tienen key
+ * se omiten. Si una decisión agota toda la cadena, el scanner usa el plan
+ * mecánico (grado C). Así el bot nunca se queda sin responder.
  */
 class AIEngine {
   constructor(config, apiKey) {
-    if (!apiKey) {
-      throw new Error('Falta OPENROUTER_API_KEY (ponla en el archivo .env).');
+    this.cfg = config.ai || {};
+
+    let providers = this.cfg.providers;
+    if (!providers || !providers.length) {
+      // Compatibilidad con el esquema viejo (un solo OpenRouter).
+      providers = [
+        {
+          name: 'openrouter',
+          base_url: this.cfg.base_url || 'https://openrouter.ai/api/v1',
+          api_key_env: 'OPENROUTER_API_KEY',
+          decision_models: [this.cfg.decision_model, ...(this.cfg.decision_model_fallbacks || [])].filter(Boolean),
+          vision_models: [this.cfg.vision_model, ...(this.cfg.vision_model_fallbacks || [])].filter(Boolean),
+        },
+      ];
     }
-    this.cfg = config.ai;
-    this.apiKey = apiKey;
+
+    // Resuelve la key de cada proveedor; conserva solo los que tienen key.
+    this.providers = providers
+      .map((p) => ({
+        ...p,
+        key: process.env[p.api_key_env] || (p.api_key_env === 'OPENROUTER_API_KEY' ? apiKey : '') || '',
+      }))
+      .filter((p) => p.key);
+
+    if (!this.providers.length) {
+      throw new Error(
+        'Falta una API key de IA. Pon GEMINI_API_KEY (gratis, recomendada) — o GROQ_API_KEY / OPENROUTER_API_KEY — en .env / secrets.'
+      );
+    }
   }
 
-  async _chat(model, messages, { temperature = 0.2, maxTokens = 900, jsonMode = false } = {}) {
+  _decisionChain() {
+    const chain = [];
+    for (const p of this.providers) for (const m of p.decision_models || []) chain.push({ provider: p, model: m });
+    return chain;
+  }
+
+  _visionChain() {
+    const chain = [];
+    for (const p of this.providers) for (const m of p.vision_models || []) chain.push({ provider: p, model: m });
+    return chain;
+  }
+
+  async _chat(provider, model, messages, { temperature = 0.2, maxTokens = 900, jsonMode = false } = {}) {
     const body = { model, messages, temperature, max_tokens: maxTokens };
-    // Pide salida JSON estricta a los modelos que lo soportan (evita que los
-    // modelos de razonamiento respondan "pensando en voz alta").
+    // Salida JSON estricta donde se soporta (evita que los modelos "piensen en voz alta").
     if (jsonMode) body.response_format = { type: 'json_object' };
-    const res = await fetch(`${this.cfg.base_url}/chat/completions`, {
+    const res = await fetch(`${provider.base_url}/chat/completions`, {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${this.apiKey}`,
+        Authorization: `Bearer ${provider.key}`,
         'Content-Type': 'application/json',
         'HTTP-Referer': 'https://localhost/crypto-signal-bot',
         'X-Title': 'Crypto Signal Bot',
@@ -30,12 +73,13 @@ class AIEngine {
       body: JSON.stringify(body),
     });
     if (!res.ok) {
-      const body = await res.text();
-      // 404 "free version gone", 429 rate-limit y 5xx son reintentables con otro modelo.
-      const freeGone = res.status === 404 && /unavailable for free|free version/i.test(body);
-      const err = new Error(`OpenRouter ${res.status} (${model}): ${body.slice(0, 200)}`);
+      const txt = await res.text();
+      const err = new Error(`${provider.name} ${res.status} (${model}): ${txt.slice(0, 200)}`);
       err.status = res.status;
-      err.retriable = freeGone || res.status === 429 || res.status >= 500;
+      // Saturación (429), modelo retirado/inexistente (404), key del proveedor mala
+      // (401/403) o caída (5xx) → se salta al siguiente modelo/proveedor de la cadena.
+      // Solo 400 (payload malo) NO es reintentable (fallaría en todos por igual).
+      err.retriable = [429, 404, 401, 403].includes(res.status) || res.status >= 500;
       throw err;
     }
     const json = await res.json();
@@ -43,33 +87,29 @@ class AIEngine {
   }
 
   /**
-   * Intenta [primary, ...fallbacks] en orden; salta al siguiente cuando el
-   * error es reintentable (modelo gratis saturado/retirado). Así el bot
-   * sobrevive a la rotación constante de modelos :free.
-   * Devuelve { content, modelUsed }.
+   * Recorre la cadena [{provider, model}, ...]; salta al siguiente cuando el
+   * error es reintentable. Devuelve { content, modelUsed }.
    */
-  async _chatFallback(models, messages, opts = {}) {
-    const chain = models.filter(Boolean);
+  async _chatFallback(chain, messages, opts = {}) {
     let lastErr;
-    for (const model of chain) {
+    for (const { provider, model } of chain) {
       try {
-        const content = await this._chat(model, messages, opts);
-        return { content, modelUsed: model };
+        const content = await this._chat(provider, model, messages, opts);
+        return { content, modelUsed: `${provider.name}:${model}` };
       } catch (e) {
         lastErr = e;
-        if (!e.retriable) throw e; // error real (key mala, payload) -> no insistir
-        // si es reintentable, probamos el siguiente modelo de la cadena
+        if (!e.retriable) throw e; // error real (payload) → no insistir
       }
     }
     throw new Error(
-      `Todos los modelos gratis fallaron (${chain.length} probados). ` +
-        `Suelen estar saturados; reintenta en un minuto o carga crédito en OpenRouter. ` +
+      `Todos los proveedores/modelos de IA fallaron (${chain.length} probados). ` +
+        `Suelen estar saturados o sin cuota; reintenta o revisa las keys. ` +
         `Último error: ${lastErr ? lastErr.message : 'desconocido'}`
     );
   }
 
   /**
-   * Pide a DeepSeek una decisión de trade estructurada.
+   * Pide una decisión de trade estructurada.
    * `candidate` trae symbol + indicadores por timeframe + bias local.
    * Devuelve objeto: { action, confidence, entry, stop, target, timeframe, style, rationale }
    */
@@ -146,9 +186,8 @@ ${visionBlock}${marketBlock}${confluenceBlock}${brainBlock}
 Devuelve la decisión en este formato JSON exacto:
 ${schema}`;
 
-    const models = [this.cfg.decision_model, ...(this.cfg.decision_model_fallbacks || [])];
     const { content, modelUsed } = await this._chatFallback(
-      models,
+      this._decisionChain(),
       [
         { role: 'system', content: sys },
         { role: 'user', content: user },
@@ -162,14 +201,15 @@ ${schema}`;
   }
 
   /**
-   * Fase 2 (opcional): describe un screenshot del gráfico con Qwen-VL.
+   * Fase 2 (opcional): describe un screenshot del gráfico con un modelo de visión.
    * imageDataUrl = "data:image/png;base64,...."
    */
   async describeChart(symbol, imageDataUrl, timeframe = '') {
     if (!this.cfg.use_vision) return null;
-    const models = [this.cfg.vision_model, ...(this.cfg.vision_model_fallbacks || [])];
+    const chain = this._visionChain();
+    if (!chain.length) return null;
     const { content } = await this._chatFallback(
-      models,
+      chain,
       [
         {
           role: 'user',
@@ -191,9 +231,8 @@ ${schema}`;
 
   /** Análisis libre (no-JSON), p.ej. autopsia de un trade perdido. Devuelve texto. */
   async analyze(system, user, maxTokens = 400) {
-    const models = [this.cfg.decision_model, ...(this.cfg.decision_model_fallbacks || [])];
     const { content } = await this._chatFallback(
-      models,
+      this._decisionChain(),
       [
         { role: 'system', content: system },
         { role: 'user', content: user },
