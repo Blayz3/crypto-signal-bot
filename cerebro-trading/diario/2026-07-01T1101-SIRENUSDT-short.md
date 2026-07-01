@@ -4,7 +4,7 @@ type: diario
 symbol: SIREN/USDT
 action: short
 date: 2026-07-01T11:01:02.189Z
-status: open
+status: loss
 orderType: limit
 setup: EMAs alineadas bajistas con MACD cruce bajista
 entry: 0.1081
@@ -12,7 +12,7 @@ stop: 0.115
 target: 0.095
 rr: 1.9
 confidence: 55
-result_r: 
+result_r: -1
 ---
 
 # SIREN/USDT SHORT — 2026-07-01

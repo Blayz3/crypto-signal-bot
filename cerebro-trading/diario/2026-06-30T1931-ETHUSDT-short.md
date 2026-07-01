@@ -4,7 +4,7 @@ type: diario
 symbol: ETH/USDT
 action: short
 date: 2026-06-30T19:31:05.823Z
-status: open
+status: loss
 orderType: limit
 setup: Retest de soporte + extremo de miedo (contrarian)
 entry: 1578.29
@@ -12,7 +12,7 @@ stop: 1594.29
 target: 1552.29
 rr: 1.63
 confidence: 55
-result_r: 
+result_r: -1
 ---
 
 # ETH/USDT SHORT — 2026-06-30

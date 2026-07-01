@@ -4,7 +4,7 @@ type: diario
 symbol: ETH/USDT
 action: short
 date: 2026-07-01T12:30:53.606Z
-status: open
+status: loss
 orderType: market
 setup: EMA200 break
 entry: 1568.17
@@ -12,7 +12,7 @@ stop: 1576
 target: 1534.18
 rr: 4.34
 confidence: 78
-result_r: 
+result_r: -1
 ---
 
 # ETH/USDT SHORT — 2026-07-01

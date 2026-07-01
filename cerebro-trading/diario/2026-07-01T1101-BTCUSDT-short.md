@@ -4,7 +4,7 @@ type: diario
 symbol: BTC/USDT
 action: short
 date: 2026-07-01T11:01:02.701Z
-status: open
+status: loss
 orderType: limit
 setup: Retest de soporte + extremo de miedo (contrarian)
 entry: 58613.8
@@ -12,7 +12,7 @@ stop: 59969.21
 target: 55313.8
 rr: 2.43
 confidence: 80
-result_r: 
+result_r: -1
 ---
 
 # BTC/USDT SHORT — 2026-07-01

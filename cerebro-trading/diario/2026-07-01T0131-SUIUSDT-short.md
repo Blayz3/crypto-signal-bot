@@ -4,7 +4,7 @@ type: diario
 symbol: SUI/USDT
 action: short
 date: 2026-07-01T01:31:16.725Z
-status: open
+status: loss
 orderType: limit
 setup: EMAs bajistas + MACD cruce + ADX fuerte + presión de venta
 entry: 0.689
@@ -12,7 +12,7 @@ stop: 0.702
 target: 0.65
 rr: 3
 confidence: 75
-result_r: 
+result_r: -1
 ---
 
 # SUI/USDT SHORT — 2026-07-01

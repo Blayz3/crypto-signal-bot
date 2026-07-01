@@ -4,7 +4,7 @@ type: diario
 symbol: XRP/USDT
 action: short
 date: 2026-07-01T12:30:53.206Z
-status: open
+status: loss
 orderType: limit
 setup: Retest de soporte + extremo de miedo (contrarian)
 entry: 1.03599
@@ -12,7 +12,7 @@ stop: 1.055
 target: 0.95
 rr: 4.52
 confidence: 70
-result_r: 
+result_r: -1
 ---
 
 # XRP/USDT SHORT — 2026-07-01

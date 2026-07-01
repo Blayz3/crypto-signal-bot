@@ -4,7 +4,7 @@ type: diario
 symbol: BTC/USDT
 action: short
 date: 2026-06-30T15:30:59.982Z
-status: open
+status: loss
 orderType: market
 setup: Ruptura de soporte bajo VAL
 entry: 58385.9
@@ -12,7 +12,7 @@ stop: 60048
 target: 55061.9
 rr: 2
 confidence: 78
-result_r: 
+result_r: -1
 ---
 
 # BTC/USDT SHORT — 2026-06-30

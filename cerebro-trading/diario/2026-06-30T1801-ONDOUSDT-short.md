@@ -4,7 +4,7 @@ type: diario
 symbol: ONDO/USDT
 action: short
 date: 2026-06-30T18:01:04.331Z
-status: open
+status: loss
 orderType: market
 setup: EMA200 break
 entry: 0.3085
@@ -12,7 +12,7 @@ stop: 0.312
 target: 0.298
 rr: 3
 confidence: 78
-result_r: 
+result_r: -1
 ---
 
 # ONDO/USDT SHORT — 2026-06-30
