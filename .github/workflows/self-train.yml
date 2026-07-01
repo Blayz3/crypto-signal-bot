@@ -1,10 +1,10 @@
 name: self-train
 
-# Autoentrenamiento mensual: el bot aprende de sus resultados y se vuelve más selectivo.
-# Corre el día 1 de cada mes (después del resumen).
+# Autoentrenamiento SEMANAL: el bot aprende de los últimos 7 días, perfecciona sus
+# setups y ajusta la exigencia. Corre cada lunes (mejora rápido).
 on:
   schedule:
-    - cron: '30 13 1 * *' # día 1, 13:30 UTC
+    - cron: '30 13 * * 1' # cada lunes, 13:30 UTC
   workflow_dispatch: {}
 
 permissions:

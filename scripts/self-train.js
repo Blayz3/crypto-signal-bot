@@ -31,17 +31,28 @@ function loadConfig() {
   return JSON.parse(fs.readFileSync(path.join(ROOT, 'config.json'), 'utf8'));
 }
 
+function isoWeekKey(ms) {
+  const t = new Date(ms);
+  const d = new Date(Date.UTC(t.getUTCFullYear(), t.getUTCMonth(), t.getUTCDate()));
+  const dayNum = (d.getUTCDay() + 6) % 7;
+  d.setUTCDate(d.getUTCDate() - dayNum + 3);
+  const firstThu = new Date(Date.UTC(d.getUTCFullYear(), 0, 4));
+  const week = 1 + Math.round(((d - firstThu) / 86400000 - 3 + ((firstThu.getUTCDay() + 6) % 7)) / 7);
+  return `${d.getUTCFullYear()}-W${String(week).padStart(2, '0')}`;
+}
+
 (async () => {
   const config = loadConfig();
-  const goal = config.brain?.monthly_r_goal || 130;
+  const monthlyGoal = config.brain?.monthly_r_goal || 130;
+  const weeklyGoal = config.brain?.weekly_r_goal || Math.round(monthlyGoal / 4);
   const vault = resolveVault(config.brain?.vault_path);
   const diaryDir = path.join(vault, 'diario');
 
-  let month = process.argv[2];
-  if (!month) {
-    const d = new Date(Date.now());
-    month = new Date(Date.UTC(d.getUTCFullYear(), d.getUTCMonth() - 1, 1)).toISOString().slice(0, 7);
-  }
+  // Ventana RODANTE de 7 días: el bot aprende y se AJUSTA CADA SEMANA (mejora rápido).
+  const now = Date.now();
+  const cutoff = now - 7 * 86400000;
+  const weekKey = isoWeekKey(now);
+  const periodLabel = `${new Date(cutoff).toISOString().slice(0, 10)} → ${new Date(now).toISOString().slice(0, 10)}`;
 
   // 1) Refresca el ranking mecánico de setups con datos frescos.
   console.log('Refrescando ranking de setups (datos frescos)...');
@@ -55,7 +66,7 @@ function loadConfig() {
   const journal = new Journal(config);
   const closed = journal
     .readEntries()
-    .filter((e) => ['win', 'loss', 'breakeven'].includes(e.status) && (e.date || '').slice(0, 7) === month && !Number.isNaN(e.result_r));
+    .filter((e) => ['win', 'loss', 'breakeven'].includes(e.status) && e.date && Date.parse(e.date) >= cutoff && !Number.isNaN(e.result_r));
 
   const bySetup = {};
   for (const e of closed) {
@@ -68,30 +79,31 @@ function loadConfig() {
   }));
   const winners = perf.filter((p) => p.n >= 3 && p.total > 0).sort((a, b) => b.total - a.total);
   const losers = perf.filter((p) => p.n >= 3 && p.total <= 0).sort((a, b) => a.total - b.total);
-  const monthR = r1(closed.reduce((a, e) => a + e.result_r, 0));
+  const weekR = r1(closed.reduce((a, e) => a + e.result_r, 0));
 
-  // 3) Lecciones de las pérdidas del mes (de las autopsias).
+  // 3) Lecciones de las pérdidas de la semana (de las autopsias).
   const lessons = [];
   try {
     for (const f of fs.readdirSync(diaryDir)) {
       if (!f.endsWith('.md')) continue;
       const raw = fs.readFileSync(path.join(diaryDir, f), 'utf8');
       if (!/status:\s*loss/.test(raw)) continue;
-      if (!new RegExp(`date:\\s*${month}`).test(raw)) continue;
+      const dm = raw.match(/^date:\s*(.+)$/m);
+      if (!dm || Date.parse(dm[1].trim()) < cutoff) continue;
       const m = raw.match(/\*\*Lección:\*\*\s*(.+)/);
       if (m && m[1].trim().length > 15) lessons.push(m[1].trim());
     }
   } catch { /* sin diario */ }
   const topLessons = [...new Set(lessons)].slice(0, 6);
 
-  // 4) Nivel de exigencia (sube si el mes no fue rentable → más selectivo).
+  // 4) Nivel de exigencia (sube si la semana no fue rentable → más selectivo).
   const statePath = path.join(vault, '.train-state.json');
-  let state = { level: 1, lastMonth: null };
-  try { state = JSON.parse(fs.readFileSync(statePath, 'utf8')); } catch { /* primer mes */ }
-  if (state.lastMonth !== month) {
-    if (monthR < goal * 0.4) state.level = Math.min(5, state.level + 1); // poco rentable → más estricto
-    else if (monthR >= goal) state.level = Math.max(1, state.level - 1); // cumplió → puede relajar
-    state.lastMonth = month;
+  let state = { level: 1, lastWeek: null };
+  try { state = JSON.parse(fs.readFileSync(statePath, 'utf8')); } catch { /* primera semana */ }
+  if (state.lastWeek !== weekKey) {
+    if (weekR < weeklyGoal * 0.4) state.level = Math.min(5, state.level + 1); // poco rentable → más estricto
+    else if (weekR >= weeklyGoal) state.level = Math.max(1, state.level - 1); // cumplió → puede relajar
+    state.lastWeek = weekKey;
   }
   const minConfluence = 3 + Math.min(state.level - 1, 2); // 3..5 factores
   fs.writeFileSync(statePath, JSON.stringify(state, null, 2));
@@ -110,20 +122,21 @@ weight: high
 
 # Autoentrenamiento (aprendido de mis resultados)
 
-Generado el ${date} con los resultados REALES del mes ${month} (${closed.length} trades, ${monthR >= 0 ? '+' : ''}${monthR}R).
-El bot se entrena solo: prioriza lo que gana, pone en cuarentena lo que pierde, y sube la
-exigencia si no fue rentable. **Nivel de exigencia actual: ${state.level}/5.**
+Generado el ${date} con los resultados REALES de la SEMANA (${periodLabel}, ${closed.length} trades, ${weekR >= 0 ? '+' : ''}${weekR}R).
+El bot se entrena solo CADA SEMANA: NO abandona los setups, los PERFECCIONA — prioriza lo que
+gana, exige la condición que faltó en lo que pierde, y sube la exigencia si no fue rentable.
+**Nivel de exigencia actual: ${state.level}/5.**
 
 ## ✅ Setups a PRIORIZAR (ganaron con datos reales)
 ${winners.length ? winners.map((p) => `- ${p.s}: ${p.n} trades, ${p.total >= 0 ? '+' : ''}${r1(p.total)}R, WR ${Math.round(p.wr * 100)}% → más confianza`).join('\n') : '- (aún sin setups ganadores con muestra suficiente — sigue recolectando)'}
 
-## ⛔ Setups en CUARENTENA (perdieron — evítalos o exige confluencia extra)
-${losers.length ? losers.map((p) => `- ${p.s}: ${p.n} trades, ${r1(p.total)}R → solo si confluencia ≥${minConfluence + 1}, si no NONE`).join('\n') : '- (ninguno con muestra suficiente este mes)'}
+## 🔧 Setups a AFINAR (perdieron — NO los abandones: exige la confluencia que faltó)
+${losers.length ? losers.map((p) => `- ${p.s}: ${p.n} trades, ${r1(p.total)}R → tómalo solo con confluencia ≥${minConfluence + 1} (perfecciona la entrada), si no NONE`).join('\n') : '- (ninguno con muestra suficiente esta semana)'}
 
-## 📝 Lecciones de las pérdidas del mes
-${topLessons.length ? topLessons.map((l) => `- ${l}`).join('\n') : '- (sin lecciones registradas este mes)'}
+## 📝 Lecciones de las pérdidas de la semana
+${topLessons.length ? topLessons.map((l) => `- ${l}`).join('\n') : '- (sin lecciones registradas esta semana)'}
 
-**Regla para el bot:** Aplica lo aprendido de MIS resultados: prioriza los setups ganadores de arriba con más confianza; los de cuarentena solo con confluencia ≥${minConfluence + 1} o NONE. Exige confluencia mínima de ${minConfluence} factores en CUALQUIER trade (nivel de exigencia ${state.level}/5). El objetivo es subir la selectividad mes a mes hasta quedarme solo con trades buenos: ante la duda, NONE.
+**Regla para el bot:** Aplica lo aprendido de MIS resultados: prioriza los setups ganadores con más confianza; los que perdieron NO se abandonan — exígeles confluencia ≥${minConfluence + 1} y la condición que faltó según las lecciones. Confluencia mínima de ${minConfluence} factores en CUALQUIER trade (nivel de exigencia ${state.level}/5). Objetivo: PERFECCIONAR los setups semana a semana para perder menos de lo evitable; ante la duda, NONE.
 
 Relacionado: [[configuracion-optima]], [[setups-rendimiento]], [[lecciones-aprendidas]], [[confluencia]], [[meta-mensual]]
 `;
@@ -134,11 +147,11 @@ Relacionado: [[configuracion-optima]], [[setups-rendimiento]], [[lecciones-apren
 
   // 6) Telegram.
   const msg =
-    `🧠 AUTOENTRENAMIENTO ${month}\n` +
-    `Resultado: ${monthR >= 0 ? '+' : ''}${monthR}R · Nivel de exigencia: ${state.level}/5 (confluencia mín ${minConfluence})\n` +
+    `🧠 AUTOENTRENAMIENTO SEMANAL (${weekKey})\n` +
+    `Resultado 7d: ${weekR >= 0 ? '+' : ''}${weekR}R (meta ${weeklyGoal}R) · Exigencia: ${state.level}/5 (confluencia mín ${minConfluence})\n` +
     `✅ Prioriza: ${winners.map((w) => w.s).slice(0, 3).join(', ') || '—'}\n` +
-    `⛔ Cuarentena: ${losers.map((l) => l.s).slice(0, 3).join(', ') || '—'}\n` +
-    `El bot está más selectivo este mes.`;
+    `🔧 A afinar: ${losers.map((l) => l.s).slice(0, 3).join(', ') || '—'}\n` +
+    `El bot perfeccionó sus setups esta semana.`;
   await new Telegram().send(msg);
 })().catch((e) => {
   console.error('Error:', e.message);
