@@ -10,19 +10,20 @@ weight: high
 
 # Autoentrenamiento (aprendido de mis resultados)
 
-Generado el 2026-06-23 con los resultados REALES del mes 2026-05 (0 trades, +0R).
-El bot se entrena solo: prioriza lo que gana, pone en cuarentena lo que pierde, y sube la
-exigencia si no fue rentable. **Nivel de exigencia actual: 2/5.**
+Generado el 2026-07-01 con los resultados REALES de la SEMANA (2026-06-24 → 2026-07-01, 18 trades, -6.9R).
+El bot se entrena solo CADA SEMANA: NO abandona los setups, los PERFECCIONA — prioriza lo que
+gana, exige la condición que faltó en lo que pierde, y sube la exigencia si no fue rentable.
+**Nivel de exigencia actual: 3/5.**
 
 ## ✅ Setups a PRIORIZAR (ganaron con datos reales)
 - (aún sin setups ganadores con muestra suficiente — sigue recolectando)
 
-## ⛔ Setups en CUARENTENA (perdieron — evítalos o exige confluencia extra)
-- (ninguno con muestra suficiente este mes)
+## 🔧 Setups a AFINAR (perdieron — NO los abandones: exige la confluencia que faltó)
+- Retest de soporte + extremo de miedo (contrarian): 9 trades, -9R → tómalo solo con confluencia ≥6 (perfecciona la entrada), si no NONE
 
-## 📝 Lecciones de las pérdidas del mes
-- (sin lecciones registradas este mes)
+## 📝 Lecciones de las pérdidas de la semana
+- (sin lecciones registradas esta semana)
 
-**Regla para el bot:** Aplica lo aprendido de MIS resultados: prioriza los setups ganadores de arriba con más confianza; los de cuarentena solo con confluencia ≥5 o NONE. Exige confluencia mínima de 4 factores en CUALQUIER trade (nivel de exigencia 2/5). El objetivo es subir la selectividad mes a mes hasta quedarme solo con trades buenos: ante la duda, NONE.
+**Regla para el bot:** Aplica lo aprendido de MIS resultados: prioriza los setups ganadores con más confianza; los que perdieron NO se abandonan — exígeles confluencia ≥6 y la condición que faltó según las lecciones. Confluencia mínima de 5 factores en CUALQUIER trade (nivel de exigencia 3/5). Objetivo: PERFECCIONAR los setups semana a semana para perder menos de lo evitable; ante la duda, NONE.
 
 Relacionado: [[configuracion-optima]], [[setups-rendimiento]], [[lecciones-aprendidas]], [[confluencia]], [[meta-mensual]]
