@@ -30,6 +30,18 @@ const ROOT = path.join(__dirname, '..');
   const stamp = new Date(Date.now()).toISOString().slice(0, 16).replace('T', ' ');
   console.log(`\n=== AUTOBOT ${stamp} ===`);
 
+  // Actualiza la cuenta de PAPER TRADING (posiciones/P&L/equity para la app).
+  // Se llama en TODOS los puntos de salida para que la cuenta siempre refleje los
+  // cierres del monitor, aunque la operativa esté detenida o sea fuera de horario.
+  const updatePaper = async () => {
+    try {
+      const { stdout } = await execFileP('node', [path.join(__dirname, 'paper-account.js')], { cwd: ROOT, timeout: 120000 });
+      process.stdout.write(stdout);
+    } catch (e) {
+      console.log('paper-account:', e.message);
+    }
+  };
+
   // 1) Monitorear trades abiertos (cierra + aprende).
   try {
     const { stdout } = await execFileP('node', [path.join(__dirname, 'monitor.js')], { cwd: ROOT, timeout: 180000 });
@@ -78,6 +90,7 @@ const ROOT = path.join(__dirname, '..');
   // El monitor corre siempre (cierra trades); solo se ESCANEA dentro del horario activo.
   if (nowHour < hStart || nowHour >= hEnd) {
     console.log(`Fuera de horario (${nowHour}h en ${tz}; activo ${hStart}-${hEnd}h). Solo monitoreo, sin escaneo.`);
+    await updatePaper();
     return;
   }
 
@@ -93,6 +106,7 @@ const ROOT = path.join(__dirname, '..');
   if (res.halted) {
     console.log('Operativa detenida:', res.halted);
     await tg.send(`⛔ Operativa detenida: ${res.halted}`);
+    await updatePaper();
     return;
   }
 
@@ -144,12 +158,7 @@ const ROOT = path.join(__dirname, '..');
   if (!toSend.length) console.log('Nada nuevo que enviar este ciclo.');
 
   // 4) Actualiza la cuenta de PAPER TRADING (para la app: posiciones, P&L, equity).
-  try {
-    const { stdout } = await execFileP('node', [path.join(__dirname, 'paper-account.js')], { cwd: ROOT, timeout: 120000 });
-    process.stdout.write(stdout);
-  } catch (e) {
-    console.log('paper-account:', e.message);
-  }
+  await updatePaper();
 })().catch((e) => {
   console.error('Autobot error fatal:', e.message);
   process.exit(1);
