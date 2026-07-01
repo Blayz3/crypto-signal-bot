@@ -17,7 +17,7 @@ require('dotenv').config({ path: path.join(__dirname, '../.env') });
 const ccxt = require('ccxt');
 const { Journal } = require('../src/core/journal');
 const { Telegram } = require('../src/core/telegram');
-const { parseFrontmatter, expandHome } = require('../src/core/brain');
+const { parseFrontmatter, resolveVault } = require('../src/core/brain');
 
 const execFileP = promisify(execFile);
 const r2 = (x) => (x == null || Number.isNaN(x) ? null : Math.round(x * 100) / 100);
@@ -53,7 +53,7 @@ function outcome(candles, startIdx, action, entry, stop, target) {
   const journal = new Journal(config);
   const tg = new Telegram();
   const ex = require("../src/core/data-exchange").spotClient();
-  const dir = path.join(expandHome(config.brain.vault_path), 'diario');
+  const dir = path.join(resolveVault(config.brain.vault_path), 'diario');
 
   const open = journal.readEntries().filter((e) => e.status === 'open');
   // OJO: NO salir aquí si el diario está vacío — abajo hay que cerrar también las
