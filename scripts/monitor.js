@@ -75,7 +75,8 @@ function outcome(candles, startIdx, action, entry, stop, target) {
       continue;
     }
     const entryMs = Date.parse(e.date);
-    const start = Math.max(0, candles.findIndex((c) => c[0] >= entryMs));
+    const start = candles.findIndex((c) => c[0] >= entryMs);
+    if (start === -1) continue; // aún no hay velas posteriores a la entrada → sigue abierto
     const res = outcome(candles, start, (e.action || '').toLowerCase(), e.entry, e.stop, e.target);
     if (!res) continue; // sigue abierto
 
@@ -122,7 +123,8 @@ function outcome(candles, startIdx, action, entry, stop, target) {
     } catch {
       continue;
     }
-    const start = Math.max(0, candles.findIndex((c) => c[0] >= Date.parse(it.date)));
+    const start = candles.findIndex((c) => c[0] >= Date.parse(it.date));
+    if (start === -1) continue; // aún sin velas posteriores a la entrada → sigue abierta
     const res = outcome(candles, start, (it.dir || '').toLowerCase(), it.entry, it.stop, it.target);
     if (!res) continue; // sigue abierta
     journal.closeIdea(it.id, res.status, res.r, res.exit);
