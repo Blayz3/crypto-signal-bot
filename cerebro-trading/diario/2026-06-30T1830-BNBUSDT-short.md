@@ -4,7 +4,7 @@ type: diario
 symbol: BNB/USDT
 action: short
 date: 2026-06-30T18:30:57.145Z
-status: open
+status: loss
 orderType: limit
 setup: Retest de soporte + extremo de miedo (contrarian)
 entry: 546.34
@@ -12,7 +12,7 @@ stop: 554.02
 target: 522.7
 rr: 3.08
 confidence: 70
-result_r: 
+result_r: -1
 ---
 
 # BNB/USDT SHORT — 2026-06-30
