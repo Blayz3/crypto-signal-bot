@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T00:31:23.520Z",
+  "updated": "2026-07-01T01:00:56.762Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 1000,
-  "equity": 1103.23,
+  "equity": 1107.85,
   "realizedPnl": 0,
-  "unrealizedPnl": 103.23,
+  "unrealizedPnl": 107.85,
   "stats": {
-    "openCount": 3,
+    "openCount": 5,
     "closedCount": 0,
     "wins": 0,
     "losses": 0,
@@ -32,9 +32,9 @@
       "notional": 8000,
       "qty": 0.14,
       "openedAt": "2026-07-01T00:31:21.412Z",
-      "markPrice": 58517.4,
-      "unrealizedPnl": -12.14,
-      "unrealizedPct": -6.07
+      "markPrice": 58559.8,
+      "unrealizedPnl": -17.95,
+      "unrealizedPct": -8.97
     },
     {
       "id": "2026-07-01T00:31-ADAUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 4000,
       "qty": 28571.43,
       "openedAt": "2026-07-01T00:31:21.858Z",
-      "markPrice": 0.1444,
-      "unrealizedPnl": 125.71,
-      "unrealizedPct": 62.86
+      "markPrice": 0.1445,
+      "unrealizedPnl": 128.57,
+      "unrealizedPct": 64.29
     },
     {
       "id": "2026-07-01T00:31-PEPEUSDT-short",
@@ -66,15 +66,49 @@
       "notional": 4000,
       "qty": 1724137931.03,
       "openedAt": "2026-07-01T00:31:22.094Z",
-      "markPrice": 0.000002326,
-      "unrealizedPnl": -10.34,
-      "unrealizedPct": -5.17
+      "markPrice": 0.000002325,
+      "unrealizedPnl": -8.62,
+      "unrealizedPct": -4.31
+    },
+    {
+      "id": "2026-07-01T01:00-STARUSDT-long",
+      "symbol": "STAR/USDT",
+      "dir": "long",
+      "grade": "A+",
+      "entry": 0.128,
+      "stop": 0.118,
+      "target": 0.148,
+      "leverage": 20,
+      "margin": 200,
+      "notional": 4000,
+      "qty": 31250,
+      "openedAt": "2026-07-01T01:00:54.523Z",
+      "markPrice": 0.1282,
+      "unrealizedPnl": 6.25,
+      "unrealizedPct": 3.13
+    },
+    {
+      "id": "2026-07-01T01:00-TAOUSDT-short",
+      "symbol": "TAO/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 201.61,
+      "stop": 203.28,
+      "target": 198.27,
+      "leverage": 40,
+      "margin": 200,
+      "notional": 8000,
+      "qty": 39.68,
+      "openedAt": "2026-07-01T01:00:54.922Z",
+      "markPrice": 201.62,
+      "unrealizedPnl": -0.4,
+      "unrealizedPct": -0.2
     }
   ],
   "closed": [],
   "equityCurve": [
     {
-      "t": "2026-07-01T00:31:23.520Z",
+      "t": "2026-07-01T01:00:56.762Z",
       "balance": 1000
     }
   ]
