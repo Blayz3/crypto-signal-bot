@@ -13,7 +13,7 @@ const fs = require('fs');
 require('dotenv').config({ path: path.join(__dirname, '../.env') });
 const ccxt = require('ccxt');
 const { AIEngine } = require('../src/core/ai');
-const { Brain, parseFrontmatter, expandHome } = require('../src/core/brain');
+const { Brain, parseFrontmatter, resolveVault } = require("../src/core/brain");
 
 function loadConfig() {
   return JSON.parse(fs.readFileSync(path.join(__dirname, '../config.json'), 'utf8'));
@@ -24,7 +24,7 @@ const r2 = (x) => (x == null || Number.isNaN(x) ? null : Math.round(x * 100) / 1
   const config = loadConfig();
   const arg = process.argv[2];
   if (!arg) throw new Error('Falta el archivo del diario.');
-  const dir = path.join(expandHome(config.brain.vault_path), 'diario');
+  const dir = path.join(resolveVault(config.brain.vault_path), "diario");
   const full = path.join(dir, path.basename(arg));
   let raw = fs.readFileSync(full, 'utf8');
   const fm = parseFrontmatter(raw) || {};

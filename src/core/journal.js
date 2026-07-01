@@ -293,6 +293,8 @@ class Journal {
 
   /** ¿Se alcanzó el límite de pérdida diaria? (para frenar nuevas señales) */
   dailyLimitHit(config) {
+    // Interruptor: en paper trading conviene NO frenar (recolectar datos y aprender).
+    if (config?.brain?.halt_enabled === false) return { hit: false };
     const s = this.stats();
     const maxLossR = config?.brain?.daily_loss_limit_r ?? -3;
     const maxConsec = config?.brain?.max_consecutive_losses ?? 3;
