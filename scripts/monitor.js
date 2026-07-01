@@ -57,11 +57,9 @@ function outcome(candles, startIdx, action, entry, stop, target) {
   const dir = path.join(expandHome(config.brain.vault_path), 'diario');
 
   const open = journal.readEntries().filter((e) => e.status === 'open');
-  if (!open.length) {
-    console.log('Sin trades abiertos que monitorear.');
-    return;
-  }
-  console.log(`Monitoreando ${open.length} trades abiertos...`);
+  // OJO: NO salir aquí si el diario está vacío — abajo hay que cerrar también las
+  // IDEAS (paper trading), que son la mayoría (grado C no van al diario).
+  console.log(`Monitoreando ${open.length} trades del diario...`);
 
   let closed = 0;
   for (const e of open) {
