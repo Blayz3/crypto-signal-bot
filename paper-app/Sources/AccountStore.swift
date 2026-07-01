@@ -10,9 +10,9 @@ final class AccountStore: ObservableObject {
     @Published var errorText: String?
     @Published var loading = false
 
-    // Cambia esto si tu repo es otro.
+    // API de GitHub (devuelve el archivo SIN cache de 5 min de raw). Cambia el repo si es otro.
     private let accountURL =
-        "https://raw.githubusercontent.com/Blayz3/crypto-signal-bot/main/cerebro-trading/paper-account.json"
+        "https://api.github.com/repos/Blayz3/crypto-signal-bot/contents/cerebro-trading/paper-account.json"
     private let kucoinTickers = "https://api.kucoin.com/api/v1/market/allTickers"
 
     private var accountTimer: Timer?
@@ -21,7 +21,7 @@ final class AccountStore: ObservableObject {
     func start() {
         Task { await refreshAccount() }
         Task { await refreshPrices() }
-        accountTimer = Timer.scheduledTimer(withTimeInterval: 60, repeats: true) { [weak self] _ in
+        accountTimer = Timer.scheduledTimer(withTimeInterval: 120, repeats: true) { [weak self] _ in
             Task { await self?.refreshAccount() }
         }
         priceTimer = Timer.scheduledTimer(withTimeInterval: 10, repeats: true) { [weak self] _ in
@@ -38,10 +38,12 @@ final class AccountStore: ObservableObject {
     func refreshAccount() async {
         loading = (account == nil)
         defer { loading = false }
-        guard let url = URL(string: accountURL + "?t=\(Int(Date().timeIntervalSince1970))") else { return }
+        guard let url = URL(string: accountURL) else { return }
         do {
             var req = URLRequest(url: url)
             req.cachePolicy = .reloadIgnoringLocalCacheData
+            req.setValue("application/vnd.github.raw", forHTTPHeaderField: "Accept")
+            req.setValue("CryptoPaper", forHTTPHeaderField: "User-Agent")
             let (data, _) = try await URLSession.shared.data(for: req)
             var acc = try JSONDecoder().decode(Account.self, from: data)
             // Conserva los precios en vivo ya conocidos.
