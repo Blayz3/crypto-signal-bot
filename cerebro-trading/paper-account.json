@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-01T00:13:33.000Z",
+  "updated": "2026-07-01T00:31:23.520Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,21 +8,73 @@
     "atOrAbove": 40
   },
   "balance": 1000,
-  "equity": 1000,
+  "equity": 1103.23,
   "realizedPnl": 0,
-  "unrealizedPnl": 0,
+  "unrealizedPnl": 103.23,
   "stats": {
-    "openCount": 0,
+    "openCount": 3,
     "closedCount": 0,
     "wins": 0,
     "losses": 0,
     "winRate": null
   },
-  "open": [],
+  "open": [
+    {
+      "id": "2026-07-01T00:31-BTCUSDT-short",
+      "symbol": "BTC/USDT",
+      "dir": "short",
+      "grade": "A+",
+      "entry": 58428.7,
+      "stop": 59691.47,
+      "target": 56665.73,
+      "leverage": 40,
+      "margin": 200,
+      "notional": 8000,
+      "qty": 0.14,
+      "openedAt": "2026-07-01T00:31:21.412Z",
+      "markPrice": 58517.4,
+      "unrealizedPnl": -12.14,
+      "unrealizedPct": -6.07
+    },
+    {
+      "id": "2026-07-01T00:31-ADAUSDT-long",
+      "symbol": "ADA/USDT",
+      "dir": "long",
+      "grade": "A+",
+      "entry": 0.14,
+      "stop": 0.1385,
+      "target": 0.15,
+      "leverage": 20,
+      "margin": 200,
+      "notional": 4000,
+      "qty": 28571.43,
+      "openedAt": "2026-07-01T00:31:21.858Z",
+      "markPrice": 0.1444,
+      "unrealizedPnl": 125.71,
+      "unrealizedPct": 62.86
+    },
+    {
+      "id": "2026-07-01T00:31-PEPEUSDT-short",
+      "symbol": "PEPE/USDT",
+      "dir": "short",
+      "grade": "B",
+      "entry": 0.00000232,
+      "stop": 0.00000237,
+      "target": 0.00000223,
+      "leverage": 20,
+      "margin": 200,
+      "notional": 4000,
+      "qty": 1724137931.03,
+      "openedAt": "2026-07-01T00:31:22.094Z",
+      "markPrice": 0.000002326,
+      "unrealizedPnl": -10.34,
+      "unrealizedPct": -5.17
+    }
+  ],
   "closed": [],
   "equityCurve": [
     {
-      "t": "2026-07-01T00:13:33.000Z",
+      "t": "2026-07-01T00:31:23.520Z",
       "balance": 1000
     }
   ]
