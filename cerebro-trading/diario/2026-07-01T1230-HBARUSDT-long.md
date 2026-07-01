@@ -4,7 +4,7 @@ type: diario
 symbol: HBAR/USDT
 action: long
 date: 2026-07-01T12:30:53.832Z
-status: open
+status: win
 orderType: limit
 setup: Retest de soporte + extremo de miedo
 entry: 0.0685
@@ -12,7 +12,7 @@ stop: 0.0665
 target: 0.072
 rr: 1.75
 confidence: 55
-result_r: 
+result_r: 1.75
 ---
 
 # HBAR/USDT LONG — 2026-07-01
