@@ -248,6 +248,21 @@ class Journal {
       : `META MENSUAL: ${s.monthR || 0}/${goal}R este mes. Faltan ${Math.round(remaining * 10) / 10}R en ${daysLeft} días (~${pace}R/día). Persíguela SOLO con setups A+ de alta confluencia; NO sobre-operes ni fuerces.`;
   }
 
+  /** Lecciones recientes de trades PERDIDOS (causa raíz) para AFINAR el setup. */
+  recentLossLessons(limit = 5) {
+    if (!fs.existsSync(this.dir)) return [];
+    const out = [];
+    const files = fs.readdirSync(this.dir).filter((f) => f.endsWith('.md')).sort().reverse();
+    for (const f of files) {
+      const raw = fs.readFileSync(path.join(this.dir, f), 'utf8');
+      if (!/status:\s*loss/.test(raw)) continue;
+      const m = raw.match(/\*\*Lección:\*\*\s*(.+)/);
+      if (m && m[1].trim().length > 15) out.push(m[1].trim().replace(/^Causa:\s*/i, ''));
+      if (out.length >= limit) break;
+    }
+    return out;
+  }
+
   /** Línea de retroalimentación de ideas por grado (vacío si aún no hay cerradas). */
   _ideasLine() {
     const is = this.ideasStats();
@@ -286,6 +301,14 @@ class Journal {
       lines.push(`⚠️ SETUPS QUE PIERDEN (evítalos o exige más confluencia): ${worst}.`);
     }
     lines.push('Prioriza los setups que ganan; evita repetir los que pierden.');
+    const lessons = this.recentLossLessons(5);
+    if (lessons.length) {
+      lines.push(
+        'LECCIONES DE PÉRDIDAS RECIENTES (NO dejes de operar el setup: PERFECCIÓNALO — ' +
+          'identifica qué condición faltó y EXÍGELA esta vez):\n- ' +
+          lessons.join('\n- ')
+      );
+    }
     if (ideasLine) lines.push(ideasLine);
     lines.push(this._metaLine(s));
     return lines.join('\n');
