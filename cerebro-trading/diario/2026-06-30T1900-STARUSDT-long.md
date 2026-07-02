@@ -4,7 +4,7 @@ type: diario
 symbol: STAR/USDT
 action: long
 date: 2026-06-30T19:00:57.170Z
-status: open
+status: win
 orderType: limit
 setup: Retest de soporte + extremo de miedo (contrarian)
 entry: 0.12
@@ -12,7 +12,7 @@ stop: 0.11
 target: 0.14
 rr: 2
 confidence: 82
-result_r: 
+result_r: 2
 ---
 
 # STAR/USDT LONG — 2026-06-30

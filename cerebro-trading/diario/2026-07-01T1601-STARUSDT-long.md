@@ -4,7 +4,7 @@ type: diario
 symbol: STAR/USDT
 action: long
 date: 2026-07-01T16:01:18.095Z
-status: open
+status: win
 orderType: limit
 setup: Bounce from VAL (extreme fear)
 entry: 0.12
@@ -12,7 +12,7 @@ stop: 0.11
 target: 0.14
 rr: 2
 confidence: 70
-result_r: 
+result_r: 2
 ---
 
 # STAR/USDT LONG — 2026-07-01
