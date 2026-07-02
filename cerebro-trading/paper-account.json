@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-02T14:01:38.560Z",
+  "updated": "2026-07-02T14:31:21.683Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 1171.37,
-  "equity": 2360.72,
-  "realizedPnl": 171.37,
-  "unrealizedPnl": 1189.35,
+  "balance": 1062.77,
+  "equity": 2066.23,
+  "realizedPnl": 62.77,
+  "unrealizedPnl": 1003.46,
   "stats": {
-    "openCount": 10,
-    "closedCount": 20,
+    "openCount": 9,
+    "closedCount": 21,
     "wins": 7,
-    "losses": 13,
-    "winRate": 35
+    "losses": 14,
+    "winRate": 33.33
   },
   "open": [
     {
@@ -32,9 +32,9 @@
       "notional": 4000,
       "qty": 253164.56,
       "openedAt": "2026-07-01T02:31:17.334Z",
-      "markPrice": 0.015458,
-      "unrealizedPnl": -86.58,
-      "unrealizedPct": -43.29
+      "markPrice": 0.015455,
+      "unrealizedPnl": -87.34,
+      "unrealizedPct": -43.67
     },
     {
       "id": "2026-07-01T11:30-PEPEUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 4000,
       "qty": 1777777777.78,
       "openedAt": "2026-07-01T11:30:56.542Z",
-      "markPrice": 0.000002483,
-      "unrealizedPnl": 414.22,
-      "unrealizedPct": 207.11
+      "markPrice": 0.000002449,
+      "unrealizedPnl": 353.78,
+      "unrealizedPct": 176.89
     },
     {
       "id": "2026-07-01T14:31-ATOMUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 4000,
       "qty": 2614.38,
       "openedAt": "2026-07-01T14:31:06.489Z",
-      "markPrice": 1.5714,
-      "unrealizedPnl": 108.24,
-      "unrealizedPct": 54.12
+      "markPrice": 1.5612,
+      "unrealizedPnl": 81.57,
+      "unrealizedPct": 40.78
     },
     {
       "id": "2026-07-01T15:14-DOGEUSDT-long",
@@ -83,9 +83,9 @@
       "notional": 4000,
       "qty": 54719.56,
       "openedAt": "2026-07-01T15:14:39.517Z",
-      "markPrice": 0.07519,
-      "unrealizedPnl": 114.36,
-      "unrealizedPct": 57.18
+      "markPrice": 0.07475,
+      "unrealizedPnl": 90.29,
+      "unrealizedPct": 45.15
     },
     {
       "id": "2026-07-01T15:32-KASUSDT-long",
@@ -100,9 +100,9 @@
       "notional": 4000,
       "qty": 126903.55,
       "openedAt": "2026-07-01T15:32:13.266Z",
-      "markPrice": 0.03093,
-      "unrealizedPnl": -74.87,
-      "unrealizedPct": -37.43
+      "markPrice": 0.0311,
+      "unrealizedPnl": -53.3,
+      "unrealizedPct": -26.65
     },
     {
       "id": "2026-07-01T19:01-RAVEUSDT-short",
@@ -117,9 +117,9 @@
       "notional": 4000,
       "qty": 13793.1,
       "openedAt": "2026-07-01T19:01:17.405Z",
-      "markPrice": 0.271,
-      "unrealizedPnl": 262.07,
-      "unrealizedPct": 131.04
+      "markPrice": 0.268,
+      "unrealizedPnl": 303.45,
+      "unrealizedPct": 151.73
     },
     {
       "id": "2026-07-01T20:31-SEIUSDT-long",
@@ -134,9 +134,9 @@
       "notional": 4000,
       "qty": 84210.53,
       "openedAt": "2026-07-01T20:31:06.753Z",
-      "markPrice": 0.04929,
-      "unrealizedPnl": 150.74,
-      "unrealizedPct": 75.37
+      "markPrice": 0.04866,
+      "unrealizedPnl": 97.68,
+      "unrealizedPct": 48.84
     },
     {
       "id": "2026-07-02T11:01-JUPUSDT-long",
@@ -151,26 +151,9 @@
       "notional": 4000,
       "qty": 17021.28,
       "openedAt": "2026-07-02T11:01:19.293Z",
-      "markPrice": 0.2503,
-      "unrealizedPnl": 260.43,
-      "unrealizedPct": 130.22
-    },
-    {
-      "id": "2026-07-02T13:02-SIRENUSDT-short",
-      "symbol": "SIREN/USDT",
-      "dir": "short",
-      "grade": "A+",
-      "entry": 0.1105,
-      "stop": 0.1135,
-      "target": 0.103,
-      "leverage": 20,
-      "margin": 200,
-      "notional": 4000,
-      "qty": 36199.1,
-      "openedAt": "2026-07-02T13:02:14.642Z",
-      "markPrice": 0.11212,
-      "unrealizedPnl": -58.64,
-      "unrealizedPct": -29.32
+      "markPrice": 0.2466,
+      "unrealizedPnl": 197.45,
+      "unrealizedPct": 98.73
     },
     {
       "id": "2026-07-02T13:31-SOLUSDT-long",
@@ -185,9 +168,9 @@
       "notional": 8000,
       "qty": 99.38,
       "openedAt": "2026-07-02T13:31:19.205Z",
-      "markPrice": 81.5,
-      "unrealizedPnl": 99.38,
-      "unrealizedPct": 49.69
+      "markPrice": 80.7,
+      "unrealizedPnl": 19.88,
+      "unrealizedPct": 9.94
     }
   ],
   "closed": [
@@ -590,6 +573,26 @@
       "pnl": -149.51,
       "pnlPct": -74.75,
       "closedAt": "2026-07-02T13:01:00.951Z"
+    },
+    {
+      "id": "2026-07-02T13:02-SIRENUSDT-short",
+      "symbol": "SIREN/USDT",
+      "dir": "short",
+      "grade": "A+",
+      "entry": 0.1105,
+      "stop": 0.1135,
+      "target": 0.103,
+      "leverage": 20,
+      "margin": 200,
+      "notional": 4000,
+      "qty": 36199.1,
+      "openedAt": "2026-07-02T13:02:14.642Z",
+      "exit": 0.1135,
+      "status": "loss",
+      "resultR": -1,
+      "pnl": -108.6,
+      "pnlPct": -54.3,
+      "closedAt": "2026-07-02T14:30:56.561Z"
     }
   ],
   "equityCurve": [
@@ -676,6 +679,10 @@
     {
       "t": "2026-07-02T13:01:00.951Z",
       "balance": 1171.37
+    },
+    {
+      "t": "2026-07-02T14:30:56.561Z",
+      "balance": 1062.77
     }
   ]
 }
