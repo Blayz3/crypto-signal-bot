@@ -4,7 +4,7 @@ type: diario
 symbol: GRAM/USDT
 action: long
 date: 2026-07-01T18:26:50.769Z
-status: open
+status: win
 orderType: limit
 setup: Bounce from VAL (extreme fear)
 entry: 1.55
@@ -12,7 +12,7 @@ stop: 1.53
 target: 1.6
 rr: 2.5
 confidence: 60
-result_r: 
+result_r: 2.5
 ---
 
 # GRAM/USDT LONG — 2026-07-01
