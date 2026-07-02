@@ -32,20 +32,42 @@ function candleLimit(entryMs) {
   return Math.min(1000, Math.max(50, hours));
 }
 
-/** Cierra solo al tocar STOP o TARGET; si no, sigue abierto (sin timeout). */
+/**
+ * Cierra solo al tocar STOP o TP (sin timeout) — con GESTIÓN DE GANADOR (runner):
+ * al tocar el TP toma PARCIAL del 50%, mueve el stop a break-even y deja correr la otra
+ * mitad hacia TP2 (el doble de distancia). Es el plan del cerebro (parcial en 2R + runner):
+ * los movimientos grandes son los que pagan el mes.
+ *   - toca SL antes de TP            → -1R (pérdida normal)
+ *   - toca TP y luego BE             → +0.5×tpR (parcial asegurado, resto en BE)
+ *   - toca TP y luego TP2 (2×dist)   → +0.5×tpR + 0.5×2×tpR  (p.ej. 2R→+3R)
+ * Devuelve además un `exit` equivalente para que el P&L en $ del paper sea exacto.
+ */
 function outcome(candles, startIdx, action, entry, stop, target) {
   const long = action === 'long';
+  const dir = long ? 1 : -1;
   const risk = Math.abs(entry - stop) || entry * 0.01;
+  const tpR = Math.abs(target - entry) / risk;
+  const target2 = entry + dir * 2 * Math.abs(target - entry); // TP2 = doble de distancia
+  const exitEq = (r) => r2(entry + dir * r * risk); // salida equivalente para el P&L en $
+  let phase = 1; // 1 = buscando SL/TP · 2 = runner (parcial tomado, stop en BE)
+
   for (let i = startIdx; i < candles.length; i++) {
     const hi = candles[i][2];
     const lo = candles[i][3];
-    const hitStop = long ? lo <= stop : hi >= stop;
-    const hitTarget = long ? hi >= target : lo <= target;
-    if (hitStop && hitTarget) return { status: 'loss', r: -1, exit: stop }; // conservador
-    if (hitStop) return { status: 'loss', r: -1, exit: stop };
-    if (hitTarget) return { status: 'win', r: r2(Math.abs(target - entry) / risk), exit: target };
+    if (phase === 1) {
+      const hitStop = long ? lo <= stop : hi >= stop;
+      const hitTarget = long ? hi >= target : lo <= target;
+      if (hitStop) return { status: 'loss', r: -1, exit: stop }; // conservador si toca ambos
+      if (hitTarget) { phase = 2; continue; } // parcial 50% en TP; el resto corre desde la sig. vela
+    } else {
+      const hitBE = long ? lo <= entry : hi >= entry;
+      const hitTP2 = long ? hi >= target2 : lo <= target2;
+      if (hitBE) { const r = r2(0.5 * tpR); return { status: 'win', r, exit: exitEq(r) }; } // conservador
+      if (hitTP2) { const r = r2(0.5 * tpR + tpR); return { status: 'win', r, exit: exitEq(r) }; }
+    }
   }
-  return null; // sigue abierto hasta tocar SL o TP
+  // fase 2 sin resolver → sigue abierto (recompute determinista en el próximo ciclo)
+  return null;
 }
 
 (async () => {

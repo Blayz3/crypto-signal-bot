@@ -36,16 +36,26 @@ const r2 = (x) => (x == null || Number.isNaN(x) ? null : Math.round(x * 100) / 1
   const LEV_HIGH = p.leverage_high || 40;
   const THRESH = p.leverage_price_threshold || 20;
 
+  const GRADE_MULT = p.sizing_by_grade || { 'A+': 1.5, A: 1.25, B: 1.0, C: 0.5 };
+  const COMPOUND = p.compound !== false;
+
   const leverageFor = (entry) => (entry < THRESH ? LEV_LOW : LEV_HIGH);
-  // P&L en $ de una posición dada un precio de salida (capado a -margen).
+  // Margen del trade: base × multiplicador por CALIDAD (más en A+, menos en C) ×
+  // factor COMPUESTO (crece/encoge con la cuenta; acotado para no explotar ni morir).
+  const marginFor = (grade, balance) => {
+    const gm = GRADE_MULT[grade] ?? 1;
+    const cf = COMPOUND ? Math.min(5, Math.max(0.25, balance / START)) : 1;
+    return r2(MARGIN * gm * cf);
+  };
+  // P&L en $ de una posición dada un precio de salida (capado a -margen: liquidación).
   const pnlAt = (pos, exit) => {
     const dirSign = pos.dir === 'long' ? 1 : -1;
     const raw = pos.notional * ((exit - pos.entry) / pos.entry) * dirSign;
-    return Math.max(-MARGIN, raw);
+    return Math.max(-pos.margin, raw);
   };
-  const mkPos = (it) => {
+  const mkPos = (it, margin) => {
     const lev = leverageFor(it.entry);
-    const notional = MARGIN * lev;
+    const notional = r2(margin * lev);
     return {
       id: it.id,
       symbol: it.symbol,
@@ -55,7 +65,7 @@ const r2 = (x) => (x == null || Number.isNaN(x) ? null : Math.round(x * 100) / 1
       stop: it.stop,
       target: it.target,
       leverage: lev,
-      margin: MARGIN,
+      margin,
       notional,
       qty: r2(notional / it.entry),
       openedAt: it.date,
@@ -85,46 +95,44 @@ const r2 = (x) => (x == null || Number.isNaN(x) ? null : Math.round(x * 100) / 1
     } catch { /* sin exchange → la app pondrá los precios en vivo */ }
   }
 
-  // --- Posiciones abiertas con P&L no realizado ---
+  // --- Trades cerrados con P&L realizado (SECUENCIAL: interés compuesto) ---
+  // El margen de cada trade se calcula con el balance del MOMENTO en que se abrió:
+  // la cuenta que gana apuesta más; la que pierde, menos (protege y compone).
+  let bal = START;
+  const equity = [{ t: new Date(Date.now()).toISOString(), balance: START }];
+  const closed = [];
+  for (const it of [...closedRaw].sort((a, b) => String(a.closedAt || a.date).localeCompare(String(b.closedAt || b.date)))) {
+    const pos = mkPos(it, marginFor(it.grade, bal));
+    // exit guardado por el monitor; si no, se aproxima por el resultado.
+    const exit =
+      it.exit != null ? it.exit : it.status === 'win' ? it.target : it.status === 'loss' ? it.stop : it.entry;
+    const pnl = r2(pnlAt(pos, exit));
+    bal = r2(bal + pnl);
+    closed.push({
+      ...pos,
+      exit,
+      status: it.status,
+      resultR: it.result_r ?? null,
+      pnl,
+      pnlPct: r2((pnl / pos.margin) * 100),
+      closedAt: it.closedAt || it.date,
+    });
+    equity.push({ t: it.closedAt || it.date, balance: bal });
+  }
+  if (equity.length > 1) equity[0].t = closed[0].openedAt || equity[1].t;
+
+  // --- Posiciones abiertas con P&L no realizado (margen al balance ACTUAL) ---
   const open = openRaw.map((it) => {
-    const pos = mkPos(it);
+    const pos = mkPos(it, marginFor(it.grade, bal));
     const mark = marks[it.symbol] ?? null;
     const uPnl = mark != null ? r2(pnlAt(pos, mark)) : null;
     return {
       ...pos,
       markPrice: mark,
       unrealizedPnl: uPnl,
-      unrealizedPct: uPnl != null ? r2((uPnl / MARGIN) * 100) : null,
+      unrealizedPct: uPnl != null ? r2((uPnl / pos.margin) * 100) : null,
     };
   });
-
-  // --- Trades cerrados con P&L realizado ---
-  const closed = closedRaw
-    .map((it) => {
-      const pos = mkPos(it);
-      // exit guardado por el monitor; si no, se aproxima por el resultado.
-      const exit =
-        it.exit != null ? it.exit : it.status === 'win' ? it.target : it.status === 'loss' ? it.stop : it.entry;
-      const pnl = r2(pnlAt(pos, exit));
-      return {
-        ...pos,
-        exit,
-        status: it.status,
-        resultR: it.result_r ?? null,
-        pnl,
-        pnlPct: r2((pnl / MARGIN) * 100),
-        closedAt: it.closedAt || it.date,
-      };
-    })
-    .sort((a, b) => String(a.closedAt).localeCompare(String(b.closedAt)));
-
-  // --- Curva de equity (balance acumulado partiendo de START) ---
-  let bal = START;
-  const equity = [{ t: closed[0]?.openedAt || new Date(Date.now()).toISOString(), balance: START }];
-  for (const c of closed) {
-    bal = r2(bal + c.pnl);
-    equity.push({ t: c.closedAt, balance: bal });
-  }
 
   const realizedPnl = r2(closed.reduce((a, c) => a + c.pnl, 0));
   const openUnrealized = r2(open.reduce((a, o) => a + (o.unrealizedPnl || 0), 0));

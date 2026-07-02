@@ -93,7 +93,9 @@
     "starting_balance": 1000,
     "leverage_low": 20,
     "leverage_high": 40,
-    "leverage_price_threshold": 20
+    "leverage_price_threshold": 20,
+    "compound": true,
+    "sizing_by_grade": { "A+": 1.5, "A": 1.25, "B": 1.0, "C": 0.5 }
   },
   "work_timezone": "America/Tegucigalpa",
   "work_hours": [
