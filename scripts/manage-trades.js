@@ -55,9 +55,13 @@ function loadConfig() {
 
   for (const t of due) {
     try {
-      const ohlcv = await ex.fetchOHLCV(t.symbol, '1h', undefined, 210);
-      const ind = computeIndicators(ohlcv);
-      const price = ind?.price ?? ohlcv[ohlcv.length - 1][4];
+      const rows = await ex.fetchOHLCV(t.symbol, '1h', undefined, 210);
+      // computeIndicators espera arrays por campo, no filas crudas de ccxt.
+      const ind = computeIndicators({
+        time: rows.map((r) => r[0]), open: rows.map((r) => r[1]), high: rows.map((r) => r[2]),
+        low: rows.map((r) => r[3]), close: rows.map((r) => r[4]), volume: rows.map((r) => r[5]),
+      });
+      const price = ind?.price ?? rows[rows.length - 1][4];
       const risk = Math.abs(t.entry - t.stop) || t.entry * 0.01;
       const dirSign = t.dir === 'long' ? 1 : -1;
       const rNow = r2((dirSign * (price - t.entry)) / risk);
