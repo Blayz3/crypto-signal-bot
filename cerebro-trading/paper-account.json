@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-03T03:30:49.987Z",
+  "updated": "2026-07-03T04:00:56.807Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,10 +7,10 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 326.78,
-  "equity": 653.79,
-  "realizedPnl": -673.22,
-  "unrealizedPnl": 327.01,
+  "balance": 919.94,
+  "equity": 1034.67,
+  "realizedPnl": -80.06,
+  "unrealizedPnl": 114.73,
   "stats": {
     "openCount": 11,
     "closedCount": 22,
@@ -28,13 +28,13 @@
       "stop": 0.0145,
       "target": 0.021,
       "leverage": 20,
-      "margin": 81.69,
-      "notional": 1633.8,
-      "qty": 103405.06,
+      "margin": 34.5,
+      "notional": 690,
+      "qty": 43670.89,
       "openedAt": "2026-07-01T02:31:17.334Z",
-      "markPrice": 0.015637,
-      "unrealizedPnl": -16.86,
-      "unrealizedPct": -20.64
+      "markPrice": 0.015553,
+      "unrealizedPnl": -10.79,
+      "unrealizedPct": -31.28
     },
     {
       "id": "2026-07-01T11:30-PEPEUSDT-long",
@@ -45,13 +45,13 @@
       "stop": 0.00000205,
       "target": 0.00000255,
       "leverage": 20,
-      "margin": 81.69,
-      "notional": 1633.8,
-      "qty": 726133333.33,
+      "margin": 34.5,
+      "notional": 690,
+      "qty": 306666666.67,
       "openedAt": "2026-07-01T11:30:56.542Z",
-      "markPrice": 0.000002464,
-      "unrealizedPnl": 155.39,
-      "unrealizedPct": 190.22
+      "markPrice": 0.000002467,
+      "unrealizedPnl": 66.55,
+      "unrealizedPct": 192.9
     },
     {
       "id": "2026-07-01T14:31-ATOMUSDT-long",
@@ -62,13 +62,13 @@
       "stop": 1.45,
       "target": 1.65,
       "leverage": 20,
-      "margin": 81.69,
-      "notional": 1633.8,
-      "qty": 1067.84,
+      "margin": 34.5,
+      "notional": 690,
+      "qty": 450.98,
       "openedAt": "2026-07-01T14:31:06.489Z",
-      "markPrice": 1.5596,
-      "unrealizedPnl": 31.61,
-      "unrealizedPct": 38.7
+      "markPrice": 1.5605,
+      "unrealizedPnl": 13.75,
+      "unrealizedPct": 39.86
     },
     {
       "id": "2026-07-01T15:14-DOGEUSDT-long",
@@ -79,13 +79,13 @@
       "stop": 0.0695,
       "target": 0.0835,
       "leverage": 20,
-      "margin": 98.03,
-      "notional": 1960.6,
-      "qty": 26820.79,
+      "margin": 41.4,
+      "notional": 828,
+      "qty": 11326.95,
       "openedAt": "2026-07-01T15:14:39.517Z",
-      "markPrice": 0.07478,
-      "unrealizedPnl": 45.06,
-      "unrealizedPct": 45.97
+      "markPrice": 0.0748,
+      "unrealizedPnl": 19.26,
+      "unrealizedPct": 46.52
     },
     {
       "id": "2026-07-01T19:01-RAVEUSDT-short",
@@ -96,13 +96,13 @@
       "stop": 0.31,
       "target": 0.23,
       "leverage": 20,
-      "margin": 98.03,
-      "notional": 1960.6,
-      "qty": 6760.69,
+      "margin": 41.4,
+      "notional": 828,
+      "qty": 2855.17,
       "openedAt": "2026-07-01T19:01:17.405Z",
-      "markPrice": 0.296,
-      "unrealizedPnl": -40.56,
-      "unrealizedPct": -41.38
+      "markPrice": 0.301,
+      "unrealizedPnl": -31.41,
+      "unrealizedPct": -75.87
     },
     {
       "id": "2026-07-01T20:31-SEIUSDT-long",
@@ -113,13 +113,13 @@
       "stop": 0.0455,
       "target": 0.052,
       "leverage": 20,
-      "margin": 81.69,
-      "notional": 1633.8,
-      "qty": 34395.79,
+      "margin": 34.5,
+      "notional": 690,
+      "qty": 14526.32,
       "openedAt": "2026-07-01T20:31:06.753Z",
-      "markPrice": 0.04858,
-      "unrealizedPnl": 37.15,
-      "unrealizedPct": 45.48
+      "markPrice": 0.0486,
+      "unrealizedPnl": 15.98,
+      "unrealizedPct": 46.32
     },
     {
       "id": "2026-07-02T11:01-JUPUSDT-long",
@@ -130,13 +130,13 @@
       "stop": 0.215,
       "target": 0.295,
       "leverage": 20,
-      "margin": 98.03,
-      "notional": 1960.6,
-      "qty": 8342.98,
+      "margin": 41.4,
+      "notional": 828,
+      "qty": 3523.4,
       "openedAt": "2026-07-02T11:01:19.293Z",
-      "markPrice": 0.242,
-      "unrealizedPnl": 58.4,
-      "unrealizedPct": 59.57
+      "markPrice": 0.2412,
+      "unrealizedPnl": 21.85,
+      "unrealizedPct": 52.78
     },
     {
       "id": "2026-07-02T13:31-SOLUSDT-long",
@@ -147,13 +147,13 @@
       "stop": 78.5,
       "target": 90,
       "leverage": 40,
-      "margin": 98.03,
-      "notional": 3921.2,
-      "qty": 48.71,
+      "margin": 41.4,
+      "notional": 1656,
+      "qty": 20.57,
       "openedAt": "2026-07-02T13:31:19.205Z",
-      "markPrice": 80.91,
-      "unrealizedPnl": 19.97,
-      "unrealizedPct": 20.37
+      "markPrice": 80.75,
+      "unrealizedPnl": 5.14,
+      "unrealizedPct": 12.42
     },
     {
       "id": "2026-07-02T17:01-WIFUSDT-long",
@@ -164,13 +164,13 @@
       "stop": 0.165,
       "target": 0.185,
       "leverage": 20,
-      "margin": 81.69,
-      "notional": 1633.8,
-      "qty": 9509.9,
+      "margin": 34.5,
+      "notional": 690,
+      "qty": 4016.3,
       "openedAt": "2026-07-02T17:01:10.887Z",
-      "markPrice": 0.1727,
-      "unrealizedPnl": 8.56,
-      "unrealizedPct": 10.48
+      "markPrice": 0.1723,
+      "unrealizedPnl": 2.01,
+      "unrealizedPct": 5.83
     },
     {
       "id": "2026-07-02T19:01-BDXUSDT-long",
@@ -181,13 +181,13 @@
       "stop": 0.08436,
       "target": 0.09678,
       "leverage": 20,
-      "margin": 81.69,
-      "notional": 1633.8,
-      "qty": 18461.02,
+      "margin": 34.5,
+      "notional": 690,
+      "qty": 7796.61,
       "openedAt": "2026-07-02T19:01:37.645Z",
-      "markPrice": 0.08802,
-      "unrealizedPnl": -8.86,
-      "unrealizedPct": -10.85
+      "markPrice": 0.08804,
+      "unrealizedPnl": -3.59,
+      "unrealizedPct": -10.41
     },
     {
       "id": "2026-07-03T00:31-SEIUSDT-long",
@@ -198,13 +198,13 @@
       "stop": 0.0455,
       "target": 0.052,
       "leverage": 20,
-      "margin": 81.69,
-      "notional": 1633.8,
-      "qty": 34395.79,
+      "margin": 34.5,
+      "notional": 690,
+      "qty": 14526.32,
       "openedAt": "2026-07-03T00:31:33.131Z",
-      "markPrice": 0.04858,
-      "unrealizedPnl": 37.15,
-      "unrealizedPct": 45.48
+      "markPrice": 0.0486,
+      "unrealizedPnl": 15.98,
+      "unrealizedPct": 46.32
     }
   ],
   "closed": [
@@ -217,15 +217,15 @@
       "stop": 59691.47,
       "target": 56665.73,
       "leverage": 40,
-      "margin": 300,
-      "notional": 12000,
-      "qty": 0.21,
+      "margin": 45,
+      "notional": 1800,
+      "qty": 0.03,
       "openedAt": "2026-07-01T00:31:21.412Z",
       "exit": 59691.47,
       "status": "loss",
       "resultR": -1,
-      "pnl": -259.35,
-      "pnlPct": -86.45,
+      "pnl": -38.9,
+      "pnlPct": -86.44,
       "closedAt": "2026-07-01T15:17:10.466Z"
     },
     {
@@ -237,15 +237,15 @@
       "stop": 0.1385,
       "target": 0.15,
       "leverage": 20,
-      "margin": 222.2,
-      "notional": 4444,
-      "qty": 31742.86,
+      "margin": 43.25,
+      "notional": 865,
+      "qty": 6178.57,
       "openedAt": "2026-07-01T00:31:21.858Z",
       "exit": 0.15,
       "status": "win",
       "resultR": 6.67,
-      "pnl": 317.43,
-      "pnlPct": 142.86,
+      "pnl": 61.79,
+      "pnlPct": 142.87,
       "closedAt": "2026-07-01T15:17:10.626Z"
     },
     {
@@ -257,15 +257,15 @@
       "stop": 0.00000237,
       "target": 0.00000223,
       "leverage": 20,
-      "margin": 211.62,
-      "notional": 4232.4,
-      "qty": 1824310344.83,
+      "margin": 30.69,
+      "notional": 613.8,
+      "qty": 264568965.52,
       "openedAt": "2026-07-01T00:31:22.094Z",
       "exit": 0.00000223,
       "status": "win",
       "resultR": 1.8,
-      "pnl": 164.19,
-      "pnlPct": 77.59,
+      "pnl": 23.81,
+      "pnlPct": 77.58,
       "closedAt": "2026-07-01T15:17:10.778Z"
     },
     {
@@ -277,15 +277,15 @@
       "stop": 203.28,
       "target": 198.27,
       "leverage": 40,
-      "margin": 305.57,
-      "notional": 12222.8,
-      "qty": 60.63,
+      "margin": 39.25,
+      "notional": 1570,
+      "qty": 7.79,
       "openedAt": "2026-07-01T01:00:54.922Z",
       "exit": 203.28,
       "status": "loss",
       "resultR": -1,
-      "pnl": -101.25,
-      "pnlPct": -33.13,
+      "pnl": -13,
+      "pnlPct": -33.12,
       "closedAt": "2026-07-01T15:17:11.073Z"
     },
     {
@@ -297,15 +297,15 @@
       "stop": 0.702,
       "target": 0.65,
       "leverage": 20,
-      "margin": 336.31,
-      "notional": 6726.2,
-      "qty": 9762.26,
+      "margin": 46.52,
+      "notional": 930.4,
+      "qty": 1350.36,
       "openedAt": "2026-07-01T01:31:16.724Z",
       "exit": 0.702,
       "status": "loss",
       "resultR": -1,
-      "pnl": -126.91,
-      "pnlPct": -37.74,
+      "pnl": -17.55,
+      "pnlPct": -37.73,
       "closedAt": "2026-07-01T15:17:11.224Z"
     },
     {
@@ -317,14 +317,14 @@
       "stop": 0.115,
       "target": 0.095,
       "leverage": 20,
-      "margin": 298.23,
-      "notional": 5964.6,
-      "qty": 55176.69,
+      "margin": 45.73,
+      "notional": 914.6,
+      "qty": 8460.68,
       "openedAt": "2026-07-01T11:01:02.189Z",
       "exit": 0.115,
       "status": "loss",
       "resultR": -1,
-      "pnl": -298.23,
+      "pnl": -45.73,
       "pnlPct": -100,
       "closedAt": "2026-07-01T15:17:11.521Z"
     },
@@ -337,15 +337,15 @@
       "stop": 59969.21,
       "target": 55313.8,
       "leverage": 40,
-      "margin": 208.76,
-      "notional": 8350.4,
-      "qty": 0.14,
+      "margin": 43.67,
+      "notional": 1746.8,
+      "qty": 0.03,
       "openedAt": "2026-07-01T11:01:02.701Z",
       "exit": 59969.21,
       "status": "loss",
       "resultR": -1,
-      "pnl": -193.1,
-      "pnlPct": -92.5,
+      "pnl": -40.39,
+      "pnlPct": -92.49,
       "closedAt": "2026-07-01T15:17:11.670Z"
     },
     {
@@ -357,15 +357,15 @@
       "stop": 549.27,
       "target": 523.27,
       "leverage": 40,
-      "margin": 150.83,
-      "notional": 6033.2,
-      "qty": 11.1,
+      "margin": 41.85,
+      "notional": 1674,
+      "qty": 3.08,
       "openedAt": "2026-07-01T11:30:56.108Z",
       "exit": 549.27,
       "status": "loss",
       "resultR": -1,
-      "pnl": -64.65,
-      "pnlPct": -42.86,
+      "pnl": -17.94,
+      "pnlPct": -42.87,
       "closedAt": "2026-07-01T15:17:11.823Z"
     },
     {
@@ -377,14 +377,14 @@
       "stop": 1.055,
       "target": 0.95,
       "leverage": 20,
-      "margin": 109.53,
-      "notional": 2190.6,
-      "qty": 2114.5,
+      "margin": 34.2,
+      "notional": 684,
+      "qty": 660.24,
       "openedAt": "2026-07-01T12:30:53.206Z",
       "exit": 1.055,
       "status": "loss",
       "resultR": -1,
-      "pnl": -40.2,
+      "pnl": -12.55,
       "pnlPct": -36.7,
       "closedAt": "2026-07-01T15:17:12.120Z"
     },
@@ -397,15 +397,15 @@
       "stop": 1576,
       "target": 1534.18,
       "leverage": 40,
-      "margin": 99.48,
-      "notional": 3979.2,
-      "qty": 2.54,
+      "margin": 33.73,
+      "notional": 1349.2,
+      "qty": 0.86,
       "openedAt": "2026-07-01T12:30:53.606Z",
       "exit": 1576,
       "status": "loss",
       "resultR": -1,
-      "pnl": -19.87,
-      "pnlPct": -19.97,
+      "pnl": -6.74,
+      "pnlPct": -19.98,
       "closedAt": "2026-07-01T15:17:12.278Z"
     },
     {
@@ -417,15 +417,15 @@
       "stop": 0.05,
       "target": 0.062,
       "leverage": 20,
-      "margin": 113.42,
-      "notional": 2268.4,
-      "qty": 44046.6,
+      "margin": 40.18,
+      "notional": 803.6,
+      "qty": 15603.88,
       "openedAt": "2026-07-01T14:31:05.942Z",
       "exit": 0.05,
       "status": "loss",
       "resultR": -1,
-      "pnl": -66.07,
-      "pnlPct": -58.25,
+      "pnl": -23.41,
+      "pnlPct": -58.26,
       "closedAt": "2026-07-01T15:22:47.469Z"
     },
     {
@@ -437,15 +437,15 @@
       "stop": 0.0665,
       "target": 0.072,
       "leverage": 20,
-      "margin": 78,
-      "notional": 1560,
-      "qty": 22773.72,
+      "margin": 32.6,
+      "notional": 652,
+      "qty": 9518.25,
       "openedAt": "2026-07-01T12:30:53.831Z",
       "exit": 0.072,
       "status": "win",
       "resultR": 1.75,
-      "pnl": 79.71,
-      "pnlPct": 102.19,
+      "pnl": 33.31,
+      "pnlPct": 102.18,
       "closedAt": "2026-07-01T16:00:58.629Z"
     },
     {
@@ -457,14 +457,14 @@
       "stop": 0.365,
       "target": 0.47,
       "leverage": 20,
-      "margin": 117.51,
-      "notional": 2350.2,
-      "qty": 5949.87,
+      "margin": 40.62,
+      "notional": 812.4,
+      "qty": 2056.71,
       "openedAt": "2026-07-01T16:31:19.824Z",
       "exit": 0.365,
       "status": "loss",
       "resultR": -1,
-      "pnl": -117.51,
+      "pnl": -40.62,
       "pnlPct": -100,
       "closedAt": "2026-07-01T19:00:57.559Z"
     },
@@ -477,15 +477,15 @@
       "stop": 0.0665,
       "target": 0.055,
       "leverage": 20,
-      "margin": 82.26,
-      "notional": 1645.2,
-      "qty": 25880.13,
+      "margin": 38.79,
+      "notional": 775.8,
+      "qty": 12203.87,
       "openedAt": "2026-07-01T16:31:20.412Z",
       "exit": 0.0665,
       "status": "loss",
       "resultR": -1,
-      "pnl": -75.83,
-      "pnlPct": -92.18,
+      "pnl": -35.76,
+      "pnlPct": -92.19,
       "closedAt": "2026-07-01T19:00:57.725Z"
     },
     {
@@ -497,14 +497,14 @@
       "stop": 0.118,
       "target": 0.148,
       "leverage": 20,
-      "margin": 75,
-      "notional": 1500,
-      "qty": 11718.75,
+      "margin": 37.18,
+      "notional": 743.6,
+      "qty": 5809.38,
       "openedAt": "2026-07-01T01:00:54.523Z",
       "exit": 0.118,
       "status": "loss",
       "resultR": -1,
-      "pnl": -75,
+      "pnl": -37.18,
       "pnlPct": -100,
       "closedAt": "2026-07-01T20:00:51.325Z"
     },
@@ -517,14 +517,14 @@
       "stop": 1.85,
       "target": 1.95,
       "leverage": 20,
-      "margin": 75,
-      "notional": 1500,
-      "qty": 800.85,
+      "margin": 35.51,
+      "notional": 710.2,
+      "qty": 379.18,
       "openedAt": "2026-07-01T19:31:05.657Z",
       "exit": 1.95,
       "status": "win",
       "resultR": 3.35,
-      "pnl": 61.67,
+      "pnl": 29.2,
       "pnlPct": 82.23,
       "closedAt": "2026-07-01T20:00:53.230Z"
     },
@@ -537,15 +537,15 @@
       "stop": 1.53,
       "target": 1.6,
       "leverage": 20,
-      "margin": 62.5,
-      "notional": 1250,
-      "qty": 806.45,
+      "margin": 30.69,
+      "notional": 613.8,
+      "qty": 396,
       "openedAt": "2026-07-01T18:26:50.768Z",
       "exit": 1.6,
       "status": "win",
       "resultR": 2.5,
-      "pnl": 40.32,
-      "pnlPct": 64.51,
+      "pnl": 19.8,
+      "pnlPct": 64.52,
       "closedAt": "2026-07-02T08:30:46.737Z"
     },
     {
@@ -557,14 +557,14 @@
       "stop": 75.5,
       "target": 80.5,
       "leverage": 40,
-      "margin": 62.5,
-      "notional": 2500,
-      "qty": 32.28,
+      "margin": 31.43,
+      "notional": 1257.2,
+      "qty": 16.23,
       "openedAt": "2026-07-01T21:01:38.271Z",
       "exit": 80.5,
       "status": "win",
       "resultR": 1.56,
-      "pnl": 98.45,
+      "pnl": 49.51,
       "pnlPct": 157.52,
       "closedAt": "2026-07-02T10:30:48.420Z"
     },
@@ -577,15 +577,15 @@
       "stop": 0.11,
       "target": 0.14,
       "leverage": 20,
-      "margin": 80.95,
-      "notional": 1619,
-      "qty": 13491.67,
+      "margin": 33.29,
+      "notional": 665.8,
+      "qty": 5548.33,
       "openedAt": "2026-07-01T16:01:18.094Z",
       "exit": 0.14,
       "status": "win",
       "resultR": 2,
-      "pnl": 269.83,
-      "pnlPct": 333.33,
+      "pnl": 110.97,
+      "pnlPct": 333.34,
       "closedAt": "2026-07-02T12:00:52.960Z"
     },
     {
@@ -597,15 +597,15 @@
       "stop": 0.5666,
       "target": 0.62,
       "leverage": 20,
-      "margin": 178.09,
-      "notional": 3561.8,
-      "qty": 6051.31,
+      "margin": 44.94,
+      "notional": 898.8,
+      "qty": 1527.01,
       "openedAt": "2026-07-02T11:01:19.885Z",
       "exit": 0.5666,
       "status": "loss",
       "resultR": -1,
-      "pnl": -133.13,
-      "pnlPct": -74.75,
+      "pnl": -33.59,
+      "pnlPct": -74.74,
       "closedAt": "2026-07-02T13:01:00.951Z"
     },
     {
@@ -617,15 +617,15 @@
       "stop": 0.1135,
       "target": 0.103,
       "leverage": 20,
-      "margin": 138.15,
-      "notional": 2763,
-      "qty": 25004.52,
+      "margin": 43.43,
+      "notional": 868.6,
+      "qty": 7860.63,
       "openedAt": "2026-07-02T13:02:14.642Z",
       "exit": 0.1135,
       "status": "loss",
       "resultR": -1,
-      "pnl": -75.01,
-      "pnlPct": -54.3,
+      "pnl": -23.58,
+      "pnlPct": -54.29,
       "closedAt": "2026-07-02T14:30:56.561Z"
     },
     {
@@ -637,14 +637,14 @@
       "stop": 0.03072,
       "target": 0.03232,
       "leverage": 20,
-      "margin": 115.65,
-      "notional": 2313,
-      "qty": 73381.98,
+      "margin": 42.37,
+      "notional": 847.4,
+      "qty": 26884.52,
       "openedAt": "2026-07-01T15:32:13.266Z",
       "exit": 0.03072,
       "status": "loss",
       "resultR": -1,
-      "pnl": -58.71,
+      "pnl": -21.51,
       "pnlPct": -50.77,
       "closedAt": "2026-07-02T20:00:51.757Z"
     }
@@ -656,91 +656,91 @@
     },
     {
       "t": "2026-07-01T15:17:10.466Z",
-      "balance": 740.65
+      "balance": 961.1
     },
     {
       "t": "2026-07-01T15:17:10.626Z",
-      "balance": 1058.08
+      "balance": 1022.89
     },
     {
       "t": "2026-07-01T15:17:10.778Z",
-      "balance": 1222.27
+      "balance": 1046.7
     },
     {
       "t": "2026-07-01T15:17:11.073Z",
-      "balance": 1121.02
+      "balance": 1033.7
     },
     {
       "t": "2026-07-01T15:17:11.224Z",
-      "balance": 994.11
+      "balance": 1016.15
     },
     {
       "t": "2026-07-01T15:17:11.521Z",
-      "balance": 695.88
+      "balance": 970.42
     },
     {
       "t": "2026-07-01T15:17:11.670Z",
-      "balance": 502.78
+      "balance": 930.03
     },
     {
       "t": "2026-07-01T15:17:11.823Z",
-      "balance": 438.13
+      "balance": 912.09
     },
     {
       "t": "2026-07-01T15:17:12.120Z",
-      "balance": 397.93
+      "balance": 899.54
     },
     {
       "t": "2026-07-01T15:17:12.278Z",
-      "balance": 378.06
+      "balance": 892.8
     },
     {
       "t": "2026-07-01T15:22:47.469Z",
-      "balance": 311.99
+      "balance": 869.39
     },
     {
       "t": "2026-07-01T16:00:58.629Z",
-      "balance": 391.7
+      "balance": 902.7
     },
     {
       "t": "2026-07-01T19:00:57.559Z",
-      "balance": 274.19
+      "balance": 862.08
     },
     {
       "t": "2026-07-01T19:00:57.725Z",
-      "balance": 198.36
+      "balance": 826.32
     },
     {
       "t": "2026-07-01T20:00:51.325Z",
-      "balance": 123.36
+      "balance": 789.14
     },
     {
       "t": "2026-07-01T20:00:53.230Z",
-      "balance": 185.03
+      "balance": 818.34
     },
     {
       "t": "2026-07-02T08:30:46.737Z",
-      "balance": 225.35
+      "balance": 838.14
     },
     {
       "t": "2026-07-02T10:30:48.420Z",
-      "balance": 323.8
+      "balance": 887.65
     },
     {
       "t": "2026-07-02T12:00:52.960Z",
-      "balance": 593.63
+      "balance": 998.62
     },
     {
       "t": "2026-07-02T13:01:00.951Z",
-      "balance": 460.5
+      "balance": 965.03
     },
     {
       "t": "2026-07-02T14:30:56.561Z",
-      "balance": 385.49
+      "balance": 941.45
     },
     {
       "t": "2026-07-02T20:00:51.757Z",
-      "balance": 326.78
+      "balance": 919.94
     }
   ]
 }
