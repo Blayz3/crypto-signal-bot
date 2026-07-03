@@ -191,6 +191,7 @@ async function runScan(config, { onProgress = () => {} } = {}) {
         action: baseDir,
         hasPlan: false,
         confluence: baseConfluence,
+        adx: c.byTimeframe?.[lastTf(config)]?.adx ?? null,
         localScore: round(c.score),
         confidence: 0,
         entry: mech?.entry ?? null,
@@ -287,7 +288,12 @@ async function runScan(config, { onProgress = () => {} } = {}) {
   // Lista RANKEADA completa: primero los que la IA aprobó (A+/A/B), luego los
   // mecánicos válidos (C). El autobot decide cuántos manda y cuándo (mínimo 4/día).
   const withPlan = evaluated.filter((e) => e.hasPlan).map((e) => ({ ...e, grade: gradeOf(e) })).sort(byRank);
-  const noPlan = evaluated.filter((e) => !e.hasPlan && e.entry != null).map((e) => ({ ...e, grade: 'C' })).sort(byRank);
+  // Ideas mecánicas (C): exigen ADX fuerte (validado en backtest — con ADX flojo son ruido).
+  const minAdxMech = config.funnel?.min_adx_mechanical ?? 25;
+  const noPlan = evaluated
+    .filter((e) => !e.hasPlan && e.entry != null && (e.adx == null || e.adx >= minAdxMech))
+    .map((e) => ({ ...e, grade: 'C' }))
+    .sort(byRank);
   const ideas = [...withPlan, ...noPlan];
 
   return { signals, ideas, scanned: ranked.length, candidates: candidates.length, errors };

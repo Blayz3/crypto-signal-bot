@@ -17,6 +17,7 @@
     "min_local_score": 1,
     "max_ai_candidates": 4,
     "min_adx": 18,
+    "min_adx_mechanical": 25,
     "max_signals_per_direction": 2,
     "daily_target_signals": 4,
     "max_signals_per_scan": 4
@@ -89,13 +90,15 @@
     "min_confidence": 65
   },
   "paper": {
+    "margin_mode": "risk_pct",
+    "risk_pct": 3,
     "margin_per_trade": 200,
     "starting_balance": 1000,
     "leverage_low": 20,
     "leverage_high": 40,
     "leverage_price_threshold": 20,
     "compound": true,
-    "sizing_by_grade": { "A+": 1.5, "A": 1.25, "B": 1.0, "C": 0.5 }
+    "sizing_by_grade": { "A+": 1.5, "A": 1.25, "B": 1.0, "C": 0 }
   },
   "work_timezone": "America/Tegucigalpa",
   "work_hours": [

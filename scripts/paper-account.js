@@ -36,14 +36,21 @@ const r2 = (x) => (x == null || Number.isNaN(x) ? null : Math.round(x * 100) / 1
   const LEV_HIGH = p.leverage_high || 40;
   const THRESH = p.leverage_price_threshold || 20;
 
-  const GRADE_MULT = p.sizing_by_grade || { 'A+': 1.5, A: 1.25, B: 1.0, C: 0.5 };
+  const GRADE_MULT = p.sizing_by_grade || { 'A+': 1.5, A: 1.25, B: 1.0, C: 0 };
   const COMPOUND = p.compound !== false;
+  const RISK_MODE = p.margin_mode === 'risk_pct';
+  const RISK_PCT = p.risk_pct || 3;
 
   const leverageFor = (entry) => (entry < THRESH ? LEV_LOW : LEV_HIGH);
-  // Margen del trade: base × multiplicador por CALIDAD (más en A+, menos en C) ×
-  // factor COMPUESTO (crece/encoge con la cuenta; acotado para no explotar ni morir).
+  // Margen del trade (= riesgo máximo, la pérdida se capa al margen):
+  //  - modo "risk_pct" (para dinero real): % del balance × multiplicador de CALIDAD.
+  //    El backtest mostró que el margen fijo grande (~10-20%/trade) da drawdowns >90%.
+  //  - modo fijo: base × grado × factor compuesto (regla vieja).
+  //  - grado con multiplicador 0 (C) => NO se le asigna dinero (solo se rastrea la idea).
   const marginFor = (grade, balance) => {
     const gm = GRADE_MULT[grade] ?? 1;
+    if (gm <= 0) return 0;
+    if (RISK_MODE) return r2(Math.max(1, balance * (RISK_PCT / 100) * gm));
     const cf = COMPOUND ? Math.min(5, Math.max(0.25, balance / START)) : 1;
     return r2(MARGIN * gm * cf);
   };
