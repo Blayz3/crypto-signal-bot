@@ -252,6 +252,42 @@ ${schema}`;
     return this._parseJSON(content, symbol, true);
   }
 
+  /**
+   * GESTIÓN ACTIVA de una posición abierta: ¿mantener o cerrar ya?
+   * Sesgo por defecto: MANTENER (el plan stop/target/runner gestiona el trade;
+   * cerrar por miedo destruye la expectativa). Cerrar solo con invalidación clara.
+   * Devuelve { decision: 'hold'|'close', confidence, reason }.
+   */
+  async manageTrade(t, ctx = {}) {
+    const sys = `Eres el GESTOR de posiciones de un sistema de trading. Revisas UNA posición abierta y decides: mantener o cerrar YA a precio de mercado.
+SESGO POR DEFECTO: MANTENER. El plan (stop / target / parcial+runner) ya gestiona el trade; cerrar temprano por miedo o impaciencia destruye la expectativa del sistema.
+Cierra SOLO si hay una razón CLARA:
+1. INVALIDACIÓN: la estructura/tesis del trade se rompió en contra (quiebre de estructura contrario, momentum fuerte opuesto, el setup ya no existe) y esperar el stop solo pierde más.
+2. TRADE MUERTO: mucho tiempo pegado al stop sin reacción alguna, contexto que empeora.
+3. AGOTAMIENTO EN TARGET: movimiento a favor claramente agotado (rechazo violento) muy cerca del target → asegurar.
+NO cierres por: retrocesos normales dentro del rango del trade, P&L negativo pequeño, aburrimiento, ni "asegurar" ganancias chicas lejos del target.
+Responde UNICAMENTE el JSON: {"decision":"hold"|"close","confidence":0-100,"reason":"1 frase en español"}`;
+
+    const user = `POSICIÓN: ${t.dir?.toUpperCase()} ${t.symbol} (grado ${t.grade || '—'}, setup: ${t.setup || '—'})
+Entrada: ${t.entry} · Stop: ${t.stop} · Target: ${t.target}
+Precio ACTUAL: ${ctx.price} · P&L actual: ${ctx.rNow}R · Horas abierta: ${ctx.hoursOpen}
+Indicadores 1h ahora: ${JSON.stringify(ctx.indicators || {})}
+${ctx.extra || ''}
+¿Mantener o cerrar? Responde solo el JSON.`;
+
+    const { content } = await this._chatFallback(
+      this._decisionChain(),
+      [
+        { role: 'system', content: sys },
+        { role: 'user', content: user },
+      ],
+      { jsonMode: true, maxTokens: 200 }
+    );
+    const out = this._parseJSON(content, t.symbol, true);
+    if (!out || (out.decision !== 'close' && out.decision !== 'hold')) return { decision: 'hold', confidence: 0, reason: 'respuesta inválida → mantener' };
+    return out;
+  }
+
   /** Análisis libre (no-JSON), p.ej. autopsia de un trade perdido. Devuelve texto. */
   async analyze(system, user, maxTokens = 400) {
     const { content } = await this._chatFallback(

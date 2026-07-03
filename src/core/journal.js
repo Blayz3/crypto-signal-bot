@@ -119,8 +119,8 @@ class Journal {
       .filter(Boolean);
   }
 
-  /** Cierra una idea (el monitor marca tp/sl/timeout con la acción del precio). */
-  closeIdea(id, status, r, exit = null) {
+  /** Cierra una idea (SL/TP del monitor, o cierre anticipado del gestor IA). */
+  closeIdea(id, status, r, exit = null, closedBy = 'monitor') {
     const all = this.readIdeas();
     let changed = false;
     for (const x of all) {
@@ -129,8 +129,20 @@ class Journal {
         x.result_r = r;
         if (exit != null) x.exit = exit;
         x.closedAt = new Date(Date.now()).toISOString();
+        x.closedBy = closedBy;
         changed = true;
       }
+    }
+    if (changed) fs.writeFileSync(this.ideasFile, all.map((x) => JSON.stringify(x)).join('\n') + '\n');
+    return changed;
+  }
+
+  /** Actualiza campos sueltos de una idea (p.ej. lastReview del gestor). */
+  updateIdea(id, patch) {
+    const all = this.readIdeas();
+    let changed = false;
+    for (const x of all) {
+      if (x.id === id) { Object.assign(x, patch); changed = true; }
     }
     if (changed) fs.writeFileSync(this.ideasFile, all.map((x) => JSON.stringify(x)).join('\n') + '\n');
     return changed;

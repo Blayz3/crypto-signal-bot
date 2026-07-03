@@ -94,6 +94,14 @@ const ROOT = path.join(__dirname, '..');
     return;
   }
 
+  // 1.5) GESTOR ACTIVO: la IA revisa las posiciones abiertas y decide mantener/cerrar.
+  try {
+    const { stdout } = await execFileP('node', [path.join(__dirname, 'manage-trades.js')], { cwd: ROOT, timeout: 180000 });
+    process.stdout.write(stdout);
+  } catch (e) {
+    console.log('gestor:', e.message);
+  }
+
   // 2) Escanear señales nuevas.
   let res;
   try {

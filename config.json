@@ -100,6 +100,11 @@
     "compound": true,
     "sizing_by_grade": { "A+": 1.5, "A": 1.25, "B": 1.0, "C": 0 }
   },
+  "trade_management": {
+    "enabled": true,
+    "review_every_hours": 4,
+    "max_per_cycle": 5
+  },
   "work_timezone": "America/Tegucigalpa",
   "work_hours": [
     5,
