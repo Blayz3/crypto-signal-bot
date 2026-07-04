@@ -4,7 +4,7 @@ type: diario
 symbol: PEPE/USDT
 action: long
 date: 2026-07-01T11:30:56.542Z
-status: open
+status: win
 orderType: limit
 setup: Retest de soporte + extremo de miedo (contrarian)
 entry: 0.00000225
@@ -12,7 +12,7 @@ stop: 0.00000205
 target: 0.00000255
 rr: 1.5
 confidence: 55
-result_r: 
+result_r: 2.25
 ---
 
 # PEPE/USDT LONG — 2026-07-01
