@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-04T23:01:18.131Z",
+  "updated": "2026-07-04T23:32:19.821Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 839.95,
-  "equity": 1035.27,
+  "equity": 1004.78,
   "realizedPnl": -160.05,
-  "unrealizedPnl": 195.32,
+  "unrealizedPnl": 164.83,
   "stats": {
     "openCount": 22,
     "closedCount": 29,
@@ -32,9 +32,9 @@
       "notional": 630,
       "qty": 39873.42,
       "openedAt": "2026-07-01T02:31:17.334Z",
-      "markPrice": 0.015376,
-      "unrealizedPnl": -16.91,
-      "unrealizedPct": -53.68
+      "markPrice": 0.015281,
+      "unrealizedPnl": -20.69,
+      "unrealizedPct": -65.68
     },
     {
       "id": "2026-07-01T14:31-ATOMUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 630,
       "qty": 411.76,
       "openedAt": "2026-07-01T14:31:06.489Z",
-      "markPrice": 1.5979,
-      "unrealizedPnl": 27.96,
-      "unrealizedPct": 88.76
+      "markPrice": 1.5946,
+      "unrealizedPnl": 26.6,
+      "unrealizedPct": 84.44
     },
     {
       "id": "2026-07-01T15:14-DOGEUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 756,
       "qty": 10342,
       "openedAt": "2026-07-01T15:14:39.517Z",
-      "markPrice": 0.07787,
-      "unrealizedPnl": 49.33,
-      "unrealizedPct": 130.5
+      "markPrice": 0.07778,
+      "unrealizedPnl": 48.4,
+      "unrealizedPct": 128.04
     },
     {
       "id": "2026-07-01T20:31-SEIUSDT-long",
@@ -83,9 +83,9 @@
       "notional": 630,
       "qty": 13263.16,
       "openedAt": "2026-07-01T20:31:06.753Z",
-      "markPrice": 0.05027,
-      "unrealizedPnl": 36.74,
-      "unrealizedPct": 116.63
+      "markPrice": 0.05007,
+      "unrealizedPnl": 34.09,
+      "unrealizedPct": 108.22
     },
     {
       "id": "2026-07-02T11:01-JUPUSDT-long",
@@ -100,9 +100,9 @@
       "notional": 756,
       "qty": 3217.02,
       "openedAt": "2026-07-02T11:01:19.293Z",
-      "markPrice": 0.2358,
-      "unrealizedPnl": 2.57,
-      "unrealizedPct": 6.8
+      "markPrice": 0.2361,
+      "unrealizedPnl": 3.54,
+      "unrealizedPct": 9.37
     },
     {
       "id": "2026-07-02T13:31-SOLUSDT-long",
@@ -134,9 +134,9 @@
       "notional": 630,
       "qty": 3667.05,
       "openedAt": "2026-07-02T17:01:10.887Z",
-      "markPrice": 0.1769,
-      "unrealizedPnl": 18.7,
-      "unrealizedPct": 59.37
+      "markPrice": 0.1761,
+      "unrealizedPnl": 15.77,
+      "unrealizedPct": 50.06
     },
     {
       "id": "2026-07-02T19:01-BDXUSDT-long",
@@ -151,9 +151,9 @@
       "notional": 630,
       "qty": 7118.64,
       "openedAt": "2026-07-02T19:01:37.645Z",
-      "markPrice": 0.08842,
-      "unrealizedPnl": -0.57,
-      "unrealizedPct": -1.81
+      "markPrice": 0.08857,
+      "unrealizedPnl": 0.5,
+      "unrealizedPct": 1.59
     },
     {
       "id": "2026-07-03T00:31-SEIUSDT-long",
@@ -168,9 +168,9 @@
       "notional": 630,
       "qty": 13263.16,
       "openedAt": "2026-07-03T00:31:33.131Z",
-      "markPrice": 0.05027,
-      "unrealizedPnl": 36.74,
-      "unrealizedPct": 116.63
+      "markPrice": 0.05007,
+      "unrealizedPnl": 34.09,
+      "unrealizedPct": 108.22
     },
     {
       "id": "2026-07-03T11:31-UNIUSDT-long",
@@ -185,9 +185,9 @@
       "notional": 756,
       "qty": 234.78,
       "openedAt": "2026-07-03T11:31:11.254Z",
-      "markPrice": 3.2178,
-      "unrealizedPnl": -0.52,
-      "unrealizedPct": -1.38
+      "markPrice": 3.2132,
+      "unrealizedPnl": -1.6,
+      "unrealizedPct": -4.23
     },
     {
       "id": "2026-07-03T11:31-BDXUSDT-long",
@@ -202,9 +202,9 @@
       "notional": 630,
       "qty": 7159.09,
       "openedAt": "2026-07-03T11:31:11.708Z",
-      "markPrice": 0.08842,
-      "unrealizedPnl": 3.01,
-      "unrealizedPct": 9.56
+      "markPrice": 0.08857,
+      "unrealizedPnl": 4.08,
+      "unrealizedPct": 12.95
     },
     {
       "id": "2026-07-03T13:02-WIFUSDT-long",
@@ -219,9 +219,9 @@
       "notional": 630,
       "qty": 3579.55,
       "openedAt": "2026-07-03T13:02:00.310Z",
-      "markPrice": 0.1769,
-      "unrealizedPnl": 3.22,
-      "unrealizedPct": 10.22
+      "markPrice": 0.1761,
+      "unrealizedPnl": 0.36,
+      "unrealizedPct": 1.14
     },
     {
       "id": "2026-07-03T14:01-ADIUSDT-long",
@@ -236,9 +236,9 @@
       "notional": 756,
       "qty": 136.22,
       "openedAt": "2026-07-03T14:01:25.721Z",
-      "markPrice": 5.8101,
-      "unrealizedPnl": 35.43,
-      "unrealizedPct": 93.73
+      "markPrice": 5.8151,
+      "unrealizedPnl": 36.11,
+      "unrealizedPct": 95.53
     },
     {
       "id": "2026-07-03T20:35-XLMUSDT-long",
@@ -270,9 +270,9 @@
       "notional": 1512,
       "qty": 21.4,
       "openedAt": "2026-07-04T11:01:14.857Z",
-      "markPrice": 70.067,
-      "unrealizedPnl": -12.35,
-      "unrealizedPct": -32.67
+      "markPrice": 69.949,
+      "unrealizedPnl": -14.88,
+      "unrealizedPct": -39.37
     },
     {
       "id": "2026-07-04T11:59-ADIUSDT-long",
@@ -287,9 +287,9 @@
       "notional": 756,
       "qty": 131.02,
       "openedAt": "2026-07-04T11:59:14.014Z",
-      "markPrice": 5.8101,
-      "unrealizedPnl": 5.23,
-      "unrealizedPct": 13.84
+      "markPrice": 5.8151,
+      "unrealizedPnl": 5.88,
+      "unrealizedPct": 15.56
     },
     {
       "id": "2026-07-04T14:31-BDXUSDT-long",
@@ -304,9 +304,9 @@
       "notional": 756,
       "qty": 8494.38,
       "openedAt": "2026-07-04T14:31:16.779Z",
-      "markPrice": 0.08842,
-      "unrealizedPnl": -4.93,
-      "unrealizedPct": -13.04
+      "markPrice": 0.08857,
+      "unrealizedPnl": -3.65,
+      "unrealizedPct": -9.66
     },
     {
       "id": "2026-07-04T15:01-SOLUSDT-long",
@@ -338,9 +338,9 @@
       "notional": 630,
       "qty": 244945.57,
       "openedAt": "2026-07-04T15:31:44.852Z",
-      "markPrice": 0.00247,
-      "unrealizedPnl": -24.98,
-      "unrealizedPct": -79.3
+      "markPrice": 0.002459,
+      "unrealizedPnl": -27.68,
+      "unrealizedPct": -87.87
     },
     {
       "id": "2026-07-04T15:48-WIFUSDT-long",
@@ -355,9 +355,9 @@
       "notional": 756,
       "qty": 4211.7,
       "openedAt": "2026-07-04T15:48:16.334Z",
-      "markPrice": 0.1769,
-      "unrealizedPnl": -10.95,
-      "unrealizedPct": -28.97
+      "markPrice": 0.1761,
+      "unrealizedPnl": -14.32,
+      "unrealizedPct": -37.88
     },
     {
       "id": "2026-07-04T17:01-HMSTRUSDT-long",
@@ -372,9 +372,9 @@
       "notional": 630,
       "qty": 1845342.71,
       "openedAt": "2026-07-04T17:01:50.139Z",
-      "markPrice": 0.0003439,
-      "unrealizedPnl": 4.61,
-      "unrealizedPct": 14.63
+      "markPrice": 0.0003394,
+      "unrealizedPnl": -3.69,
+      "unrealizedPct": -11.71
     },
     {
       "id": "2026-07-04T20:32-UNIUSDT-long",
@@ -389,9 +389,9 @@
       "notional": 756,
       "qty": 234.06,
       "openedAt": "2026-07-04T20:32:14.678Z",
-      "markPrice": 3.2178,
-      "unrealizedPnl": -2.86,
-      "unrealizedPct": -7.57
+      "markPrice": 3.2132,
+      "unrealizedPnl": -3.93,
+      "unrealizedPct": -10.4
     }
   ],
   "closed": [
