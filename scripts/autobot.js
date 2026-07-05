@@ -127,6 +127,9 @@ const ROOT = path.join(__dirname, '..');
   const maxDir = config.funnel?.max_signals_per_direction || 2;
   const perScanCap = config.funnel?.max_signals_per_scan || 4;
   const sentSymbols = new Set((st.sent || []).map((x) => x.symbol));
+  // Sin duplicados: excluye también símbolos con posición ABIERTA de días anteriores
+  // (antes el dedup era solo por día → WIF/SEI/BDX acumularon 2-3 posiciones iguales).
+  for (const i of journal.readIdeas()) if (i.status === 'open') sentSymbols.add(i.symbol);
 
   // Ritmo del día: el piso sube de ~1 a `target` conforme avanza la jornada
   // (así los trades caen repartidos, no 4 de golpe al inicio).

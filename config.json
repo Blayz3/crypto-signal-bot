@@ -11,8 +11,13 @@
   "scan_interval_minutes": 15,
   "scan_concurrency": 6,
   "ai_concurrency": 2,
-  "watchlist": [],
-  "auto_top_volume": 60,
+  "watchlist": [
+    "BTC", "ETH", "XRP", "SOL", "BNB", "DOGE", "ADA", "LINK", "AVAX", "LTC",
+    "DOT", "UNI", "AAVE", "NEAR", "ATOM", "XLM", "HBAR", "SUI", "TAO", "XMR",
+    "ZEC", "BCH", "TRX", "ETC", "PEPE", "WIF", "HYPE", "SEI", "JUP", "TON"
+  ],
+  "auto_top_volume": 30,
+  "min_quote_volume_usd": 10000000,
   "funnel": {
     "min_local_score": 1,
     "max_ai_candidates": 4,

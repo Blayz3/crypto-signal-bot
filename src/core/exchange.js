@@ -69,9 +69,15 @@ class ExchangeClient {
     } catch (e) {
       throw new Error(`No se pudieron traer tickers: ${e.message}`);
     }
+    // FILTRO DE CALIDAD: los listings nuevos inflan volumen 1-2 días y se cuelan al top
+    // (SIREN/RAVE/etc. concentraron las pérdidas). Piso de volumen REAL en USD + fuera
+    // tokens apalancados. Con el piso, el ranking queda dominado por majors líquidas.
+    const minQuoteVol = this.config.min_quote_volume_usd ?? 10000000; // $10M/24h
+    const LEVERAGED = /(3L|3S|2L|2S|5L|5S|UP|DOWN)$/;
     const rows = Object.values(tickers)
       .filter((t) => t.symbol && t.symbol.endsWith(`/${quote}`))
       .filter((t) => !STABLE_BASES.has((t.symbol.split('/')[0] || '').toUpperCase()))
+      .filter((t) => !LEVERAGED.test(t.symbol.split('/')[0] || ''))
       .filter((t) => {
         const m = this.ex.markets[t.symbol];
         return m && m.active && m.spot !== false;
@@ -80,9 +86,24 @@ class ExchangeClient {
         symbol: t.symbol,
         quoteVolume: t.quoteVolume || (t.baseVolume || 0) * (t.last || 0),
       }))
+      .filter((r) => r.quoteVolume >= minQuoteVol)
       .sort((a, b) => b.quoteVolume - a.quoteVolume);
 
-    return rows.slice(0, n).map((r) => r.symbol);
+    // FILTRO DE MADUREZ: fuera listings nuevos (los pumps les inflan el volumen real).
+    // La moneda debe tener >= min_listing_age_days de historia en el exchange.
+    const minAgeDays = this.config.min_listing_age_days ?? 120;
+    const cutoff = Date.now() - minAgeDays * 86400000;
+    const out = [];
+    for (const r of rows) {
+      if (out.length >= n) break;
+      try {
+        const first = await this.ex.fetchOHLCV(r.symbol, '1d', cutoff - 30 * 86400000, 1);
+        if (first.length && first[0][0] <= cutoff) out.push(r.symbol);
+      } catch {
+        out.push(r.symbol); // si la consulta falla, no bloquear (fail-open)
+      }
+    }
+    return out;
   }
 
   /**
