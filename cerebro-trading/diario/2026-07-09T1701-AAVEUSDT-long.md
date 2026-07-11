@@ -4,7 +4,7 @@ type: diario
 symbol: AAVE/USDT
 action: long
 date: 2026-07-09T17:01:20.018Z
-status: open
+status: win
 orderType: limit
 setup: Bounce from VAL (extreme fear)
 entry: 90.5
@@ -12,7 +12,7 @@ stop: 88.5
 target: 96
 rr: 2.75
 confidence: 60
-result_r: 
+result_r: 4.13
 ---
 
 # AAVE/USDT LONG — 2026-07-09
