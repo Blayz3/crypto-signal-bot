@@ -4,7 +4,7 @@ type: diario
 symbol: DOT/USDT
 action: short
 date: 2026-07-13T00:01:53.687Z
-status: open
+status: win
 orderType: limit
 setup: Retest de soporte + extremo de miedo
 entry: 0.8447
@@ -12,7 +12,7 @@ stop: 0.8485
 target: 0.835
 rr: 2.55
 confidence: 70
-result_r: 
+result_r: 3.83
 ---
 
 # DOT/USDT SHORT — 2026-07-13
