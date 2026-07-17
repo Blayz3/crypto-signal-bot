@@ -4,7 +4,7 @@ type: diario
 symbol: NEAR/USDT
 action: long
 date: 2026-07-08T22:31:48.396Z
-status: open
+status: win
 orderType: limit
 setup: Bounce from VAL (extreme fear)
 entry: 1.89
@@ -12,7 +12,7 @@ stop: 1.85
 target: 2.01
 rr: 3
 confidence: 75
-result_r: 
+result_r: 1.5
 ---
 
 # NEAR/USDT LONG — 2026-07-08
