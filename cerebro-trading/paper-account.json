@@ -1,5 +1,5 @@
 {
-  "updated": "2026-07-19T00:01:57.510Z",
+  "updated": "2026-07-19T00:31:03.721Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 898.42,
-  "equity": 907.05,
+  "equity": 886.41,
   "realizedPnl": -101.58,
-  "unrealizedPnl": 8.63,
+  "unrealizedPnl": -12.01,
   "stats": {
-    "openCount": 16,
+    "openCount": 17,
     "closedCount": 99,
     "wins": 31,
     "losses": 68,
@@ -32,9 +32,9 @@
       "notional": 673.8,
       "qty": 440.39,
       "openedAt": "2026-07-01T14:31:06.489Z",
-      "markPrice": 1.4974,
-      "unrealizedPnl": -14.36,
-      "unrealizedPct": -42.62
+      "markPrice": 1.5013,
+      "unrealizedPnl": -12.64,
+      "unrealizedPct": -37.52
     },
     {
       "id": "2026-07-01T15:14-DOGEUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 808.6,
       "qty": 11061.56,
       "openedAt": "2026-07-01T15:14:39.517Z",
-      "markPrice": 0.07257,
-      "unrealizedPnl": -5.86,
-      "unrealizedPct": -14.49
+      "markPrice": 0.07245,
+      "unrealizedPnl": -7.19,
+      "unrealizedPct": -17.78
     },
     {
       "id": "2026-07-01T20:31-SEIUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 673.8,
       "qty": 14185.26,
       "openedAt": "2026-07-01T20:31:06.753Z",
-      "markPrice": 0.04685,
-      "unrealizedPnl": -9.22,
-      "unrealizedPct": -27.37
+      "markPrice": 0.04682,
+      "unrealizedPnl": -9.65,
+      "unrealizedPct": -28.64
     },
     {
       "id": "2026-07-03T00:31-SEIUSDT-long",
@@ -83,9 +83,9 @@
       "notional": 673.8,
       "qty": 14185.26,
       "openedAt": "2026-07-03T00:31:33.131Z",
-      "markPrice": 0.04685,
-      "unrealizedPnl": -9.22,
-      "unrealizedPct": -27.37
+      "markPrice": 0.04682,
+      "unrealizedPnl": -9.65,
+      "unrealizedPct": -28.64
     },
     {
       "id": "2026-07-06T11:01-TRXUSDT-long",
@@ -100,9 +100,9 @@
       "notional": 673.8,
       "qty": 2073.23,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3261,
-      "unrealizedPnl": 2.28,
-      "unrealizedPct": 6.77
+      "markPrice": 0.326,
+      "unrealizedPnl": 2.07,
+      "unrealizedPct": 6.14
     },
     {
       "id": "2026-07-06T17:01-LTCUSDT-long",
@@ -117,9 +117,9 @@
       "notional": 1347.6,
       "qty": 29.83,
       "openedAt": "2026-07-06T17:01:23.668Z",
-      "markPrice": 47.03,
-      "unrealizedPnl": 55.49,
-      "unrealizedPct": 164.71
+      "markPrice": 46.75,
+      "unrealizedPnl": 47.14,
+      "unrealizedPct": 139.92
     },
     {
       "id": "2026-07-09T14:01-XLMUSDT-long",
@@ -134,9 +134,9 @@
       "notional": 673.8,
       "qty": 3681.97,
       "openedAt": "2026-07-09T14:01:19.451Z",
-      "markPrice": 0.188,
-      "unrealizedPnl": 18.41,
-      "unrealizedPct": 54.65
+      "markPrice": 0.1874,
+      "unrealizedPnl": 16.2,
+      "unrealizedPct": 48.09
     },
     {
       "id": "2026-07-13T11:01-HBARUSDT-short",
@@ -151,9 +151,9 @@
       "notional": 673.8,
       "qty": 10047.72,
       "openedAt": "2026-07-13T11:01:21.896Z",
-      "markPrice": 0.06725,
-      "unrealizedPnl": -1.91,
-      "unrealizedPct": -5.67
+      "markPrice": 0.06715,
+      "unrealizedPnl": -0.9,
+      "unrealizedPct": -2.67
     },
     {
       "id": "2026-07-16T11:01-WIFUSDT-long",
@@ -185,9 +185,9 @@
       "notional": 673.8,
       "qty": 96.84,
       "openedAt": "2026-07-16T13:01:39.147Z",
-      "markPrice": 7.011,
-      "unrealizedPnl": -5.13,
-      "unrealizedPct": -15.23
+      "markPrice": 7.0199,
+      "unrealizedPnl": -5.99,
+      "unrealizedPct": -17.78
     },
     {
       "id": "2026-07-17T11:01-TAOUSDT-short",
@@ -202,9 +202,9 @@
       "notional": 1347.6,
       "qty": 6.99,
       "openedAt": "2026-07-17T11:01:25.716Z",
-      "markPrice": 196.26,
-      "unrealizedPnl": -25.11,
-      "unrealizedPct": -74.53
+      "markPrice": 196.17,
+      "unrealizedPnl": -24.48,
+      "unrealizedPct": -72.66
     },
     {
       "id": "2026-07-17T13:31-AVAXUSDT-long",
@@ -219,9 +219,9 @@
       "notional": 673.8,
       "qty": 104.95,
       "openedAt": "2026-07-17T13:31:02.971Z",
-      "markPrice": 6.599,
-      "unrealizedPnl": 18.79,
-      "unrealizedPct": 55.77
+      "markPrice": 6.573,
+      "unrealizedPnl": 16.06,
+      "unrealizedPct": 47.67
     },
     {
       "id": "2026-07-18T11:14-BNBUSDT-short",
@@ -236,9 +236,9 @@
       "notional": 1347.6,
       "qty": 2.36,
       "openedAt": "2026-07-18T11:14:08.869Z",
-      "markPrice": 571.096,
-      "unrealizedPnl": -3.02,
-      "unrealizedPct": -8.96
+      "markPrice": 570.904,
+      "unrealizedPnl": -2.56,
+      "unrealizedPct": -7.6
     },
     {
       "id": "2026-07-18T11:30-HYPEUSDT-short",
@@ -253,9 +253,9 @@
       "notional": 1617.2,
       "qty": 27.44,
       "openedAt": "2026-07-18T11:30:56.340Z",
-      "markPrice": 60.308,
-      "unrealizedPnl": -37.54,
-      "unrealizedPct": -92.85
+      "markPrice": 60.359,
+      "unrealizedPnl": -38.93,
+      "unrealizedPct": -96.29
     },
     {
       "id": "2026-07-18T12:28-BTCUSDT-long",
@@ -270,9 +270,9 @@
       "notional": 1347.6,
       "qty": 0.02,
       "openedAt": "2026-07-18T12:28:38.053Z",
-      "markPrice": 64854.4,
-      "unrealizedPnl": 15.81,
-      "unrealizedPct": 46.93
+      "markPrice": 64786.5,
+      "unrealizedPnl": 14.38,
+      "unrealizedPct": 42.68
     },
     {
       "id": "2026-07-18T22:01-ZECUSDT-long",
@@ -287,9 +287,26 @@
       "notional": 1347.6,
       "qty": 2.41,
       "openedAt": "2026-07-18T22:01:17.501Z",
-      "markPrice": 558.547,
-      "unrealizedPnl": -2.78,
-      "unrealizedPct": -8.25
+      "markPrice": 556.432,
+      "unrealizedPnl": -7.87,
+      "unrealizedPct": -23.36
+    },
+    {
+      "id": "2026-07-19T00:31-ETHUSDT-long",
+      "symbol": "ETH/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 1859.82,
+      "stop": 1834.27,
+      "target": 1882.13,
+      "leverage": 40,
+      "margin": 33.69,
+      "notional": 1347.6,
+      "qty": 0.72,
+      "openedAt": "2026-07-19T00:31:02.317Z",
+      "markPrice": 1859.82,
+      "unrealizedPnl": 0,
+      "unrealizedPct": 0
     }
   ],
   "closed": [
