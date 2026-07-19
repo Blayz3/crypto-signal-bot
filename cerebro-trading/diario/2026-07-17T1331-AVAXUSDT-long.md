@@ -4,7 +4,7 @@ type: diario
 symbol: AVAX/USDT
 action: long
 date: 2026-07-17T13:31:02.972Z
-status: open
+status: win
 orderType: limit
 setup: Retest de soporte + extremo de miedo
 entry: 6.42
@@ -12,7 +12,7 @@ stop: 6.35
 target: 6.65
 rr: 3.29
 confidence: 60
-result_r: 
+result_r: 1.64
 ---
 
 # AVAX/USDT LONG — 2026-07-17
