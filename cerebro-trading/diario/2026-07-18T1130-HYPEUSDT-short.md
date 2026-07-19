@@ -4,7 +4,7 @@ type: diario
 symbol: HYPE/USDT
 action: short
 date: 2026-07-18T11:30:56.341Z
-status: open
+status: loss
 orderType: limit
 setup: EMAs bajistas con ADX fuerte
 entry: 58.94
@@ -12,7 +12,7 @@ stop: 61.18
 target: 54.44
 rr: 2.01
 confidence: 60
-result_r: 
+result_r: -1
 ---
 
 # HYPE/USDT SHORT — 2026-07-18
@@ -22,4 +22,4 @@ result_r:
 **Razón (IA):** La confluencia de EMAs bajistas, ADX fuerte y el sesgo local a la baja sugieren un movimiento a la baja. La falta de confluencia de factores a favor del lado largo y la presencia de ballenas vendiendo refuerzan esta decisión. El stop se coloca en la invalidación estructural y el target se establece en un nivel de soporte histórico.
 
 **Resultado:** (marca status: win/loss/breakeven y result_r al cerrar)
-**Lección:** 
+**Lección:** Causa: La falta de confluencia suficiente de factores a favor de la tendencia bajista y un mal timing en la entrada, ya que el precio no mostró un movimiento significativo a favor antes de tocar el stop.  Lección: Exigir una confluencia más fuerte de al menos 6 factores y un mejor análisis del momentum y el timing de la entrada para evitar operar contra la tendencia o en momentos de baja volatilidad.
