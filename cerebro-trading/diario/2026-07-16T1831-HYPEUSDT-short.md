@@ -4,7 +4,7 @@ type: diario
 symbol: HYPE/USDT
 action: short
 date: 2026-07-16T18:31:04.380Z
-status: open
+status: win
 orderType: limit
 setup: Retest de soporte + extremo de miedo
 entry: 62.689
@@ -12,7 +12,7 @@ stop: 64.5
 target: 59.5
 rr: 1.76
 confidence: 80
-result_r: 
+result_r: 0.88
 ---
 
 # HYPE/USDT SHORT — 2026-07-16
