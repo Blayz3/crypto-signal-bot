@@ -4,7 +4,7 @@ type: diario
 symbol: JUP/USDT
 action: short
 date: 2026-07-16T16:01:15.978Z
-status: open
+status: win
 orderType: limit
 setup: Retest de soporte + extremo de miedo
 entry: 0.2029
@@ -12,7 +12,7 @@ stop: 0.2055
 target: 0.195
 rr: 3.04
 confidence: 70
-result_r: 
+result_r: 4.56
 ---
 
 # JUP/USDT SHORT — 2026-07-16
