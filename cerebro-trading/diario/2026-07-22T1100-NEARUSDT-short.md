@@ -4,7 +4,7 @@ type: diario
 symbol: NEAR/USDT
 action: short
 date: 2026-07-22T11:00:56.442Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con ADX fuerte
 entry: 1.8898
@@ -12,7 +12,7 @@ stop: 1.9118
 target: 1.8668
 rr: 1.05
 confidence: 70
-result_r: 
+result_r: 0.52
 ---
 
 # NEAR/USDT SHORT — 2026-07-22
