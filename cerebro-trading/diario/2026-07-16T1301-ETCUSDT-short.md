@@ -4,7 +4,7 @@ type: diario
 symbol: ETC/USDT
 action: short
 date: 2026-07-16T13:01:39.148Z
-status: open
+status: loss
 orderType: limit
 setup: Retest de soporte + extremo de miedo
 entry: 6.958
@@ -12,7 +12,7 @@ stop: 7.15
 target: 6.5
 rr: 2.39
 confidence: 70
-result_r: 
+result_r: -1
 ---
 
 # ETC/USDT SHORT — 2026-07-16
@@ -22,4 +22,4 @@ result_r:
 **Razón (IA):** La confluencia de factores a favor de la dirección bajista es alta, con un MACD cruce bajista, EMAs alineadas bajistas y un ADX fuerte. El retest de soporte en el área de valor (VAL) es un indicio de que el precio puede seguir bajando. La entrada se realiza en un momento de extremo miedo, lo que puede ser un indicio de que el precio está en una zona de soporte.
 
 **Resultado:** (marca status: win/loss/breakeven y result_r al cerrar)
-**Lección:** 
+**Lección:** Causa: La falta de ajuste del stop loss y no asegurar parcialmente las ganancias permitió que el precio revertiera y alcanzara el stop, lo que indica un error en la gestión del trade. Lección: Es crucial ajustar el stop loss y asegurar parcialmente las ganancias en función del movimiento del precio para evitar pérdidas innecesarias y maximizar los beneficios.
