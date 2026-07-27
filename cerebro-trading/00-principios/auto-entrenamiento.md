@@ -10,7 +10,7 @@ weight: high
 
 # Autoentrenamiento (aprendido de mis resultados)
 
-Generado el 2026-07-20 con los resultados REALES de la SEMANA (2026-07-13 → 2026-07-20, 22 trades, -11.1R).
+Generado el 2026-07-27 con los resultados REALES de la SEMANA (2026-07-20 → 2026-07-27, 27 trades, -17.1R).
 El bot se entrena solo CADA SEMANA: NO abandona los setups, los PERFECCIONA — prioriza lo que
 gana, exige la condición que faltó en lo que pierde, y sube la exigencia si no fue rentable.
 **Nivel de exigencia actual: 5/5.**
@@ -19,16 +19,17 @@ gana, exige la condición que faltó en lo que pierde, y sube la exigencia si no
 - (aún sin setups ganadores con muestra suficiente — sigue recolectando)
 
 ## 🔧 Setups a AFINAR (perdieron — NO los abandones: exige la confluencia que faltó)
-- Retest de soporte + extremo de miedo: 16 trades, -7R → tómalo solo con confluencia ≥6 (perfecciona la entrada), si no NONE
-- EMAs bajistas con ADX fuerte: 5 trades, -3.1R → tómalo solo con confluencia ≥6 (perfecciona la entrada), si no NONE
+- Retest de soporte + extremo de miedo: 11 trades, -5.5R → tómalo solo con confluencia ≥6 (perfecciona la entrada), si no NONE
+- EMAs bajistas con ADX fuerte: 5 trades, -3.5R → tómalo solo con confluencia ≥6 (perfecciona la entrada), si no NONE
+- Bounce from VAL (extreme fear): 6 trades, -3.2R → tómalo solo con confluencia ≥6 (perfecciona la entrada), si no NONE
 
 ## 📝 Lecciones de las pérdidas de la semana
-- Causa: La falta de confluencia suficiente de factores a favor de la tendencia alcista y un stop demasiado ajustado en una zona de ruido, lo que no permitió que el precio se moviera en favor de la operación sin activar el stop loss.  Lección: Exigir una confluencia mínima de 5 factores y ajustar el stop en función de la volatilidad real del mercado para dar espacio al precio para moverse en favor de la operación.
-- Causa: La falta de confluencia suficiente y un stop demasiado ajustado en una zona de ruido, lo que no permitió que el trade se desarrollara según la expectativa.  Lección: Exigir una confluencia mínima de 5 factores y ajustar el stop considerando el ruido del mercado y el régimen de volatilidad para dar espacio al trade para desarrollarse.
-- Causa: La falta de confluencia suficiente y un momentum claro a favor de la entrada, junto con un timing de entrada que no aprovechó adecuadamente el impulso del mercado.  Lección: Exigir una confluencia más fuerte (≥6 factores) y un momentum más claro (ADX≥35) antes de tomar una posición, especialmente en trades que no tienen un contexto de tendencia clara a favor.
-- Causa: La falta de asegurar parcialmente la posición o mover el stop a breakeven permitió que el trade revertiera y alcanzara el stop, lo que indica un error en la gestión del riesgo y la falta de ajuste en la estrategia de salida.  Lección: Es crucial implementar una estrategia de gestión de ganancias y pérdidas más efectiva, como asegurar parcialmente la posición o ajustar el stop a breakeven una vez que el trade avance en la dirección favorable, para maximizar las ganancias y minimizar las pérdidas.
-- Causa: La falta de ajuste del stop a medida que el precio avanzaba a favor, lo que impidió asegurar parcialmente las ganancias y finalmente llevó a la activación del stop en una reversión del precio.  Lección: Asegurar parcialmente las ganancias y ajustar el stop a medida que el precio avanza a favor es crucial para maximizar los beneficios y minimizar las pérdidas, especialmente en trades con un buen potencial de continuación.
-- Causa: La entrada se realizó en un mal momento, con el precio moviéndose en contra casi de inmediato, lo que sugiere una falta de confluencia de factores a favor del momentum o una mala lectura del timing.  Lección: Exigir una confluencia más fuerte de factores, incluyendo un ADX más alto y una mejor alineación con la tendencia mayor, antes de tomar una posición, especialmente en trades que dependen de un bounce o retest de soporte.
+- Causa: La entrada se realizó en un mal momento, sin considerar adecuadamente el momentum y la tendencia actual del mercado, lo que llevó a que el precio se moviera en contra casi de inmediato.  Lección: Exigir una confluencia más fuerte de factores, incluyendo un análisis más detallado del momentum y la tendencia, antes de tomar una posición, especialmente cuando el precio está cerca de un soporte o resistencia clave.
+- Causa: La falta de confluencia adicional y un stop demasiado ajustado en una zona de ruido, lo que no permitió que el precio se desarrollara a favor del trade.  Lección: Exigir una confluencia mínima de 6 factores y ajustar el stop considerando el ruido del mercado para permitir que el precio tenga espacio para moverse en el futuro, evitando stops prematuros.
+- Causa: La causa raíz de la pérdida fue la falta de confluencia suficiente y un mal timing en la entrada, ya que el precio no mostró un momentum claro a favor después de la entrada, lo que sugiere que el setup no estaba lo suficientemente fuerte o que el momento de entrada no fue el óptimo.  Lección: Exigir una confluencia más fuerte (≥6 factores) y un mejor contexto de mercado, incluyendo un momentum más claro a favor de la tendencia antes de tomar una posición, especialmente en trades que no tienen una alta probabilidad de éxito según los backtests y el análisis técnico.
+- Causa: La causa raíz de la pérdida fue la falta de confluencia suficiente y un momento de entrada inadecuado, con el precio no mostrando suficiente momentum a favor de la tendencia alcista identificada.  Lección: Exigir una confluencia más fuerte (al menos 5 factores) y un mejor momento de entrada, con el precio mostrando un movimiento más claro en la dirección de la tendencia, es crucial para evitar pérdidas similares en el futuro.
+- Causa: La falta de ajuste del stop a medida que el precio avanzaba a favor, lo que impidió asegurar parcialmente las ganancias y finalmente llevó a que el precio revertiera hasta alcanzar el stop inicial.  Lección: Es crucial implementar una gestión efectiva de stop y tomar ganancias parciales en momentos clave para evitar que las ganancias se conviertan en pérdidas, asegurando así una mejor relación riesgo-recompensa.
+- Causa: La falta de confluencia suficiente y el momento de entrada inadecuado, lo que indica un error en la evaluación del contexto y el timing del trade.  Lección: Exigir una confluencia más fuerte (≥6 factores) y un análisis más detallado del momento de entrada, considerando el momentum y la tendencia mayor, antes de tomar una decisión de trading.
 
 **Regla para el bot:** Aplica lo aprendido de MIS resultados: prioriza los setups ganadores con más confianza; los que perdieron NO se abandonan — exígeles confluencia ≥6 y la condición que faltó según las lecciones. Confluencia mínima de 5 factores en CUALQUIER trade (nivel de exigencia 5/5). Objetivo: PERFECCIONAR los setups semana a semana para perder menos de lo evitable; ante la duda, NONE.
 
