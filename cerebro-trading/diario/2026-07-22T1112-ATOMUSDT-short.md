@@ -4,7 +4,7 @@ type: diario
 symbol: ATOM/USDT
 action: short
 date: 2026-07-22T11:12:32.663Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con MACD- y en/bajo VAL
 entry: 1.464
@@ -12,7 +12,7 @@ stop: 1.492
 target: 1.384
 rr: 2.86
 confidence: 80
-result_r: 
+result_r: 4.29
 ---
 
 # ATOM/USDT SHORT — 2026-07-22
