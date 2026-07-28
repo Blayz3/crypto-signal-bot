@@ -4,7 +4,7 @@ type: diario
 symbol: AAVE/USDT
 action: long
 date: 2026-07-26T18:31:09.222Z
-status: open
+status: win
 orderType: limit
 setup: Retest de soporte + extremo de miedo
 entry: 96.618
@@ -12,7 +12,7 @@ stop: 94.5
 target: 100.5
 rr: 1.83
 confidence: 70
-result_r: 
+result_r: 0.92
 ---
 
 # AAVE/USDT LONG — 2026-07-26
