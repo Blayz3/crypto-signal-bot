@@ -4,7 +4,7 @@ type: diario
 symbol: TAO/USDT
 action: short
 date: 2026-07-27T22:30:50.820Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con MACD- y bajo VAL
 entry: 191.69
@@ -12,7 +12,7 @@ stop: 194.5
 target: 184.5
 rr: 2.56
 confidence: 70
-result_r: 
+result_r: 1.28
 ---
 
 # TAO/USDT SHORT — 2026-07-27
