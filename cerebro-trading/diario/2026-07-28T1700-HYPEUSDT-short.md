@@ -4,7 +4,7 @@ type: diario
 symbol: HYPE/USDT
 action: short
 date: 2026-07-28T17:00:40.516Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con MACD- y en/bajo VAL
 entry: 55.7
@@ -12,7 +12,7 @@ stop: 57.5
 target: 53.5
 rr: 1.22
 confidence: 70
-result_r: 
+result_r: 0.61
 ---
 
 # HYPE/USDT SHORT — 2026-07-28
