@@ -4,7 +4,7 @@ type: diario
 symbol: ATOM/USDT
 action: short
 date: 2026-07-25T22:01:14.730Z
-status: open
+status: win
 orderType: market
 setup: EMAs bajistas con ADX fuerte
 entry: 1.3869
@@ -12,7 +12,7 @@ stop: 1.42
 target: 1.32
 rr: 2.02
 confidence: 62
-result_r: 
+result_r: 3.03
 ---
 
 # ATOM/USDT SHORT — 2026-07-25
