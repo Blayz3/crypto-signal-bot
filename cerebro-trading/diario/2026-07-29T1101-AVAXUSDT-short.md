@@ -4,7 +4,7 @@ type: diario
 symbol: AVAX/USDT
 action: short
 date: 2026-07-29T11:01:03.169Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con MACD-
 entry: 6.41
@@ -12,7 +12,7 @@ stop: 6.55
 target: 6.21
 rr: 1.43
 confidence: 55
-result_r: 
+result_r: 0.71
 ---
 
 # AVAX/USDT SHORT — 2026-07-29
