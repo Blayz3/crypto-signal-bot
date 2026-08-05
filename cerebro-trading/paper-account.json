@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-05T02:01:16.963Z",
+  "updated": "2026-08-05T02:35:00.000Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 394.1,
+  "balance": 394.87,
   "equity": 414.99,
-  "realizedPnl": -605.9,
-  "unrealizedPnl": 20.89,
+  "realizedPnl": -605.13,
+  "unrealizedPnl": 20.12,
   "stats": {
-    "openCount": 10,
-    "closedCount": 184,
-    "wins": 52,
+    "openCount": 9,
+    "closedCount": 185,
+    "wins": 53,
     "losses": 132,
-    "winRate": 28.26
+    "winRate": 28.65
   },
   "open": [
     {
@@ -156,23 +156,6 @@
       "unrealizedPct": -18.54
     },
     {
-      "id": "2026-08-03T15:31-ADAUSDT-short",
-      "symbol": "ADA/USDT",
-      "dir": "short",
-      "grade": "A",
-      "entry": 0.1931,
-      "stop": 0.203,
-      "target": 0.1735,
-      "leverage": 20,
-      "margin": 14.78,
-      "notional": 295.6,
-      "qty": 1530.81,
-      "openedAt": "2026-08-03T15:31:01.756Z",
-      "markPrice": 0.1926,
-      "unrealizedPnl": 0.77,
-      "unrealizedPct": 5.21
-    },
-    {
       "id": "2026-08-04T16:30-BNBUSDT-long",
       "symbol": "BNB/USDT",
       "dir": "long",
@@ -236,15 +219,15 @@
       "symbol": "PEPE/USDT",
       "dir": "short",
       "grade": "B",
-      "entry": 0.00000232,
-      "stop": 0.00000237,
-      "target": 0.00000223,
+      "entry": 2.32e-06,
+      "stop": 2.37e-06,
+      "target": 2.23e-06,
       "leverage": 20,
       "margin": 30.69,
       "notional": 613.8,
       "qty": 264568965.52,
       "openedAt": "2026-07-01T00:31:22.094Z",
-      "exit": 0.00000223,
+      "exit": 2.23e-06,
       "status": "win",
       "resultR": 1.8,
       "pnl": 23.81,
@@ -636,15 +619,15 @@
       "symbol": "PEPE/USDT",
       "dir": "long",
       "grade": "A",
-      "entry": 0.00000225,
-      "stop": 0.00000205,
-      "target": 0.00000255,
+      "entry": 2.25e-06,
+      "stop": 2.05e-06,
+      "target": 2.55e-06,
       "leverage": 20,
       "margin": 34.5,
       "notional": 690,
       "qty": 306666666.67,
       "openedAt": "2026-07-01T11:30:56.542Z",
-      "exit": 0.000002573,
+      "exit": 2.573e-06,
       "status": "win",
       "resultR": 1.61,
       "pnl": 99.05,
@@ -3870,6 +3853,26 @@
       "pnl": -12.96,
       "pnlPct": -84.93,
       "closedAt": "2026-08-04T20:00:53.598Z"
+    },
+    {
+      "id": "2026-08-03T15:31-ADAUSDT-short",
+      "symbol": "ADA/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 0.1931,
+      "stop": 0.203,
+      "target": 0.1735,
+      "leverage": 20,
+      "margin": 14.78,
+      "notional": 295.6,
+      "qty": 1530.81,
+      "openedAt": "2026-08-03T15:31:01.756Z",
+      "exit": 0.1926,
+      "status": "win",
+      "resultR": 0.05,
+      "pnl": 0.77,
+      "pnlPct": 5.21,
+      "closedAt": "2026-08-05T02:35:00.000Z"
     }
   ],
   "equityCurve": [
@@ -4063,7 +4066,7 @@
     },
     {
       "t": "2026-07-07T19:31:12.169Z",
-      "balance": 604
+      "balance": 604.0
     },
     {
       "t": "2026-07-07T22:01:05.617Z",
@@ -4071,7 +4074,7 @@
     },
     {
       "t": "2026-07-07T22:31:05.044Z",
-      "balance": 592
+      "balance": 592.0
     },
     {
       "t": "2026-07-08T01:31:04.652Z",
@@ -4187,7 +4190,7 @@
     },
     {
       "t": "2026-07-13T14:31:10.388Z",
-      "balance": 826
+      "balance": 826.0
     },
     {
       "t": "2026-07-13T18:01:14.911Z",
@@ -4523,7 +4526,7 @@
     },
     {
       "t": "2026-07-30T20:00:42.948Z",
-      "balance": 514
+      "balance": 514.0
     },
     {
       "t": "2026-07-30T22:05:46.764Z",
@@ -4612,6 +4615,10 @@
     {
       "t": "2026-08-04T20:00:53.598Z",
       "balance": 394.1
+    },
+    {
+      "t": "2026-08-05T02:35:00.000Z",
+      "balance": 394.87
     }
   ]
 }
