@@ -4,7 +4,7 @@ type: diario
 symbol: LTC/USDT
 action: short
 date: 2026-07-31T15:01:28.956Z
-status: open
+status: loss
 orderType: limit
 setup: EMAs bajistas con MACD- y en/bajo VAL
 entry: 44.82
@@ -12,7 +12,7 @@ stop: 46.44
 target: 42.82
 rr: 1.23
 confidence: 70
-result_r: 
+result_r: -1
 ---
 
 # LTC/USDT SHORT — 2026-07-31
@@ -22,4 +22,4 @@ result_r:
 **Razón (IA):** La tendencia bajista se refuerza con EMAs alineadas bajistas en diferentes timeframes, MACD- en 4h y en/bajo VAL en 4h. El sentimiento del mercado es de miedo extremo, lo que sugiere una posible reversión. La confluencia de estos factores me da una confianza de 70 en una señal de venta.
 
 **Resultado:** (marca status: win/loss/breakeven y result_r al cerrar)
-**Lección:** 
+**Lección:** Causa: La falta de confluencia suficiente y un stop demasiado ajustado en una zona de ruido, lo que no permitió que el trade se desarrollara según la expectativa.  Lección: Exigir una confluencia mínima de 5 factores y ajustar el stop considerando el ruido del mercado y el régimen de volatilidad para dar espacio al trade para desarrollarse.
