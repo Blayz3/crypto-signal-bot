@@ -4,7 +4,7 @@ type: diario
 symbol: NEAR/USDT
 action: short
 date: 2026-08-07T11:23:27.749Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con MACD-
 entry: 1.66
@@ -12,7 +12,7 @@ stop: 1.69
 target: 1.59
 rr: 2.33
 confidence: 55
-result_r: 
+result_r: 1.17
 ---
 
 # NEAR/USDT SHORT — 2026-08-07
