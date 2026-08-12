@@ -4,7 +4,7 @@ type: diario
 symbol: ETC/USDT
 action: short
 date: 2026-07-28T17:34:06.758Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con MACD- y en/bajo VAL
 entry: 6.72
@@ -12,7 +12,7 @@ stop: 6.85
 target: 6.45
 rr: 2.08
 confidence: 55
-result_r: 
+result_r: 3.12
 ---
 
 # ETC/USDT SHORT — 2026-07-28
