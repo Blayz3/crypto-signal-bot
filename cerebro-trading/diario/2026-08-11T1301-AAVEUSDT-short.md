@@ -4,7 +4,7 @@ type: diario
 symbol: AAVE/USDT
 action: short
 date: 2026-08-11T13:01:47.729Z
-status: open
+status: win
 orderType: market
 setup: EMAs bajistas con MACD- y en/bajo VAL
 entry: 88.696
@@ -12,7 +12,7 @@ stop: 89.68
 target: 86.72
 rr: 2.01
 confidence: 55
-result_r: 
+result_r: 1
 ---
 
 # AAVE/USDT SHORT — 2026-08-11
