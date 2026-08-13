@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-13T17:31:17.224Z",
+  "updated": "2026-08-13T18:01:44.065Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 269.77,
-  "equity": 311.9,
+  "equity": 316.16,
   "realizedPnl": -730.23,
-  "unrealizedPnl": 42.13,
+  "unrealizedPnl": 46.39,
   "stats": {
-    "openCount": 12,
+    "openCount": 13,
     "closedCount": 218,
     "wins": 59,
     "losses": 159,
@@ -32,9 +32,9 @@
       "notional": 202.4,
       "qty": 622.77,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3342,
-      "unrealizedPnl": 5.73,
-      "unrealizedPct": 56.62
+      "markPrice": 0.334,
+      "unrealizedPnl": 5.6,
+      "unrealizedPct": 55.34
     },
     {
       "id": "2026-07-27T22:30-SUIUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 202.4,
       "qty": 290.22,
       "openedAt": "2026-07-27T22:30:50.366Z",
-      "markPrice": 0.6846,
-      "unrealizedPnl": 3.71,
-      "unrealizedPct": 36.66
+      "markPrice": 0.685,
+      "unrealizedPnl": 3.6,
+      "unrealizedPct": 35.57
     },
     {
       "id": "2026-08-06T17:37-XRPUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 202.4,
       "qty": 193.99,
       "openedAt": "2026-08-06T17:37:08.365Z",
-      "markPrice": 1.00669,
-      "unrealizedPnl": 7.12,
-      "unrealizedPct": 70.36
+      "markPrice": 1.00706,
+      "unrealizedPnl": 7.04,
+      "unrealizedPct": 69.57
     },
     {
       "id": "2026-08-11T16:01-LINKUSDT-long",
@@ -83,9 +83,9 @@
       "notional": 202.4,
       "qty": 23.81,
       "openedAt": "2026-08-11T16:01:21.344Z",
-      "markPrice": 8.7706,
-      "unrealizedPnl": 6.44,
-      "unrealizedPct": 63.64
+      "markPrice": 8.7737,
+      "unrealizedPnl": 6.52,
+      "unrealizedPct": 64.43
     },
     {
       "id": "2026-08-12T00:31-JUPUSDT-short",
@@ -100,9 +100,9 @@
       "notional": 202.4,
       "qty": 1152.62,
       "openedAt": "2026-08-12T00:31:08.702Z",
-      "markPrice": 0.1687,
-      "unrealizedPnl": 7.95,
-      "unrealizedPct": 78.56
+      "markPrice": 0.169,
+      "unrealizedPnl": 7.61,
+      "unrealizedPct": 75.2
     },
     {
       "id": "2026-08-12T15:31-BTCUSDT-short",
@@ -117,9 +117,9 @@
       "notional": 404.8,
       "qty": 0.01,
       "openedAt": "2026-08-12T15:31:31.255Z",
-      "markPrice": 63209.5,
-      "unrealizedPnl": 1.87,
-      "unrealizedPct": 18.48
+      "markPrice": 63195.4,
+      "unrealizedPnl": 1.96,
+      "unrealizedPct": 19.37
     },
     {
       "id": "2026-08-12T20:01-AAVEUSDT-short",
@@ -134,9 +134,9 @@
       "notional": 404.8,
       "qty": 4.57,
       "openedAt": "2026-08-12T20:01:54.910Z",
-      "markPrice": 87.572,
-      "unrealizedPnl": 4.65,
-      "unrealizedPct": 45.95
+      "markPrice": 87.483,
+      "unrealizedPnl": 5.06,
+      "unrealizedPct": 50
     },
     {
       "id": "2026-08-12T22:31-LTCUSDT-short",
@@ -168,9 +168,9 @@
       "notional": 242.8,
       "qty": 38.79,
       "openedAt": "2026-08-13T11:21:49.700Z",
-      "markPrice": 6.2183,
-      "unrealizedPnl": 1.62,
-      "unrealizedPct": 13.34
+      "markPrice": 6.2283,
+      "unrealizedPnl": 1.23,
+      "unrealizedPct": 10.13
     },
     {
       "id": "2026-08-13T15:07-DOTUSDT-short",
@@ -185,9 +185,9 @@
       "notional": 202.4,
       "qty": 261.16,
       "openedAt": "2026-08-13T15:07:16.141Z",
-      "markPrice": 0.7702,
-      "unrealizedPnl": 1.25,
-      "unrealizedPct": 12.35
+      "markPrice": 0.7692,
+      "unrealizedPnl": 1.51,
+      "unrealizedPct": 14.92
     },
     {
       "id": "2026-08-13T16:01-XLMUSDT-short",
@@ -202,9 +202,9 @@
       "notional": 202.4,
       "qty": 1268.97,
       "openedAt": "2026-08-13T16:01:12.757Z",
-      "markPrice": 0.1589,
-      "unrealizedPnl": 0.76,
-      "unrealizedPct": 7.51
+      "markPrice": 0.1596,
+      "unrealizedPnl": -0.13,
+      "unrealizedPct": -1.28
     },
     {
       "id": "2026-08-13T16:26-WIFUSDT-short",
@@ -219,9 +219,26 @@
       "notional": 202.4,
       "qty": 1477.37,
       "openedAt": "2026-08-13T16:26:29.780Z",
-      "markPrice": 0.1374,
-      "unrealizedPnl": -0.59,
-      "unrealizedPct": -5.83
+      "markPrice": 0.1372,
+      "unrealizedPnl": -0.3,
+      "unrealizedPct": -2.96
+    },
+    {
+      "id": "2026-08-13T18:01-XMRUSDT-long",
+      "symbol": "XMR/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 394.95,
+      "stop": 378.42,
+      "target": 428.01,
+      "leverage": 40,
+      "margin": 10.12,
+      "notional": 404.8,
+      "qty": 1.02,
+      "openedAt": "2026-08-13T18:01:42.735Z",
+      "markPrice": 399.9,
+      "unrealizedPnl": 5.07,
+      "unrealizedPct": 50.1
     }
   ],
   "closed": [
