@@ -4,7 +4,7 @@ type: diario
 symbol: UNI/USDT
 action: short
 date: 2026-08-13T20:01:44.338Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con MACD- y ADX fuerte
 entry: 3.49
@@ -12,7 +12,7 @@ stop: 3.56
 target: 3.35
 rr: 2
 confidence: 55
-result_r: 
+result_r: 3
 ---
 
 # UNI/USDT SHORT — 2026-08-13
