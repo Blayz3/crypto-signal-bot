@@ -4,7 +4,7 @@ type: diario
 symbol: LTC/USDT
 action: short
 date: 2026-08-12T22:31:00.372Z
-status: open
+status: win
 orderType: market
 setup: EMAs bajistas con MACD-
 entry: 44.92
@@ -12,7 +12,7 @@ stop: 45.25
 target: 44.27
 rr: 1.97
 confidence: 55
-result_r: 
+result_r: 2.95
 ---
 
 # LTC/USDT SHORT — 2026-08-12
