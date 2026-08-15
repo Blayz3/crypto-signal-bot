@@ -4,7 +4,7 @@ type: diario
 symbol: XLM/USDT
 action: short
 date: 2026-08-13T16:01:12.759Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con MACD- y en/bajo VAL
 entry: 0.1595
@@ -12,7 +12,7 @@ stop: 0.1615
 target: 0.1555
 rr: 2
 confidence: 55
-result_r: 
+result_r: 1
 ---
 
 # XLM/USDT SHORT — 2026-08-13
