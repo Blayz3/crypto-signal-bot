@@ -4,7 +4,7 @@ type: diario
 symbol: DOT/USDT
 action: short
 date: 2026-08-13T15:07:16.143Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con MACD- y en/bajo VAL
 entry: 0.775
@@ -12,7 +12,7 @@ stop: 0.783
 target: 0.759
 rr: 2
 confidence: 55
-result_r: 
+result_r: 1
 ---
 
 # DOT/USDT SHORT — 2026-08-13
