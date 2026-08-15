@@ -4,7 +4,7 @@ type: diario
 symbol: LINK/USDT
 action: long
 date: 2026-08-11T16:01:21.345Z
-status: open
+status: win
 orderType: limit
 setup: Pullback a EMA en tendencia
 entry: 8.5
@@ -12,7 +12,7 @@ stop: 8.35
 target: 8.9
 rr: 2.67
 confidence: 55
-result_r: 
+result_r: 4
 ---
 
 # LINK/USDT LONG — 2026-08-11
