@@ -4,7 +4,7 @@ type: diario
 symbol: HYPE/USDT
 action: short
 date: 2026-07-22T11:00:55.833Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con ADX fuerte
 entry: 59.08
@@ -12,7 +12,7 @@ stop: 61.24
 target: 54.92
 rr: 1.93
 confidence: 55
-result_r: 
+result_r: 0.96
 ---
 
 # HYPE/USDT SHORT — 2026-07-22
