@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-18T11:28:56.056Z",
+  "updated": "2026-08-18T11:31:30.547Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 299.72,
-  "equity": 361.8,
+  "equity": 362.76,
   "realizedPnl": -700.28,
-  "unrealizedPnl": 62.08,
+  "unrealizedPnl": 63.04,
   "stats": {
     "openCount": 15,
     "closedCount": 232,
@@ -32,9 +32,9 @@
       "notional": 224.8,
       "qty": 691.69,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3334,
-      "unrealizedPnl": 5.81,
-      "unrealizedPct": 51.69
+      "markPrice": 0.3328,
+      "unrealizedPnl": 5.4,
+      "unrealizedPct": 48.04
     },
     {
       "id": "2026-07-27T22:30-SUIUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 224.8,
       "qty": 322.34,
       "openedAt": "2026-07-27T22:30:50.366Z",
-      "markPrice": 0.6533,
-      "unrealizedPnl": 14.22,
-      "unrealizedPct": 126.51
+      "markPrice": 0.653,
+      "unrealizedPnl": 14.31,
+      "unrealizedPct": 127.31
     },
     {
       "id": "2026-08-06T17:37-XRPUSDT-short",
@@ -66,7 +66,7 @@
       "notional": 224.8,
       "qty": 215.46,
       "openedAt": "2026-08-06T17:37:08.365Z",
-      "markPrice": 0.99991,
+      "markPrice": 0.99993,
       "unrealizedPnl": 9.36,
       "unrealizedPct": 83.27
     },
@@ -83,9 +83,9 @@
       "notional": 449.6,
       "qty": 0.01,
       "openedAt": "2026-08-12T15:31:31.255Z",
-      "markPrice": 64366.9,
-      "unrealizedPnl": -6.11,
-      "unrealizedPct": -54.36
+      "markPrice": 64348.4,
+      "unrealizedPnl": -5.98,
+      "unrealizedPct": -53.2
     },
     {
       "id": "2026-08-13T11:21-ETCUSDT-short",
@@ -117,9 +117,9 @@
       "notional": 449.6,
       "qty": 1.14,
       "openedAt": "2026-08-13T18:01:42.735Z",
-      "markPrice": 412.14,
-      "unrealizedPnl": 19.57,
-      "unrealizedPct": 174.11
+      "markPrice": 412.32,
+      "unrealizedPnl": 19.77,
+      "unrealizedPct": 175.89
     },
     {
       "id": "2026-08-13T18:31-HBARUSDT-short",
@@ -134,9 +134,9 @@
       "notional": 224.8,
       "qty": 3421.09,
       "openedAt": "2026-08-13T18:31:50.037Z",
-      "markPrice": 0.06608,
-      "unrealizedPnl": -1.27,
-      "unrealizedPct": -11.3
+      "markPrice": 0.06598,
+      "unrealizedPnl": -0.92,
+      "unrealizedPct": -8.19
     },
     {
       "id": "2026-08-15T01:31-BCHUSDT-short",
@@ -151,9 +151,9 @@
       "notional": 539.6,
       "qty": 2.62,
       "openedAt": "2026-08-15T01:31:32.248Z",
-      "markPrice": 203.88,
-      "unrealizedPnl": 5.86,
-      "unrealizedPct": 43.44
+      "markPrice": 203.83,
+      "unrealizedPnl": 5.99,
+      "unrealizedPct": 44.4
     },
     {
       "id": "2026-08-15T11:00-LINKUSDT-long",
@@ -168,9 +168,9 @@
       "notional": 224.8,
       "qty": 24.07,
       "openedAt": "2026-08-15T11:00:51.551Z",
-      "markPrice": 9.4641,
-      "unrealizedPnl": 2.99,
-      "unrealizedPct": 26.6
+      "markPrice": 9.4717,
+      "unrealizedPnl": 3.17,
+      "unrealizedPct": 28.2
     },
     {
       "id": "2026-08-15T11:00-XLMUSDT-short",
@@ -202,9 +202,9 @@
       "notional": 539.6,
       "qty": 12.27,
       "openedAt": "2026-08-15T11:23:40.671Z",
-      "markPrice": 44.54,
-      "unrealizedPnl": -7,
-      "unrealizedPct": -51.89
+      "markPrice": 44.52,
+      "unrealizedPnl": -6.75,
+      "unrealizedPct": -50.04
     },
     {
       "id": "2026-08-15T14:30-JUPUSDT-short",
@@ -236,9 +236,9 @@
       "notional": 224.8,
       "qty": 69.17,
       "openedAt": "2026-08-15T21:47:47.856Z",
-      "markPrice": 3.2737,
-      "unrealizedPnl": -1.64,
-      "unrealizedPct": -14.59
+      "markPrice": 3.2744,
+      "unrealizedPnl": -1.69,
+      "unrealizedPct": -15.04
     },
     {
       "id": "2026-08-16T19:30-PEPEUSDT-long",
@@ -253,9 +253,9 @@
       "notional": 224.8,
       "qty": 86594761.17,
       "openedAt": "2026-08-16T19:30:51.903Z",
-      "markPrice": 0.000002583,
-      "unrealizedPnl": -1.13,
-      "unrealizedPct": -10.05
+      "markPrice": 0.000002584,
+      "unrealizedPnl": -1.04,
+      "unrealizedPct": -9.25
     },
     {
       "id": "2026-08-16T19:45-SEIUSDT-short",
