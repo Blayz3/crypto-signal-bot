@@ -4,7 +4,7 @@ type: diario
 symbol: WIF/USDT
 action: short
 date: 2026-07-29T01:31:39.731Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con MACD- y en/bajo VAL
 entry: 0.1473
@@ -12,7 +12,7 @@ stop: 0.1515
 target: 0.135
 rr: 2.93
 confidence: 70
-result_r: 
+result_r: 1.46
 ---
 
 # WIF/USDT SHORT — 2026-07-29

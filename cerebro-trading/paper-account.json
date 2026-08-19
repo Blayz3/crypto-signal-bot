@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T21:28:57.786Z",
+  "updated": "2026-08-19T21:30:45.025Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 248.73,
-  "equity": 294.21,
+  "equity": 295.05,
   "realizedPnl": -751.27,
-  "unrealizedPnl": 45.48,
+  "unrealizedPnl": 46.32,
   "stats": {
     "openCount": 3,
     "closedCount": 244,
@@ -32,9 +32,9 @@
       "notional": 186.6,
       "qty": 574.15,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3336,
-      "unrealizedPnl": 4.94,
-      "unrealizedPct": 52.95
+      "markPrice": 0.3337,
+      "unrealizedPnl": 5,
+      "unrealizedPct": 53.59
     },
     {
       "id": "2026-08-13T18:01-XMRUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 373.2,
       "qty": 0.94,
       "openedAt": "2026-08-13T18:01:42.735Z",
-      "markPrice": 418.84,
-      "unrealizedPnl": 22.57,
-      "unrealizedPct": 241.91
+      "markPrice": 418.83,
+      "unrealizedPnl": 22.56,
+      "unrealizedPct": 241.8
     },
     {
       "id": "2026-08-16T19:30-PEPEUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 186.6,
       "qty": 71879815.1,
       "openedAt": "2026-08-16T19:30:51.903Z",
-      "markPrice": 0.000002846,
-      "unrealizedPnl": 17.97,
-      "unrealizedPct": 192.6
+      "markPrice": 0.000002857,
+      "unrealizedPnl": 18.76,
+      "unrealizedPct": 201.07
     }
   ],
   "closed": [
