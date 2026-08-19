@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T19:30:44.546Z",
+  "updated": "2026-08-19T19:53:23.822Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 262.96,
-  "equity": 283.79,
+  "equity": 283.58,
   "realizedPnl": -737.04,
-  "unrealizedPnl": 20.83,
+  "unrealizedPnl": 20.62,
   "stats": {
     "openCount": 5,
     "closedCount": 242,
@@ -32,9 +32,9 @@
       "notional": 197.2,
       "qty": 606.77,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3325,
-      "unrealizedPnl": 4.55,
-      "unrealizedPct": 46.15
+      "markPrice": 0.3326,
+      "unrealizedPnl": 4.61,
+      "unrealizedPct": 46.75
     },
     {
       "id": "2026-08-13T11:21-ETCUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 236.6,
       "qty": 37.8,
       "openedAt": "2026-08-13T11:21:49.700Z",
-      "markPrice": 6.3481,
-      "unrealizedPnl": -3.33,
-      "unrealizedPct": -28.15
+      "markPrice": 6.3524,
+      "unrealizedPnl": -3.49,
+      "unrealizedPct": -29.5
     },
     {
       "id": "2026-08-13T18:01-XMRUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 394.4,
       "qty": 1,
       "openedAt": "2026-08-13T18:01:42.735Z",
-      "markPrice": 416.7,
-      "unrealizedPnl": 21.72,
-      "unrealizedPct": 220.28
+      "markPrice": 415.38,
+      "unrealizedPnl": 20.4,
+      "unrealizedPct": 206.9
     },
     {
       "id": "2026-08-13T18:31-HBARUSDT-short",
@@ -83,7 +83,7 @@
       "notional": 197.2,
       "qty": 3001.07,
       "openedAt": "2026-08-13T18:31:50.037Z",
-      "markPrice": 0.06928,
+      "markPrice": 0.06956,
       "unrealizedPnl": -9.86,
       "unrealizedPct": -100
     },
@@ -100,9 +100,9 @@
       "notional": 197.2,
       "qty": 75963020.03,
       "openedAt": "2026-08-16T19:30:51.903Z",
-      "markPrice": 0.000002698,
-      "unrealizedPnl": 7.75,
-      "unrealizedPct": 78.6
+      "markPrice": 0.000002714,
+      "unrealizedPnl": 8.96,
+      "unrealizedPct": 90.87
     }
   ],
   "closed": [
