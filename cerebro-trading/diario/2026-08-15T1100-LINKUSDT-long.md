@@ -4,7 +4,7 @@ type: diario
 symbol: LINK/USDT
 action: long
 date: 2026-08-15T11:00:51.552Z
-status: open
+status: win
 orderType: limit
 setup: EMAs alineadas alcistas (20>50>200)
 entry: 9.34
@@ -12,7 +12,7 @@ stop: 9.15
 target: 9.65
 rr: 1.63
 confidence: 70
-result_r: 
+result_r: 2.45
 ---
 
 # LINK/USDT LONG — 2026-08-15
