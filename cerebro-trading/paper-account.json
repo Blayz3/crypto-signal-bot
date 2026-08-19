@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-19T21:00:50.052Z",
+  "updated": "2026-08-19T21:28:57.786Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 258.42,
-  "equity": 287.03,
-  "realizedPnl": -741.58,
-  "unrealizedPnl": 28.61,
+  "balance": 248.73,
+  "equity": 294.21,
+  "realizedPnl": -751.27,
+  "unrealizedPnl": 45.48,
   "stats": {
-    "openCount": 4,
-    "closedCount": 243,
+    "openCount": 3,
+    "closedCount": 244,
     "wins": 67,
-    "losses": 176,
-    "winRate": 27.57
+    "losses": 177,
+    "winRate": 27.46
   },
   "open": [
     {
@@ -28,13 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 9.69,
-      "notional": 193.8,
-      "qty": 596.31,
+      "margin": 9.33,
+      "notional": 186.6,
+      "qty": 574.15,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3335,
-      "unrealizedPnl": 5.07,
-      "unrealizedPct": 52.32
+      "markPrice": 0.3336,
+      "unrealizedPnl": 4.94,
+      "unrealizedPct": 52.95
     },
     {
       "id": "2026-08-13T18:01-XMRUSDT-long",
@@ -45,30 +45,13 @@
       "stop": 378.42,
       "target": 428.01,
       "leverage": 40,
-      "margin": 9.69,
-      "notional": 387.6,
-      "qty": 0.98,
+      "margin": 9.33,
+      "notional": 373.2,
+      "qty": 0.94,
       "openedAt": "2026-08-13T18:01:42.735Z",
-      "markPrice": 416.72,
-      "unrealizedPnl": 21.36,
-      "unrealizedPct": 220.43
-    },
-    {
-      "id": "2026-08-13T18:31-HBARUSDT-short",
-      "symbol": "HBAR/USDT",
-      "dir": "short",
-      "grade": "A",
-      "entry": 0.06571,
-      "stop": 0.071,
-      "target": 0.059,
-      "leverage": 20,
-      "margin": 9.69,
-      "notional": 193.8,
-      "qty": 2949.32,
-      "openedAt": "2026-08-13T18:31:50.037Z",
-      "markPrice": 0.07039,
-      "unrealizedPnl": -9.69,
-      "unrealizedPct": -100
+      "markPrice": 418.84,
+      "unrealizedPnl": 22.57,
+      "unrealizedPct": 241.91
     },
     {
       "id": "2026-08-16T19:30-PEPEUSDT-long",
@@ -79,13 +62,13 @@
       "stop": 0.0000024,
       "target": 0.000003,
       "leverage": 20,
-      "margin": 9.69,
-      "notional": 193.8,
-      "qty": 74653312.79,
+      "margin": 9.33,
+      "notional": 186.6,
+      "qty": 71879815.1,
       "openedAt": "2026-08-16T19:30:51.903Z",
-      "markPrice": 0.000002755,
-      "unrealizedPnl": 11.87,
-      "unrealizedPct": 122.5
+      "markPrice": 0.000002846,
+      "unrealizedPnl": 17.97,
+      "unrealizedPct": 192.6
     }
   ],
   "closed": [
@@ -4948,6 +4931,26 @@
       "pnl": -4.54,
       "pnlPct": -38.38,
       "closedAt": "2026-08-19T21:00:41.566Z"
+    },
+    {
+      "id": "2026-08-13T18:31-HBARUSDT-short",
+      "symbol": "HBAR/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 0.06571,
+      "stop": 0.071,
+      "target": 0.059,
+      "leverage": 20,
+      "margin": 9.69,
+      "notional": 193.8,
+      "qty": 2949.32,
+      "openedAt": "2026-08-13T18:31:50.037Z",
+      "exit": 0.071,
+      "status": "loss",
+      "resultR": -1,
+      "pnl": -9.69,
+      "pnlPct": -100,
+      "closedAt": "2026-08-19T21:28:43.825Z"
     }
   ],
   "equityCurve": [
@@ -5926,6 +5929,10 @@
     {
       "t": "2026-08-19T21:00:41.566Z",
       "balance": 258.42
+    },
+    {
+      "t": "2026-08-19T21:28:43.825Z",
+      "balance": 248.73
     }
   ]
 }
