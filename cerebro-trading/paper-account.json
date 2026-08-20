@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-20T10:30:30.593Z",
+  "updated": "2026-08-20T10:34:42.129Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 248.73,
-  "equity": 323.98,
+  "equity": 322.14,
   "realizedPnl": -751.27,
-  "unrealizedPnl": 75.25,
+  "unrealizedPnl": 73.41,
   "stats": {
     "openCount": 4,
     "closedCount": 244,
@@ -49,9 +49,9 @@
       "notional": 373.2,
       "qty": 0.94,
       "openedAt": "2026-08-13T18:01:42.735Z",
-      "markPrice": 418.92,
-      "unrealizedPnl": 22.65,
-      "unrealizedPct": 242.77
+      "markPrice": 416.98,
+      "unrealizedPnl": 20.82,
+      "unrealizedPct": 223.15
     },
     {
       "id": "2026-08-16T19:30-PEPEUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 186.6,
       "qty": 71879815.1,
       "openedAt": "2026-08-16T19:30:51.903Z",
-      "markPrice": 0.000003104,
-      "unrealizedPnl": 36.51,
-      "unrealizedPct": 391.32
+      "markPrice": 0.000003098,
+      "unrealizedPnl": 36.08,
+      "unrealizedPct": 386.71
     },
     {
       "id": "2026-08-20T02:31-BNBUSDT-long",
@@ -83,9 +83,9 @@
       "notional": 373.2,
       "qty": 0.6,
       "openedAt": "2026-08-20T02:31:06.172Z",
-      "markPrice": 642.52,
-      "unrealizedPnl": 10.46,
-      "unrealizedPct": 112.11
+      "markPrice": 643.219,
+      "unrealizedPnl": 10.88,
+      "unrealizedPct": 116.61
     }
   ],
   "closed": [
