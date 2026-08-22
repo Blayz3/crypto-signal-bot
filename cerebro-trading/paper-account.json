@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T05:00:35.462Z",
+  "updated": "2026-08-22T05:30:28.401Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 383.86,
-  "equity": 459.65,
-  "realizedPnl": -616.14,
-  "unrealizedPnl": 75.79,
+  "balance": 400.53,
+  "equity": 419.66,
+  "realizedPnl": -599.47,
+  "unrealizedPnl": 19.13,
   "stats": {
-    "openCount": 2,
-    "closedCount": 249,
-    "wins": 71,
+    "openCount": 1,
+    "closedCount": 250,
+    "wins": 72,
     "losses": 178,
-    "winRate": 28.51
+    "winRate": 28.8
   },
   "open": [
     {
@@ -28,30 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 14.39,
-      "notional": 287.8,
-      "qty": 885.54,
+      "margin": 15.02,
+      "notional": 300.4,
+      "qty": 924.31,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3499,
-      "unrealizedPnl": 22.05,
-      "unrealizedPct": 153.23
-    },
-    {
-      "id": "2026-08-22T01:25-XRPUSDT-long",
-      "symbol": "XRP/USDT",
-      "dir": "long",
-      "grade": "A+",
-      "entry": 1.45,
-      "stop": 1.378,
-      "target": 1.594,
-      "leverage": 20,
-      "margin": 17.27,
-      "notional": 345.4,
-      "qty": 238.21,
-      "openedAt": "2026-08-22T01:25:46.022Z",
-      "markPrice": 1.67561,
-      "unrealizedPnl": 53.74,
-      "unrealizedPct": 311.18
+      "markPrice": 0.3457,
+      "unrealizedPnl": 19.13,
+      "unrealizedPct": 127.36
     }
   ],
   "closed": [
@@ -5034,6 +5017,26 @@
       "pnl": 60.82,
       "pnlPct": 502.23,
       "closedAt": "2026-08-22T05:00:32.806Z"
+    },
+    {
+      "id": "2026-08-22T01:25-XRPUSDT-long",
+      "symbol": "XRP/USDT",
+      "dir": "long",
+      "grade": "A+",
+      "entry": 1.45,
+      "stop": 1.378,
+      "target": 1.594,
+      "leverage": 20,
+      "margin": 17.27,
+      "notional": 345.4,
+      "qty": 238.21,
+      "openedAt": "2026-08-22T01:25:46.022Z",
+      "exit": 1.52,
+      "status": "win",
+      "resultR": 1,
+      "pnl": 16.67,
+      "pnlPct": 96.53,
+      "closedAt": "2026-08-22T05:30:26.819Z"
     }
   ],
   "equityCurve": [
@@ -6036,6 +6039,10 @@
     {
       "t": "2026-08-22T05:00:32.806Z",
       "balance": 383.86
+    },
+    {
+      "t": "2026-08-22T05:30:26.819Z",
+      "balance": 400.53
     }
   ]
 }
