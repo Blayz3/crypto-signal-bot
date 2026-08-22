@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T00:01:41.948Z",
+  "updated": "2026-08-22T00:31:01.146Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 239.4,
-  "equity": 332.98,
+  "equity": 330.34,
   "realizedPnl": -760.6,
-  "unrealizedPnl": 93.58,
+  "unrealizedPnl": 90.94,
   "stats": {
-    "openCount": 4,
+    "openCount": 5,
     "closedCount": 245,
     "wins": 67,
     "losses": 178,
@@ -32,9 +32,9 @@
       "notional": 179.6,
       "qty": 552.62,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3435,
-      "unrealizedPnl": 10.22,
-      "unrealizedPct": 113.81
+      "markPrice": 0.3437,
+      "unrealizedPnl": 10.33,
+      "unrealizedPct": 115.03
     },
     {
       "id": "2026-08-13T18:01-XMRUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 359.2,
       "qty": 0.91,
       "openedAt": "2026-08-13T18:01:42.735Z",
-      "markPrice": 412.97,
-      "unrealizedPnl": 16.39,
-      "unrealizedPct": 182.52
+      "markPrice": 409.86,
+      "unrealizedPnl": 13.56,
+      "unrealizedPct": 151
     },
     {
       "id": "2026-08-20T02:31-BNBUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 359.2,
       "qty": 0.57,
       "openedAt": "2026-08-20T02:31:06.172Z",
-      "markPrice": 687.457,
-      "unrealizedPnl": 35.9,
-      "unrealizedPct": 399.78
+      "markPrice": 687.788,
+      "unrealizedPnl": 36.09,
+      "unrealizedPct": 401.89
     },
     {
       "id": "2026-08-20T20:30-SOLUSDT-long",
@@ -83,9 +83,26 @@
       "notional": 430.8,
       "qty": 4.92,
       "openedAt": "2026-08-20T20:30:45.257Z",
-      "markPrice": 93.79,
-      "unrealizedPnl": 31.07,
-      "unrealizedPct": 288.49
+      "markPrice": 93.72,
+      "unrealizedPnl": 30.73,
+      "unrealizedPct": 285.33
+    },
+    {
+      "id": "2026-08-22T00:30-SUIUSDT-long",
+      "symbol": "SUI/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 0.842,
+      "stop": 0.8237,
+      "target": 0.8786,
+      "leverage": 20,
+      "margin": 8.98,
+      "notional": 179.6,
+      "qty": 213.3,
+      "openedAt": "2026-08-22T00:30:59.582Z",
+      "markPrice": 0.8431,
+      "unrealizedPnl": 0.23,
+      "unrealizedPct": 2.56
     }
   ],
   "closed": [
