@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-22T04:36:36.398Z",
+  "updated": "2026-08-22T05:00:35.462Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 323.04,
-  "equity": 449.35,
-  "realizedPnl": -676.96,
-  "unrealizedPnl": 126.31,
+  "balance": 383.86,
+  "equity": 459.65,
+  "realizedPnl": -616.14,
+  "unrealizedPnl": 75.79,
   "stats": {
-    "openCount": 3,
-    "closedCount": 248,
-    "wins": 70,
+    "openCount": 2,
+    "closedCount": 249,
+    "wins": 71,
     "losses": 178,
-    "winRate": 28.23
+    "winRate": 28.51
   },
   "open": [
     {
@@ -28,30 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 12.11,
-      "notional": 242.2,
-      "qty": 745.23,
+      "margin": 14.39,
+      "notional": 287.8,
+      "qty": 885.54,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.348,
-      "unrealizedPnl": 17.14,
-      "unrealizedPct": 141.54
-    },
-    {
-      "id": "2026-08-13T18:01-XMRUSDT-long",
-      "symbol": "XMR/USDT",
-      "dir": "long",
-      "grade": "A",
-      "entry": 394.95,
-      "stop": 378.42,
-      "target": 428.01,
-      "leverage": 40,
-      "margin": 12.11,
-      "notional": 484.4,
-      "qty": 1.23,
-      "openedAt": "2026-08-13T18:01:42.735Z",
-      "markPrice": 452.8,
-      "unrealizedPnl": 70.95,
-      "unrealizedPct": 585.88
+      "markPrice": 0.3499,
+      "unrealizedPnl": 22.05,
+      "unrealizedPct": 153.23
     },
     {
       "id": "2026-08-22T01:25-XRPUSDT-long",
@@ -62,13 +45,13 @@
       "stop": 1.378,
       "target": 1.594,
       "leverage": 20,
-      "margin": 14.54,
-      "notional": 290.8,
-      "qty": 200.55,
+      "margin": 17.27,
+      "notional": 345.4,
+      "qty": 238.21,
       "openedAt": "2026-08-22T01:25:46.022Z",
-      "markPrice": 1.64056,
-      "unrealizedPnl": 38.22,
-      "unrealizedPct": 262.86
+      "markPrice": 1.67561,
+      "unrealizedPnl": 53.74,
+      "unrealizedPct": 311.18
     }
   ],
   "closed": [
@@ -5031,6 +5014,26 @@
       "pnl": 15.87,
       "pnlPct": 137.76,
       "closedAt": "2026-08-22T03:30:30.210Z"
+    },
+    {
+      "id": "2026-08-13T18:01-XMRUSDT-long",
+      "symbol": "XMR/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 394.95,
+      "stop": 378.42,
+      "target": 428.01,
+      "leverage": 40,
+      "margin": 12.11,
+      "notional": 484.4,
+      "qty": 1.23,
+      "openedAt": "2026-08-13T18:01:42.735Z",
+      "exit": 444.54,
+      "status": "win",
+      "resultR": 3,
+      "pnl": 60.82,
+      "pnlPct": 502.23,
+      "closedAt": "2026-08-22T05:00:32.806Z"
     }
   ],
   "equityCurve": [
@@ -6029,6 +6032,10 @@
     {
       "t": "2026-08-22T03:30:30.210Z",
       "balance": 323.04
+    },
+    {
+      "t": "2026-08-22T05:00:32.806Z",
+      "balance": 383.86
     }
   ]
 }
