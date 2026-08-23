@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23T04:30:30.262Z",
+  "updated": "2026-08-23T05:00:41.119Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 400.53,
-  "equity": 381.23,
-  "realizedPnl": -599.47,
-  "unrealizedPnl": -19.3,
+  "balance": 390.76,
+  "equity": 374.01,
+  "realizedPnl": -609.24,
+  "unrealizedPnl": -16.75,
   "stats": {
-    "openCount": 5,
-    "closedCount": 250,
+    "openCount": 4,
+    "closedCount": 251,
     "wins": 72,
-    "losses": 178,
-    "winRate": 28.8
+    "losses": 179,
+    "winRate": 28.69
   },
   "open": [
     {
@@ -28,30 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 15.02,
-      "notional": 300.4,
-      "qty": 924.31,
+      "margin": 14.65,
+      "notional": 293,
+      "qty": 901.54,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3428,
-      "unrealizedPnl": 16.45,
-      "unrealizedPct": 109.52
-    },
-    {
-      "id": "2026-08-22T11:48-LINKUSDT-long",
-      "symbol": "LINK/USDT",
-      "dir": "long",
-      "grade": "A",
-      "entry": 11.68,
-      "stop": 11.3,
-      "target": 12.44,
-      "leverage": 20,
-      "margin": 15.02,
-      "notional": 300.4,
-      "qty": 25.72,
-      "openedAt": "2026-08-22T11:48:41.405Z",
-      "markPrice": 11.4835,
-      "unrealizedPnl": -5.05,
-      "unrealizedPct": -33.62
+      "markPrice": 0.3422,
+      "unrealizedPnl": 15.51,
+      "unrealizedPct": 105.87
     },
     {
       "id": "2026-08-22T12:31-ADAUSDT-long",
@@ -62,13 +45,13 @@
       "stop": 0.2138,
       "target": 0.2624,
       "leverage": 20,
-      "margin": 15.02,
-      "notional": 300.4,
-      "qty": 1306.09,
+      "margin": 14.65,
+      "notional": 293,
+      "qty": 1273.91,
       "openedAt": "2026-08-22T12:31:07.927Z",
-      "markPrice": 0.2196,
-      "unrealizedPnl": -13.58,
-      "unrealizedPct": -90.41
+      "markPrice": 0.2166,
+      "unrealizedPnl": -14.65,
+      "unrealizedPct": -100
     },
     {
       "id": "2026-08-22T13:34-LTCUSDT-long",
@@ -79,13 +62,13 @@
       "stop": 49,
       "target": 57,
       "leverage": 40,
-      "margin": 15.02,
-      "notional": 600.8,
-      "qty": 11.67,
+      "margin": 14.65,
+      "notional": 586,
+      "qty": 11.38,
       "openedAt": "2026-08-22T13:34:55.872Z",
-      "markPrice": 51.32,
-      "unrealizedPnl": -2.1,
-      "unrealizedPct": -13.98
+      "markPrice": 51.24,
+      "unrealizedPnl": -2.96,
+      "unrealizedPct": -20.2
     },
     {
       "id": "2026-08-22T14:01-TAOUSDT-long",
@@ -96,12 +79,12 @@
       "stop": 212.7,
       "target": 246.9,
       "leverage": 40,
-      "margin": 15.02,
-      "notional": 600.8,
-      "qty": 2.68,
+      "margin": 14.65,
+      "notional": 586,
+      "qty": 2.62,
       "openedAt": "2026-08-22T14:01:29.375Z",
-      "markPrice": 218.09,
-      "unrealizedPnl": -15.02,
+      "markPrice": 216.22,
+      "unrealizedPnl": -14.65,
       "unrealizedPct": -100
     }
   ],
@@ -5105,6 +5088,26 @@
       "pnl": 16.67,
       "pnlPct": 96.53,
       "closedAt": "2026-08-22T05:30:26.819Z"
+    },
+    {
+      "id": "2026-08-22T11:48-LINKUSDT-long",
+      "symbol": "LINK/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 11.68,
+      "stop": 11.3,
+      "target": 12.44,
+      "leverage": 20,
+      "margin": 15.02,
+      "notional": 300.4,
+      "qty": 25.72,
+      "openedAt": "2026-08-22T11:48:41.405Z",
+      "exit": 11.3,
+      "status": "loss",
+      "resultR": -1,
+      "pnl": -9.77,
+      "pnlPct": -65.05,
+      "closedAt": "2026-08-23T05:00:38.854Z"
     }
   ],
   "equityCurve": [
@@ -6111,6 +6114,10 @@
     {
       "t": "2026-08-22T05:30:26.819Z",
       "balance": 400.53
+    },
+    {
+      "t": "2026-08-23T05:00:38.854Z",
+      "balance": 390.76
     }
   ]
 }
