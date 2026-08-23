@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23T04:00:32.924Z",
+  "updated": "2026-08-23T04:09:43.743Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 400.53,
-  "equity": 378.84,
+  "equity": 376.66,
   "realizedPnl": -599.47,
-  "unrealizedPnl": -21.69,
+  "unrealizedPnl": -23.87,
   "stats": {
     "openCount": 5,
     "closedCount": 250,
@@ -32,9 +32,9 @@
       "notional": 300.4,
       "qty": 924.31,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.343,
-      "unrealizedPnl": 16.64,
-      "unrealizedPct": 110.79
+      "markPrice": 0.3429,
+      "unrealizedPnl": 16.55,
+      "unrealizedPct": 110.19
     },
     {
       "id": "2026-08-22T11:48-LINKUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 300.4,
       "qty": 25.72,
       "openedAt": "2026-08-22T11:48:41.405Z",
-      "markPrice": 11.4535,
-      "unrealizedPnl": -5.83,
-      "unrealizedPct": -38.81
+      "markPrice": 11.4308,
+      "unrealizedPnl": -6.41,
+      "unrealizedPct": -42.68
     },
     {
       "id": "2026-08-22T12:31-ADAUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 300.4,
       "qty": 1306.09,
       "openedAt": "2026-08-22T12:31:07.927Z",
-      "markPrice": 0.2193,
-      "unrealizedPnl": -13.98,
-      "unrealizedPct": -93.08
+      "markPrice": 0.2184,
+      "unrealizedPnl": -15.02,
+      "unrealizedPct": -100
     },
     {
       "id": "2026-08-22T13:34-LTCUSDT-long",
@@ -83,9 +83,9 @@
       "notional": 600.8,
       "qty": 11.67,
       "openedAt": "2026-08-22T13:34:55.872Z",
-      "markPrice": 51.2,
-      "unrealizedPnl": -3.5,
-      "unrealizedPct": -23.3
+      "markPrice": 51.16,
+      "unrealizedPnl": -3.97,
+      "unrealizedPct": -26.43
     },
     {
       "id": "2026-08-22T14:01-TAOUSDT-long",
@@ -100,7 +100,7 @@
       "notional": 600.8,
       "qty": 2.68,
       "openedAt": "2026-08-22T14:01:29.375Z",
-      "markPrice": 218.16,
+      "markPrice": 217.12,
       "unrealizedPnl": -15.02,
       "unrealizedPct": -100
     }
