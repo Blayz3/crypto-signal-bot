@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-23T11:24:32.491Z",
+  "updated": "2026-08-23T11:30:53.902Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 376.11,
-  "equity": 410.36,
+  "equity": 406.98,
   "realizedPnl": -623.89,
-  "unrealizedPnl": 34.25,
+  "unrealizedPnl": 30.87,
   "stats": {
     "openCount": 3,
     "closedCount": 252,
@@ -49,9 +49,9 @@
       "notional": 564,
       "qty": 10.95,
       "openedAt": "2026-08-22T13:34:55.872Z",
-      "markPrice": 52.44,
-      "unrealizedPnl": 10.29,
-      "unrealizedPct": 72.98
+      "markPrice": 52.28,
+      "unrealizedPnl": 8.54,
+      "unrealizedPct": 60.57
     },
     {
       "id": "2026-08-22T14:01-TAOUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 564,
       "qty": 2.52,
       "openedAt": "2026-08-22T14:01:29.375Z",
-      "markPrice": 227.11,
-      "unrealizedPnl": 7.65,
-      "unrealizedPct": 54.26
+      "markPrice": 226.46,
+      "unrealizedPnl": 6.02,
+      "unrealizedPct": 42.7
     }
   ],
   "closed": [
