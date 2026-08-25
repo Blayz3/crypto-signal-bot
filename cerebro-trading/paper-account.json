@@ -1,5 +1,5 @@
 {
-  "updated": "2026-08-25T10:00:35.209Z",
+  "updated": "2026-08-25T10:30:34.020Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 371.79,
-  "equity": 432.14,
+  "equity": 438.68,
   "realizedPnl": -628.21,
-  "unrealizedPnl": 60.35,
+  "unrealizedPnl": 66.89,
   "stats": {
     "openCount": 6,
     "closedCount": 255,
@@ -32,9 +32,9 @@
       "notional": 278.8,
       "qty": 857.85,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3422,
-      "unrealizedPnl": 14.75,
-      "unrealizedPct": 105.81
+      "markPrice": 0.3424,
+      "unrealizedPnl": 14.93,
+      "unrealizedPct": 107.1
     },
     {
       "id": "2026-08-22T13:34-LTCUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 557.6,
       "qty": 10.83,
       "openedAt": "2026-08-22T13:34:55.872Z",
-      "markPrice": 51.26,
-      "unrealizedPnl": -2.6,
-      "unrealizedPct": -18.65
+      "markPrice": 51.39,
+      "unrealizedPnl": -1.19,
+      "unrealizedPct": -8.54
     },
     {
       "id": "2026-08-22T14:01-TAOUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 557.6,
       "qty": 2.49,
       "openedAt": "2026-08-22T14:01:29.375Z",
-      "markPrice": 236.2,
-      "unrealizedPnl": 30.19,
-      "unrealizedPct": 216.57
+      "markPrice": 235.42,
+      "unrealizedPnl": 28.24,
+      "unrealizedPct": 202.58
     },
     {
       "id": "2026-08-24T01:31-NEARUSDT-long",
@@ -83,7 +83,7 @@
       "notional": 278.8,
       "qty": 136,
       "openedAt": "2026-08-24T01:31:14.018Z",
-      "markPrice": 1.9174,
+      "markPrice": 1.918,
       "unrealizedPnl": -13.94,
       "unrealizedPct": -100
     },
@@ -100,9 +100,9 @@
       "notional": 557.6,
       "qty": 1.3,
       "openedAt": "2026-08-24T18:46:19.010Z",
-      "markPrice": 443.58,
-      "unrealizedPnl": 17.61,
-      "unrealizedPct": 126.33
+      "markPrice": 448.64,
+      "unrealizedPnl": 24.17,
+      "unrealizedPct": 173.39
     },
     {
       "id": "2026-08-25T02:31-ZECUSDT-short",
@@ -117,9 +117,9 @@
       "notional": 557.6,
       "qty": 0.65,
       "openedAt": "2026-08-25T02:31:24.413Z",
-      "markPrice": 838.881,
-      "unrealizedPnl": 14.34,
-      "unrealizedPct": 102.87
+      "markPrice": 838.359,
+      "unrealizedPnl": 14.68,
+      "unrealizedPct": 105.31
     }
   ],
   "closed": [
