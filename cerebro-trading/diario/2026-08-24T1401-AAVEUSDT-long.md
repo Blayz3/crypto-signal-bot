@@ -4,7 +4,7 @@ type: diario
 symbol: AAVE/USDT
 action: long
 date: 2026-08-24T14:01:33.240Z
-status: open
+status: loss
 orderType: market
 setup: EMAs alcistas + MACD+ + ADX fuerte + VAH
 entry: 136.04
@@ -12,7 +12,7 @@ stop: 129.1
 target: 149.91
 rr: 2
 confidence: 85
-result_r: 
+result_r: -1
 ---
 
 # AAVE/USDT LONG — 2026-08-24
