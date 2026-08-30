@@ -4,7 +4,7 @@ type: diario
 symbol: ZEC/USDT
 action: short
 date: 2026-08-25T02:31:24.415Z
-status: open
+status: win
 orderType: market
 setup: short from overbought with MACD reversal
 entry: 861.02
@@ -12,7 +12,7 @@ stop: 901
 target: 770
 rr: 2.28
 confidence: 75
-result_r: 
+result_r: 1.14
 ---
 
 # ZEC/USDT SHORT — 2026-08-25
