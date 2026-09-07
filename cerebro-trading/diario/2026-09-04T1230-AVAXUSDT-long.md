@@ -4,7 +4,7 @@ type: diario
 symbol: AVAX/USDT
 action: long
 date: 2026-09-04T12:30:59.686Z
-status: open
+status: win
 orderType: limit
 setup: EMA200 pullback continuation
 entry: 7.36
@@ -12,7 +12,7 @@ stop: 7.24
 target: 7.7
 rr: 2.83
 confidence: 85
-result_r: 
+result_r: 4.25
 ---
 
 # AVAX/USDT LONG — 2026-09-04
