@@ -4,7 +4,7 @@ type: diario
 symbol: BTC/USDT
 action: short
 date: 2026-09-10T11:01:12.831Z
-status: open
+status: win
 orderType: market
 setup: EMAs alineadas bajistas con MACD negativo
 entry: 77850
@@ -12,7 +12,7 @@ stop: 78120
 target: 77300
 rr: 2.04
 confidence: 60
-result_r: 
+result_r: 3.06
 ---
 
 # BTC/USDT SHORT — 2026-09-10
