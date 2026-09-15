@@ -4,7 +4,7 @@ type: diario
 symbol: HBAR/USDT
 action: short
 date: 2026-09-10T12:30:56.080Z
-status: open
+status: win
 orderType: limit
 setup: EMA200 Pullback Short
 entry: 0.0795
@@ -12,7 +12,7 @@ stop: 0.0805
 target: 0.0745
 rr: 5
 confidence: 58
-result_r: 
+result_r: 2.5
 ---
 
 # HBAR/USDT SHORT — 2026-09-10
