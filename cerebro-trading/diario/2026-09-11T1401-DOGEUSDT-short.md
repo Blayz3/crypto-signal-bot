@@ -4,7 +4,7 @@ type: diario
 symbol: DOGE/USDT
 action: short
 date: 2026-09-11T14:01:27.243Z
-status: open
+status: win
 orderType: market
 setup: EMAs alineadas bajistas con MACD negativo
 entry: 0.0875
@@ -12,7 +12,7 @@ stop: 0.08936
 target: 0.0837
 rr: 2.04
 confidence: 78
-result_r: 
+result_r: 3.06
 ---
 
 # DOGE/USDT SHORT — 2026-09-11
