@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-15T23:31:08.171Z",
+  "updated": "2026-09-15T23:36:48.508Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 556.27,
-  "equity": 636.52,
+  "equity": 636.07,
   "realizedPnl": -443.73,
-  "unrealizedPnl": 80.25,
+  "unrealizedPnl": 79.8,
   "stats": {
     "openCount": 3,
     "closedCount": 298,
@@ -32,9 +32,9 @@
       "notional": 417.2,
       "qty": 1283.69,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.333,
-      "unrealizedPnl": 10.27,
-      "unrealizedPct": 49.23
+      "markPrice": 0.3328,
+      "unrealizedPnl": 10.01,
+      "unrealizedPct": 47.99
     },
     {
       "id": "2026-08-24T01:31-NEARUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 417.2,
       "qty": 203.51,
       "openedAt": "2026-08-24T01:31:14.018Z",
-      "markPrice": 2.3368,
-      "unrealizedPnl": 58.37,
-      "unrealizedPct": 279.82
+      "markPrice": 2.333,
+      "unrealizedPnl": 57.59,
+      "unrealizedPct": 276.08
     },
     {
       "id": "2026-09-15T11:31-SUIUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 417.2,
       "qty": 589.43,
       "openedAt": "2026-09-15T11:31:02.482Z",
-      "markPrice": 0.6881,
-      "unrealizedPnl": 11.61,
-      "unrealizedPct": 55.66
+      "markPrice": 0.6871,
+      "unrealizedPnl": 12.2,
+      "unrealizedPct": 58.49
     }
   ],
   "closed": [
