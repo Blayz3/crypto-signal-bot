@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-17T15:31:21.354Z",
+  "updated": "2026-09-17T16:01:18.302Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 556.27,
-  "equity": 746.35,
+  "equity": 749.63,
   "realizedPnl": -443.73,
-  "unrealizedPnl": 190.08,
+  "unrealizedPnl": 193.36,
   "stats": {
     "openCount": 6,
     "closedCount": 298,
@@ -32,9 +32,9 @@
       "notional": 417.2,
       "qty": 1283.69,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3346,
-      "unrealizedPnl": 12.32,
-      "unrealizedPct": 59.06
+      "markPrice": 0.3344,
+      "unrealizedPnl": 12.07,
+      "unrealizedPct": 57.86
     },
     {
       "id": "2026-08-24T01:31-NEARUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 417.2,
       "qty": 203.51,
       "openedAt": "2026-08-24T01:31:14.018Z",
-      "markPrice": 2.8408,
-      "unrealizedPnl": 160.94,
-      "unrealizedPct": 771.52
+      "markPrice": 2.8787,
+      "unrealizedPnl": 168.65,
+      "unrealizedPct": 808.49
     },
     {
       "id": "2026-09-15T11:31-SUIUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 417.2,
       "qty": 589.43,
       "openedAt": "2026-09-15T11:31:02.482Z",
-      "markPrice": 0.7284,
-      "unrealizedPnl": -12.14,
-      "unrealizedPct": -58.2
+      "markPrice": 0.7346,
+      "unrealizedPnl": -15.8,
+      "unrealizedPct": -75.74
     },
     {
       "id": "2026-09-16T00:02-HBARUSDT-long",
@@ -83,7 +83,7 @@
       "notional": 0,
       "qty": 0,
       "openedAt": "2026-09-16T00:02:36.455Z",
-      "markPrice": 0.0755,
+      "markPrice": 0.07641,
       "unrealizedPnl": 0,
       "unrealizedPct": null
     },
@@ -100,9 +100,9 @@
       "notional": 1001.2,
       "qty": 4.19,
       "openedAt": "2026-09-17T14:30:48.573Z",
-      "markPrice": 232.26,
-      "unrealizedPnl": 28.28,
-      "unrealizedPct": 112.98
+      "markPrice": 233.3,
+      "unrealizedPnl": 23.92,
+      "unrealizedPct": 95.57
     },
     {
       "id": "2026-09-17T15:31-XLMUSDT-long",
@@ -117,9 +117,9 @@
       "notional": 417.2,
       "qty": 2261.25,
       "openedAt": "2026-09-17T15:31:18.454Z",
-      "markPrice": 0.1848,
-      "unrealizedPnl": 0.68,
-      "unrealizedPct": 3.26
+      "markPrice": 0.1865,
+      "unrealizedPnl": 4.52,
+      "unrealizedPct": 21.67
     }
   ],
   "closed": [
