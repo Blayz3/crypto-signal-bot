@@ -4,7 +4,7 @@ type: diario
 symbol: NEAR/USDT
 action: long
 date: 2026-08-24T01:31:14.020Z
-status: open
+status: win
 orderType: limit
 setup: EMAs alcistas + MACD+ + ADX fuerte
 entry: 2.05
@@ -12,7 +12,7 @@ stop: 1.69
 target: 2.8
 rr: 2.08
 confidence: 75
-result_r: 
+result_r: 3.13
 ---
 
 # NEAR/USDT LONG — 2026-08-24
