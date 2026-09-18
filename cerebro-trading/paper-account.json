@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-17T23:30:54.600Z",
+  "updated": "2026-09-18T00:03:01.458Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 556.27,
-  "equity": 797.21,
-  "realizedPnl": -443.73,
-  "unrealizedPnl": 240.94,
+  "balance": 537.59,
+  "equity": 783.21,
+  "realizedPnl": -462.41,
+  "unrealizedPnl": 245.62,
   "stats": {
-    "openCount": 6,
-    "closedCount": 298,
+    "openCount": 5,
+    "closedCount": 299,
     "wins": 90,
-    "losses": 208,
-    "winRate": 30.2
+    "losses": 209,
+    "winRate": 30.1
   },
   "open": [
     {
@@ -28,13 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 20.86,
-      "notional": 417.2,
-      "qty": 1283.69,
+      "margin": 20.16,
+      "notional": 403.2,
+      "qty": 1240.62,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.335,
-      "unrealizedPnl": 12.84,
-      "unrealizedPct": 61.55
+      "markPrice": 0.3349,
+      "unrealizedPnl": 12.28,
+      "unrealizedPct": 60.91
     },
     {
       "id": "2026-08-24T01:31-NEARUSDT-long",
@@ -45,30 +45,13 @@
       "stop": 1.69,
       "target": 2.8,
       "leverage": 20,
-      "margin": 20.86,
-      "notional": 417.2,
-      "qty": 203.51,
+      "margin": 20.16,
+      "notional": 403.2,
+      "qty": 196.68,
       "openedAt": "2026-08-24T01:31:14.018Z",
-      "markPrice": 3.1864,
-      "unrealizedPnl": 231.27,
-      "unrealizedPct": 1108.68
-    },
-    {
-      "id": "2026-09-15T11:31-SUIUSDT-short",
-      "symbol": "SUI/USDT",
-      "dir": "short",
-      "grade": "A",
-      "entry": 0.7078,
-      "stop": 0.7395,
-      "target": 0.6444,
-      "leverage": 20,
-      "margin": 20.86,
-      "notional": 417.2,
-      "qty": 589.43,
-      "openedAt": "2026-09-15T11:31:02.482Z",
-      "markPrice": 0.7387,
-      "unrealizedPnl": -18.21,
-      "unrealizedPct": -87.3
+      "markPrice": 3.158,
+      "unrealizedPnl": 217.92,
+      "unrealizedPct": 1080.95
     },
     {
       "id": "2026-09-16T00:02-HBARUSDT-long",
@@ -83,7 +66,7 @@
       "notional": 0,
       "qty": 0,
       "openedAt": "2026-09-16T00:02:36.455Z",
-      "markPrice": 0.07456,
+      "markPrice": 0.07461,
       "unrealizedPnl": 0,
       "unrealizedPct": null
     },
@@ -96,13 +79,13 @@
       "stop": 242.5,
       "target": 226.58,
       "leverage": 40,
-      "margin": 25.03,
-      "notional": 1001.2,
-      "qty": 4.19,
+      "margin": 24.19,
+      "notional": 967.6,
+      "qty": 4.05,
       "openedAt": "2026-09-17T14:30:48.573Z",
-      "markPrice": 235.15,
-      "unrealizedPnl": 16.17,
-      "unrealizedPct": 64.6
+      "markPrice": 234.66,
+      "unrealizedPnl": 17.61,
+      "unrealizedPct": 72.8
     },
     {
       "id": "2026-09-17T15:31-XLMUSDT-long",
@@ -113,13 +96,13 @@
       "stop": 0.1795,
       "target": 0.196,
       "leverage": 20,
-      "margin": 20.86,
-      "notional": 417.2,
-      "qty": 2261.25,
+      "margin": 20.16,
+      "notional": 403.2,
+      "qty": 2185.37,
       "openedAt": "2026-09-17T15:31:18.454Z",
-      "markPrice": 0.184,
-      "unrealizedPnl": -1.13,
-      "unrealizedPct": -5.42
+      "markPrice": 0.1835,
+      "unrealizedPnl": -2.19,
+      "unrealizedPct": -10.86
     }
   ],
   "closed": [
@@ -6082,6 +6065,26 @@
       "pnl": -21.67,
       "pnlPct": -100,
       "closedAt": "2026-09-15T19:00:46.074Z"
+    },
+    {
+      "id": "2026-09-15T11:31-SUIUSDT-short",
+      "symbol": "SUI/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 0.7078,
+      "stop": 0.7395,
+      "target": 0.6444,
+      "leverage": 20,
+      "margin": 20.86,
+      "notional": 417.2,
+      "qty": 589.43,
+      "openedAt": "2026-09-15T11:31:02.482Z",
+      "exit": 0.7395,
+      "status": "loss",
+      "resultR": -1,
+      "pnl": -18.68,
+      "pnlPct": -89.55,
+      "closedAt": "2026-09-18T00:00:37.970Z"
     }
   ],
   "equityCurve": [
@@ -7280,6 +7283,10 @@
     {
       "t": "2026-09-15T19:00:46.074Z",
       "balance": 556.27
+    },
+    {
+      "t": "2026-09-18T00:00:37.970Z",
+      "balance": 537.59
     }
   ]
 }
