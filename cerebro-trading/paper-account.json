@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-21T17:31:15.939Z",
+  "updated": "2026-09-21T18:02:31.313Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 837.39,
-  "equity": 1243.58,
+  "equity": 1230.94,
   "realizedPnl": -162.61,
-  "unrealizedPnl": 406.19,
+  "unrealizedPnl": 393.55,
   "stats": {
-    "openCount": 6,
+    "openCount": 7,
     "closedCount": 310,
     "wins": 94,
     "losses": 215,
@@ -32,9 +32,9 @@
       "notional": 628,
       "qty": 1932.31,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3442,
-      "unrealizedPnl": 37.1,
-      "unrealizedPct": 118.15
+      "markPrice": 0.344,
+      "unrealizedPnl": 36.71,
+      "unrealizedPct": 116.91
     },
     {
       "id": "2026-09-19T14:01-DOTUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 628,
       "qty": 554.33,
       "openedAt": "2026-09-19T14:01:55.634Z",
-      "markPrice": 1.1807,
-      "unrealizedPnl": 26.5,
-      "unrealizedPct": 84.39
+      "markPrice": 1.1675,
+      "unrealizedPnl": 19.18,
+      "unrealizedPct": 61.08
     },
     {
       "id": "2026-09-20T01:32-TAOUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 1256,
       "qty": 5.02,
       "openedAt": "2026-09-20T01:32:35.578Z",
-      "markPrice": 283.73,
-      "unrealizedPnl": 169.46,
-      "unrealizedPct": 539.68
+      "markPrice": 281,
+      "unrealizedPnl": 155.74,
+      "unrealizedPct": 495.99
     },
     {
       "id": "2026-09-20T11:01-JUPUSDT-long",
@@ -83,9 +83,9 @@
       "notional": 753.6,
       "qty": 2791.11,
       "openedAt": "2026-09-20T11:01:35.092Z",
-      "markPrice": 0.2995,
-      "unrealizedPnl": 82.34,
-      "unrealizedPct": 218.52
+      "markPrice": 0.293,
+      "unrealizedPnl": 64.2,
+      "unrealizedPct": 170.38
     },
     {
       "id": "2026-09-20T12:30-AVAXUSDT-long",
@@ -100,9 +100,9 @@
       "notional": 628,
       "qty": 61.73,
       "openedAt": "2026-09-20T12:30:47.865Z",
-      "markPrice": 10.996,
-      "unrealizedPnl": 50.81,
-      "unrealizedPct": 161.82
+      "markPrice": 10.885,
+      "unrealizedPnl": 43.95,
+      "unrealizedPct": 139.97
     },
     {
       "id": "2026-09-20T22:30-LINKUSDT-long",
@@ -117,9 +117,26 @@
       "notional": 628,
       "qty": 51.82,
       "openedAt": "2026-09-20T22:30:48.875Z",
-      "markPrice": 12.8915,
-      "unrealizedPnl": 39.98,
-      "unrealizedPct": 127.32
+      "markPrice": 12.8231,
+      "unrealizedPnl": 36.43,
+      "unrealizedPct": 116.02
+    },
+    {
+      "id": "2026-09-21T18:02-AAVEUSDT-long",
+      "symbol": "AAVE/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 138.5,
+      "stop": 130.5,
+      "target": 154.5,
+      "leverage": 40,
+      "margin": 31.4,
+      "notional": 1256,
+      "qty": 9.07,
+      "openedAt": "2026-09-21T18:02:28.870Z",
+      "markPrice": 142.618,
+      "unrealizedPnl": 37.34,
+      "unrealizedPct": 118.92
     }
   ],
   "closed": [
