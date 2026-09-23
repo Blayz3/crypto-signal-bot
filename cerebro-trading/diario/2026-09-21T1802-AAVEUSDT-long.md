@@ -4,7 +4,7 @@ type: diario
 symbol: AAVE/USDT
 action: long
 date: 2026-09-21T18:02:28.871Z
-status: open
+status: win
 orderType: limit
 setup: EMA Alignment + MACD + ADX Strong Pullback
 entry: 138.5
@@ -12,7 +12,7 @@ stop: 130.5
 target: 154.5
 rr: 2
 confidence: 85
-result_r: 
+result_r: 1
 ---
 
 # AAVE/USDT LONG — 2026-09-21
