@@ -4,7 +4,7 @@ type: diario
 symbol: LINK/USDT
 action: long
 date: 2026-09-20T22:30:48.877Z
-status: open
+status: win
 orderType: limit
 setup: EMA alignment bullish continuation
 entry: 12.12
@@ -12,7 +12,7 @@ stop: 11.58
 target: 13.2
 rr: 2
 confidence: 60
-result_r: 
+result_r: 1
 ---
 
 # LINK/USDT LONG — 2026-09-20

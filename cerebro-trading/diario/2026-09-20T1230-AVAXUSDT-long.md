@@ -4,7 +4,7 @@ type: diario
 symbol: AVAX/USDT
 action: long
 date: 2026-09-20T12:30:47.866Z
-status: open
+status: win
 orderType: market
 setup: EMAs alcistas + MACD positivo + ADX fuerte
 entry: 10.173
@@ -12,7 +12,7 @@ stop: 9.369
 target: 11.781
 rr: 2
 confidence: 78
-result_r: 
+result_r: 1
 ---
 
 # AVAX/USDT LONG — 2026-09-20
