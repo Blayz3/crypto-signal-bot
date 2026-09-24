@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-24T05:30:32.951Z",
+  "updated": "2026-09-24T05:56:48.491Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1376.41,
-  "equity": 1547.1,
+  "equity": 1510.55,
   "realizedPnl": 376.41,
-  "unrealizedPnl": 170.69,
+  "unrealizedPnl": 134.14,
   "stats": {
     "openCount": 3,
     "closedCount": 317,
@@ -32,9 +32,9 @@
       "notional": 1032.4,
       "qty": 3176.62,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3437,
-      "unrealizedPnl": 59.4,
-      "unrealizedPct": 115.07
+      "markPrice": 0.3435,
+      "unrealizedPnl": 58.77,
+      "unrealizedPct": 113.85
     },
     {
       "id": "2026-09-19T14:01-DOTUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 1032.4,
       "qty": 911.29,
       "openedAt": "2026-09-19T14:01:55.634Z",
-      "markPrice": 1.1362,
-      "unrealizedPnl": 3.01,
-      "unrealizedPct": 5.83
+      "markPrice": 1.1275,
+      "unrealizedPnl": -4.92,
+      "unrealizedPct": -9.53
     },
     {
       "id": "2026-09-20T11:01-JUPUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 1238.8,
       "qty": 4588.15,
       "openedAt": "2026-09-20T11:01:35.092Z",
-      "markPrice": 0.2936,
-      "unrealizedPnl": 108.28,
-      "unrealizedPct": 174.81
+      "markPrice": 0.2875,
+      "unrealizedPnl": 80.29,
+      "unrealizedPct": 129.63
     }
   ],
   "closed": [
