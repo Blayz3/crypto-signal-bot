@@ -4,7 +4,7 @@ type: diario
 symbol: NEAR/USDT
 action: long
 date: 2026-09-24T13:01:15.683Z
-status: open
+status: win
 orderType: market
 setup: EMA200 bullish pullback
 entry: 4.4314
@@ -12,7 +12,7 @@ stop: 4.3
 target: 4.7
 rr: 2.04
 confidence: 60
-result_r: 
+result_r: 3.07
 ---
 
 # NEAR/USDT LONG — 2026-09-24
