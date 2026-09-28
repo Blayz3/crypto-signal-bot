@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T10:00:39.320Z",
+  "updated": "2026-09-28T10:30:33.996Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1866.5,
-  "equity": 2039.63,
+  "equity": 2053.27,
   "realizedPnl": 866.5,
-  "unrealizedPnl": 173.13,
+  "unrealizedPnl": 186.77,
   "stats": {
     "openCount": 5,
     "closedCount": 328,
@@ -32,9 +32,9 @@
       "notional": 1399.8,
       "qty": 4307.08,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3342,
-      "unrealizedPnl": 39.63,
-      "unrealizedPct": 56.62
+      "markPrice": 0.3341,
+      "unrealizedPnl": 39.19,
+      "unrealizedPct": 55.99
     },
     {
       "id": "2026-09-19T14:01-DOTUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 1399.8,
       "qty": 1235.59,
       "openedAt": "2026-09-19T14:01:55.634Z",
-      "markPrice": 1.1913,
-      "unrealizedPnl": 72.16,
-      "unrealizedPct": 103.1
+      "markPrice": 1.192,
+      "unrealizedPnl": 73.02,
+      "unrealizedPct": 104.33
     },
     {
       "id": "2026-09-24T11:34-LTCUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 2799.6,
       "qty": 42.42,
       "openedAt": "2026-09-24T11:34:40.360Z",
-      "markPrice": 70.36,
-      "unrealizedPnl": 184.94,
-      "unrealizedPct": 264.24
+      "markPrice": 70.47,
+      "unrealizedPnl": 189.61,
+      "unrealizedPct": 270.91
     },
     {
       "id": "2026-09-26T01:00-AAVEUSDT-long",
@@ -83,7 +83,7 @@
       "notional": 2799.6,
       "qty": 18,
       "openedAt": "2026-09-26T01:00:50.985Z",
-      "markPrice": 147.168,
+      "markPrice": 147.397,
       "unrealizedPnl": -69.99,
       "unrealizedPct": -100
     },
@@ -100,9 +100,9 @@
       "notional": 1399.8,
       "qty": 129.49,
       "openedAt": "2026-09-26T13:01:35.460Z",
-      "markPrice": 10.396,
-      "unrealizedPnl": -53.61,
-      "unrealizedPct": -76.6
+      "markPrice": 10.462,
+      "unrealizedPnl": -45.06,
+      "unrealizedPct": -64.38
     }
   ],
   "closed": [
