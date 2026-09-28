@@ -4,7 +4,7 @@ type: diario
 symbol: ATOM/USDT
 action: long
 date: 2026-09-24T22:30:48.919Z
-status: open
+status: win
 orderType: limit
 setup: pullback_ema20_long
 entry: 1.755
@@ -12,7 +12,7 @@ stop: 1.697
 target: 1.871
 rr: 2
 confidence: 85
-result_r: 
+result_r: 1
 ---
 
 # ATOM/USDT LONG — 2026-09-24

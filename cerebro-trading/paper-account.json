@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-28T07:30:33.707Z",
+  "updated": "2026-09-28T08:00:42.521Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 1894.69,
-  "equity": 2055.02,
-  "realizedPnl": 894.69,
-  "unrealizedPnl": 160.33,
+  "balance": 1939.22,
+  "equity": 2092.71,
+  "realizedPnl": 939.22,
+  "unrealizedPnl": 153.49,
   "stats": {
-    "openCount": 7,
-    "closedCount": 326,
-    "wins": 104,
+    "openCount": 6,
+    "closedCount": 327,
+    "wins": 105,
     "losses": 221,
-    "winRate": 31.9
+    "winRate": 32.11
   },
   "open": [
     {
@@ -28,13 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 71.05,
-      "notional": 1421,
-      "qty": 4372.31,
+      "margin": 72.72,
+      "notional": 1454.4,
+      "qty": 4475.08,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3335,
-      "unrealizedPnl": 37.16,
-      "unrealizedPct": 52.3
+      "markPrice": 0.3338,
+      "unrealizedPnl": 39.38,
+      "unrealizedPct": 54.15
     },
     {
       "id": "2026-09-19T14:01-DOTUSDT-long",
@@ -45,13 +45,13 @@
       "stop": 1.0671,
       "target": 1.2645,
       "leverage": 20,
-      "margin": 71.05,
-      "notional": 1421,
-      "qty": 1254.3,
+      "margin": 72.72,
+      "notional": 1454.4,
+      "qty": 1283.78,
       "openedAt": "2026-09-19T14:01:55.634Z",
-      "markPrice": 1.2146,
-      "unrealizedPnl": 102.48,
-      "unrealizedPct": 144.24
+      "markPrice": 1.2014,
+      "unrealizedPnl": 87.94,
+      "unrealizedPct": 120.93
     },
     {
       "id": "2026-09-24T11:34-LTCUSDT-long",
@@ -62,30 +62,13 @@
       "stop": 63.5,
       "target": 72.5,
       "leverage": 40,
-      "margin": 71.05,
-      "notional": 2842,
-      "qty": 43.06,
+      "margin": 72.72,
+      "notional": 2908.8,
+      "qty": 44.07,
       "openedAt": "2026-09-24T11:34:40.360Z",
-      "markPrice": 70.15,
-      "unrealizedPnl": 178.7,
-      "unrealizedPct": 251.51
-    },
-    {
-      "id": "2026-09-24T22:30-ATOMUSDT-long",
-      "symbol": "ATOM/USDT",
-      "dir": "long",
-      "grade": "A",
-      "entry": 1.755,
-      "stop": 1.697,
-      "target": 1.871,
-      "leverage": 20,
-      "margin": 71.05,
-      "notional": 1421,
-      "qty": 809.69,
-      "openedAt": "2026-09-24T22:30:48.918Z",
-      "markPrice": 1.7568,
-      "unrealizedPnl": 1.46,
-      "unrealizedPct": 2.05
+      "markPrice": 70.22,
+      "unrealizedPnl": 185.99,
+      "unrealizedPct": 255.76
     },
     {
       "id": "2026-09-26T01:00-AAVEUSDT-long",
@@ -96,12 +79,12 @@
       "stop": 146.13,
       "target": 174.29,
       "leverage": 40,
-      "margin": 71.05,
-      "notional": 2842,
-      "qty": 18.27,
+      "margin": 72.72,
+      "notional": 2908.8,
+      "qty": 18.7,
       "openedAt": "2026-09-26T01:00:50.985Z",
-      "markPrice": 147.783,
-      "unrealizedPnl": -71.05,
+      "markPrice": 147.014,
+      "unrealizedPnl": -72.72,
       "unrealizedPct": -100
     },
     {
@@ -113,13 +96,13 @@
       "stop": 10.04,
       "target": 12.35,
       "leverage": 20,
-      "margin": 71.05,
-      "notional": 1421,
-      "qty": 131.45,
+      "margin": 72.72,
+      "notional": 1454.4,
+      "qty": 134.54,
       "openedAt": "2026-09-26T13:01:35.460Z",
-      "markPrice": 10.445,
-      "unrealizedPnl": -47.98,
-      "unrealizedPct": -67.53
+      "markPrice": 10.359,
+      "unrealizedPnl": -60.68,
+      "unrealizedPct": -83.44
     },
     {
       "id": "2026-09-26T17:02-HBARUSDT-short",
@@ -130,13 +113,13 @@
       "stop": 0.101,
       "target": 0.07,
       "leverage": 20,
-      "margin": 71.05,
-      "notional": 1421,
-      "qty": 14921.77,
+      "margin": 72.72,
+      "notional": 1454.4,
+      "qty": 15272.5,
       "openedAt": "2026-09-26T17:02:01.075Z",
-      "markPrice": 0.09794,
-      "unrealizedPnl": -40.44,
-      "unrealizedPct": -56.92
+      "markPrice": 0.09696,
+      "unrealizedPnl": -26.42,
+      "unrealizedPct": -36.33
     }
   ],
   "closed": [
@@ -6659,6 +6642,26 @@
       "pnl": -43.61,
       "pnlPct": -50,
       "closedAt": "2026-09-28T04:30:37.231Z"
+    },
+    {
+      "id": "2026-09-24T22:30-ATOMUSDT-long",
+      "symbol": "ATOM/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 1.755,
+      "stop": 1.697,
+      "target": 1.871,
+      "leverage": 20,
+      "margin": 71.05,
+      "notional": 1421,
+      "qty": 809.69,
+      "openedAt": "2026-09-24T22:30:48.918Z",
+      "exit": 1.81,
+      "status": "win",
+      "resultR": 1,
+      "pnl": 44.53,
+      "pnlPct": 62.67,
+      "closedAt": "2026-09-28T08:00:40.337Z"
     }
   ],
   "equityCurve": [
@@ -7969,6 +7972,10 @@
     {
       "t": "2026-09-28T04:30:37.231Z",
       "balance": 1894.69
+    },
+    {
+      "t": "2026-09-28T08:00:40.337Z",
+      "balance": 1939.22
     }
   ]
 }
