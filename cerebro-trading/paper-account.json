@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30T18:31:03.872Z",
+  "updated": "2026-09-30T19:01:35.197Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 1686.39,
-  "equity": 1876.64,
-  "realizedPnl": 686.39,
-  "unrealizedPnl": 190.25,
+  "balance": 1778.7,
+  "equity": 1964.52,
+  "realizedPnl": 778.7,
+  "unrealizedPnl": 185.82,
   "stats": {
-    "openCount": 5,
-    "closedCount": 331,
-    "wins": 105,
-    "losses": 225,
-    "winRate": 31.72
+    "openCount": 3,
+    "closedCount": 333,
+    "wins": 106,
+    "losses": 226,
+    "winRate": 31.83
   },
   "open": [
     {
@@ -28,13 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 63.24,
-      "notional": 1264.8,
-      "qty": 3891.69,
+      "margin": 66.7,
+      "notional": 1334,
+      "qty": 4104.62,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3375,
-      "unrealizedPnl": 48.65,
-      "unrealizedPct": 76.93
+      "markPrice": 0.3377,
+      "unrealizedPnl": 52.13,
+      "unrealizedPct": 78.16
     },
     {
       "id": "2026-09-19T14:01-DOTUSDT-long",
@@ -45,30 +45,13 @@
       "stop": 1.0671,
       "target": 1.2645,
       "leverage": 20,
-      "margin": 63.24,
-      "notional": 1264.8,
-      "qty": 1116.43,
+      "margin": 66.7,
+      "notional": 1334,
+      "qty": 1177.51,
       "openedAt": "2026-09-19T14:01:55.634Z",
-      "markPrice": 1.2387,
-      "unrealizedPnl": 118.12,
-      "unrealizedPct": 186.78
-    },
-    {
-      "id": "2026-09-24T11:34-LTCUSDT-long",
-      "symbol": "LTC/USDT",
-      "dir": "long",
-      "grade": "A",
-      "entry": 66,
-      "stop": 63.5,
-      "target": 72.5,
-      "leverage": 40,
-      "margin": 63.24,
-      "notional": 2529.6,
-      "qty": 38.33,
-      "openedAt": "2026-09-24T11:34:40.360Z",
-      "markPrice": 66.56,
-      "unrealizedPnl": 21.46,
-      "unrealizedPct": 33.93
+      "markPrice": 1.2304,
+      "unrealizedPnl": 114.81,
+      "unrealizedPct": 172.13
     },
     {
       "id": "2026-09-26T13:01-AVAXUSDT-long",
@@ -79,30 +62,13 @@
       "stop": 10.04,
       "target": 12.35,
       "leverage": 20,
-      "margin": 63.24,
-      "notional": 1264.8,
-      "qty": 117,
+      "margin": 66.7,
+      "notional": 1334,
+      "qty": 123.4,
       "openedAt": "2026-09-26T13:01:35.460Z",
-      "markPrice": 10.988,
-      "unrealizedPnl": 20.83,
-      "unrealizedPct": 32.94
-    },
-    {
-      "id": "2026-09-30T16:01-SUIUSDT-long",
-      "symbol": "SUI/USDT",
-      "dir": "long",
-      "grade": "A",
-      "entry": 1.1836,
-      "stop": 1.1555,
-      "target": 1.2398,
-      "leverage": 20,
-      "margin": 63.24,
-      "notional": 1264.8,
-      "qty": 1068.6,
-      "openedAt": "2026-09-30T16:01:06.839Z",
-      "markPrice": 1.166,
-      "unrealizedPnl": -18.81,
-      "unrealizedPct": -29.74
+      "markPrice": 10.963,
+      "unrealizedPnl": 18.88,
+      "unrealizedPct": 28.31
     }
   ],
   "closed": [
@@ -6725,6 +6691,46 @@
       "pnl": -65.7,
       "pnlPct": -100,
       "closedAt": "2026-09-30T08:30:36.544Z"
+    },
+    {
+      "id": "2026-09-24T11:34-LTCUSDT-long",
+      "symbol": "LTC/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 66,
+      "stop": 63.5,
+      "target": 72.5,
+      "leverage": 40,
+      "margin": 63.24,
+      "notional": 2529.6,
+      "qty": 38.33,
+      "openedAt": "2026-09-24T11:34:40.360Z",
+      "exit": 69.25,
+      "status": "win",
+      "resultR": 1.3,
+      "pnl": 124.56,
+      "pnlPct": 196.96,
+      "closedAt": "2026-09-30T19:00:42.739Z"
+    },
+    {
+      "id": "2026-09-30T16:01-SUIUSDT-long",
+      "symbol": "SUI/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 1.1836,
+      "stop": 1.1555,
+      "target": 1.2398,
+      "leverage": 20,
+      "margin": 67.91,
+      "notional": 1358.2,
+      "qty": 1147.52,
+      "openedAt": "2026-09-30T16:01:06.839Z",
+      "exit": 1.1555,
+      "status": "loss",
+      "resultR": -1,
+      "pnl": -32.25,
+      "pnlPct": -47.49,
+      "closedAt": "2026-09-30T19:00:43.048Z"
     }
   ],
   "equityCurve": [
@@ -8055,6 +8061,14 @@
     {
       "t": "2026-09-30T08:30:36.544Z",
       "balance": 1686.39
+    },
+    {
+      "t": "2026-09-30T19:00:42.739Z",
+      "balance": 1810.95
+    },
+    {
+      "t": "2026-09-30T19:00:43.048Z",
+      "balance": 1778.7
     }
   ]
 }
