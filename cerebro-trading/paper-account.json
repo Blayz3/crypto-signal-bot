@@ -1,5 +1,5 @@
 {
-  "updated": "2026-09-30T07:30:34.168Z",
+  "updated": "2026-09-30T08:00:39.470Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1752.09,
-  "equity": 1879.71,
+  "equity": 1897.02,
   "realizedPnl": 752.09,
-  "unrealizedPnl": 127.62,
+  "unrealizedPnl": 144.93,
   "stats": {
     "openCount": 5,
     "closedCount": 330,
@@ -32,9 +32,9 @@
       "notional": 1314,
       "qty": 4043.08,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3379,
-      "unrealizedPnl": 52.16,
-      "unrealizedPct": 79.39
+      "markPrice": 0.3386,
+      "unrealizedPnl": 54.99,
+      "unrealizedPct": 83.7
     },
     {
       "id": "2026-09-19T14:01-DOTUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 1314,
       "qty": 1159.86,
       "openedAt": "2026-09-19T14:01:55.634Z",
-      "markPrice": 1.1994,
-      "unrealizedPnl": 77.13,
-      "unrealizedPct": 117.4
+      "markPrice": 1.2037,
+      "unrealizedPnl": 82.12,
+      "unrealizedPct": 124.99
     },
     {
       "id": "2026-09-24T11:34-LTCUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 2628,
       "qty": 39.82,
       "openedAt": "2026-09-24T11:34:40.360Z",
-      "markPrice": 66.68,
-      "unrealizedPnl": 27.08,
-      "unrealizedPct": 41.22
+      "markPrice": 66.9,
+      "unrealizedPnl": 35.84,
+      "unrealizedPct": 54.55
     },
     {
       "id": "2026-09-26T13:01-AVAXUSDT-long",
@@ -83,9 +83,9 @@
       "notional": 1314,
       "qty": 121.55,
       "openedAt": "2026-09-26T13:01:35.460Z",
-      "markPrice": 11.114,
-      "unrealizedPnl": 36.95,
-      "unrealizedPct": 56.24
+      "markPrice": 11.12,
+      "unrealizedPnl": 37.68,
+      "unrealizedPct": 57.35
     },
     {
       "id": "2026-09-28T18:01-LINKUSDT-long",
@@ -100,7 +100,7 @@
       "notional": 1314,
       "qty": 86.92,
       "openedAt": "2026-09-28T18:01:02.604Z",
-      "markPrice": 14.3,
+      "markPrice": 14.3106,
       "unrealizedPnl": -65.7,
       "unrealizedPct": -100
     }
