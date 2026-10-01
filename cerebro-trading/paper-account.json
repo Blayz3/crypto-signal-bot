@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01T22:30:45.138Z",
+  "updated": "2026-10-01T23:00:49.959Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1763.51,
-  "equity": 1801.99,
+  "equity": 1801.38,
   "realizedPnl": 763.51,
-  "unrealizedPnl": 38.48,
+  "unrealizedPnl": 37.87,
   "stats": {
     "openCount": 5,
     "closedCount": 334,
@@ -32,9 +32,9 @@
       "notional": 1322.6,
       "qty": 4069.54,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3353,
-      "unrealizedPnl": 41.92,
-      "unrealizedPct": 63.39
+      "markPrice": 0.3351,
+      "unrealizedPnl": 41.1,
+      "unrealizedPct": 62.15
     },
     {
       "id": "2026-09-19T14:01-DOTUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 1322.6,
       "qty": 1167.45,
       "openedAt": "2026-09-19T14:01:55.634Z",
-      "markPrice": 1.1759,
-      "unrealizedPnl": 50.2,
-      "unrealizedPct": 75.91
+      "markPrice": 1.1743,
+      "unrealizedPnl": 48.33,
+      "unrealizedPct": 73.08
     },
     {
       "id": "2026-09-26T13:01-AVAXUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 1322.6,
       "qty": 122.35,
       "openedAt": "2026-09-26T13:01:35.460Z",
-      "markPrice": 10.973,
-      "unrealizedPnl": 19.94,
-      "unrealizedPct": 30.15
+      "markPrice": 10.977,
+      "unrealizedPnl": 20.43,
+      "unrealizedPct": 30.89
     },
     {
       "id": "2026-10-01T11:30-NEARUSDT-long",
@@ -83,7 +83,7 @@
       "notional": 1322.6,
       "qty": 259.6,
       "openedAt": "2026-10-01T11:30:56.387Z",
-      "markPrice": 4.8003,
+      "markPrice": 4.7826,
       "unrealizedPnl": -66.13,
       "unrealizedPct": -100
     },
@@ -100,9 +100,9 @@
       "notional": 1322.6,
       "qty": 5324.48,
       "openedAt": "2026-10-01T12:31:07.469Z",
-      "markPrice": 0.247,
-      "unrealizedPnl": -7.45,
-      "unrealizedPct": -11.27
+      "markPrice": 0.2473,
+      "unrealizedPnl": -5.86,
+      "unrealizedPct": -8.86
     }
   ],
   "closed": [
