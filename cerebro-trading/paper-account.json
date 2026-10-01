@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-01T10:30:33.428Z",
+  "updated": "2026-10-01T11:01:49.405Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 1778.7,
-  "equity": 1915.72,
+  "equity": 1896.17,
   "realizedPnl": 778.7,
-  "unrealizedPnl": 137.02,
+  "unrealizedPnl": 117.47,
   "stats": {
-    "openCount": 3,
+    "openCount": 4,
     "closedCount": 333,
     "wins": 106,
     "losses": 226,
@@ -32,9 +32,9 @@
       "notional": 1334,
       "qty": 4104.62,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.334,
-      "unrealizedPnl": 36.94,
-      "unrealizedPct": 55.38
+      "markPrice": 0.3325,
+      "unrealizedPnl": 30.78,
+      "unrealizedPct": 46.15
     },
     {
       "id": "2026-09-19T14:01-DOTUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 1334,
       "qty": 1177.51,
       "openedAt": "2026-09-19T14:01:55.634Z",
-      "markPrice": 1.2051,
-      "unrealizedPnl": 85.02,
-      "unrealizedPct": 127.47
+      "markPrice": 1.2033,
+      "unrealizedPnl": 82.9,
+      "unrealizedPct": 124.29
     },
     {
       "id": "2026-09-26T13:01-AVAXUSDT-long",
@@ -66,9 +66,26 @@
       "notional": 1334,
       "qty": 123.4,
       "openedAt": "2026-09-26T13:01:35.460Z",
-      "markPrice": 10.932,
-      "unrealizedPnl": 15.06,
-      "unrealizedPct": 22.58
+      "markPrice": 10.956,
+      "unrealizedPnl": 18.02,
+      "unrealizedPct": 27.02
+    },
+    {
+      "id": "2026-10-01T11:01-AAVEUSDT-long",
+      "symbol": "AAVE/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 165.14,
+      "stop": 164.2,
+      "target": 167.02,
+      "leverage": 40,
+      "margin": 66.7,
+      "notional": 2668,
+      "qty": 16.16,
+      "openedAt": "2026-10-01T11:01:48.165Z",
+      "markPrice": 164.259,
+      "unrealizedPnl": -14.23,
+      "unrealizedPct": -21.33
     }
   ],
   "closed": [
