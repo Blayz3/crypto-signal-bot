@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-02T15:02:11.993Z",
+  "updated": "2026-10-02T15:31:16.167Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 1752.35,
-  "equity": 1867.11,
-  "realizedPnl": 752.35,
-  "unrealizedPnl": 114.76,
+  "balance": 1707.11,
+  "equity": 1853.91,
+  "realizedPnl": 707.11,
+  "unrealizedPnl": 146.8,
   "stats": {
     "openCount": 6,
-    "closedCount": 335,
+    "closedCount": 336,
     "wins": 106,
-    "losses": 228,
-    "winRate": 31.64
+    "losses": 229,
+    "winRate": 31.55
   },
   "open": [
     {
@@ -28,13 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 65.71,
-      "notional": 1314.2,
-      "qty": 4043.69,
+      "margin": 64.02,
+      "notional": 1280.4,
+      "qty": 3939.69,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3352,
-      "unrealizedPnl": 41.25,
-      "unrealizedPct": 62.78
+      "markPrice": 0.3358,
+      "unrealizedPnl": 42.55,
+      "unrealizedPct": 66.46
     },
     {
       "id": "2026-09-19T14:01-DOTUSDT-long",
@@ -45,13 +45,13 @@
       "stop": 1.0671,
       "target": 1.2645,
       "leverage": 20,
-      "margin": 65.71,
-      "notional": 1314.2,
-      "qty": 1160.03,
+      "margin": 64.02,
+      "notional": 1280.4,
+      "qty": 1130.2,
       "openedAt": "2026-09-19T14:01:55.634Z",
-      "markPrice": 1.2098,
-      "unrealizedPnl": 89.21,
-      "unrealizedPct": 135.76
+      "markPrice": 1.2139,
+      "unrealizedPnl": 91.55,
+      "unrealizedPct": 143
     },
     {
       "id": "2026-09-26T13:01-AVAXUSDT-long",
@@ -62,13 +62,13 @@
       "stop": 10.04,
       "target": 12.35,
       "leverage": 20,
-      "margin": 65.71,
-      "notional": 1314.2,
-      "qty": 121.57,
+      "margin": 64.02,
+      "notional": 1280.4,
+      "qty": 118.45,
       "openedAt": "2026-09-26T13:01:35.460Z",
-      "markPrice": 11.088,
-      "unrealizedPnl": 33.8,
-      "unrealizedPct": 51.44
+      "markPrice": 11.126,
+      "unrealizedPnl": 37.43,
+      "unrealizedPct": 58.47
     },
     {
       "id": "2026-10-01T11:30-NEARUSDT-long",
@@ -79,13 +79,13 @@
       "stop": 4.71,
       "target": 5.87,
       "leverage": 20,
-      "margin": 65.71,
-      "notional": 1314.2,
-      "qty": 257.95,
+      "margin": 64.02,
+      "notional": 1280.4,
+      "qty": 251.32,
       "openedAt": "2026-10-01T11:30:56.387Z",
-      "markPrice": 4.8914,
-      "unrealizedPnl": -52.47,
-      "unrealizedPct": -79.85
+      "markPrice": 4.8645,
+      "unrealizedPnl": -57.88,
+      "unrealizedPct": -90.41
     },
     {
       "id": "2026-10-01T12:31-WIFUSDT-long",
@@ -96,30 +96,30 @@
       "stop": 0.2324,
       "target": 0.2805,
       "leverage": 20,
-      "margin": 65.71,
-      "notional": 1314.2,
-      "qty": 5290.66,
+      "margin": 64.02,
+      "notional": 1280.4,
+      "qty": 5154.59,
       "openedAt": "2026-10-01T12:31:07.469Z",
-      "markPrice": 0.2545,
-      "unrealizedPnl": 32.27,
-      "unrealizedPct": 49.11
+      "markPrice": 0.2548,
+      "unrealizedPnl": 32.99,
+      "unrealizedPct": 51.53
     },
     {
-      "id": "2026-10-02T11:30-SOLUSDT-long",
-      "symbol": "SOL/USDT",
+      "id": "2026-10-02T15:31-BTCUSDT-long",
+      "symbol": "BTC/USDT",
       "dir": "long",
-      "grade": "A",
-      "entry": 122,
-      "stop": 119.9,
-      "target": 126.3,
+      "grade": "A+",
+      "entry": 85532.7,
+      "stop": 84444.2,
+      "target": 87709.7,
       "leverage": 40,
-      "margin": 65.71,
-      "notional": 2628.4,
-      "qty": 21.54,
-      "openedAt": "2026-10-02T11:30:51.658Z",
-      "markPrice": 120.64,
-      "unrealizedPnl": -29.3,
-      "unrealizedPct": -44.59
+      "margin": 76.82,
+      "notional": 3072.8,
+      "qty": 0.04,
+      "openedAt": "2026-10-02T15:31:14.586Z",
+      "markPrice": 85537.1,
+      "unrealizedPnl": 0.16,
+      "unrealizedPct": 0.21
     }
   ],
   "closed": [
@@ -6822,6 +6822,26 @@
       "pnl": -11.16,
       "pnlPct": -16.88,
       "closedAt": "2026-10-02T15:00:51.531Z"
+    },
+    {
+      "id": "2026-10-02T11:30-SOLUSDT-long",
+      "symbol": "SOL/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 122,
+      "stop": 119.9,
+      "target": 126.3,
+      "leverage": 40,
+      "margin": 65.71,
+      "notional": 2628.4,
+      "qty": 21.54,
+      "openedAt": "2026-10-02T11:30:51.658Z",
+      "exit": 119.9,
+      "status": "loss",
+      "resultR": -1,
+      "pnl": -45.24,
+      "pnlPct": -68.85,
+      "closedAt": "2026-10-02T15:30:36.208Z"
     }
   ],
   "equityCurve": [
@@ -8168,6 +8188,10 @@
     {
       "t": "2026-10-02T15:00:51.531Z",
       "balance": 1752.35
+    },
+    {
+      "t": "2026-10-02T15:30:36.208Z",
+      "balance": 1707.11
     }
   ]
 }
