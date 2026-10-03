@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-03T21:01:36.034Z",
+  "updated": "2026-10-03T21:30:35.999Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1605.45,
-  "equity": 1775.93,
+  "equity": 1758.68,
   "realizedPnl": 605.45,
-  "unrealizedPnl": 170.48,
+  "unrealizedPnl": 153.23,
   "stats": {
     "openCount": 5,
     "closedCount": 338,
@@ -32,9 +32,9 @@
       "notional": 1204,
       "qty": 3704.62,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3357,
-      "unrealizedPnl": 39.64,
-      "unrealizedPct": 65.85
+      "markPrice": 0.3354,
+      "unrealizedPnl": 38.53,
+      "unrealizedPct": 64
     },
     {
       "id": "2026-09-19T14:01-DOTUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 1204,
       "qty": 1062.76,
       "openedAt": "2026-09-19T14:01:55.634Z",
-      "markPrice": 1.1922,
-      "unrealizedPnl": 63.02,
-      "unrealizedPct": 104.68
+      "markPrice": 1.1888,
+      "unrealizedPnl": 59.41,
+      "unrealizedPct": 98.69
     },
     {
       "id": "2026-09-26T13:01-AVAXUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 1204,
       "qty": 111.38,
       "openedAt": "2026-09-26T13:01:35.460Z",
-      "markPrice": 11.111,
-      "unrealizedPnl": 33.52,
-      "unrealizedPct": 55.68
+      "markPrice": 11.09,
+      "unrealizedPnl": 31.19,
+      "unrealizedPct": 51.81
     },
     {
       "id": "2026-10-01T12:31-WIFUSDT-long",
@@ -83,9 +83,9 @@
       "notional": 1204,
       "qty": 4847.02,
       "openedAt": "2026-10-01T12:31:07.469Z",
-      "markPrice": 0.2543,
-      "unrealizedPnl": 28.6,
-      "unrealizedPct": 47.51
+      "markPrice": 0.2526,
+      "unrealizedPnl": 20.36,
+      "unrealizedPct": 33.82
     },
     {
       "id": "2026-10-02T23:30-AAVEUSDT-long",
@@ -100,9 +100,9 @@
       "notional": 2408,
       "qty": 13.34,
       "openedAt": "2026-10-02T23:30:38.885Z",
-      "markPrice": 180.927,
-      "unrealizedPnl": 5.7,
-      "unrealizedPct": 9.47
+      "markPrice": 180.78,
+      "unrealizedPnl": 3.74,
+      "unrealizedPct": 6.21
     }
   ],
   "closed": [
