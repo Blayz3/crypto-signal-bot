@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-04T06:30:32.908Z",
+  "updated": "2026-10-04T07:00:36.378Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1605.45,
-  "equity": 1754.23,
+  "equity": 1758.91,
   "realizedPnl": 605.45,
-  "unrealizedPnl": 148.78,
+  "unrealizedPnl": 153.46,
   "stats": {
     "openCount": 6,
     "closedCount": 338,
@@ -32,9 +32,9 @@
       "notional": 1204,
       "qty": 3704.62,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3354,
-      "unrealizedPnl": 38.53,
-      "unrealizedPct": 64
+      "markPrice": 0.3353,
+      "unrealizedPnl": 38.16,
+      "unrealizedPct": 63.39
     },
     {
       "id": "2026-09-19T14:01-DOTUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 1204,
       "qty": 1062.76,
       "openedAt": "2026-09-19T14:01:55.634Z",
-      "markPrice": 1.1853,
-      "unrealizedPnl": 55.69,
-      "unrealizedPct": 92.51
+      "markPrice": 1.1857,
+      "unrealizedPnl": 56.11,
+      "unrealizedPct": 93.21
     },
     {
       "id": "2026-09-26T13:01-AVAXUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 1204,
       "qty": 111.38,
       "openedAt": "2026-09-26T13:01:35.460Z",
-      "markPrice": 11.055,
-      "unrealizedPnl": 27.29,
-      "unrealizedPct": 45.33
+      "markPrice": 11.038,
+      "unrealizedPnl": 25.39,
+      "unrealizedPct": 42.18
     },
     {
       "id": "2026-10-01T12:31-WIFUSDT-long",
@@ -100,9 +100,9 @@
       "notional": 2408,
       "qty": 13.34,
       "openedAt": "2026-10-02T23:30:38.885Z",
-      "markPrice": 182.298,
-      "unrealizedPnl": 23.99,
-      "unrealizedPct": 39.85
+      "markPrice": 182.635,
+      "unrealizedPnl": 28.48,
+      "unrealizedPct": 47.31
     },
     {
       "id": "2026-10-03T23:00-BNBUSDT-long",
@@ -117,9 +117,9 @@
       "notional": 2408,
       "qty": 3.06,
       "openedAt": "2026-10-03T23:00:44.853Z",
-      "markPrice": 787.938,
-      "unrealizedPnl": 1.34,
-      "unrealizedPct": 2.23
+      "markPrice": 788.606,
+      "unrealizedPnl": 3.38,
+      "unrealizedPct": 5.61
     }
   ],
   "closed": [
