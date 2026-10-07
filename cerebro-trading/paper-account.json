@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-07T19:30:59.943Z",
+  "updated": "2026-10-07T20:00:48.131Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1387.45,
-  "equity": 1426.88,
+  "equity": 1423.27,
   "realizedPnl": 387.45,
-  "unrealizedPnl": 39.43,
+  "unrealizedPnl": 35.82,
   "stats": {
     "openCount": 4,
     "closedCount": 346,
@@ -32,9 +32,9 @@
       "notional": 1040.6,
       "qty": 3201.85,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3355,
-      "unrealizedPnl": 33.62,
-      "unrealizedPct": 64.62
+      "markPrice": 0.3356,
+      "unrealizedPnl": 33.94,
+      "unrealizedPct": 65.23
     },
     {
       "id": "2026-09-26T13:01-AVAXUSDT-long",
@@ -49,9 +49,9 @@
       "notional": 1040.6,
       "qty": 96.26,
       "openedAt": "2026-09-26T13:01:35.460Z",
-      "markPrice": 11.281,
-      "unrealizedPnl": 45.34,
-      "unrealizedPct": 87.14
+      "markPrice": 11.196,
+      "unrealizedPnl": 37.16,
+      "unrealizedPct": 71.42
     },
     {
       "id": "2026-10-02T23:30-AAVEUSDT-long",
@@ -66,7 +66,7 @@
       "notional": 2081.2,
       "qty": 11.53,
       "openedAt": "2026-10-02T23:30:38.885Z",
-      "markPrice": 172.501,
+      "markPrice": 172.602,
       "unrealizedPnl": -52.03,
       "unrealizedPct": -100
     },
@@ -83,9 +83,9 @@
       "notional": 1040.6,
       "qty": 720.64,
       "openedAt": "2026-10-07T12:33:13.959Z",
-      "markPrice": 1.42665,
-      "unrealizedPnl": 12.5,
-      "unrealizedPct": 24.02
+      "markPrice": 1.42076,
+      "unrealizedPnl": 16.75,
+      "unrealizedPct": 32.19
     }
   ],
   "closed": [
