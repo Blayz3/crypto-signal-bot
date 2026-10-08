@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-08T10:30:33.821Z",
+  "updated": "2026-10-08T11:01:25.427Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 1411.95,
-  "equity": 1399.68,
+  "equity": 1390.84,
   "realizedPnl": 411.95,
-  "unrealizedPnl": -12.27,
+  "unrealizedPnl": -21.11,
   "stats": {
-    "openCount": 3,
+    "openCount": 4,
     "closedCount": 347,
     "wins": 108,
     "losses": 238,
@@ -49,9 +49,9 @@
       "notional": 1059,
       "qty": 97.96,
       "openedAt": "2026-09-26T13:01:35.460Z",
-      "markPrice": 10.856,
-      "unrealizedPnl": 4.51,
-      "unrealizedPct": 8.52
+      "markPrice": 10.753,
+      "unrealizedPnl": -5.58,
+      "unrealizedPct": -10.54
     },
     {
       "id": "2026-10-02T23:30-AAVEUSDT-long",
@@ -66,9 +66,26 @@
       "notional": 2118,
       "qty": 11.73,
       "openedAt": "2026-10-02T23:30:38.885Z",
-      "markPrice": 171.951,
+      "markPrice": 170.616,
       "unrealizedPnl": -52.95,
       "unrealizedPct": -100
+    },
+    {
+      "id": "2026-10-08T11:01-ATOMUSDT-short",
+      "symbol": "ATOM/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 1.782,
+      "stop": 1.8,
+      "target": 1.71,
+      "leverage": 20,
+      "margin": 52.95,
+      "notional": 1059,
+      "qty": 594.28,
+      "openedAt": "2026-10-08T11:01:22.192Z",
+      "markPrice": 1.7799,
+      "unrealizedPnl": 1.25,
+      "unrealizedPct": 2.36
     }
   ],
   "closed": [
