@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T11:01:15.606Z",
+  "updated": "2026-10-09T11:30:53.854Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1282.98,
-  "equity": 1305.29,
+  "equity": 1297.43,
   "realizedPnl": 282.98,
-  "unrealizedPnl": 22.31,
+  "unrealizedPnl": 14.45,
   "stats": {
     "openCount": 2,
     "closedCount": 352,
@@ -32,9 +32,9 @@
       "notional": 962.2,
       "qty": 2960.62,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3322,
-      "unrealizedPnl": 21.32,
-      "unrealizedPct": 44.32
+      "markPrice": 0.333,
+      "unrealizedPnl": 23.68,
+      "unrealizedPct": 49.22
     },
     {
       "id": "2026-10-09T11:01-ZECUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 1924.4,
       "qty": 1.58,
       "openedAt": "2026-10-09T11:01:13.712Z",
-      "markPrice": 1220.145,
-      "unrealizedPnl": 0.99,
-      "unrealizedPct": 2.06
+      "markPrice": 1226.623,
+      "unrealizedPnl": -9.23,
+      "unrealizedPct": -19.19
     }
   ],
   "closed": [
