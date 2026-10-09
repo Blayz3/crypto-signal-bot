@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T07:30:33.787Z",
+  "updated": "2026-10-09T07:51:22.576Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 1249.44,
-  "equity": 1272.32,
-  "realizedPnl": 249.44,
-  "unrealizedPnl": 22.88,
+  "balance": 1282.98,
+  "equity": 1304.3,
+  "realizedPnl": 282.98,
+  "unrealizedPnl": 21.32,
   "stats": {
-    "openCount": 2,
-    "closedCount": 351,
-    "wins": 108,
+    "openCount": 1,
+    "closedCount": 352,
+    "wins": 109,
     "losses": 242,
-    "winRate": 30.77
+    "winRate": 30.97
   },
   "open": [
     {
@@ -28,30 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 46.85,
-      "notional": 937,
-      "qty": 2883.08,
+      "margin": 48.11,
+      "notional": 962.2,
+      "qty": 2960.62,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3323,
-      "unrealizedPnl": 21.05,
-      "unrealizedPct": 44.93
-    },
-    {
-      "id": "2026-10-08T11:31-HYPEUSDT-short",
-      "symbol": "HYPE/USDT",
-      "dir": "short",
-      "grade": "A",
-      "entry": 86.111,
-      "stop": 87.65,
-      "target": 83.03,
-      "leverage": 40,
-      "margin": 46.85,
-      "notional": 1874,
-      "qty": 21.76,
-      "openedAt": "2026-10-08T11:31:12.131Z",
-      "markPrice": 86.027,
-      "unrealizedPnl": 1.83,
-      "unrealizedPct": 3.91
+      "markPrice": 0.3322,
+      "unrealizedPnl": 21.32,
+      "unrealizedPct": 44.32
     }
   ],
   "closed": [
@@ -7074,6 +7057,26 @@
       "pnl": -48.68,
       "pnlPct": -100,
       "closedAt": "2026-10-09T05:00:45.140Z"
+    },
+    {
+      "id": "2026-10-08T11:31-HYPEUSDT-short",
+      "symbol": "HYPE/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 86.111,
+      "stop": 87.65,
+      "target": 83.03,
+      "leverage": 40,
+      "margin": 46.85,
+      "notional": 1874,
+      "qty": 21.76,
+      "openedAt": "2026-10-08T11:31:12.131Z",
+      "exit": 84.57,
+      "status": "win",
+      "resultR": 1,
+      "pnl": 33.54,
+      "pnlPct": 71.59,
+      "closedAt": "2026-10-09T07:51:21.330Z"
     }
   ],
   "equityCurve": [
@@ -8484,6 +8487,10 @@
     {
       "t": "2026-10-09T05:00:45.140Z",
       "balance": 1249.44
+    },
+    {
+      "t": "2026-10-09T07:51:21.330Z",
+      "balance": 1282.98
     }
   ]
 }

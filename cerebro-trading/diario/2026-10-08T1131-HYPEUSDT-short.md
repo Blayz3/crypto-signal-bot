@@ -4,7 +4,7 @@ type: diario
 symbol: HYPE/USDT
 action: short
 date: 2026-10-08T11:31:12.132Z
-status: open
+status: win
 orderType: market
 setup: Bearish EMA-MACD-ADX-VAL-Whale
 entry: 86.111
@@ -12,7 +12,7 @@ stop: 87.65
 target: 83.03
 rr: 2
 confidence: 85
-result_r: 
+result_r: 1
 ---
 
 # HYPE/USDT SHORT — 2026-10-08
