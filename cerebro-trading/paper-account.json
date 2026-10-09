@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-09T11:30:53.854Z",
+  "updated": "2026-10-09T12:30:59.178Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 1282.98,
-  "equity": 1297.43,
-  "realizedPnl": 282.98,
-  "unrealizedPnl": 14.45,
+  "balance": 1262.98,
+  "equity": 1286,
+  "realizedPnl": 262.98,
+  "unrealizedPnl": 23.02,
   "stats": {
-    "openCount": 2,
-    "closedCount": 352,
+    "openCount": 1,
+    "closedCount": 353,
     "wins": 109,
-    "losses": 242,
-    "winRate": 30.97
+    "losses": 243,
+    "winRate": 30.88
   },
   "open": [
     {
@@ -28,30 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 48.11,
-      "notional": 962.2,
-      "qty": 2960.62,
+      "margin": 47.36,
+      "notional": 947.2,
+      "qty": 2914.46,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.333,
-      "unrealizedPnl": 23.68,
-      "unrealizedPct": 49.22
-    },
-    {
-      "id": "2026-10-09T11:01-ZECUSDT-short",
-      "symbol": "ZEC/USDT",
-      "dir": "short",
-      "grade": "A",
-      "entry": 1220.77,
-      "stop": 1233.46,
-      "target": 1195.38,
-      "leverage": 40,
-      "margin": 48.11,
-      "notional": 1924.4,
-      "qty": 1.58,
-      "openedAt": "2026-10-09T11:01:13.712Z",
-      "markPrice": 1226.623,
-      "unrealizedPnl": -9.23,
-      "unrealizedPct": -19.19
+      "markPrice": 0.3329,
+      "unrealizedPnl": 23.02,
+      "unrealizedPct": 48.61
     }
   ],
   "closed": [
@@ -7094,6 +7077,26 @@
       "pnl": 33.54,
       "pnlPct": 71.59,
       "closedAt": "2026-10-09T07:51:21.330Z"
+    },
+    {
+      "id": "2026-10-09T11:01-ZECUSDT-short",
+      "symbol": "ZEC/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 1220.77,
+      "stop": 1233.46,
+      "target": 1195.38,
+      "leverage": 40,
+      "margin": 48.11,
+      "notional": 1924.4,
+      "qty": 1.58,
+      "openedAt": "2026-10-09T11:01:13.712Z",
+      "exit": 1233.46,
+      "status": "loss",
+      "resultR": -1,
+      "pnl": -20,
+      "pnlPct": -41.57,
+      "closedAt": "2026-10-09T12:00:41.217Z"
     }
   ],
   "equityCurve": [
@@ -8508,6 +8511,10 @@
     {
       "t": "2026-10-09T07:51:21.330Z",
       "balance": 1282.98
+    },
+    {
+      "t": "2026-10-09T12:00:41.217Z",
+      "balance": 1262.98
     }
   ]
 }
