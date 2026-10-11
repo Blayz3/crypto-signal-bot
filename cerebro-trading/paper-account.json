@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-11T21:01:25.107Z",
+  "updated": "2026-10-11T21:30:51.166Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 1262.98,
-  "equity": 1254.81,
-  "realizedPnl": 262.98,
-  "unrealizedPnl": -8.17,
+  "balance": 1244.73,
+  "equity": 1238.49,
+  "realizedPnl": 244.73,
+  "unrealizedPnl": -6.24,
   "stats": {
-    "openCount": 4,
-    "closedCount": 353,
+    "openCount": 3,
+    "closedCount": 354,
     "wins": 109,
-    "losses": 243,
-    "winRate": 30.88
+    "losses": 244,
+    "winRate": 30.79
   },
   "open": [
     {
@@ -28,13 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 47.36,
-      "notional": 947.2,
-      "qty": 2914.46,
+      "margin": 46.68,
+      "notional": 933.6,
+      "qty": 2872.62,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3302,
-      "unrealizedPnl": 15.16,
-      "unrealizedPct": 32.01
+      "markPrice": 0.3301,
+      "unrealizedPnl": 14.65,
+      "unrealizedPct": 31.38
     },
     {
       "id": "2026-10-11T00:01-DOGEUSDT-long",
@@ -49,7 +49,7 @@
       "notional": 0,
       "qty": 0,
       "openedAt": "2026-10-11T00:01:33.074Z",
-      "markPrice": 0.08712,
+      "markPrice": 0.08639,
       "unrealizedPnl": 0,
       "unrealizedPct": null
     },
@@ -62,30 +62,13 @@
       "stop": 0.346,
       "target": 0.421,
       "leverage": 20,
-      "margin": 47.36,
-      "notional": 947.2,
-      "qty": 2553.1,
+      "margin": 46.68,
+      "notional": 933.6,
+      "qty": 2516.44,
       "openedAt": "2026-10-11T17:01:25.213Z",
-      "markPrice": 0.3668,
-      "unrealizedPnl": -10.72,
-      "unrealizedPct": -22.64
-    },
-    {
-      "id": "2026-10-11T18:00-NEARUSDT-long",
-      "symbol": "NEAR/USDT",
-      "dir": "long",
-      "grade": "A",
-      "entry": 5.71,
-      "stop": 5.6,
-      "target": 5.93,
-      "leverage": 20,
-      "margin": 47.36,
-      "notional": 947.2,
-      "qty": 165.88,
-      "openedAt": "2026-10-11T18:00:46.494Z",
-      "markPrice": 5.634,
-      "unrealizedPnl": -12.61,
-      "unrealizedPct": -26.63
+      "markPrice": 0.3627,
+      "unrealizedPnl": -20.89,
+      "unrealizedPct": -44.75
     }
   ],
   "closed": [
@@ -7148,6 +7131,26 @@
       "pnl": -20,
       "pnlPct": -41.57,
       "closedAt": "2026-10-09T12:00:41.217Z"
+    },
+    {
+      "id": "2026-10-11T18:00-NEARUSDT-long",
+      "symbol": "NEAR/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 5.71,
+      "stop": 5.6,
+      "target": 5.93,
+      "leverage": 20,
+      "margin": 47.36,
+      "notional": 947.2,
+      "qty": 165.88,
+      "openedAt": "2026-10-11T18:00:46.494Z",
+      "exit": 5.6,
+      "status": "loss",
+      "resultR": -1,
+      "pnl": -18.25,
+      "pnlPct": -38.53,
+      "closedAt": "2026-10-11T21:30:38.254Z"
     }
   ],
   "equityCurve": [
@@ -8566,6 +8569,10 @@
     {
       "t": "2026-10-09T12:00:41.217Z",
       "balance": 1262.98
+    },
+    {
+      "t": "2026-10-11T21:30:38.254Z",
+      "balance": 1244.73
     }
   ]
 }
