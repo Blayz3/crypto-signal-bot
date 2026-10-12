@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12T03:30:33.030Z",
+  "updated": "2026-10-12T04:00:38.157Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1244.73,
-  "equity": 1241.72,
+  "equity": 1250.42,
   "realizedPnl": 244.73,
-  "unrealizedPnl": -3.01,
+  "unrealizedPnl": 5.69,
   "stats": {
     "openCount": 3,
     "closedCount": 354,
@@ -32,9 +32,9 @@
       "notional": 933.6,
       "qty": 2872.62,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3307,
-      "unrealizedPnl": 16.37,
-      "unrealizedPct": 35.07
+      "markPrice": 0.3318,
+      "unrealizedPnl": 19.53,
+      "unrealizedPct": 41.84
     },
     {
       "id": "2026-10-11T00:01-DOGEUSDT-long",
@@ -49,7 +49,7 @@
       "notional": 0,
       "qty": 0,
       "openedAt": "2026-10-11T00:01:33.074Z",
-      "markPrice": 0.08704,
+      "markPrice": 0.08688,
       "unrealizedPnl": 0,
       "unrealizedPct": null
     },
@@ -66,9 +66,9 @@
       "notional": 933.6,
       "qty": 2516.44,
       "openedAt": "2026-10-11T17:01:25.213Z",
-      "markPrice": 0.3633,
-      "unrealizedPnl": -19.38,
-      "unrealizedPct": -41.52
+      "markPrice": 0.3655,
+      "unrealizedPnl": -13.84,
+      "unrealizedPct": -29.65
     }
   ],
   "closed": [
