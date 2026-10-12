@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-12T16:01:54.385Z",
+  "updated": "2026-10-12T16:31:18.137Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 1198.05,
-  "equity": 1214.64,
+  "equity": 1214.65,
   "realizedPnl": 198.05,
-  "unrealizedPnl": 16.59,
+  "unrealizedPnl": 16.6,
   "stats": {
-    "openCount": 2,
+    "openCount": 3,
     "closedCount": 355,
     "wins": 109,
     "losses": 245,
@@ -32,9 +32,9 @@
       "notional": 898.6,
       "qty": 2764.92,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.331,
-      "unrealizedPnl": 16.59,
-      "unrealizedPct": 36.92
+      "markPrice": 0.3312,
+      "unrealizedPnl": 17.14,
+      "unrealizedPct": 38.15
     },
     {
       "id": "2026-10-11T00:01-DOGEUSDT-long",
@@ -49,9 +49,26 @@
       "notional": 0,
       "qty": 0,
       "openedAt": "2026-10-11T00:01:33.074Z",
-      "markPrice": 0.0852,
+      "markPrice": 0.08511,
       "unrealizedPnl": 0,
       "unrealizedPct": null
+    },
+    {
+      "id": "2026-10-12T16:31-XRPUSDT-short",
+      "symbol": "XRP/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 1.37724,
+      "stop": 1.3905,
+      "target": 1.355,
+      "leverage": 20,
+      "margin": 44.93,
+      "notional": 898.6,
+      "qty": 652.46,
+      "openedAt": "2026-10-12T16:31:16.204Z",
+      "markPrice": 1.37806,
+      "unrealizedPnl": -0.54,
+      "unrealizedPct": -1.2
     }
   ],
   "closed": [
