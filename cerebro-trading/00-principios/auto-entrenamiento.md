@@ -10,25 +10,24 @@ weight: high
 
 # Autoentrenamiento (aprendido de mis resultados)
 
-Generado el 2026-09-28 con los resultados REALES de la SEMANA (2026-09-21 → 2026-09-28, 14 trades, +8R).
+Generado el 2026-10-12 con los resultados REALES de la SEMANA (2026-10-05 → 2026-10-12, 9 trades, -2.7R).
 El bot se entrena solo CADA SEMANA: NO abandona los setups, los PERFECCIONA — prioriza lo que
 gana, exige la condición que faltó en lo que pierde, y sube la exigencia si no fue rentable.
 **Nivel de exigencia actual: 5/5.**
 
 ## ✅ Setups a PRIORIZAR (ganaron con datos reales)
-- EMA Pullback Long: 3 trades, +2.9R, WR 33% → más confianza
-- EMA Alignment + MACD + ADX Strong: 3 trades, +1R, WR 33% → más confianza
+- (aún sin setups ganadores con muestra suficiente — sigue recolectando)
 
 ## 🔧 Setups a AFINAR (perdieron — NO los abandones: exige la confluencia que faltó)
 - (ninguno con muestra suficiente esta semana)
 
 ## 📝 Lecciones de las pérdidas de la semana
-- Causa:** El trade entró con una confluencia marginal – el ADX apenas alcanzaba el umbral mínimo y el stop quedó dentro de una zona de ruido cerca del VAH – por lo que el precio no desarrolló impulso sostenido
-- Causa:** Entró solo con la alineación de EMAs, MACD y ADX, sin una confirmación de impulso real (ruptura clara, captura de
-- Causa:** Entraste justo después de que el precio cruzara la EMA200 sin un impulso real; el ADX estaba por debajo del nivel fuerte (≈25‑30) y el micro‑régimen mostraba consolidación, de modo que la confluencia era solo aparente y el trade se abrió contra el momentum inmediato.   **Lección:** Antes de cualquier entrada long exige una confirmación de momentum (ADX ≥ 35) y una ruptura o rebote claro de
-- Causa:** Entraste sin confirmar el impulso en un timeframe superior; el precio estaba en un punto de rebote cerca del soporte y, aunque los
-- Causa:** El stop se ubicó justo encima de la VAH, dentro de una zona de ruido y sin respaldo de momentum (ADX < 25) ni de una confluencia mínima; la falta de una condición estructural fuerte hizo que el precio lo alcanzara rápidamente.   **Lección:** Antes de entrar, exige siempre (i) ADX ≥ 25 y stop al menos 2 × ATR alejado del nivel estructural, y (ii) confluencia mínima de 5 factores; si cualquiera de estos requisitos falta, descarta la operación (NONE).
-- Causa:** La entrada se basó solo en el pull‑back al EMA20 sin confirmar una fuerza de momentum clara (ADX no alcanzó el umbral ≥35) ni una confluencia de al menos 5 factores; el stop quedó dentro de la zona de ruido, lo que permitió que una pequeña reversión borrara la posición.   **Lección:** Antes de operar un pull‑back, exige ADX ≥35 y al menos 5 señales de confluencia (incluyendo confirmación en un marco superior) y sitúa el stop fuera de la zona de ruido (≈2 × ATR), de modo que solo se activen trades con momentum real y gestión de riesgo robusta.
+- Causa:** La confluencia careció de una condición clave de fuerza de impulso
+- Causa:** Entré en el pullback a la EMA‑20 sin confirmación de impulso; el precio no respetó esa EMA y el ADX estaba por debajo del nivel fuerte, de modo que faltó confluencia clave de momentum.   **Lección:** Antes de operar un pullback, exige al menos una señal de confirmación (cierre por encima de la EMA, vela alcista y ADX
+- Causa:** Entré sin confirmar momentum alcista/ bajista (ADX < 25) y sin la confluencia mínima requerida; el stop muy estrecho (≈ 2 × ATR) quedó justo encima de la resistencia, por lo que el precio rebotó inmediatamente.   **Lección:** Antes de cualquier short, exige ADX ≥ 25 y al menos 4 factores de confluencia (incluyendo tendencia mayor y volumen) y coloca el stop al menos 2 × ATR por debajo de la resistencia; si falta cualquiera de esos filtros, descarta la operación (NONE).
+- Causa: la entrada se hizo con la mínima confluencia (solo EMA‑MACD‑ADX) y sin una confirmación clara de ruptura del nivel clave, por lo que el precio mostró un rebote inmediato y alcanzó el stop.   Lección: antes de operar exige al menos 5 factores de confluencia y una señal de momentum (p.ej., cierre bajo el soporte o un impulso de volumen) que confirme la dirección; si falta cualquiera de ellos, descarta la operación.
+- Causa:** Solo se cumplieron los 3 indicadores básicos (EMAs, MACD y ADX) sin una confirmación de mayor marco ni confluencia extra; la entrada se hizo justo en la EMA 200 sin ruptura clara, lo que mostró falta de timing y de fuerza real del movimiento.   **Lección:** Exige al menos 5 factores de confluencia (incluyendo confirmación de tendencia superior y estructura de liquidez) y espera una ruptura o rebote claro antes de entrar; si el precio está apenas bajo la EMA 200, considera “none”.
+- Causa:** Entré solo con la alineación de EMAs y MACD, pero faltó confirmación de momentum real (precio bajo la EMA20, bajo volumen y ADX apenas ≥25), por lo que el pull‑back era una trampa de reversión y el stop se activó rápidamente.   **Lección:** Antes de cualquier LONG exige al menos 4 factores de confluencia, incluyendo una señal de impulso alcista (candle bullish, volumen creciente y ADX ≥ 35) y que el precio esté por encima de la EMA20; si cualquiera de esos criterios falta, descarta la operación (NONE).
 
 **Regla para el bot:** Aplica lo aprendido de MIS resultados: prioriza los setups ganadores con más confianza; los que perdieron NO se abandonan — exígeles confluencia ≥6 y la condición que faltó según las lecciones. Confluencia mínima de 5 factores en CUALQUIER trade (nivel de exigencia 5/5). Objetivo: PERFECCIONAR los setups semana a semana para perder menos de lo evitable; ante la duda, NONE.
 
