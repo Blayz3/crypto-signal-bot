@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-13T08:30:34.901Z",
+  "updated": "2026-10-13T09:00:38.961Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1253.89,
-  "equity": 1240.23,
+  "equity": 1244.14,
   "realizedPnl": 253.89,
-  "unrealizedPnl": -13.66,
+  "unrealizedPnl": -9.75,
   "stats": {
     "openCount": 2,
     "closedCount": 359,
@@ -32,9 +32,9 @@
       "notional": 940.4,
       "qty": 2893.54,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3301,
-      "unrealizedPnl": 14.76,
-      "unrealizedPct": 31.39
+      "markPrice": 0.3299,
+      "unrealizedPnl": 14.18,
+      "unrealizedPct": 30.16
     },
     {
       "id": "2026-10-13T00:31-XLMUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 940.4,
       "qty": 4986.21,
       "openedAt": "2026-10-13T00:31:07.167Z",
-      "markPrice": 0.1943,
-      "unrealizedPnl": -28.42,
-      "unrealizedPct": -60.44
+      "markPrice": 0.1934,
+      "unrealizedPnl": -23.93,
+      "unrealizedPct": -50.89
     }
   ],
   "closed": [
