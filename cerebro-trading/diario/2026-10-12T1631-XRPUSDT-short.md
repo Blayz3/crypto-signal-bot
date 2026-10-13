@@ -4,7 +4,7 @@ type: diario
 symbol: XRP/USDT
 action: short
 date: 2026-10-12T16:31:16.206Z
-status: open
+status: win
 orderType: market
 setup: EMAs bearish alignment + MACD negative
 entry: 1.37724
@@ -12,7 +12,7 @@ stop: 1.3905
 target: 1.355
 rr: 1.68
 confidence: 85
-result_r: 
+result_r: 2.52
 ---
 
 # XRP/USDT SHORT — 2026-10-12
