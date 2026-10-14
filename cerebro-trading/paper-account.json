@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-14T00:02:05.093Z",
+  "updated": "2026-10-14T00:31:28.510Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 1239.55,
-  "equity": 1237.54,
+  "equity": 1232.04,
   "realizedPnl": 239.55,
-  "unrealizedPnl": -2.01,
+  "unrealizedPnl": -7.51,
   "stats": {
-    "openCount": 2,
+    "openCount": 3,
     "closedCount": 360,
     "wins": 111,
     "losses": 247,
@@ -32,9 +32,9 @@
       "notional": 929.6,
       "qty": 2860.31,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3274,
-      "unrealizedPnl": 6.86,
-      "unrealizedPct": 14.76
+      "markPrice": 0.3272,
+      "unrealizedPnl": 6.29,
+      "unrealizedPct": 13.53
     },
     {
       "id": "2026-10-13T00:31-XLMUSDT-short",
@@ -49,9 +49,26 @@
       "notional": 929.6,
       "qty": 4928.95,
       "openedAt": "2026-10-13T00:31:07.167Z",
-      "markPrice": 0.1904,
-      "unrealizedPnl": -8.87,
-      "unrealizedPct": -19.08
+      "markPrice": 0.1914,
+      "unrealizedPnl": -13.8,
+      "unrealizedPct": -29.69
+    },
+    {
+      "id": "2026-10-14T00:31-HYPEUSDT-short",
+      "symbol": "HYPE/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 82.212,
+      "stop": 85.114,
+      "target": 76.407,
+      "leverage": 40,
+      "margin": 46.48,
+      "notional": 1859.2,
+      "qty": 22.61,
+      "openedAt": "2026-10-14T00:31:27.272Z",
+      "markPrice": 82.212,
+      "unrealizedPnl": 0,
+      "unrealizedPct": 0
     }
   ],
   "closed": [
