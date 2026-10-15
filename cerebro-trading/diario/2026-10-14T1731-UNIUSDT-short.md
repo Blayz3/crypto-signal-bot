@@ -4,7 +4,7 @@ type: diario
 symbol: UNI/USDT
 action: short
 date: 2026-10-14T17:31:16.047Z
-status: open
+status: win
 orderType: market
 setup: EMAs bearish alignment + MACD negative + ADX strong + price below VAL + whale sell pressure
 entry: 7.1734
@@ -12,7 +12,7 @@ stop: 7.31
 target: 6.9
 rr: 2
 confidence: 85
-result_r: 
+result_r: 1
 ---
 
 # UNI/USDT SHORT — 2026-10-14
