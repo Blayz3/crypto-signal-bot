@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-17T05:00:38.663Z",
+  "updated": "2026-10-17T05:30:31.769Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1214.73,
-  "equity": 1369.89,
+  "equity": 1375.54,
   "realizedPnl": 214.73,
-  "unrealizedPnl": 155.16,
+  "unrealizedPnl": 160.81,
   "stats": {
     "openCount": 6,
     "closedCount": 365,
@@ -49,9 +49,9 @@
       "notional": 911,
       "qty": 4830.33,
       "openedAt": "2026-10-13T00:31:07.167Z",
-      "markPrice": 0.1796,
-      "unrealizedPnl": 43.47,
-      "unrealizedPct": 95.43
+      "markPrice": 0.1795,
+      "unrealizedPnl": 43.96,
+      "unrealizedPct": 96.51
     },
     {
       "id": "2026-10-14T00:31-HYPEUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 1822,
       "qty": 22.16,
       "openedAt": "2026-10-14T00:31:27.272Z",
-      "markPrice": 79.776,
-      "unrealizedPnl": 53.99,
-      "unrealizedPct": 118.53
+      "markPrice": 79.78,
+      "unrealizedPnl": 53.9,
+      "unrealizedPct": 118.33
     },
     {
       "id": "2026-10-14T16:52-XRPUSDT-short",
@@ -83,9 +83,9 @@
       "notional": 1093.2,
       "qty": 818.39,
       "openedAt": "2026-10-14T16:52:07.759Z",
-      "markPrice": 1.30873,
-      "unrealizedPnl": 22.15,
-      "unrealizedPct": 40.52
+      "markPrice": 1.30971,
+      "unrealizedPnl": 21.35,
+      "unrealizedPct": 39.06
     },
     {
       "id": "2026-10-15T16:32-DOGEUSDT-short",
@@ -100,9 +100,9 @@
       "notional": 911,
       "qty": 11263.6,
       "openedAt": "2026-10-15T16:32:13.197Z",
-      "markPrice": 0.08047,
-      "unrealizedPnl": 4.62,
-      "unrealizedPct": 10.14
+      "markPrice": 0.08046,
+      "unrealizedPnl": 4.73,
+      "unrealizedPct": 10.38
     },
     {
       "id": "2026-10-15T18:30-BCHUSDT-short",
@@ -117,9 +117,9 @@
       "notional": 1822,
       "qty": 6.53,
       "openedAt": "2026-10-15T18:30:47.980Z",
-      "markPrice": 278.96,
-      "unrealizedPnl": 1.5,
-      "unrealizedPct": 3.29
+      "markPrice": 278.05,
+      "unrealizedPnl": 7.44,
+      "unrealizedPct": 16.33
     }
   ],
   "closed": [
