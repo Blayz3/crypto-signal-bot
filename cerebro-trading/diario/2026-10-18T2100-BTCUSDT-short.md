@@ -4,7 +4,7 @@ type: diario
 symbol: BTC/USDT
 action: short
 date: 2026-10-18T21:00:56.284Z
-status: open
+status: loss
 orderType: market
 setup: EMAs bajistas + MACD negativo + ADX fuerte
 entry: 80975.1
@@ -12,7 +12,7 @@ stop: 81459.1
 target: 80007.1
 rr: 2
 confidence: 60
-result_r: 
+result_r: -1
 ---
 
 # BTC/USDT SHORT — 2026-10-18
@@ -22,4 +22,4 @@ result_r:
 **Razón (IA):** Confluencia de EMAs alineadas bajistas en 15m,1h,4h, MACD negativo en 1h y 4h y ADX fuerte (>45) confirman sesgo bajista; el precio está bajo la EMA200 y el VAL, ofreciendo un riesgo de 484 puntos y objetivo a 2R (≈970 puntos) con R:R≈2.0.
 
 **Resultado:** (marca status: win/loss/breakeven y result_r al cerrar)
-**Lección:** 
+**Lección:** Causa:** Entré solo con la confluencia de indicadores, sin una confirmación de ruptura de estructura bajista (no hubo break del swing low ni vela de rechazo), por lo que el ADX alto reflejaba fuerte movimiento pero no una dirección clara y el
