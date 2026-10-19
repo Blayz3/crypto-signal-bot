@@ -4,7 +4,7 @@ type: diario
 symbol: ETC/USDT
 action: short
 date: 2026-10-18T02:30:53.196Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bajistas con MACD negativo y ADX fuerte
 entry: 7.78
@@ -12,7 +12,7 @@ stop: 7.92
 target: 7.5
 rr: 2
 confidence: 85
-result_r: 
+result_r: 1
 ---
 
 # ETC/USDT SHORT — 2026-10-18
