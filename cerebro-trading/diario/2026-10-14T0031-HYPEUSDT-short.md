@@ -4,7 +4,7 @@ type: diario
 symbol: HYPE/USDT
 action: short
 date: 2026-10-14T00:31:27.273Z
-status: open
+status: win
 orderType: market
 setup: EMAs bearish alignment + MACD negative + ADX strong
 entry: 82.212
@@ -12,7 +12,7 @@ stop: 85.114
 target: 76.407
 rr: 2
 confidence: 85
-result_r: 
+result_r: 1
 ---
 
 # HYPE/USDT SHORT — 2026-10-14
