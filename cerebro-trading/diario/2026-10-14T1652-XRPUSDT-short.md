@@ -4,7 +4,7 @@ type: diario
 symbol: XRP/USDT
 action: short
 date: 2026-10-14T16:52:07.761Z
-status: open
+status: loss
 orderType: market
 setup: EMAs bearish alignment + MACD negative + ADX strong + price below VAL + whale sell pressure
 entry: 1.3358
@@ -12,7 +12,7 @@ stop: 1.38
 target: 1.2474
 rr: 2
 confidence: 88
-result_r: 
+result_r: -1
 ---
 
 # XRP/USDT SHORT — 2026-10-14
@@ -22,4 +22,4 @@ result_r:
 **Razón (IA):** Los EMAs están alineados bajistas, MACD negativo, ADX > 40 y el precio está bajo el VAL, con presión de venta de ballenas; el stop está por encima de la EMA20 (invalidación estructural) y el objetivo brinda un R:R ≈2.0, cumpliendo el filtro A+.
 
 **Resultado:** (marca status: win/loss/breakeven y result_r al cerrar)
-**Lección:** 
+**Lección:** Causa:** La gestión de salida fue insuficiente; al alcanzar +1.8 R no se aseguró una posición parcial ni se movió el stop a break‑even, permitiendo que la reversión borrara toda la ganancia.   **Lección:** Cada trade debe incluir un plan de salida: colocar stop a BE al primer nivel de +1 R y/o tomar una parcialidad, y usar trailing después de +2 R; sin este paso, incluso los setups A+ pueden convertirse en pérdidas.
