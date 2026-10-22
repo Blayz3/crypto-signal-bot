@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-22T18:31:00.431Z",
+  "updated": "2026-10-22T19:00:53.426Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 1203.8,
-  "equity": 1203.8,
-  "realizedPnl": 203.8,
-  "unrealizedPnl": 0,
+  "balance": 1158.66,
+  "equity": 1336.46,
+  "realizedPnl": 158.66,
+  "unrealizedPnl": 177.8,
   "stats": {
-    "openCount": 7,
-    "closedCount": 377,
+    "openCount": 6,
+    "closedCount": 378,
     "wins": 118,
-    "losses": 257,
-    "winRate": 31.3
+    "losses": 258,
+    "winRate": 31.22
   },
   "open": [
     {
@@ -28,13 +28,13 @@
       "stop": 0.315,
       "target": 0.345,
       "leverage": 20,
-      "margin": 45.14,
-      "notional": 902.8,
-      "qty": 2777.85,
+      "margin": 43.45,
+      "notional": 869,
+      "qty": 2673.85,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": null,
-      "unrealizedPnl": null,
-      "unrealizedPct": null
+      "markPrice": 0.3283,
+      "unrealizedPnl": 8.82,
+      "unrealizedPct": 20.3
     },
     {
       "id": "2026-10-13T00:31-XLMUSDT-short",
@@ -45,13 +45,13 @@
       "stop": 0.202,
       "target": 0.155,
       "leverage": 20,
-      "margin": 45.14,
-      "notional": 902.8,
-      "qty": 4786.85,
+      "margin": 43.45,
+      "notional": 869,
+      "qty": 4607.64,
       "openedAt": "2026-10-13T00:31:07.167Z",
-      "markPrice": null,
-      "unrealizedPnl": null,
-      "unrealizedPct": null
+      "markPrice": 0.1761,
+      "unrealizedPnl": 57.6,
+      "unrealizedPct": 132.57
     },
     {
       "id": "2026-10-20T15:01-ADAUSDT-short",
@@ -62,13 +62,13 @@
       "stop": 0.236,
       "target": 0.215,
       "leverage": 20,
-      "margin": 45.14,
-      "notional": 902.8,
-      "qty": 3942.36,
+      "margin": 43.45,
+      "notional": 869,
+      "qty": 3794.76,
       "openedAt": "2026-10-20T15:01:00.162Z",
-      "markPrice": null,
-      "unrealizedPnl": null,
-      "unrealizedPct": null
+      "markPrice": 0.213,
+      "unrealizedPnl": 60.72,
+      "unrealizedPct": 139.75
     },
     {
       "id": "2026-10-21T15:30-LINKUSDT-short",
@@ -79,30 +79,13 @@
       "stop": 12.87,
       "target": 12.01,
       "leverage": 20,
-      "margin": 45.14,
-      "notional": 902.8,
-      "qty": 71.42,
+      "margin": 43.45,
+      "notional": 869,
+      "qty": 68.75,
       "openedAt": "2026-10-21T15:30:50.524Z",
-      "markPrice": null,
-      "unrealizedPnl": null,
-      "unrealizedPct": null
-    },
-    {
-      "id": "2026-10-22T11:30-XMRUSDT-long",
-      "symbol": "XMR/USDT",
-      "dir": "long",
-      "grade": "A",
-      "entry": 630,
-      "stop": 606.2,
-      "target": 678,
-      "leverage": 40,
-      "margin": 45.14,
-      "notional": 1805.6,
-      "qty": 2.87,
-      "openedAt": "2026-10-22T11:30:55.910Z",
-      "markPrice": null,
-      "unrealizedPnl": null,
-      "unrealizedPct": null
+      "markPrice": 11.9503,
+      "unrealizedPnl": 47.42,
+      "unrealizedPct": 109.14
     },
     {
       "id": "2026-10-22T15:30-AAVEUSDT-short",
@@ -113,13 +96,13 @@
       "stop": 150.09,
       "target": 139.33,
       "leverage": 40,
-      "margin": 45.14,
-      "notional": 1805.6,
-      "qty": 12.32,
+      "margin": 43.45,
+      "notional": 1738,
+      "qty": 11.86,
       "openedAt": "2026-10-22T15:30:51.849Z",
-      "markPrice": null,
-      "unrealizedPnl": null,
-      "unrealizedPct": null
+      "markPrice": 146.115,
+      "unrealizedPnl": 4.57,
+      "unrealizedPct": 10.52
     },
     {
       "id": "2026-10-22T17:00-AVAXUSDT-short",
@@ -130,13 +113,13 @@
       "stop": 9.2,
       "target": 8.96,
       "leverage": 20,
-      "margin": 45.14,
-      "notional": 902.8,
-      "qty": 98.9,
+      "margin": 43.45,
+      "notional": 869,
+      "qty": 95.2,
       "openedAt": "2026-10-22T17:00:52.703Z",
-      "markPrice": null,
-      "unrealizedPnl": null,
-      "unrealizedPct": null
+      "markPrice": 9.142,
+      "unrealizedPnl": -1.33,
+      "unrealizedPct": -3.06
     }
   ],
   "closed": [
@@ -7679,6 +7662,26 @@
       "pnl": -36.04,
       "pnlPct": -77.52,
       "closedAt": "2026-10-21T15:00:50.109Z"
+    },
+    {
+      "id": "2026-10-22T11:30-XMRUSDT-long",
+      "symbol": "XMR/USDT",
+      "dir": "long",
+      "grade": "A",
+      "entry": 630,
+      "stop": 606.2,
+      "target": 678,
+      "leverage": 40,
+      "margin": 45.14,
+      "notional": 1805.6,
+      "qty": 2.87,
+      "openedAt": "2026-10-22T11:30:55.910Z",
+      "exit": 606.2,
+      "status": "loss",
+      "resultR": -1,
+      "pnl": -45.14,
+      "pnlPct": -100,
+      "closedAt": "2026-10-22T19:00:43.644Z"
     }
   ],
   "equityCurve": [
@@ -9193,6 +9196,10 @@
     {
       "t": "2026-10-21T15:00:50.109Z",
       "balance": 1203.8
+    },
+    {
+      "t": "2026-10-22T19:00:43.644Z",
+      "balance": 1158.66
     }
   ]
 }
