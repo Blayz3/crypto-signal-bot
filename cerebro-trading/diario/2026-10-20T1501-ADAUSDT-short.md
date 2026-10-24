@@ -4,7 +4,7 @@ type: diario
 symbol: ADA/USDT
 action: short
 date: 2026-10-20T15:01:00.164Z
-status: open
+status: win
 orderType: limit
 setup: short pullback to VAH resistance
 entry: 0.229
@@ -12,7 +12,7 @@ stop: 0.236
 target: 0.215
 rr: 2
 confidence: 58
-result_r: 
+result_r: 3
 ---
 
 # ADA/USDT SHORT — 2026-10-20
