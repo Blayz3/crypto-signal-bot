@@ -4,7 +4,7 @@ type: diario
 symbol: LINK/USDT
 action: short
 date: 2026-10-21T15:30:50.526Z
-status: open
+status: win
 orderType: market
 setup: EMAs bearish alignment + ADX strong + RSI overbought short
 entry: 12.64
@@ -12,7 +12,7 @@ stop: 12.87
 target: 12.01
 rr: 2.74
 confidence: 85
-result_r: 
+result_r: 4.11
 ---
 
 # LINK/USDT SHORT — 2026-10-21
