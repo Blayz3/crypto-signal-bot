@@ -4,7 +4,7 @@ type: diario
 symbol: TAO/USDT
 action: short
 date: 2026-10-24T01:00:52.710Z
-status: open
+status: win
 orderType: market
 setup: EMAs alineadas bajistas con MACD negativo
 entry: 253.17
@@ -12,7 +12,7 @@ stop: 256.5
 target: 245
 rr: 2.45
 confidence: 78
-result_r: 
+result_r: 1.23
 ---
 
 # TAO/USDT SHORT — 2026-10-24
