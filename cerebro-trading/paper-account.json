@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-25T04:00:37.911Z",
+  "updated": "2026-10-25T04:30:33.143Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1227.02,
-  "equity": 1374.47,
+  "equity": 1379.82,
   "realizedPnl": 227.02,
-  "unrealizedPnl": 147.45,
+  "unrealizedPnl": 152.8,
   "stats": {
     "openCount": 6,
     "closedCount": 383,
@@ -32,9 +32,9 @@
       "notional": 920.2,
       "qty": 2831.38,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3291,
-      "unrealizedPnl": 11.61,
-      "unrealizedPct": 25.23
+      "markPrice": 0.3294,
+      "unrealizedPnl": 12.46,
+      "unrealizedPct": 27.08
     },
     {
       "id": "2026-10-13T00:31-XLMUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 1840.4,
       "qty": 31.73,
       "openedAt": "2026-10-23T20:30:40.714Z",
-      "markPrice": 57,
-      "unrealizedPnl": 31.73,
-      "unrealizedPct": 68.96
+      "markPrice": 56.97,
+      "unrealizedPnl": 32.68,
+      "unrealizedPct": 71.03
     },
     {
       "id": "2026-10-24T01:00-TAOUSDT-short",
@@ -83,9 +83,9 @@
       "notional": 1840.4,
       "qty": 7.27,
       "openedAt": "2026-10-24T01:00:52.708Z",
-      "markPrice": 252.41,
-      "unrealizedPnl": 5.52,
-      "unrealizedPct": 12
+      "markPrice": 252.05,
+      "unrealizedPnl": 8.14,
+      "unrealizedPct": 17.69
     },
     {
       "id": "2026-10-24T13:01-DOGEUSDT-short",
@@ -100,9 +100,9 @@
       "notional": 920.2,
       "qty": 11589.42,
       "openedAt": "2026-10-24T13:01:47.313Z",
-      "markPrice": 0.07787,
-      "unrealizedPnl": 17.73,
-      "unrealizedPct": 38.54
+      "markPrice": 0.0779,
+      "unrealizedPnl": 17.38,
+      "unrealizedPct": 37.77
     },
     {
       "id": "2026-10-24T20:30-JUPUSDT-short",
@@ -117,9 +117,9 @@
       "notional": 920.2,
       "qty": 3200.7,
       "openedAt": "2026-10-24T20:30:48.781Z",
-      "markPrice": 0.288,
-      "unrealizedPnl": -1.6,
-      "unrealizedPct": -3.48
+      "markPrice": 0.2876,
+      "unrealizedPnl": -0.32,
+      "unrealizedPct": -0.7
     }
   ],
   "closed": [
