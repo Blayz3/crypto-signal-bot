@@ -4,7 +4,7 @@ type: diario
 symbol: SEI/USDT
 action: short
 date: 2026-10-26T11:31:20.993Z
-status: open
+status: loss
 orderType: market
 setup: short EMA alignment with ADX strong
 entry: 0.05233
@@ -12,7 +12,7 @@ stop: 0.05355
 target: 0.05
 rr: 1.91
 confidence: 62
-result_r: 
+result_r: -1
 ---
 
 # SEI/USDT SHORT — 2026-10-26
