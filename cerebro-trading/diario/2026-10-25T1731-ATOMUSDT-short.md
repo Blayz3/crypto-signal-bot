@@ -4,7 +4,7 @@ type: diario
 symbol: ATOM/USDT
 action: short
 date: 2026-10-25T17:31:00.350Z
-status: open
+status: win
 orderType: market
 setup: EMAs bearish alignment + ADX strong + RSI overbought short
 entry: 1.6521
@@ -12,7 +12,7 @@ stop: 1.667
 target: 1.62
 rr: 2.15
 confidence: 78
-result_r: 
+result_r: 1.08
 ---
 
 # ATOM/USDT SHORT — 2026-10-25
