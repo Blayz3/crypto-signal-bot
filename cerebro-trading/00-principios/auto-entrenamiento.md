@@ -10,7 +10,7 @@ weight: high
 
 # Autoentrenamiento (aprendido de mis resultados)
 
-Generado el 2026-10-19 con los resultados REALES de la SEMANA (2026-10-12 → 2026-10-19, 13 trades, +3.9R).
+Generado el 2026-10-26 con los resultados REALES de la SEMANA (2026-10-19 → 2026-10-26, 14 trades, +1.4R).
 El bot se entrena solo CADA SEMANA: NO abandona los setups, los PERFECCIONA — prioriza lo que
 gana, exige la condición que faltó en lo que pierde, y sube la exigencia si no fue rentable.
 **Nivel de exigencia actual: 5/5.**
@@ -22,12 +22,12 @@ gana, exige la condición que faltó en lo que pierde, y sube la exigencia si no
 - (ninguno con muestra suficiente esta semana)
 
 ## 📝 Lecciones de las pérdidas de la semana
-- Causa:** Entré solo con la confluencia de indicadores (EMAs, MACD, ADX, flujo de ballenas) sin una confirmación de ruptura de estructura; el precio aún estaba en rango y el stop quedó demasiado cerca del punto de entrada, por lo que el trade se disparó en contra inmediatamente.   **
-- Causa:** Entró demasiado pronto; aunque había alineación de EMAs y ADX fuerte, faltó confirmación de ruptura de estructura en un marco superior (p.ej., cierre bajo EMA20/50 en 1 h) y señal de momentum bajista, de modo que el precio siguió subiendo y alcanzó el stop.   **Lección:** Antes de abrir una posición corta exige siempre una confirmación de tendencia en un timeframe superior (cierre bajo EMA20/50 o ruptura de swing) y/o una señal de momentum (p.ej., presión de venta o ruptura de liquidez); si esa condición falta, descarta el trade (NONE).
-- Causa:** Entré sin confirmar la continuidad del momentum bajista en el timeframe superior; el precio estaba en un rango y el stop
-- Causa:** Entré en corto justo en el VAL sin una ruptura ni captura de liquidez que confirmara la presión de venta; la confluencia se limitó a indicadores y no incluyó
-- Causa: Entré sin confirmar fuerza alcista del momentum (ADX < 25) y sin una señal de captura de liquidez, de modo que el precio revirtió inmediatamente contra la posición.   Lección: Antes de cualquier short exige al menos ADX ≥ 25 y una confirmación de impulso (p.ej., ruptura con volumen o liquidity grab); si falta, descarta el trade o espera una señal más robusta.
-- Causa:** El stop se ubicó demasiado cerca del nivel de ruido (≈ 1 ATR), sin una confirmación de ruptura real (ausencia de spike de volumen o de soporte bajo EMA200), de modo que el precio retrocedió dentro del rango y activó el stop.   **Lección:** Antes de entrar, exige una
+- Causa: la gestión de salida fue insuficiente; al no mover el stop a breakeven ni asegurar una parte de la posición tras alcanzar +1 R, el trade quedó expuesto a la reversión y tocó el stop.   Lección: en cualquier operación con R:R ≥ 2, tras el primer nivel de ganancia (≈+1 R) traslada el stop a breakeven o cierra parcialmente y usa trailing; además exige ADX ≥ 35 para confirmar un momentum robusto antes de entrar.
+- Causa:** Entré sin la confluencia mínima requerida; faltó la confirmación de la tendencia mayor (ADX < 35 y sin nivel de liquidez claro), por lo que el timing fue desfavorable y el stop quedó demasiado estrecho.   **Lección:** Exige siempre ≥5 factores de confluencia (incluyendo ADX
+- Causa:** Entré con confluencia insuficiente y timing desfavorable; el precio estaba justo en la EMA200, el ADX apenas superaba 25 y faltó una confirmación clara de impulso o captura de liquidez, por lo que el
+- Causa:** Entré en el pull‑back a la EMA20 mientras el precio estaba sobrevalorado, cerca del VAH y bajo presión de venta
+- Causa:** Entró sin una ruptura clara del VAL ni confirmación de captura de liquidez; el stop quedó dentro de una zona de ruido y se activó antes de que el sesgo bajista se materializara.   **Lección:** Exige siempre una ruptura o un “liquidity grab” que valide el movimiento y coloca el stop al menos 2 × ATR (fuera del rango de ruido); si falta esa confirmación, descarta la operación.
+- Causa:** el stop se colocó justo encima de la EMA‑20, dentro de una zona de ruido, sin esperar una ruptura estructural o un nivel de liquidez que confirmara la caída.   **Lección:** antes de entrar, exige una confirmación clara (ruptura de EMA‑20 o bloque de liquidez) y sitúa el stop al menos 2 × ATR o fuera del rango de volatilidad para evitar ser “invalidado” por fluctuaciones menores.
 
 **Regla para el bot:** Aplica lo aprendido de MIS resultados: prioriza los setups ganadores con más confianza; los que perdieron NO se abandonan — exígeles confluencia ≥6 y la condición que faltó según las lecciones. Confluencia mínima de 5 factores en CUALQUIER trade (nivel de exigencia 5/5). Objetivo: PERFECCIONAR los setups semana a semana para perder menos de lo evitable; ante la duda, NONE.
 
