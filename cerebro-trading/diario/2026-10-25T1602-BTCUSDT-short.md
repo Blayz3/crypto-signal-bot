@@ -4,7 +4,7 @@ type: diario
 symbol: BTC/USDT
 action: short
 date: 2026-10-25T16:02:28.280Z
-status: open
+status: win
 orderType: market
 setup: EMA bearish alignment with ADX and VAL break
 entry: 80603.8
@@ -12,7 +12,7 @@ stop: 81118
 target: 79576
 rr: 2
 confidence: 78
-result_r: 
+result_r: 1
 ---
 
 # BTC/USDT SHORT — 2026-10-25
