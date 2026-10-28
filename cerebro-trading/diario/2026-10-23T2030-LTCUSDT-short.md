@@ -4,7 +4,7 @@ type: diario
 symbol: LTC/USDT
 action: short
 date: 2026-10-23T20:30:40.716Z
-status: open
+status: win
 orderType: limit
 setup: EMAs alineadas bajistas con MACD negativo
 entry: 58
@@ -12,7 +12,7 @@ stop: 58.99
 target: 56.02
 rr: 2
 confidence: 85
-result_r: 
+result_r: 1
 ---
 
 # LTC/USDT SHORT — 2026-10-23
