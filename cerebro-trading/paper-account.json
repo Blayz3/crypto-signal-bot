@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-28T18:00:58.154Z",
+  "updated": "2026-10-28T18:30:45.652Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1205.02,
-  "equity": 1402.3,
+  "equity": 1384.57,
   "realizedPnl": 205.02,
-  "unrealizedPnl": 197.28,
+  "unrealizedPnl": 179.55,
   "stats": {
     "openCount": 6,
     "closedCount": 394,
@@ -32,9 +32,9 @@
       "notional": 903.8,
       "qty": 2780.92,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3303,
-      "unrealizedPnl": 14.74,
-      "unrealizedPct": 32.62
+      "markPrice": 0.3299,
+      "unrealizedPnl": 13.63,
+      "unrealizedPct": 30.16
     },
     {
       "id": "2026-10-13T00:31-XLMUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 903.8,
       "qty": 4792.15,
       "openedAt": "2026-10-13T00:31:07.167Z",
-      "markPrice": 0.1698,
-      "unrealizedPnl": 90.09,
-      "unrealizedPct": 199.36
+      "markPrice": 0.1707,
+      "unrealizedPnl": 85.78,
+      "unrealizedPct": 189.82
     },
     {
       "id": "2026-10-24T20:30-JUPUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 903.8,
       "qty": 3143.65,
       "openedAt": "2026-10-24T20:30:48.781Z",
-      "markPrice": 0.278,
-      "unrealizedPnl": 29.86,
-      "unrealizedPct": 66.08
+      "markPrice": 0.2794,
+      "unrealizedPnl": 25.46,
+      "unrealizedPct": 56.34
     },
     {
       "id": "2026-10-25T17:00-ADAUSDT-short",
@@ -83,9 +83,9 @@
       "notional": 903.8,
       "qty": 4372.52,
       "openedAt": "2026-10-25T17:00:57.165Z",
-      "markPrice": 0.2025,
-      "unrealizedPnl": 18.36,
-      "unrealizedPct": 40.63
+      "markPrice": 0.2027,
+      "unrealizedPnl": 17.49,
+      "unrealizedPct": 38.7
     },
     {
       "id": "2026-10-27T11:31-AVAXUSDT-short",
@@ -100,9 +100,9 @@
       "notional": 903.8,
       "qty": 103.06,
       "openedAt": "2026-10-27T11:31:07.445Z",
-      "markPrice": 8.856,
-      "unrealizedPnl": -8.86,
-      "unrealizedPct": -19.61
+      "markPrice": 8.889,
+      "unrealizedPnl": -12.26,
+      "unrealizedPct": -27.13
     },
     {
       "id": "2026-10-28T11:30-HBARUSDT-short",
@@ -117,9 +117,9 @@
       "notional": 903.8,
       "qty": 11368.55,
       "openedAt": "2026-10-28T11:30:54.979Z",
-      "markPrice": 0.07483,
-      "unrealizedPnl": 53.09,
-      "unrealizedPct": 117.48
+      "markPrice": 0.07515,
+      "unrealizedPnl": 49.45,
+      "unrealizedPct": 109.43
     }
   ],
   "closed": [
