@@ -4,7 +4,7 @@ type: diario
 symbol: DOGE/USDT
 action: short
 date: 2026-10-24T13:01:47.315Z
-status: open
+status: win
 orderType: limit
 setup: EMA bearish alignment + MACD negative + ADX strong (short continuation)
 entry: 0.0794
@@ -12,7 +12,7 @@ stop: 0.0805
 target: 0.076
 rr: 3.09
 confidence: 78
-result_r: 
+result_r: 1.55
 ---
 
 # DOGE/USDT SHORT — 2026-10-24
