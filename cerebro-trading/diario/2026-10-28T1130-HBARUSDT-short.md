@@ -4,7 +4,7 @@ type: diario
 symbol: HBAR/USDT
 action: short
 date: 2026-10-28T11:30:54.981Z
-status: open
+status: win
 orderType: limit
 setup: short pullback to VAH resistance
 entry: 0.0795
@@ -12,7 +12,7 @@ stop: 0.0825
 target: 0.0735
 rr: 2
 confidence: 78
-result_r: 
+result_r: 3
 ---
 
 # HBAR/USDT SHORT — 2026-10-28
