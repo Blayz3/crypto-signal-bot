@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31T21:00:46.775Z",
+  "updated": "2026-10-31T21:30:40.736Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1247.58,
-  "equity": 1441.8,
+  "equity": 1427.5,
   "realizedPnl": 247.58,
-  "unrealizedPnl": 194.22,
+  "unrealizedPnl": 179.92,
   "stats": {
     "openCount": 8,
     "closedCount": 398,
@@ -32,7 +32,7 @@
       "notional": 935.6,
       "qty": 2878.77,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3038,
+      "markPrice": 0.3029,
       "unrealizedPnl": -46.78,
       "unrealizedPct": -100
     },
@@ -49,9 +49,9 @@
       "notional": 935.6,
       "qty": 4960.76,
       "openedAt": "2026-10-13T00:31:07.167Z",
-      "markPrice": 0.1696,
-      "unrealizedPnl": 94.25,
-      "unrealizedPct": 201.47
+      "markPrice": 0.1704,
+      "unrealizedPnl": 90.29,
+      "unrealizedPct": 193.01
     },
     {
       "id": "2026-10-24T20:30-JUPUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 935.6,
       "qty": 3254.26,
       "openedAt": "2026-10-24T20:30:48.781Z",
-      "markPrice": 0.2573,
-      "unrealizedPnl": 98.28,
-      "unrealizedPct": 210.09
+      "markPrice": 0.2581,
+      "unrealizedPnl": 95.68,
+      "unrealizedPct": 204.53
     },
     {
       "id": "2026-10-25T17:00-ADAUSDT-short",
@@ -83,9 +83,9 @@
       "notional": 935.6,
       "qty": 4526.37,
       "openedAt": "2026-10-25T17:00:57.165Z",
-      "markPrice": 0.1927,
-      "unrealizedPnl": 63.37,
-      "unrealizedPct": 135.46
+      "markPrice": 0.193,
+      "unrealizedPnl": 62.01,
+      "unrealizedPct": 132.56
     },
     {
       "id": "2026-10-30T11:30-LTCUSDT-short",
@@ -100,9 +100,9 @@
       "notional": 1871.2,
       "qty": 33.7,
       "openedAt": "2026-10-30T11:30:52.715Z",
-      "markPrice": 55.75,
-      "unrealizedPnl": -7.75,
-      "unrealizedPct": -16.57
+      "markPrice": 55.94,
+      "unrealizedPnl": -14.16,
+      "unrealizedPct": -30.27
     },
     {
       "id": "2026-10-30T18:00-ATOMUSDT-short",
@@ -117,9 +117,9 @@
       "notional": 1122.8,
       "qty": 747.19,
       "openedAt": "2026-10-30T18:00:51.614Z",
-      "markPrice": 1.5013,
-      "unrealizedPnl": 1.05,
-      "unrealizedPct": 1.87
+      "markPrice": 1.5086,
+      "unrealizedPnl": -4.41,
+      "unrealizedPct": -7.86
     },
     {
       "id": "2026-10-30T21:30-ETHUSDT-short",
@@ -134,9 +134,9 @@
       "notional": 1871.2,
       "qty": 0.84,
       "openedAt": "2026-10-30T21:30:48.601Z",
-      "markPrice": 2253.7,
-      "unrealizedPnl": -11.11,
-      "unrealizedPct": -23.75
+      "markPrice": 2253,
+      "unrealizedPnl": -10.52,
+      "unrealizedPct": -22.49
     },
     {
       "id": "2026-10-31T16:00-BNBUSDT-short",
@@ -151,9 +151,9 @@
       "notional": 1871.2,
       "qty": 2.65,
       "openedAt": "2026-10-31T16:00:46.446Z",
-      "markPrice": 704.152,
-      "unrealizedPnl": 2.91,
-      "unrealizedPct": 6.22
+      "markPrice": 702.308,
+      "unrealizedPnl": 7.81,
+      "unrealizedPct": 16.7
     }
   ],
   "closed": [
