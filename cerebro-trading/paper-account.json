@@ -1,5 +1,5 @@
 {
-  "updated": "2026-10-31T08:30:32.674Z",
+  "updated": "2026-10-31T09:00:37.043Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1252.68,
-  "equity": 1547.73,
+  "equity": 1534.93,
   "realizedPnl": 252.68,
-  "unrealizedPnl": 295.05,
+  "unrealizedPnl": 282.25,
   "stats": {
     "openCount": 7,
     "closedCount": 397,
@@ -32,9 +32,9 @@
       "notional": 939.6,
       "qty": 2891.08,
       "openedAt": "2026-07-06T11:01:24.043Z",
-      "markPrice": 0.3264,
-      "unrealizedPnl": 4.05,
-      "unrealizedPct": 8.62
+      "markPrice": 0.3255,
+      "unrealizedPnl": 1.45,
+      "unrealizedPct": 3.09
     },
     {
       "id": "2026-10-13T00:31-XLMUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 939.6,
       "qty": 4981.97,
       "openedAt": "2026-10-13T00:31:07.167Z",
-      "markPrice": 0.1687,
-      "unrealizedPnl": 99.14,
-      "unrealizedPct": 211.03
+      "markPrice": 0.1694,
+      "unrealizedPnl": 95.65,
+      "unrealizedPct": 203.6
     },
     {
       "id": "2026-10-24T20:30-JUPUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 939.6,
       "qty": 3268.17,
       "openedAt": "2026-10-24T20:30:48.781Z",
-      "markPrice": 0.2556,
-      "unrealizedPnl": 104.25,
-      "unrealizedPct": 221.9
+      "markPrice": 0.2569,
+      "unrealizedPnl": 100.01,
+      "unrealizedPct": 212.88
     },
     {
       "id": "2026-10-25T17:00-ADAUSDT-short",
@@ -100,9 +100,9 @@
       "notional": 1879.2,
       "qty": 33.85,
       "openedAt": "2026-10-30T11:30:52.715Z",
-      "markPrice": 54.66,
-      "unrealizedPnl": 29.11,
-      "unrealizedPct": 61.96
+      "markPrice": 54.72,
+      "unrealizedPnl": 27.08,
+      "unrealizedPct": 57.64
     },
     {
       "id": "2026-10-30T18:00-ATOMUSDT-short",
@@ -117,9 +117,9 @@
       "notional": 1127.4,
       "qty": 750.25,
       "openedAt": "2026-10-30T18:00:51.614Z",
-      "markPrice": 1.5074,
-      "unrealizedPnl": -3.53,
-      "unrealizedPct": -6.26
+      "markPrice": 1.508,
+      "unrealizedPnl": -3.98,
+      "unrealizedPct": -7.06
     },
     {
       "id": "2026-10-30T21:30-ETHUSDT-short",
@@ -134,9 +134,9 @@
       "notional": 1879.2,
       "qty": 0.84,
       "openedAt": "2026-10-30T21:30:48.601Z",
-      "markPrice": 2241.78,
-      "unrealizedPnl": -1.16,
-      "unrealizedPct": -2.47
+      "markPrice": 2241.77,
+      "unrealizedPnl": -1.15,
+      "unrealizedPct": -2.45
     }
   ],
   "closed": [
