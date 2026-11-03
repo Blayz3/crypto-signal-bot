@@ -4,7 +4,7 @@ type: diario
 symbol: BNB/USDT
 action: short
 date: 2026-11-02T14:00:51.420Z
-status: open
+status: win
 orderType: market
 setup: short EMA alignment
 entry: 704.52
@@ -12,7 +12,7 @@ stop: 707.63
 target: 698.3
 rr: 2
 confidence: 45
-result_r: 
+result_r: 3
 ---
 
 # BNB/USDT SHORT — 2026-11-02
