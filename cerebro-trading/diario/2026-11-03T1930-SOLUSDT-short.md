@@ -4,7 +4,7 @@ type: diario
 symbol: SOL/USDT
 action: short
 date: 2026-11-03T19:30:49.631Z
-status: open
+status: win
 orderType: market
 setup: short pullback to VAL
 entry: 93.24
@@ -12,7 +12,7 @@ stop: 94.09
 target: 91.13
 rr: 2.48
 confidence: 85
-result_r: 
+result_r: 1.24
 ---
 
 # SOL/USDT SHORT — 2026-11-03
