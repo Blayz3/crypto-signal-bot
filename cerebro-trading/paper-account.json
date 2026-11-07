@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-07T05:00:41.671Z",
+  "updated": "2026-11-07T05:30:33.454Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 1255.99,
-  "equity": 1739.41,
+  "equity": 1736.88,
   "realizedPnl": 255.99,
-  "unrealizedPnl": 483.42,
+  "unrealizedPnl": 480.89,
   "stats": {
     "openCount": 6,
     "closedCount": 407,
@@ -32,9 +32,9 @@
       "notional": 942,
       "qty": 4994.7,
       "openedAt": "2026-10-13T00:31:07.167Z",
-      "markPrice": 0.1522,
-      "unrealizedPnl": 181.81,
-      "unrealizedPct": 386.01
+      "markPrice": 0.1527,
+      "unrealizedPnl": 179.31,
+      "unrealizedPct": 380.7
     },
     {
       "id": "2026-10-25T17:00-ADAUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 942,
       "qty": 4557.33,
       "openedAt": "2026-10-25T17:00:57.165Z",
-      "markPrice": 0.1841,
-      "unrealizedPnl": 103,
-      "unrealizedPct": 218.68
+      "markPrice": 0.1847,
+      "unrealizedPnl": 100.26,
+      "unrealizedPct": 212.87
     },
     {
       "id": "2026-10-30T11:30-LTCUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 1884,
       "qty": 33.93,
       "openedAt": "2026-10-30T11:30:52.715Z",
-      "markPrice": 52.38,
-      "unrealizedPnl": 106.55,
-      "unrealizedPct": 226.22
+      "markPrice": 52.42,
+      "unrealizedPnl": 105.19,
+      "unrealizedPct": 223.33
     },
     {
       "id": "2026-10-30T18:00-ATOMUSDT-short",
@@ -83,9 +83,9 @@
       "notional": 1130.4,
       "qty": 752.25,
       "openedAt": "2026-10-30T18:00:51.614Z",
-      "markPrice": 1.3875,
-      "unrealizedPnl": 86.66,
-      "unrealizedPct": 153.33
+      "markPrice": 1.3845,
+      "unrealizedPnl": 88.92,
+      "unrealizedPct": 157.32
     },
     {
       "id": "2026-11-06T11:30-TAOUSDT-short",
@@ -100,9 +100,9 @@
       "notional": 1884,
       "qty": 8.37,
       "openedAt": "2026-11-06T11:30:50.931Z",
-      "markPrice": 225.01,
-      "unrealizedPnl": 1.76,
-      "unrealizedPct": 3.74
+      "markPrice": 225.11,
+      "unrealizedPnl": 0.92,
+      "unrealizedPct": 1.95
     },
     {
       "id": "2026-11-06T20:30-BCHUSDT-short",
@@ -117,9 +117,9 @@
       "notional": 1884,
       "qty": 7.14,
       "openedAt": "2026-11-06T20:30:48.811Z",
-      "markPrice": 263.2,
-      "unrealizedPnl": 3.64,
-      "unrealizedPct": 7.73
+      "markPrice": 262.83,
+      "unrealizedPnl": 6.29,
+      "unrealizedPct": 13.35
     }
   ],
   "closed": [
