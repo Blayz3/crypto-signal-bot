@@ -4,7 +4,7 @@ type: diario
 symbol: TAO/USDT
 action: short
 date: 2026-11-06T11:30:50.934Z
-status: open
+status: win
 orderType: market
 setup: short EMA200 break
 entry: 225.22
@@ -12,7 +12,7 @@ stop: 228
 target: 219.5
 rr: 2.06
 confidence: 85
-result_r: 
+result_r: 3.09
 ---
 
 # TAO/USDT SHORT — 2026-11-06

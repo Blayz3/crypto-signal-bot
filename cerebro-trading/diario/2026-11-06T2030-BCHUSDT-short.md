@@ -4,7 +4,7 @@ type: diario
 symbol: BCH/USDT
 action: short
 date: 2026-11-06T20:30:48.812Z
-status: open
+status: win
 orderType: market
 setup: EMAs bearish + MACD bearish + ADX strong + price below EMA200 + fear sentiment
 entry: 263.71
@@ -12,7 +12,7 @@ stop: 269.3
 target: 252.5
 rr: 2.01
 confidence: 85
-result_r: 
+result_r: 3.01
 ---
 
 # BCH/USDT SHORT — 2026-11-06

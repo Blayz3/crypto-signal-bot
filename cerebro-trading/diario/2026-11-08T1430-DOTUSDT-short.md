@@ -4,7 +4,7 @@ type: diario
 symbol: DOT/USDT
 action: short
 date: 2026-11-08T14:30:54.669Z
-status: open
+status: win
 orderType: market
 setup: short momentum continuation (EMAs bajistas, MACD negativo, ADX fuerte, precio bajo EMA200, sentimiento bajista)
 entry: 0.8908
@@ -12,7 +12,7 @@ stop: 0.8967
 target: 0.879
 rr: 2
 confidence: 78
-result_r: 
+result_r: 3
 ---
 
 # DOT/USDT SHORT — 2026-11-08
