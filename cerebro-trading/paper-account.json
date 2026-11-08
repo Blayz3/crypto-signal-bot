@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T22:30:51.217Z",
+  "updated": "2026-11-08T23:00:50.912Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 1693.44,
-  "equity": 2507.31,
+  "equity": 2419.54,
   "realizedPnl": 693.44,
-  "unrealizedPnl": 813.87,
+  "unrealizedPnl": 726.1,
   "stats": {
-    "openCount": 6,
+    "openCount": 7,
     "closedCount": 412,
     "wins": 132,
     "losses": 278,
@@ -32,9 +32,9 @@
       "notional": 1270,
       "qty": 6144.17,
       "openedAt": "2026-10-25T17:00:57.165Z",
-      "markPrice": 0.1738,
-      "unrealizedPnl": 202.14,
-      "unrealizedPct": 318.33
+      "markPrice": 0.1756,
+      "unrealizedPnl": 191.08,
+      "unrealizedPct": 300.91
     },
     {
       "id": "2026-10-30T11:30-LTCUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 2540,
       "qty": 45.75,
       "openedAt": "2026-10-30T11:30:52.715Z",
-      "markPrice": 49.84,
-      "unrealizedPnl": 259.86,
-      "unrealizedPct": 409.23
+      "markPrice": 50.34,
+      "unrealizedPnl": 236.98,
+      "unrealizedPct": 373.2
     },
     {
       "id": "2026-10-30T18:00-ATOMUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 1524,
       "qty": 1014.17,
       "openedAt": "2026-10-30T18:00:51.614Z",
-      "markPrice": 1.2975,
-      "unrealizedPnl": 208.11,
-      "unrealizedPct": 273.11
+      "markPrice": 1.31,
+      "unrealizedPnl": 195.43,
+      "unrealizedPct": 256.47
     },
     {
       "id": "2026-11-08T11:01-DOGEUSDT-short",
@@ -83,9 +83,9 @@
       "notional": 1270,
       "qty": 17899.93,
       "openedAt": "2026-11-08T11:01:33.171Z",
-      "markPrice": 0.06862,
-      "unrealizedPnl": 41.71,
-      "unrealizedPct": 65.69
+      "markPrice": 0.06945,
+      "unrealizedPnl": 26.85,
+      "unrealizedPct": 42.28
     },
     {
       "id": "2026-11-08T16:13-JUPUSDT-short",
@@ -100,9 +100,9 @@
       "notional": 1524,
       "qty": 6355.3,
       "openedAt": "2026-11-08T16:13:14.521Z",
-      "markPrice": 0.2299,
-      "unrealizedPnl": 62.92,
-      "unrealizedPct": 82.57
+      "markPrice": 0.2324,
+      "unrealizedPnl": 47.03,
+      "unrealizedPct": 61.72
     },
     {
       "id": "2026-11-08T21:30-ETCUSDT-short",
@@ -117,9 +117,26 @@
       "notional": 1524,
       "qty": 224.51,
       "openedAt": "2026-11-08T21:30:44.457Z",
-      "markPrice": 6.6137,
-      "unrealizedPnl": 39.13,
-      "unrealizedPct": 51.35
+      "markPrice": 6.6642,
+      "unrealizedPnl": 27.79,
+      "unrealizedPct": 36.47
+    },
+    {
+      "id": "2026-11-08T23:00-TAOUSDT-short",
+      "symbol": "TAO/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 216.26,
+      "stop": 221,
+      "target": 206.8,
+      "leverage": 40,
+      "margin": 63.5,
+      "notional": 2540,
+      "qty": 11.75,
+      "openedAt": "2026-11-08T23:00:49.154Z",
+      "markPrice": 216.18,
+      "unrealizedPnl": 0.94,
+      "unrealizedPct": 1.48
     }
   ],
   "closed": [
