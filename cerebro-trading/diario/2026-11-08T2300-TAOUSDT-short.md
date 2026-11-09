@@ -4,7 +4,7 @@ type: diario
 symbol: TAO/USDT
 action: short
 date: 2026-11-08T23:00:49.156Z
-status: open
+status: loss
 orderType: market
 setup: short EMA200 continuation with confluence
 entry: 216.26
@@ -12,7 +12,7 @@ stop: 221
 target: 206.8
 rr: 2
 confidence: 85
-result_r: 
+result_r: -1
 ---
 
 # TAO/USDT SHORT — 2026-11-08
@@ -22,4 +22,4 @@ result_r:
 **Razón (IA):** Tres EMAs alineadas bajistas, MACD negativo, ADX fuerte, precio bajo el VAL y sentimiento de miedo generan 5 factores de confluencia. El stop está 2 × ATR por encima de la EMA20, y el target a 2R brinda R:R≈2, cumpliendo el filtro A+.
 
 **Resultado:** (marca status: win/loss/breakeven y result_r al cerrar)
-**Lección:** 
+**Lección:** Causa:** Entré en un rango de ruido con ADX apenas suficiente y el stop a solo 2 × ATR sobre la EMA20, de modo que una ligera reversión activó el stop antes de que el impulso continuara.   **
