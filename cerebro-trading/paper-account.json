@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-09T14:31:02.397Z",
+  "updated": "2026-11-09T15:01:33.460Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 1698.08,
-  "equity": 2192.08,
+  "equity": 2079.16,
   "realizedPnl": 698.08,
-  "unrealizedPnl": 494,
+  "unrealizedPnl": 381.08,
   "stats": {
-    "openCount": 9,
+    "openCount": 10,
     "closedCount": 414,
     "wins": 133,
     "losses": 279,
@@ -32,9 +32,9 @@
       "notional": 1273.6,
       "qty": 6161.59,
       "openedAt": "2026-10-25T17:00:57.165Z",
-      "markPrice": 0.179,
-      "unrealizedPnl": 170.68,
-      "unrealizedPct": 268.03
+      "markPrice": 0.1808,
+      "unrealizedPnl": 159.59,
+      "unrealizedPct": 250.61
     },
     {
       "id": "2026-10-30T11:30-LTCUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 2547.2,
       "qty": 45.88,
       "openedAt": "2026-10-30T11:30:52.715Z",
-      "markPrice": 51.64,
-      "unrealizedPnl": 178.01,
-      "unrealizedPct": 279.54
+      "markPrice": 51.96,
+      "unrealizedPnl": 163.33,
+      "unrealizedPct": 256.49
     },
     {
       "id": "2026-10-30T18:00-ATOMUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 1528.2,
       "qty": 1016.97,
       "openedAt": "2026-10-30T18:00:51.614Z",
-      "markPrice": 1.3742,
-      "unrealizedPnl": 130.68,
-      "unrealizedPct": 171.02
+      "markPrice": 1.3847,
+      "unrealizedPnl": 120,
+      "unrealizedPct": 157.05
     },
     {
       "id": "2026-11-08T11:01-DOGEUSDT-short",
@@ -83,9 +83,9 @@
       "notional": 1273.6,
       "qty": 17950.67,
       "openedAt": "2026-11-08T11:01:33.171Z",
-      "markPrice": 0.06947,
-      "unrealizedPnl": 26.57,
-      "unrealizedPct": 41.72
+      "markPrice": 0.07005,
+      "unrealizedPnl": 16.16,
+      "unrealizedPct": 25.38
     },
     {
       "id": "2026-11-08T16:13-JUPUSDT-short",
@@ -100,9 +100,9 @@
       "notional": 1528.2,
       "qty": 6372.81,
       "openedAt": "2026-11-08T16:13:14.521Z",
-      "markPrice": 0.2404,
-      "unrealizedPnl": -3.82,
-      "unrealizedPct": -5
+      "markPrice": 0.2423,
+      "unrealizedPnl": -15.93,
+      "unrealizedPct": -20.85
     },
     {
       "id": "2026-11-08T21:30-ETCUSDT-short",
@@ -117,9 +117,9 @@
       "notional": 1528.2,
       "qty": 225.13,
       "openedAt": "2026-11-08T21:30:44.457Z",
-      "markPrice": 6.8528,
-      "unrealizedPnl": -14.59,
-      "unrealizedPct": -19.09
+      "markPrice": 6.917,
+      "unrealizedPnl": -29.04,
+      "unrealizedPct": -38.01
     },
     {
       "id": "2026-11-09T12:00-NEARUSDT-short",
@@ -134,9 +134,9 @@
       "notional": 1273.6,
       "qty": 362.07,
       "openedAt": "2026-11-09T12:00:58.055Z",
-      "markPrice": 3.5457,
-      "unrealizedPnl": -10.17,
-      "unrealizedPct": -15.97
+      "markPrice": 3.6055,
+      "unrealizedPnl": -31.83,
+      "unrealizedPct": -49.98
     },
     {
       "id": "2026-11-09T14:00-ETHUSDT-short",
@@ -151,9 +151,9 @@
       "notional": 3056.4,
       "qty": 1.44,
       "openedAt": "2026-11-09T14:00:51.099Z",
-      "markPrice": 2115.05,
-      "unrealizedPnl": 15.6,
-      "unrealizedPct": 20.42
+      "markPrice": 2123.61,
+      "unrealizedPnl": 3.29,
+      "unrealizedPct": 4.31
     },
     {
       "id": "2026-11-09T14:00-XLMUSDT-short",
@@ -168,9 +168,26 @@
       "notional": 1528.2,
       "qty": 10381.79,
       "openedAt": "2026-11-09T14:00:51.659Z",
-      "markPrice": 0.1471,
-      "unrealizedPnl": 1.04,
-      "unrealizedPct": 1.36
+      "markPrice": 0.1477,
+      "unrealizedPnl": -5.19,
+      "unrealizedPct": -6.79
+    },
+    {
+      "id": "2026-11-09T15:01-SOLUSDT-short",
+      "symbol": "SOL/USDT",
+      "dir": "short",
+      "grade": "A+",
+      "entry": 87.09,
+      "stop": 88.5,
+      "target": 84.2,
+      "leverage": 40,
+      "margin": 76.41,
+      "notional": 3056.4,
+      "qty": 35.09,
+      "openedAt": "2026-11-09T15:01:32.094Z",
+      "markPrice": 87.07,
+      "unrealizedPnl": 0.7,
+      "unrealizedPct": 0.92
     }
   ],
   "closed": [
