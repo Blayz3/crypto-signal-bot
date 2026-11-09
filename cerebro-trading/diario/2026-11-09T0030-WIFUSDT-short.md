@@ -4,7 +4,7 @@ type: diario
 symbol: WIF/USDT
 action: short
 date: 2026-11-09T00:30:50.688Z
-status: open
+status: win
 orderType: market
 setup: EMAs bearish + MACD bearish + ADX strong
 entry: 0.1564
@@ -12,7 +12,7 @@ stop: 0.1586
 target: 0.152
 rr: 2
 confidence: 78
-result_r: 
+result_r: 1
 ---
 
 # WIF/USDT SHORT — 2026-11-09
