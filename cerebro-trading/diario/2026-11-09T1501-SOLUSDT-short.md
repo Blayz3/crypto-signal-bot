@@ -4,7 +4,7 @@ type: diario
 symbol: SOL/USDT
 action: short
 date: 2026-11-09T15:01:32.096Z
-status: open
+status: win
 orderType: market
 setup: short EMA200 break
 entry: 87.09
@@ -12,7 +12,7 @@ stop: 88.5
 target: 84.2
 rr: 2.05
 confidence: 85
-result_r: 
+result_r: 3.07
 ---
 
 # SOL/USDT SHORT — 2026-11-09

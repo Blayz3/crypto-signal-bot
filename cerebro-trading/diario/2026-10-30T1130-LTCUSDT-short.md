@@ -4,7 +4,7 @@ type: diario
 symbol: LTC/USDT
 action: short
 date: 2026-10-30T11:30:52.716Z
-status: open
+status: win
 orderType: market
 setup: short momentum continuation
 entry: 55.52
@@ -12,7 +12,7 @@ stop: 57.2
 target: 52
 rr: 2.1
 confidence: 84
-result_r: 
+result_r: 3.14
 ---
 
 # LTC/USDT SHORT — 2026-10-30
