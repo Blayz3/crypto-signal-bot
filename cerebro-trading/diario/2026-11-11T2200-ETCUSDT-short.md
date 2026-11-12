@@ -4,7 +4,7 @@ type: diario
 symbol: ETC/USDT
 action: short
 date: 2026-11-11T22:00:51.854Z
-status: open
+status: win
 orderType: market
 setup: short continuation con EMAs bajistas y ADX fuerte
 entry: 6.68
@@ -12,7 +12,7 @@ stop: 6.76
 target: 6.5
 rr: 2.25
 confidence: 78
-result_r: 
+result_r: 1.12
 ---
 
 # ETC/USDT SHORT — 2026-11-11
