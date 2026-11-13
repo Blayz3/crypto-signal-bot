@@ -4,7 +4,7 @@ type: diario
 symbol: LINK/USDT
 action: short
 date: 2026-11-12T02:00:46.314Z
-status: open
+status: win
 orderType: market
 setup: short pullback to EMA20
 entry: 10.1074
@@ -12,7 +12,7 @@ stop: 10.35
 target: 9.64
 rr: 1.93
 confidence: 62
-result_r: 
+result_r: 0.96
 ---
 
 # LINK/USDT SHORT — 2026-11-12
