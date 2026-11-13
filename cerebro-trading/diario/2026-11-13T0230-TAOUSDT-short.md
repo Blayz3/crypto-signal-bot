@@ -4,7 +4,7 @@ type: diario
 symbol: TAO/USDT
 action: short
 date: 2026-11-13T02:30:51.722Z
-status: open
+status: win
 orderType: limit
 setup: short momentum continuation
 entry: 209
@@ -12,7 +12,7 @@ stop: 211.28
 target: 204.44
 rr: 2
 confidence: 78
-result_r: 
+result_r: 1
 ---
 
 # TAO/USDT SHORT — 2026-11-13
