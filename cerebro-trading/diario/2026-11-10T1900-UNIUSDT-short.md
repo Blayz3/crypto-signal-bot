@@ -4,7 +4,7 @@ type: diario
 symbol: UNI/USDT
 action: short
 date: 2026-11-10T19:00:48.618Z
-status: open
+status: win
 orderType: market
 setup: EMAs bearish + MACD bearish
 entry: 6.696
@@ -12,7 +12,7 @@ stop: 6.89
 target: 6.3
 rr: 2.04
 confidence: 65
-result_r: 
+result_r: 3.06
 ---
 
 # UNI/USDT SHORT — 2026-11-10
