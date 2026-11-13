@@ -4,7 +4,7 @@ type: diario
 symbol: BTC/USDT
 action: short
 date: 2026-11-10T12:30:57.216Z
-status: open
+status: win
 orderType: limit
 setup: short_ema200_confluence
 entry: 74425
@@ -12,7 +12,7 @@ stop: 75237
 target: 72000
 rr: 2.99
 confidence: 78
-result_r: 
+result_r: 4.48
 ---
 
 # BTC/USDT SHORT — 2026-11-10

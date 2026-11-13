@@ -4,7 +4,7 @@ type: diario
 symbol: ETH/USDT
 action: short
 date: 2026-11-09T14:00:51.101Z
-status: open
+status: win
 orderType: market
 setup: short EMAs bearish with strong ADX
 entry: 2125.9
@@ -12,7 +12,7 @@ stop: 2166.43
 target: 2044.83
 rr: 2
 confidence: 85
-result_r: 
+result_r: 3
 ---
 
 # ETH/USDT SHORT — 2026-11-09
