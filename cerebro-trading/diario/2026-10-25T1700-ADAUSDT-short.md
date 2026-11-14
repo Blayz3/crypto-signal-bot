@@ -4,7 +4,7 @@ type: diario
 symbol: ADA/USDT
 action: short
 date: 2026-10-25T17:00:57.168Z
-status: open
+status: win
 orderType: market
 setup: EMA bearish alignment short
 entry: 0.2067
@@ -12,7 +12,7 @@ stop: 0.218
 target: 0.184
 rr: 2.01
 confidence: 78
-result_r: 
+result_r: 3.01
 ---
 
 # ADA/USDT SHORT — 2026-10-25
