@@ -4,7 +4,7 @@ type: diario
 symbol: XRP/USDT
 action: short
 date: 2026-11-09T17:01:12.237Z
-status: open
+status: win
 orderType: market
 setup: short pullback to EMA200 with strong ADX
 entry: 1.1004
@@ -12,7 +12,7 @@ stop: 1.147
 target: 1.0072
 rr: 2
 confidence: 82
-result_r: 
+result_r: 3
 ---
 
 # XRP/USDT SHORT — 2026-11-09
