@@ -4,7 +4,7 @@ type: diario
 symbol: SOL/USDT
 action: short
 date: 2026-11-12T18:30:52.706Z
-status: open
+status: win
 orderType: market
 setup: short momentum continuation (EMAs bajistas + MACD negativo + ADX fuerte)
 entry: 81.73
@@ -12,7 +12,7 @@ stop: 84.2
 target: 76.5
 rr: 2.12
 confidence: 78
-result_r: 
+result_r: 3.18
 ---
 
 # SOL/USDT SHORT — 2026-11-12

@@ -4,7 +4,7 @@ type: diario
 symbol: XMR/USDT
 action: short
 date: 2026-11-12T16:30:53.679Z
-status: open
+status: win
 orderType: limit
 setup: short momentum continuation
 entry: 551.04
@@ -12,7 +12,7 @@ stop: 569
 target: 515.04
 rr: 2
 confidence: 70
-result_r: 
+result_r: 3.01
 ---
 
 # XMR/USDT SHORT — 2026-11-12
