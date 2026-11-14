@@ -4,7 +4,7 @@ type: diario
 symbol: DOGE/USDT
 action: short
 date: 2026-11-08T11:01:33.173Z
-status: open
+status: win
 orderType: market
 setup: short pullback to EMA200
 entry: 0.07095
@@ -12,7 +12,7 @@ stop: 0.07308
 target: 0.0665
 rr: 2.09
 confidence: 78
-result_r: 
+result_r: 3.13
 ---
 
 # DOGE/USDT SHORT — 2026-11-08
