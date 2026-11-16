@@ -4,7 +4,7 @@ type: diario
 symbol: DOT/USDT
 action: short
 date: 2026-11-15T14:00:55.471Z
-status: open
+status: win
 orderType: market
 setup: short momentum continuation
 entry: 0.7376
@@ -12,7 +12,7 @@ stop: 0.746
 target: 0.72
 rr: 2.1
 confidence: 60
-result_r: 
+result_r: 1.05
 ---
 
 # DOT/USDT SHORT — 2026-11-15
