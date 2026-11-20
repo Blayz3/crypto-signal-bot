@@ -4,7 +4,7 @@ type: diario
 symbol: JUP/USDT
 action: short
 date: 2026-10-24T20:30:48.784Z
-status: open
+status: win
 orderType: limit
 setup: EMAs bearish alignment + ADX strong
 entry: 0.2875
@@ -12,7 +12,7 @@ stop: 0.3045
 target: 0.2535
 rr: 2
 confidence: 60
-result_r: 
+result_r: 3
 ---
 
 # JUP/USDT SHORT — 2026-10-24
