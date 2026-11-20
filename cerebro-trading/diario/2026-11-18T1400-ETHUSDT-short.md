@@ -4,7 +4,7 @@ type: diario
 symbol: ETH/USDT
 action: short
 date: 2026-11-18T14:00:55.398Z
-status: open
+status: win
 orderType: market
 setup: short momentum continuation
 entry: 1790.88
@@ -12,7 +12,7 @@ stop: 1820
 target: 1730
 rr: 2.09
 confidence: 85
-result_r: 
+result_r: 3.14
 ---
 
 # ETH/USDT SHORT — 2026-11-18
