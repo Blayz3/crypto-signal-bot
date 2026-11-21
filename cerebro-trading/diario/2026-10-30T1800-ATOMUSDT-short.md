@@ -4,7 +4,7 @@ type: diario
 symbol: ATOM/USDT
 action: short
 date: 2026-10-30T18:00:51.616Z
-status: open
+status: win
 orderType: market
 setup: short continuation below VAL
 entry: 1.5027
@@ -12,7 +12,7 @@ stop: 1.585
 target: 1.338
 rr: 2
 confidence: 85
-result_r: 
+result_r: 3
 ---
 
 # ATOM/USDT SHORT — 2026-10-30

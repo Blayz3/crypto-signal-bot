@@ -4,7 +4,7 @@ type: diario
 symbol: XLM/USDT
 action: short
 date: 2026-10-13T00:31:07.169Z
-status: open
+status: win
 orderType: market
 setup: EMAs bearish alignment + MACD negative + ADX strong + price below VAL + whale sell pressure
 entry: 0.1886
@@ -12,7 +12,7 @@ stop: 0.202
 target: 0.155
 rr: 2.51
 confidence: 88
-result_r: 
+result_r: 3.76
 ---
 
 # XLM/USDT SHORT — 2026-10-13
