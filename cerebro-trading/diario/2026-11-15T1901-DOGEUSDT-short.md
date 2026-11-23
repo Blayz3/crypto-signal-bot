@@ -4,7 +4,7 @@ type: diario
 symbol: DOGE/USDT
 action: short
 date: 2026-11-15T19:01:02.000Z
-status: open
+status: win
 orderType: market
 setup: short momentum continuation
 entry: 0.05874
@@ -12,7 +12,7 @@ stop: 0.06243
 target: 0.05136
 rr: 2
 confidence: 88
-result_r: 
+result_r: 1
 ---
 
 # DOGE/USDT SHORT — 2026-11-15

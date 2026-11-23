@@ -4,7 +4,7 @@ type: diario
 symbol: SUI/USDT
 action: short
 date: 2026-11-17T02:01:00.744Z
-status: open
+status: win
 orderType: limit
 setup: short momentum continuation
 entry: 0.72
@@ -12,7 +12,7 @@ stop: 0.761
 target: 0.638
 rr: 2
 confidence: 86
-result_r: 
+result_r: 1
 ---
 
 # SUI/USDT SHORT — 2026-11-17
