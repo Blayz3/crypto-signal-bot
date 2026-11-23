@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-23T19:00:56.842Z",
+  "updated": "2026-11-23T19:30:58.263Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 5093.93,
-  "equity": 6329.21,
+  "equity": 6378.62,
   "realizedPnl": 4093.93,
-  "unrealizedPnl": 1235.28,
+  "unrealizedPnl": 1284.69,
   "stats": {
     "openCount": 3,
     "closedCount": 449,
@@ -32,9 +32,9 @@
       "notional": 3820.4,
       "qty": 58460.6,
       "openedAt": "2026-11-10T17:01:02.753Z",
-      "markPrice": 0.05331,
-      "unrealizedPnl": 703.87,
-      "unrealizedPct": 368.48
+      "markPrice": 0.05296,
+      "unrealizedPnl": 724.33,
+      "unrealizedPct": 379.19
     },
     {
       "id": "2026-11-13T22:30-LINKUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 3820.4,
       "qty": 389.44,
       "openedAt": "2026-11-13T22:30:49.957Z",
-      "markPrice": 9.0559,
-      "unrealizedPnl": 293.68,
-      "unrealizedPct": 153.74
+      "markPrice": 9.0187,
+      "unrealizedPnl": 308.16,
+      "unrealizedPct": 161.32
     },
     {
       "id": "2026-11-22T11:30-ETCUSDT-long",
@@ -66,9 +66,9 @@
       "notional": 3820.4,
       "qty": 685.89,
       "openedAt": "2026-11-22T11:30:57.133Z",
-      "markPrice": 5.9166,
-      "unrealizedPnl": 237.73,
-      "unrealizedPct": 124.45
+      "markPrice": 5.9377,
+      "unrealizedPnl": 252.2,
+      "unrealizedPct": 132.03
     }
   ],
   "closed": [
