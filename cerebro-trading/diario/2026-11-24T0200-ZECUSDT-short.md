@@ -4,7 +4,7 @@ type: diario
 symbol: ZEC/USDT
 action: short
 date: 2026-11-24T02:00:57.154Z
-status: open
+status: win
 orderType: market
 setup: short momentum continuation
 entry: 772.07
@@ -12,7 +12,7 @@ stop: 788.4
 target: 763.9
 rr: 0.5
 confidence: 78
-result_r: 
+result_r: 0.75
 ---
 
 # ZEC/USDT SHORT — 2026-11-24
