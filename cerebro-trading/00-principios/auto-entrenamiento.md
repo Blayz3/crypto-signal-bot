@@ -10,21 +10,23 @@ weight: high
 
 # Autoentrenamiento (aprendido de mis resultados)
 
-Generado el 2026-11-16 con los resultados REALES de la SEMANA (2026-11-09 → 2026-11-16, 13 trades, +14.9R).
+Generado el 2026-11-24 con los resultados REALES de la SEMANA (2026-11-17 → 2026-11-24, 9 trades, +3R).
 El bot se entrena solo CADA SEMANA: NO abandona los setups, los PERFECCIONA — prioriza lo que
 gana, exige la condición que faltó en lo que pierde, y sube la exigencia si no fue rentable.
 **Nivel de exigencia actual: 5/5.**
 
 ## ✅ Setups a PRIORIZAR (ganaron con datos reales)
-- short momentum continuation: 5 trades, +3.1R, WR 60% → más confianza
+- short momentum continuation: 9 trades, +3R, WR 44% → más confianza
 
 ## 🔧 Setups a AFINAR (perdieron — NO los abandones: exige la confluencia que faltó)
 - (ninguno con muestra suficiente esta semana)
 
 ## 📝 Lecciones de las pérdidas de la semana
-- Causa:** Entré sin una confirmación de ruptura estructural; el stop estaba justo en la EMA 20/50, lo que indica que el precio nunca superó el nivel de invalidación y la confluencia real quedó por debajo del umbral requerido.
-- Causa:** Entraste justo en el VAL sin esperar una confirmación de ruptura o un “liquidity grab”; el precio mostró una reversión inmediata, lo que indica que la confluencia usada (EMA, MACD, ADX y sentimiento) no era suficiente para validar el momento de la operación.   **Lección:** Antes de abrir una posición corta, exige al menos un factor adicional de timing (p.ej., cierre bajo el mínimo del swing reciente, vela bajista clara o ruptura de soporte) y confirma que el ADX esté ≥ 35 para asegurar un momentum fuerte. Si falta esa confirmación, descarta la señal (NONE).
-- Causa:** Entraste con solo la confluencia mínima (3 factores) y un stop justo por encima de la EMA20/50, sin la distancia de 2×ATR que exige el filtro A+, por lo que una rápida reversión del momentum anuló la señal.   **Lección:** Exige siempre ≥5 factores de confluencia y coloca el stop al menos 2×ATR bajo la zona de invalid
+- Causa:** Entré en corto contra el micro‑régimen; el precio estaba en el VAL bajo y el miedo extremo señalaba un posible rebote, de modo que la confluencia short (solo 3 factores) era insuficiente.   **Lección:** Exige siempre al menos 5 factores de confluencia, incluyendo confirmación de tendencia mayor y ausencia de señales de reversión (precio en VAL
+- Causa:** Entré antes de que el precio mostrara una ruptura
+- Causa:** la gestión del riesgo fue insuficiente; al alcanzar +1 R no se aseguró la posición (ni se movió el stop a break‑even ni se tomó parcial), de modo que el retroceso posterior borró toda la ganancia y activó el stop original.   **Lección:** siempre protege la operación tan pronto como el precio llegue a +1 R (stop a BE
+- Causa:** el stop estaba demasiado cerca del rango de ruido (≈ 1 ATR) y no respetó la regla de “stop ≈ 2 × ATR” para una invalidación estructural, por lo que el precio volvió rápidamente y activó la salida antes de que el impulso continuara.   **Lección:** antes de entrar, verifica que el nivel de stop tenga al menos 2 × ATR de distancia y que la confluencia sea ≥ 6 cuando el sesgo mayor del mercado sea contrario; si el stop queda dentro de la zona de volatilidad inmediata, descarta la operación o ajusta el punto de entrada.
+- Causa:** Entré demasiado pronto, sin una confirmación de ruptura/pull‑back del nivel de liquidez y sin la confluencia mínima (faltó al menos un factor clave como un swing low roto o un patrón de absorción). El precio se revirtió al instante, disparando el stop. **Lección:** Antes de cualquier short, exige una confirmación clara (ruptura de swing low, absorción de órdenes o rebote en nivel de soporte) y al menos 6 factores de confluencia; si falta cualquiera, descarta la operación.
 
 **Regla para el bot:** Aplica lo aprendido de MIS resultados: prioriza los setups ganadores con más confianza; los que perdieron NO se abandonan — exígeles confluencia ≥6 y la condición que faltó según las lecciones. Confluencia mínima de 5 factores en CUALQUIER trade (nivel de exigencia 5/5). Objetivo: PERFECCIONAR los setups semana a semana para perder menos de lo evitable; ante la duda, NONE.
 
