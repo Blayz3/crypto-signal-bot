@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T15:01:10.560Z",
+  "updated": "2026-11-25T15:30:55.267Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,11 +8,11 @@
     "atOrAbove": 40
   },
   "balance": 5313.47,
-  "equity": 7111.24,
+  "equity": 7223.26,
   "realizedPnl": 4313.47,
-  "unrealizedPnl": 1797.77,
+  "unrealizedPnl": 1909.79,
   "stats": {
-    "openCount": 4,
+    "openCount": 5,
     "closedCount": 451,
     "wins": 155,
     "losses": 294,
@@ -32,9 +32,9 @@
       "notional": 3985.2,
       "qty": 60982.4,
       "openedAt": "2026-11-10T17:01:02.753Z",
-      "markPrice": 0.04956,
-      "unrealizedPnl": 962.91,
-      "unrealizedPct": 483.24
+      "markPrice": 0.04915,
+      "unrealizedPnl": 987.91,
+      "unrealizedPct": 495.79
     },
     {
       "id": "2026-11-13T22:30-LINKUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 3985.2,
       "qty": 406.24,
       "openedAt": "2026-11-13T22:30:49.957Z",
-      "markPrice": 8.6816,
-      "unrealizedPnl": 458.4,
-      "unrealizedPct": 230.05
+      "markPrice": 8.6089,
+      "unrealizedPnl": 487.93,
+      "unrealizedPct": 244.87
     },
     {
       "id": "2026-11-24T16:01-BTCUSDT-short",
@@ -66,9 +66,9 @@
       "notional": 9564.4,
       "qty": 0.16,
       "openedAt": "2026-11-24T16:01:21.745Z",
-      "markPrice": 58263.1,
-      "unrealizedPnl": 236.5,
-      "unrealizedPct": 98.91
+      "markPrice": 58047.2,
+      "unrealizedPnl": 271.06,
+      "unrealizedPct": 113.36
     },
     {
       "id": "2026-11-24T20:00-JUPUSDT-short",
@@ -83,9 +83,26 @@
       "notional": 3985.2,
       "qty": 17943.27,
       "openedAt": "2026-11-24T20:00:58.382Z",
-      "markPrice": 0.2143,
-      "unrealizedPnl": 139.96,
-      "unrealizedPct": 70.24
+      "markPrice": 0.2128,
+      "unrealizedPnl": 166.87,
+      "unrealizedPct": 83.74
+    },
+    {
+      "id": "2026-11-25T15:30-LTCUSDT-short",
+      "symbol": "LTC/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 40.01,
+      "stop": 41,
+      "target": 36.5,
+      "leverage": 40,
+      "margin": 199.26,
+      "notional": 7970.4,
+      "qty": 199.21,
+      "openedAt": "2026-11-25T15:30:53.522Z",
+      "markPrice": 40.03,
+      "unrealizedPnl": -3.98,
+      "unrealizedPct": -2
     }
   ],
   "closed": [
