@@ -4,7 +4,7 @@ type: diario
 symbol: BTC/USDT
 action: short
 date: 2026-11-24T16:01:21.747Z
-status: open
+status: win
 orderType: market
 setup: short momentum continuation
 entry: 59740.3
@@ -12,7 +12,7 @@ stop: 60455.62
 target: 58309.66
 rr: 2
 confidence: 78
-result_r: 
+result_r: 1
 ---
 
 # BTC/USDT SHORT — 2026-11-24

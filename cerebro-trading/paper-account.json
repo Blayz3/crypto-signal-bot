@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T17:00:57.637Z",
+  "updated": "2026-11-25T17:30:50.075Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 5313.47,
-  "equity": 6848.69,
-  "realizedPnl": 4313.47,
-  "unrealizedPnl": 1535.22,
+  "balance": 5226.53,
+  "equity": 6557.3,
+  "realizedPnl": 4226.53,
+  "unrealizedPnl": 1330.77,
   "stats": {
-    "openCount": 5,
-    "closedCount": 451,
-    "wins": 155,
-    "losses": 294,
-    "winRate": 34.37
+    "openCount": 3,
+    "closedCount": 453,
+    "wins": 156,
+    "losses": 295,
+    "winRate": 34.44
   },
   "open": [
     {
@@ -28,13 +28,13 @@
       "stop": 0.07,
       "target": 0.05605,
       "leverage": 20,
-      "margin": 199.26,
-      "notional": 3985.2,
-      "qty": 60982.4,
+      "margin": 195.99,
+      "notional": 3919.8,
+      "qty": 59981.64,
       "openedAt": "2026-11-10T17:01:02.753Z",
-      "markPrice": 0.04987,
-      "unrealizedPnl": 944.01,
-      "unrealizedPct": 473.76
+      "markPrice": 0.05046,
+      "unrealizedPnl": 893.13,
+      "unrealizedPct": 455.7
     },
     {
       "id": "2026-11-13T22:30-LINKUSDT-short",
@@ -45,30 +45,13 @@
       "stop": 10.32,
       "target": 8.8,
       "leverage": 20,
-      "margin": 199.26,
-      "notional": 3985.2,
-      "qty": 406.24,
+      "margin": 195.99,
+      "notional": 3919.8,
+      "qty": 399.57,
       "openedAt": "2026-11-13T22:30:49.957Z",
-      "markPrice": 8.7002,
-      "unrealizedPnl": 450.84,
-      "unrealizedPct": 226.26
-    },
-    {
-      "id": "2026-11-24T16:01-BTCUSDT-short",
-      "symbol": "BTC/USDT",
-      "dir": "short",
-      "grade": "A+",
-      "entry": 59740.3,
-      "stop": 60455.62,
-      "target": 58309.66,
-      "leverage": 40,
-      "margin": 239.11,
-      "notional": 9564.4,
-      "qty": 0.16,
-      "openedAt": "2026-11-24T16:01:21.745Z",
-      "markPrice": 58528.2,
-      "unrealizedPnl": 194.06,
-      "unrealizedPct": 81.16
+      "markPrice": 8.8163,
+      "unrealizedPnl": 397.05,
+      "unrealizedPct": 202.59
     },
     {
       "id": "2026-11-24T20:00-JUPUSDT-short",
@@ -79,30 +62,13 @@
       "stop": 0.229304,
       "target": 0.207692,
       "leverage": 20,
-      "margin": 199.26,
-      "notional": 3985.2,
-      "qty": 17943.27,
+      "margin": 195.99,
+      "notional": 3919.8,
+      "qty": 17648.81,
       "openedAt": "2026-11-24T20:00:58.382Z",
-      "markPrice": 0.2151,
-      "unrealizedPnl": 125.6,
-      "unrealizedPct": 63.03
-    },
-    {
-      "id": "2026-11-25T15:30-LTCUSDT-short",
-      "symbol": "LTC/USDT",
-      "dir": "short",
-      "grade": "A",
-      "entry": 40.01,
-      "stop": 41,
-      "target": 36.5,
-      "leverage": 40,
-      "margin": 199.26,
-      "notional": 7970.4,
-      "qty": 199.21,
-      "openedAt": "2026-11-25T15:30:53.522Z",
-      "markPrice": 40.91,
-      "unrealizedPnl": -179.29,
-      "unrealizedPct": -89.98
+      "markPrice": 0.2198,
+      "unrealizedPnl": 40.59,
+      "unrealizedPct": 20.71
     }
   ],
   "closed": [
@@ -9125,6 +9091,46 @@
       "pnl": 98.31,
       "pnlPct": 50.27,
       "closedAt": "2026-11-25T15:00:43.026Z"
+    },
+    {
+      "id": "2026-11-24T16:01-BTCUSDT-short",
+      "symbol": "BTC/USDT",
+      "dir": "short",
+      "grade": "A+",
+      "entry": 59740.3,
+      "stop": 60455.62,
+      "target": 58309.66,
+      "leverage": 40,
+      "margin": 239.11,
+      "notional": 9564.4,
+      "qty": 0.16,
+      "openedAt": "2026-11-24T16:01:21.745Z",
+      "exit": 59024.98,
+      "status": "win",
+      "resultR": 1,
+      "pnl": 114.52,
+      "pnlPct": 47.89,
+      "closedAt": "2026-11-25T17:30:38.328Z"
+    },
+    {
+      "id": "2026-11-25T15:30-LTCUSDT-short",
+      "symbol": "LTC/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 40.01,
+      "stop": 41,
+      "target": 36.5,
+      "leverage": 40,
+      "margin": 203.55,
+      "notional": 8142,
+      "qty": 203.5,
+      "openedAt": "2026-11-25T15:30:53.522Z",
+      "exit": 41,
+      "status": "loss",
+      "resultR": -1,
+      "pnl": -201.46,
+      "pnlPct": -98.97,
+      "closedAt": "2026-11-25T17:30:38.746Z"
     }
   ],
   "equityCurve": [
@@ -10935,6 +10941,14 @@
     {
       "t": "2026-11-25T15:00:43.026Z",
       "balance": 5313.47
+    },
+    {
+      "t": "2026-11-25T17:30:38.328Z",
+      "balance": 5427.99
+    },
+    {
+      "t": "2026-11-25T17:30:38.746Z",
+      "balance": 5226.53
     }
   ]
 }
