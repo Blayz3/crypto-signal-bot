@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-25T19:04:11.830Z",
+  "updated": "2026-11-25T19:31:01.824Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -7,16 +7,16 @@
     "below": 20,
     "atOrAbove": 40
   },
-  "balance": 5226.53,
-  "equity": 6333.36,
-  "realizedPnl": 4226.53,
-  "unrealizedPnl": 1106.83,
+  "balance": 5099.39,
+  "equity": 6168.74,
+  "realizedPnl": 4099.39,
+  "unrealizedPnl": 1069.35,
   "stats": {
-    "openCount": 3,
-    "closedCount": 453,
+    "openCount": 2,
+    "closedCount": 454,
     "wins": 156,
-    "losses": 295,
-    "winRate": 34.44
+    "losses": 296,
+    "winRate": 34.36
   },
   "open": [
     {
@@ -28,13 +28,13 @@
       "stop": 0.07,
       "target": 0.05605,
       "leverage": 20,
-      "margin": 195.99,
-      "notional": 3919.8,
-      "qty": 59981.64,
+      "margin": 191.23,
+      "notional": 3824.6,
+      "qty": 58524.87,
       "openedAt": "2026-11-10T17:01:02.753Z",
-      "markPrice": 0.0514,
-      "unrealizedPnl": 836.74,
-      "unrealizedPct": 426.93
+      "markPrice": 0.05188,
+      "unrealizedPnl": 788.33,
+      "unrealizedPct": 412.24
     },
     {
       "id": "2026-11-13T22:30-LINKUSDT-short",
@@ -45,30 +45,13 @@
       "stop": 10.32,
       "target": 8.8,
       "leverage": 20,
-      "margin": 195.99,
-      "notional": 3919.8,
-      "qty": 399.57,
+      "margin": 191.23,
+      "notional": 3824.6,
+      "qty": 389.87,
       "openedAt": "2026-11-13T22:30:49.957Z",
-      "markPrice": 9.0192,
-      "unrealizedPnl": 315.98,
-      "unrealizedPct": 161.22
-    },
-    {
-      "id": "2026-11-24T20:00-JUPUSDT-short",
-      "symbol": "JUP/USDT",
-      "dir": "short",
-      "grade": "A",
-      "entry": 0.2221,
-      "stop": 0.229304,
-      "target": 0.207692,
-      "leverage": 20,
-      "margin": 195.99,
-      "notional": 3919.8,
-      "qty": 17648.81,
-      "openedAt": "2026-11-24T20:00:58.382Z",
-      "markPrice": 0.2247,
-      "unrealizedPnl": -45.89,
-      "unrealizedPct": -23.41
+      "markPrice": 9.0892,
+      "unrealizedPnl": 281.02,
+      "unrealizedPct": 146.95
     }
   ],
   "closed": [
@@ -9131,6 +9114,26 @@
       "pnl": -201.46,
       "pnlPct": -98.97,
       "closedAt": "2026-11-25T17:30:38.746Z"
+    },
+    {
+      "id": "2026-11-24T20:00-JUPUSDT-short",
+      "symbol": "JUP/USDT",
+      "dir": "short",
+      "grade": "A",
+      "entry": 0.2221,
+      "stop": 0.229304,
+      "target": 0.207692,
+      "leverage": 20,
+      "margin": 195.99,
+      "notional": 3919.8,
+      "qty": 17648.81,
+      "openedAt": "2026-11-24T20:00:58.382Z",
+      "exit": 0.229304,
+      "status": "loss",
+      "resultR": -1,
+      "pnl": -127.14,
+      "pnlPct": -64.87,
+      "closedAt": "2026-11-25T19:30:40.800Z"
     }
   ],
   "equityCurve": [
@@ -10949,6 +10952,10 @@
     {
       "t": "2026-11-25T17:30:38.746Z",
       "balance": 5226.53
+    },
+    {
+      "t": "2026-11-25T19:30:40.800Z",
+      "balance": 5099.39
     }
   ]
 }
