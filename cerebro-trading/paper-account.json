@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-26T14:00:54.989Z",
+  "updated": "2026-11-26T14:30:59.224Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 5099.39,
-  "equity": 5997.5,
+  "equity": 5971.68,
   "realizedPnl": 4099.39,
-  "unrealizedPnl": 898.11,
+  "unrealizedPnl": 872.29,
   "stats": {
     "openCount": 2,
     "closedCount": 454,
@@ -32,9 +32,9 @@
       "notional": 3824.6,
       "qty": 58524.87,
       "openedAt": "2026-11-10T17:01:02.753Z",
-      "markPrice": 0.05373,
-      "unrealizedPnl": 680.06,
-      "unrealizedPct": 355.62
+      "markPrice": 0.05406,
+      "unrealizedPnl": 660.75,
+      "unrealizedPct": 345.53
     },
     {
       "id": "2026-11-13T22:30-LINKUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 3824.6,
       "qty": 389.87,
       "openedAt": "2026-11-13T22:30:49.957Z",
-      "markPrice": 9.2507,
-      "unrealizedPnl": 218.05,
-      "unrealizedPct": 114.02
+      "markPrice": 9.2674,
+      "unrealizedPnl": 211.54,
+      "unrealizedPct": 110.62
     }
   ],
   "closed": [
