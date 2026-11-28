@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-28T09:00:38.467Z",
+  "updated": "2026-11-28T09:30:36.460Z",
   "marginPerTrade": 200,
   "startingBalance": 1000,
   "leverageRule": {
@@ -8,9 +8,9 @@
     "atOrAbove": 40
   },
   "balance": 5099.39,
-  "equity": 5839.06,
+  "equity": 5843.34,
   "realizedPnl": 4099.39,
-  "unrealizedPnl": 739.67,
+  "unrealizedPnl": 743.95,
   "stats": {
     "openCount": 5,
     "closedCount": 454,
@@ -32,9 +32,9 @@
       "notional": 3824.6,
       "qty": 58524.87,
       "openedAt": "2026-11-10T17:01:02.753Z",
-      "markPrice": 0.05323,
-      "unrealizedPnl": 709.32,
-      "unrealizedPct": 370.93
+      "markPrice": 0.05345,
+      "unrealizedPnl": 696.45,
+      "unrealizedPct": 364.19
     },
     {
       "id": "2026-11-13T22:30-LINKUSDT-short",
@@ -49,9 +49,9 @@
       "notional": 3824.6,
       "qty": 389.87,
       "openedAt": "2026-11-13T22:30:49.957Z",
-      "markPrice": 9.1877,
-      "unrealizedPnl": 242.61,
-      "unrealizedPct": 126.87
+      "markPrice": 9.1686,
+      "unrealizedPnl": 250.06,
+      "unrealizedPct": 130.76
     },
     {
       "id": "2026-11-27T14:30-XMRUSDT-short",
@@ -66,7 +66,7 @@
       "notional": 9178.8,
       "qty": 21.49,
       "openedAt": "2026-11-27T14:30:43.064Z",
-      "markPrice": 438.97,
+      "markPrice": 442,
       "unrealizedPnl": -229.47,
       "unrealizedPct": -100
     },
@@ -83,9 +83,9 @@
       "notional": 3824.6,
       "qty": 27240.74,
       "openedAt": "2026-11-27T19:00:43.631Z",
-      "markPrice": 0.1412,
-      "unrealizedPnl": 21.79,
-      "unrealizedPct": 11.39
+      "markPrice": 0.1415,
+      "unrealizedPnl": 29.96,
+      "unrealizedPct": 15.67
     },
     {
       "id": "2026-11-28T01:00-TRXUSDT-short",
@@ -100,9 +100,9 @@
       "notional": 4589.4,
       "qty": 15267.47,
       "openedAt": "2026-11-28T01:00:45.522Z",
-      "markPrice": 0.3009,
-      "unrealizedPnl": -4.58,
-      "unrealizedPct": -2
+      "markPrice": 0.3008,
+      "unrealizedPnl": -3.05,
+      "unrealizedPct": -1.33
     }
   ],
   "closed": [
